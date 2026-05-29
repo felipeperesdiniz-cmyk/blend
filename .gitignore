@@ -3,3 +3,9 @@ node_modules/
 dist/
 .env
 *.tsbuildinfo
+.next/
+.DS_Store
+*.docx
+blend-mockup-home.html
+"ChatGPT Image May 25, 2026, 09_52_13 AM.png"
+"WhatsApp Image 2026-05-24 at 18.12.29.jpeg"
