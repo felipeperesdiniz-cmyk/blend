@@ -1,0 +1,60 @@
+{
+  "redirects": [
+    { "source": "/home",            "destination": "/",        "permanent": true },
+    { "source": "/portfolio",       "destination": "/gallery", "permanent": true },
+    { "source": "/galeria",         "destination": "/gallery", "permanent": true },
+    { "source": "/gallery/:path*",  "destination": "/gallery", "permanent": false },
+    { "source": "/sobre",           "destination": "/about",   "permanent": true },
+    { "source": "/about-us",        "destination": "/about",   "permanent": true },
+    { "source": "/quem-somos",      "destination": "/about",   "permanent": true },
+    { "source": "/nossa-historia",  "destination": "/about",   "permanent": true },
+    { "source": "/contato",         "destination": "/contact", "permanent": true },
+    { "source": "/contact-location","destination": "/contact", "permanent": true },
+    { "source": "/location",        "destination": "/contact", "permanent": true },
+    { "source": "/localização",     "destination": "/contact", "permanent": true },
+    { "source": "/localizacao",     "destination": "/contact", "permanent": true },
+    { "source": "/servicos",        "destination": "/services","permanent": true },
+    { "source": "/servi%C3%A7os",   "destination": "/services","permanent": true },
+    { "source": "/services-list",   "destination": "/services","permanent": true },
+    { "source": "/our-services",    "destination": "/services","permanent": true },
+    { "source": "/equipe",          "destination": "/team",    "permanent": true },
+    { "source": "/nossa-equipe",    "destination": "/team",    "permanent": true },
+    { "source": "/our-team",        "destination": "/team",    "permanent": true },
+    { "source": "/team-members",    "destination": "/team",    "permanent": true },
+    { "source": "/profissionais",   "destination": "/team",    "permanent": true },
+    { "source": "/stylists",        "destination": "/team",    "permanent": true },
+    { "source": "/blog",            "destination": "/",        "permanent": true },
+    { "source": "/blog/:path*",     "destination": "/",        "permanent": true },
+    { "source": "/noticias",        "destination": "/",        "permanent": true },
+    { "source": "/noticias/:path*", "destination": "/",        "permanent": true },
+    { "source": "/news",            "destination": "/",        "permanent": true },
+    { "source": "/book",    "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false },
+    { "source": "/booking", "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false },
+    { "source": "/agendar", "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false }
+  ],
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(_next/static|favicon\\.svg|logo\\.png|hero-interior\\.(jpg|png)|og-image\\.jpg|sitemap\\.xml|robots\\.txt|llms\\.txt)(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

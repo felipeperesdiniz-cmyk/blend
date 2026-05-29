@@ -1,0 +1,9 @@
+# Build artifacts & dependencies (Vercel builds these remotely)
+.next
+node_modules
+
+# Loose non-source files in project root
+/WhatsApp Image 2026-05-24 at 18.12.29.jpeg
+/ChatGPT Image May 25, 2026, 09_52_13 AM.png
+/Blend services.docx
+/blend-mockup-home.html

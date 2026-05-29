@@ -1,0 +1,146 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/app/_not-found/page-f187ad254cc1b0eb.js"
+    ],
+    "/not-found": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/not-found-97f6faa21d4b775e.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/css/5ab16e37c3f8afa1.css",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/app/layout-69a7865a080857fd.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/124-1f46e35b9f7637ec.js",
+      "static/chunks/app/page-0ba3230dd408815a.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/app/contact/page-716de6305b609717.js"
+    ],
+    "/blonding-specialist-plantation/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/blonding-specialist-plantation/page-d4ad99170a7f8d8b.js"
+    ],
+    "/about/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/app/about/page-82fb0bad8bcd4437.js"
+    ],
+    "/bridal-hair-south-florida/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/bridal-hair-south-florida/page-d4ad99170a7f8d8b.js"
+    ],
+    "/balayage-plantation-fl/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/balayage-plantation-fl/page-d4ad99170a7f8d8b.js"
+    ],
+    "/gallery/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/app/gallery/page-1db6af899ab7dfd2.js"
+    ],
+    "/hair-extensions-plantation/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/hair-extensions-plantation/page-d4ad99170a7f8d8b.js"
+    ],
+    "/keratin-treatment-plantation/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/keratin-treatment-plantation/page-d4ad99170a7f8d8b.js"
+    ],
+    "/team/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/app/team/page-71193d7d6796115d.js"
+    ],
+    "/hair-color-plantation/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/app/hair-color-plantation/page-d4ad99170a7f8d8b.js"
+    ],
+    "/services/page": [
+      "static/chunks/webpack-2eb758dea75faf50.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-4f84124391a7dac4.js",
+      "static/chunks/main-app-bfd03c79874fed63.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/486-4e48d852acd32d64.js",
+      "static/chunks/839-9431705084369eb0.js",
+      "static/chunks/124-1f46e35b9f7637ec.js",
+      "static/chunks/app/services/page-23e4645a4118cac0.js"
+    ]
+  }
+}

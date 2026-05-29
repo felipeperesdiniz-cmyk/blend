@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/blonding-specialist-plantation/page": "app/blonding-specialist-plantation/page.js",
+  "/about/page": "app/about/page.js",
+  "/bridal-hair-south-florida/page": "app/bridal-hair-south-florida/page.js",
+  "/balayage-plantation-fl/page": "app/balayage-plantation-fl/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/hair-extensions-plantation/page": "app/hair-extensions-plantation/page.js",
+  "/keratin-treatment-plantation/page": "app/keratin-treatment-plantation/page.js",
+  "/team/page": "app/team/page.js",
+  "/hair-color-plantation/page": "app/hair-color-plantation/page.js",
+  "/services/page": "app/services/page.js"
+}

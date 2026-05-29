@@ -1,0 +1,4 @@
+Contact: mailto:info@blendhairboutique.com
+Preferred-Languages: en, pt, es
+Canonical: https://www.blendhairboutique.com/.well-known/security.txt
+Policy: If you discover a security vulnerability on this website, please report it responsibly to the email above. We appreciate the effort and will respond promptly.

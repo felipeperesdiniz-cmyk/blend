@@ -1,0 +1,83 @@
+# robots.txt — Blend Hair Boutique
+# https://www.blendhairboutique.com
+
+# ── Block known exploit scanners & attack bots ─────────────────
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: Nuclei
+Disallow: /
+
+User-agent: sqlmap
+Disallow: /
+
+User-agent: masscan
+Disallow: /
+
+User-agent: zgrab
+Disallow: /
+
+# ── All legitimate crawlers ─────────────────────────────────────
+User-agent: *
+Allow: /
+
+# Point all crawlers to the sitemap
+Sitemap: https://www.blendhairboutique.com/sitemap.xml
+
+# ── AI / LLM crawlers ──────────────────────────────────────────
+# Blend Hair Boutique welcomes AI crawlers to index and surface
+# this business in AI-powered search results.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /

@@ -1,0 +1,155 @@
+# Blend Hair Boutique — llms.txt
+# This file summarizes the business for AI language models and crawlers.
+# Format follows the proposed llms.txt standard (llmstxt.org).
+
+# ─── Business Identity ────────────────────────────────────────────
+Business Name: Blend Hair Boutique
+Type: Hair Salon, Beauty Boutique
+Location: 10035 Cleary Blvd, Plantation, FL 33324, United States
+City: Plantation
+County: Broward County
+State: Florida
+Country: United States
+
+Phone (calls only): +1 (754) 206-3501
+WhatsApp (text only): +1 (954) 544-6792 — https://wa.me/19545446792
+Email: info@blendhairboutique.com
+Website: https://www.blendhairboutique.com/
+Booking: https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer
+Directions: https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324
+
+# ─── Hours ────────────────────────────────────────────────────────
+Monday:    10:00 AM – 5:00 PM
+Tuesday:   10:00 AM – 7:00 PM
+Wednesday: 10:00 AM – 7:00 PM
+Thursday:  10:00 AM – 7:00 PM
+Friday:    10:00 AM – 7:00 PM
+Saturday:  10:00 AM – 7:00 PM
+Sunday:    Closed
+
+# ─── About ────────────────────────────────────────────────────────
+Blend Hair Boutique is a luxury hair salon and full-service beauty boutique
+in Plantation, Florida (South Florida / Broward County). The salon is known
+for its Brazilian-inspired approach to hair and beauty, combining precision
+color artistry with warm, personalized service. The team is multilingual,
+serving clients in English, Portuguese, and Spanish.
+
+The salon holds a 4.9-star Google rating based on over 1,218 reviews.
+
+# ─── Services ─────────────────────────────────────────────────────
+1. Color & Balayage
+   Custom hair color, balayage, highlights, ombre, and color correction.
+   Tailored to hair texture, skin tone, and maintenance preferences.
+   Page: https://www.blendhairboutique.com/services#color-balayage
+
+2. Haircuts & Styling
+   Precision haircuts, lived-in layers, blowout styling.
+   Page: https://www.blendhairboutique.com/services#cuts-styling
+
+3. Brazilian Blowout & Keratin Treatment
+   Frizz-eliminating smoothing treatments. Results last 3–5 months.
+   Ideal for Florida humidity. Signature service.
+   Page: https://www.blendhairboutique.com/services#smoothing-keratin
+
+4. Nail Services
+   Manicures, pedicures, gel nails, and nail art.
+   Page: https://www.blendhairboutique.com/services#nails
+
+5. Facials & Spa
+   Customized facials, hydrating treatments, and spa rituals.
+   Page: https://www.blendhairboutique.com/services#facials-spa
+
+6. Waxing & Brow Shaping
+   Full and partial body waxing, eyebrow shaping, brow tinting.
+   Page: https://www.blendhairboutique.com/services#waxing
+
+7. Hair Extensions
+   Tape-in, sew-in, and clip-in methods. Consultation required.
+   Page: https://www.blendhairboutique.com/services#extensions
+
+8. Bridal & Event Beauty
+   Full bridal packages: hair, nails, skin. Trials, day-of styling,
+   and group packages for bridal parties in South Florida.
+   Page: https://www.blendhairboutique.com/services#bridal-events
+
+# ─── Areas Served ─────────────────────────────────────────────────
+Plantation FL, Fort Lauderdale FL, Davie FL, Weston FL,
+Sunrise FL, Pembroke Pines FL, Miramar FL, Cooper City FL,
+Boca Raton FL, Miami FL, Broward County FL, South Florida
+
+# ─── Social Profiles ──────────────────────────────────────────────
+Instagram: https://www.instagram.com/blendhairboutique
+Facebook: https://www.facebook.com/blendhairboutique
+TikTok: https://www.tiktok.com/@blendhairboutique
+
+# ─── Important Pages ──────────────────────────────────────────────
+Homepage:    https://www.blendhairboutique.com/
+Services:    https://www.blendhairboutique.com/services
+Gallery:     https://www.blendhairboutique.com/gallery
+Team:        https://www.blendhairboutique.com/team
+About:       https://www.blendhairboutique.com/about
+Contact:     https://www.blendhairboutique.com/contact
+Book Online: https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer
+
+# ─── Frequently Asked Questions ───────────────────────────────────
+Q: How do I book an appointment at Blend Hair Boutique?
+A: Book online 24/7 at the Fresha booking page, or call (754) 206-3501.
+   WhatsApp at (954) 544-6792 for text inquiries.
+   Booking: https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer
+
+Q: Where is Blend Hair Boutique located?
+A: 10035 Cleary Blvd, Plantation, FL 33324.
+   Located in Plantation, Broward County, South Florida.
+   Accessible from Plantation, Davie, Weston, Fort Lauderdale, Sunrise, Cooper City, Pembroke Pines.
+   Directions: https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324
+
+Q: What are Blend Hair Boutique's hours?
+A: Monday 10 AM–5 PM. Tuesday–Saturday 10 AM–7 PM. Closed Sunday.
+
+Q: What hair services does Blend Hair Boutique offer?
+A: Balayage, hair color, blonding, highlights, color correction, Brazilian blowout,
+   keratin treatments, haircuts, precision cuts, styling, hair extensions (tape-in,
+   sew-in, clip-in), nail services, facials, waxing, brow shaping, and bridal packages.
+
+Q: Does Blend Hair Boutique specialize in balayage?
+A: Yes. Color and balayage is the salon's most requested service.
+   The colorists create custom formulas tailored to each client's hair texture,
+   skin tone, and maintenance lifestyle.
+
+Q: Does the salon do Brazilian blowouts?
+A: Yes. Brazilian blowout and keratin treatments are a signature service,
+   especially popular in Florida's humid climate. Results last 3–5 months.
+
+Q: Does Blend Hair Boutique offer hair extensions?
+A: Yes. Premium hair extensions including tape-in, sew-in, and clip-in methods.
+   Consultation required. Pricing varies by length and method.
+
+Q: Does Blend Hair Boutique offer bridal packages?
+A: Yes. Full bridal beauty packages including hair, nails, and skin services.
+   Bridal trials, day-of styling, and group packages for bridal parties.
+   Serving brides across South Florida. Book bridal consultations early.
+
+Q: What languages does the salon staff speak?
+A: English, Portuguese, and Spanish. The team is Brazilian-trained and multilingual.
+
+Q: Is Blend Hair Boutique a luxury salon?
+A: Yes. Blend Hair Boutique is a luxury hair boutique with a 4.9-star Google rating
+   from over 1,218 reviews. It is an authorized Kérastase salon serving premium clients
+   across Plantation and South Florida since 2012.
+
+Q: What is the price range at Blend Hair Boutique?
+A: Blend Hair Boutique is a premium luxury salon. Pricing is competitive for the
+   South Florida luxury market. Starting prices are available upon booking.
+
+Q: What is the phone number for Blend Hair Boutique?
+A: Calls: (754) 206-3501. WhatsApp (text): (954) 544-6792.
+
+Q: What is the email for Blend Hair Boutique?
+A: info@blendhairboutique.com
+
+Q: Does Blend Hair Boutique offer gift cards?
+A: Yes. Gift cards are available online and in the boutique.
+
+Q: How long has Blend Hair Boutique been open?
+A: Blend Hair Boutique was established in 2012 in Plantation, Florida.
+   The salon has served the South Florida community for over 13 years.
