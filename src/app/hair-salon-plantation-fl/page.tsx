@@ -189,22 +189,7 @@ export default function HairSalonPlantationPage() {
                 <Link
                   key={s.href}
                   href={s.href}
-                  style={{
-                    display: 'block',
-                    padding: '1.5rem',
-                    border: '1px solid var(--line)',
-                    background: 'var(--white)',
-                    transition: 'border-color 0.2s, box-shadow 0.2s',
-                    textDecoration: 'none',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--gold)'
-                    ;(e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow-sm)'
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderColor = 'var(--line)'
-                    ;(e.currentTarget as HTMLElement).style.boxShadow = 'none'
-                  }}
+                  className="service-hub-card"
                 >
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.1rem', fontWeight: 400, marginBottom: '0.4rem', color: 'var(--text)' }}>{s.name}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', lineHeight: 1.6, fontWeight: 300 }}>{s.desc}</p>

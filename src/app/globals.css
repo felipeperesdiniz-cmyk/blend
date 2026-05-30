@@ -2973,7 +2973,21 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── FAQ ── */
   .faq-trigger { padding: 1.25rem 0; }
   .faq-trigger__q { font-size: 1rem; }
-  .faq-body__inner { font-size: 13.5px; }
+  /* ── Service hub cards (hair-salon-plantation-fl) ── */
+.service-hub-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background: var(--white);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.service-hub-card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-body__inner { font-size: 13.5px; }
 
   /* ── Page heroes ── */
   .services-page-hero,
