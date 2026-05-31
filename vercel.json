@@ -33,7 +33,7 @@
     { "source": "/portfolio/:path*",                                    "destination": "/services", "permanent": true },
 
     { "source": "/galeria",         "destination": "/gallery", "permanent": true },
-    { "source": "/gallery/:path*",  "destination": "/gallery", "permanent": true },
+    { "source": "/gallery/:path+",  "destination": "/gallery", "permanent": true },
     { "source": "/sobre",           "destination": "/about",   "permanent": true },
     { "source": "/about-us",        "destination": "/about",   "permanent": true },
     { "source": "/quem-somos",      "destination": "/about",   "permanent": true },
@@ -53,11 +53,9 @@
     { "source": "/team-members",    "destination": "/team",    "permanent": true },
     { "source": "/profissionais",   "destination": "/team",    "permanent": true },
     { "source": "/stylists",        "destination": "/team",    "permanent": true },
-    { "source": "/blog",            "destination": "/",        "permanent": true },
-    { "source": "/blog/:path*",     "destination": "/",        "permanent": true },
-    { "source": "/noticias",        "destination": "/",        "permanent": true },
-    { "source": "/noticias/:path*", "destination": "/",        "permanent": true },
-    { "source": "/news",            "destination": "/",        "permanent": true },
+    { "source": "/noticias",        "destination": "/blog",    "permanent": true },
+    { "source": "/noticias/:path*", "destination": "/blog",    "permanent": true },
+    { "source": "/news",            "destination": "/blog",    "permanent": true },
     { "source": "/book",    "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false },
     { "source": "/booking", "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false },
     { "source": "/agendar", "destination": "https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer", "permanent": false }
