@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'What are the hours of Blend Hair Boutique?',
-    a: 'Blend Hair Boutique is open Monday through Friday 9:00 AM to 7:00 PM, Saturday 9:00 AM to 7:00 PM, and closed on Sunday. Hours may vary on holidays — we recommend checking our booking system or calling (754) 206-3501 to confirm availability.',
+    a: 'Blend Hair Boutique is open Monday 10:00 AM to 5:00 PM, Tuesday through Saturday 10:00 AM to 7:00 PM, and closed on Sunday. Hours may vary on holidays — we recommend checking our booking system or calling (754) 206-3501 to confirm availability.',
   },
   {
     q: 'What services does Blend Hair Boutique offer?',
@@ -83,6 +83,7 @@ const schema = {
     },
     {
       '@type': 'FAQPage',
+      '@id': `${CANONICAL}#faq`,
       mainEntity: faqs.map(({ q, a }) => ({
         '@type': 'Question',
         name: q,

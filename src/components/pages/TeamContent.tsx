@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
 import CTASection from '@/components/sections/CTASection'
@@ -62,7 +63,7 @@ export default function TeamContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 }}
                 >
-                  <div style={{ overflow: 'hidden', aspectRatio: '3/4', background: 'var(--bg-soft)', marginBottom: '1.75rem' }}>
+                  <Link href={`/team/${member.id}`} style={{ display: 'block', overflow: 'hidden', aspectRatio: '3/4', background: 'var(--bg-soft)', marginBottom: '1.75rem', textDecoration: 'none' }}>
                     <img
                       src={member.image}
                       alt={`${member.name} — ${td.specialty}`}
@@ -71,17 +72,24 @@ export default function TeamContent() {
                       onMouseEnter={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1.04)' }}
                       onMouseLeave={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1)' }}
                     />
-                  </div>
+                  </Link>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '0.4rem', flexWrap: 'wrap', gap: '0.5rem' }}>
-                      <h2 style={{ fontFamily: 'var(--serif)', fontSize: '1.8rem', fontWeight: 400, color: 'var(--ink)' }}>{member.name}</h2>
+                      <Link href={`/team/${member.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h2 style={{ fontFamily: 'var(--serif)', fontSize: '1.8rem', fontWeight: 400, color: 'var(--ink)' }}>{member.name}</h2>
+                      </Link>
                     </div>
                     <p style={{ fontSize: '0.82rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
                     <p style={{ fontSize: '0.8rem', color: 'var(--text-2)', marginBottom: '0.5rem', fontWeight: 300 }}>{t.languages}: {td.languages}</p>
                     <p style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>{td.bio}</p>
-                    <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
-                      {t.bookBtn}
-                    </a>
+                    <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                      <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.82rem' }}>
+                        View Profile
+                      </Link>
+                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
+                        {t.bookBtn}
+                      </a>
+                    </div>
                   </div>
                 </motion.article>
               )

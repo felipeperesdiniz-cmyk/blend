@@ -297,7 +297,7 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · All rights reserved · Plantation, Florida`,
       madeWith: 'Made with love · Brazilian touch',
       serviceLinks: ['Color & Balayage', 'Haircuts & Styling', 'Brazilian Blowout', 'Nails', 'Bridal & Events'],
-      quickLinks: ['Services', 'Gallery', 'Team', 'About', 'Contact', 'Gift Cards'],
+      quickLinks: ['Services', 'Gallery', 'Team', 'Resources', 'Gift Cards', 'About', 'Contact'],
     },
 
     teamData: [
@@ -671,7 +671,7 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · Todos os direitos reservados · Plantation, Florida`,
       madeWith: 'Feito com amor · toque brasileiro',
       serviceLinks: ['Coloração & Balayage', 'Cortes & Finalização', 'Escova Brasileira', 'Unhas', 'Noivas & Eventos'],
-      quickLinks: ['Serviços', 'Galeria', 'Equipe', 'Sobre', 'Contato', 'Vale-Presente'],
+      quickLinks: ['Serviços', 'Galeria', 'Equipe', 'Recursos', 'Vale-Presente', 'Sobre', 'Contato'],
     },
 
     teamData: [
@@ -1044,7 +1044,7 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · Todos los derechos reservados · Plantation, Florida`,
       madeWith: 'Hecho con amor · toque brasileño',
       serviceLinks: ['Coloración & Balayage', 'Cortes & Estilizado', 'Brushing Brasileño', 'Uñas', 'Novias & Eventos'],
-      quickLinks: ['Servicios', 'Galería', 'Equipo', 'Nosotros', 'Contacto', 'Tarjetas de Regalo'],
+      quickLinks: ['Servicios', 'Galería', 'Equipo', 'Recursos', 'Tarjetas de Regalo', 'Nosotros', 'Contacto'],
     },
 
     teamData: [

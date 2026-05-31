@@ -1,0 +1,28 @@
+Old URL,New URL,Redirect Type,Notes
+https://www.blendhairboutique.com/home,https://www.blendhairboutique.com/,301,Duplicate home path
+https://www.blendhairboutique.com/client-form,https://www.blendhairboutique.com/contact,301,Old Fresha client intake form
+https://www.blendhairboutique.com/thank-you,https://www.blendhairboutique.com/,301,Old Fresha thank-you page
+https://www.blendhairboutique.com/galleries,https://www.blendhairboutique.com/gallery,301,Old gallery hub URL
+https://www.blendhairboutique.com/gallery/3475-blendhairplantationflorida,https://www.blendhairboutique.com/gallery,301,Old gallery item (wildcard catch-all)
+https://www.blendhairboutique.com/portfolio/hair-color,https://www.blendhairboutique.com/hair-color-plantation,301,Old hair color portfolio hub
+https://www.blendhairboutique.com/portfolio/hair-color/140759-color-hair,https://www.blendhairboutique.com/hair-color-plantation,301,Old hair color portfolio item
+https://www.blendhairboutique.com/portfolio/hair-cut,https://www.blendhairboutique.com/haircuts-plantation-fl,301,Old haircut portfolio hub
+https://www.blendhairboutique.com/portfolio/hair-cut/140736-women-hair-cut,https://www.blendhairboutique.com/haircuts-plantation-fl,301,Old haircut portfolio item
+https://www.blendhairboutique.com/portfolio/hair-stylist,https://www.blendhairboutique.com/blowout-plantation-fl,301,Old blowout/styling portfolio hub
+https://www.blendhairboutique.com/portfolio/hair-stylist/140760-blow-dry,https://www.blendhairboutique.com/blowout-plantation-fl,301,Old blow dry portfolio item
+https://www.blendhairboutique.com/portfolio/smoothing-treatment,https://www.blendhairboutique.com/keratin-treatment-plantation,301,Old keratin/smoothing portfolio hub
+https://www.blendhairboutique.com/portfolio/smoothing-treatment/881601-smoothing-treatment,https://www.blendhairboutique.com/keratin-treatment-plantation,301,Old smoothing treatment item
+https://www.blendhairboutique.com/portfolio/eyebrows,https://www.blendhairboutique.com/micropigmentation-plantation-fl,301,Old eyebrows (microblading) portfolio hub
+https://www.blendhairboutique.com/portfolio/eyebrows/1027856-eyebrows,https://www.blendhairboutique.com/micropigmentation-plantation-fl,301,Old eyebrow portfolio item
+https://www.blendhairboutique.com/portfolio/lips,https://www.blendhairboutique.com/micropigmentation-plantation-fl,301,Old lip blushing portfolio hub
+https://www.blendhairboutique.com/portfolio/lips/1027859-lips,https://www.blendhairboutique.com/micropigmentation-plantation-fl,301,Old lip portfolio item
+https://www.blendhairboutique.com/portfolio/make-up,https://www.blendhairboutique.com/makeup-plantation-fl,301,Old makeup portfolio hub
+https://www.blendhairboutique.com/portfolio/make-up/140765-make-up,https://www.blendhairboutique.com/makeup-plantation-fl,301,Old makeup portfolio item
+https://www.blendhairboutique.com/portfolio/nails,https://www.blendhairboutique.com/nails-plantation-fl,301,Old nails portfolio hub
+https://www.blendhairboutique.com/portfolio/nails/140763-manicure-and-pedicure,https://www.blendhairboutique.com/nails-plantation-fl,301,Old nails portfolio item
+https://www.blendhairboutique.com/portfolio/waxing,https://www.blendhairboutique.com/waxing-plantation-fl,301,Old waxing portfolio hub
+https://www.blendhairboutique.com/portfolio/waxing/140805-facial-and-wax,https://www.blendhairboutique.com/waxing-plantation-fl,301,Old facial/wax portfolio item
+https://www.blendhairboutique.com/portfolio/tratament,https://www.blendhairboutique.com/blowout-plantation-fl,301,Old updo/styling portfolio hub (tratament = treatment/updo)
+https://www.blendhairboutique.com/portfolio/tratament/140761-updo,https://www.blendhairboutique.com/blowout-plantation-fl,301,Old updo portfolio item
+https://www.blendhairboutique.com/price-list,https://www.blendhairboutique.com/services,301,Old Fresha price list page
+https://www.blendhairboutique.com/testimonials,https://www.blendhairboutique.com/reviews,301,Old testimonials page

@@ -19,13 +19,13 @@ export const metadata: Metadata = {
 const personSchemas = TEAM.map((member) => ({
   '@context': 'https://schema.org',
   '@type': 'Person',
-  '@id': `${SITE_URL}/team#${member.id}`,
+  '@id': `${SITE_URL}/team/${member.id}#person`,
   name: member.name,
   jobTitle: member.specialty,
   worksFor: { '@id': `${SITE_URL}/#business` },
   knowsLanguage: member.languages.split(', '),
   description: member.bio,
-  url: `${SITE_URL}/team#${member.id}`,
+  url: `${SITE_URL}/team/${member.id}`,
 }))
 
 const breadcrumbSchema = {

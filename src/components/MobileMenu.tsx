@@ -30,13 +30,15 @@ export default function MobileMenu({ open, onClose }: Props) {
   const t = T[lang].nav
 
   const links = [
-    { label: t.services, href: '/services' },
-    { label: t.gallery,  href: '/gallery' },
-    { label: t.team,     href: '/team' },
-    { label: t.reviews,  href: '/reviews' },
-    { label: t.faq,      href: '/faq' },
-    { label: t.about,    href: '/about' },
-    { label: t.location, href: '/contact' },
+    { label: t.services,    href: '/services' },
+    { label: t.gallery,     href: '/gallery' },
+    { label: t.team,        href: '/team' },
+    { label: t.reviews,     href: '/reviews' },
+    { label: 'Resources',   href: '/blog' },
+    { label: t.faq,         href: '/faq' },
+    { label: 'Gift Cards',  href: '/gift-cards' },
+    { label: t.about,       href: '/about' },
+    { label: t.location,    href: '/contact' },
   ]
 
   return (

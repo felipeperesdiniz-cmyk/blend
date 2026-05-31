@@ -14,7 +14,7 @@ function TikTokIcon({ size = 15 }: { size?: number }) {
 }
 
 const year = new Date().getFullYear()
-const quickHrefs = ['/services', '/gallery', '/team', '/about', '/contact']
+const quickHrefs = ['/services', '/gallery', '/team', '/blog', '/gift-cards', '/about', '/contact']
 
 export default function Footer() {
   const { lang } = useLang()
@@ -22,8 +22,8 @@ export default function Footer() {
 
   const quickLinks = t.quickLinks.map((label, i) => ({
     label,
-    href: i < 5 ? quickHrefs[i] : BUSINESS.giftCardUrl,
-    external: i === 5,
+    href: quickHrefs[i] ?? '/',
+    external: false,
   }))
 
   const serviceHrefs = [
