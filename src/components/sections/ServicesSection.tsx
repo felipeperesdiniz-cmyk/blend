@@ -7,6 +7,8 @@ import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
+const MotionLink = motion(Link)
+
 export default function ServicesSection() {
   const { lang } = useLang()
   const t = T[lang].services
@@ -33,10 +35,8 @@ export default function ServicesSection() {
           </Link>
         </div>
 
-        <motion.a
-          href={BUSINESS.bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <MotionLink
+          href={`/services/${featuredService.id}`}
           className="svc-featured"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,9 +57,9 @@ export default function ServicesSection() {
             <h3 className="svc-featured__h3">{featuredData.title}</h3>
             <p className="svc-featured__benefit">{featuredData.benefit}</p>
             <p className="svc-featured__desc">{featuredData.description}</p>
-            <span className="svc-featured__cta">{t.bookNow}</span>
+            <span className="svc-featured__cta">{t.viewDetails}</span>
           </div>
-        </motion.a>
+        </MotionLink>
 
         <div className="svc-list">
           {listServices.map((s, i) => (
@@ -71,7 +71,7 @@ export default function ServicesSection() {
               viewport={{ once: true, amount: 0.01 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 }}
             >
-              <Link href={`/services#${s.id}`} className="svc-list__left" aria-label={`View ${listData[i].title} at Blend Hair Boutique`}>
+              <Link href={`/services/${s.id}`} className="svc-list__left" aria-label={`View ${listData[i].title} at Blend Hair Boutique`}>
                 <span className="svc-list__name">{listData[i].title}</span>
                 <span className="svc-list__cat">{s.category}</span>
               </Link>

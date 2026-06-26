@@ -118,7 +118,7 @@ export default function HairExtensionsPage() {
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '2.5rem' }}>A consultation is required before booking your extension appointment.</p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Consultation</a>
-              <Link href="/services#extensions" className="btn btn--outline">View Service Details</Link>
+              <Link href="/services/extensions" className="btn btn--outline">View Service Details</Link>
             </div>
           </div>
         </section>

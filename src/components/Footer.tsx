@@ -27,11 +27,11 @@ export default function Footer() {
   }))
 
   const serviceHrefs = [
-    '/services#color-balayage',
-    '/services#cuts-styling',
-    '/services#smoothing-keratin',
-    '/services#nails',
-    '/services#bridal-events',
+    '/services/haircuts',
+    '/services/color',
+    '/services/balayage-highlights',
+    '/services/smoothing',
+    '/services/nails',
   ]
 
   return (

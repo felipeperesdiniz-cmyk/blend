@@ -1,12 +1,11 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { SERVICES } from '@/data/services'
-import { BUSINESS } from '@/data/constants'
 import SectionHeader from '@/components/ui/SectionHeader'
 import CTASection from '@/components/sections/CTASection'
-import AnimatedSection from '@/components/ui/AnimatedSection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
@@ -45,72 +44,53 @@ export default function ServicesContent() {
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.p
+          <p
+            className="fade-in-up"
             style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
-            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
             {t.eyebrow}
-          </motion.p>
-          <motion.h1
-            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch' }}
-            initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+          </p>
+          <h1
+            className="fade-in-up"
+            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch', animationDelay: '0.15s' }}
           >
             <em style={{ fontStyle: 'italic' }}>{t.h1}</em>
-          </motion.h1>
-          <motion.p
-            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300 }}
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
+          </h1>
+          <p
+            className="fade-in-up"
+            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300, animationDelay: '0.4s' }}
           >
             {t.sub}
-          </motion.p>
+          </p>
         </div>
       </header>
 
-      <div>
-        {SERVICES.map((s, i) => {
-          const sd = servicesData[i]
-          return (
-            <section key={s.id} id={s.id} className="service-detail">
-              <div className="container">
-                <div className="service-detail__inner">
-                  <AnimatedSection delay={0.1}>
-                    <div className="service-detail__img">
-                      <img
-                        src={s.image}
-                        alt={`${sd.title} at Blend Hair Boutique, Plantation FL`}
-                        loading={i < 2 ? 'eager' : 'lazy'}
-                      />
-                    </div>
-                  </AnimatedSection>
-
-                  <AnimatedSection delay={0.25}>
-                    <div className="service-detail__body">
-                      <p className="service-detail__eyebrow">{sd.category}</p>
-                      <h2 className="service-detail__h2">{sd.title}</h2>
-                      <p className="service-detail__benefit">{sd.benefit}</p>
-                      <p className="service-detail__body" style={{ marginBottom: '1rem' }}>{sd.description}</p>
-                      <p className="service-detail__body">{sd.detail}</p>
-                      <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-                        <a
-                          href={BUSINESS.bookingUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn btn--primary"
-                        >
-                          {T[lang].cta.book}
-                        </a>
-                        <span style={{ fontSize: '0.78rem', color: 'var(--text-3)', fontStyle: 'italic', fontFamily: 'var(--serif)' }}>
-                          {sd.priceNote}
-                        </span>
-                      </div>
-                    </div>
-                  </AnimatedSection>
-                </div>
-              </div>
-            </section>
-          )
-        })}
-      </div>
+      <section className="section">
+        <div className="container">
+          <div className="services-grid">
+            {SERVICES.map((s, i) => {
+              const sd = servicesData[i]
+              return (
+                <Link key={s.id} href={`/services/${s.id}`} className="service-card">
+                  <div className="service-card__img-wrap">
+                    <img
+                      src={s.image}
+                      alt={`${sd.title} at Blend Hair Boutique, Plantation FL`}
+                      loading={i < 4 ? 'eager' : 'lazy'}
+                    />
+                  </div>
+                  <div className="service-card__body">
+                    <p className="service-card__category">{sd.category}</p>
+                    <h2 className="service-card__title">{sd.title}</h2>
+                    <p className="service-card__benefit">{sd.benefit}</p>
+                    <span className="service-card__cta">{t.viewDetails}</span>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      </section>
 
       <section className="section section--beige" id="faq">
         <div className="container" style={{ maxWidth: '820px' }}>

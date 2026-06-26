@@ -40,7 +40,7 @@ export default function Nav() {
             <li><Link href="/gallery"     className="nav__link">{t.gallery}</Link></li>
             <li><Link href="/team"        className="nav__link">{t.team}</Link></li>
             <li><Link href="/reviews"     className="nav__link">{t.reviews}</Link></li>
-            <li><Link href="/blog"        className="nav__link">Resources</Link></li>
+            <li><Link href="/blog"        className="nav__link">{t.resources}</Link></li>
           </ul>
 
           <Link href="/" className="nav__logo" aria-label="Blend Hair Boutique">
@@ -50,7 +50,7 @@ export default function Nav() {
           <div className="nav__actions">
             <ul className="nav__links nav__links--right">
               <li><Link href="/faq"         className="nav__link">{t.faq}</Link></li>
-              <li><Link href="/gift-cards"  className="nav__link">Gift Cards</Link></li>
+              <li><Link href="/gift-cards"  className="nav__link">{t.giftCards}</Link></li>
               <li><Link href="/about"       className="nav__link">{t.about}</Link></li>
               <li><Link href="/contact"     className="nav__link">{t.location}</Link></li>
             </ul>

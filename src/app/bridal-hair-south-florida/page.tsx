@@ -147,7 +147,7 @@ export default function BridalHairPage() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Bridal Consultation</a>
-              <Link href="/services#bridal-events" className="btn btn--outline">Bridal Service Details</Link>
+              <Link href="/services/styling" className="btn btn--outline">Bridal Service Details</Link>
             </div>
           </div>
         </section>

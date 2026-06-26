@@ -7,25 +7,25 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'Hair & Beauty Services | Blend Hair Boutique — Plantation, FL',
   description:
-    'Explore all services at Blend Hair Boutique in Plantation, FL: balayage, Brazilian blowout, keratin treatments, precision haircuts, nail services, facials, waxing, hair extensions, and bridal beauty packages.',
+    'Explore all services at Blend Hair Boutique in Plantation, FL: haircuts, color, balayage & highlights, styling, keratin smoothing, hair care, extensions, nails, brows, makeup, waxing, facials, and lashes.',
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
     title: 'Hair & Beauty Services | Blend Hair Boutique — Plantation, FL',
-    description: 'Explore all services at Blend Hair Boutique in Plantation, FL: balayage, Brazilian blowout, keratin treatments, precision haircuts, nail services, facials, waxing, hair extensions, and bridal beauty.',
+    description: 'Explore all services at Blend Hair Boutique in Plantation, FL: haircuts, color, balayage & highlights, styling, keratin smoothing, hair care, extensions, nails, brows, makeup, waxing, facials, and lashes.',
     url: `${SITE_URL}/services`,
   },
 }
 
-const serviceSchemas = SERVICES.map((s) => ({
+const itemListSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': `${SITE_URL}/services#${s.id}`,
-  name: s.title,
-  description: s.description,
-  provider: { '@id': `${SITE_URL}/#business` },
-  areaServed: { '@type': 'City', name: 'Plantation, FL' },
-  url: `${SITE_URL}/services#${s.id}`,
-}))
+  '@type': 'ItemList',
+  itemListElement: SERVICES.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.title,
+    url: `${SITE_URL}/services/${s.id}`,
+  })),
+}
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -49,9 +49,7 @@ const breadcrumbSchema = {
 export default function ServicesPage() {
   return (
     <>
-      {serviceSchemas.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      ))}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <ServicesContent />

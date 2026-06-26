@@ -124,7 +124,7 @@ export default function KeratinTreatmentPage() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online</a>
-              <Link href="/services#smoothing-keratin" className="btn btn--outline">Learn More</Link>
+              <Link href="/services/smoothing" className="btn btn--outline">Learn More</Link>
             </div>
           </div>
         </section>

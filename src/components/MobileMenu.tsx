@@ -34,9 +34,9 @@ export default function MobileMenu({ open, onClose }: Props) {
     { label: t.gallery,     href: '/gallery' },
     { label: t.team,        href: '/team' },
     { label: t.reviews,     href: '/reviews' },
-    { label: 'Resources',   href: '/blog' },
+    { label: t.resources,   href: '/blog' },
     { label: t.faq,         href: '/faq' },
-    { label: 'Gift Cards',  href: '/gift-cards' },
+    { label: t.giftCards,   href: '/gift-cards' },
     { label: t.about,       href: '/about' },
     { label: t.location,    href: '/contact' },
   ]

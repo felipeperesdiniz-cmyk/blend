@@ -12,12 +12,20 @@ import type { NextConfig } from 'next'
 //   • Unused browser APIs   → Permissions-Policy
 //   • Cross-domain data     → X-Permitted-Cross-Domain-Policies
 //
+// Next.js dev mode wraps webpack modules with eval() for HMR / fast refresh —
+// without 'unsafe-eval' the browser silently blocks all client-side script
+// execution in dev (no errors, no hydration, no interactivity). Production
+// builds use real script files and never call eval(), so this is scoped to
+// development only and the production CSP stays maximally strict.
+const isDev = process.env.NODE_ENV !== 'production'
+
 const CSP = [
   "default-src 'self'",
 
   // Next.js requires 'unsafe-inline' for its injected __NEXT_DATA__ bootstrap
   // script and for the JSON-LD <script> tags used throughout the site.
-  "script-src 'self' 'unsafe-inline'",
+  // 'unsafe-eval' is added only in dev — see comment above.
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
 
   // Framer-motion and JSX inline style props require 'unsafe-inline'.
   // Google Fonts stylesheet is loaded from fonts.googleapis.com.

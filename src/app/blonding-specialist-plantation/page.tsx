@@ -119,7 +119,7 @@ export default function BlondingSpecialistPage() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online</a>
-              <Link href="/services#color-balayage" className="btn btn--outline">View Color Services</Link>
+              <Link href="/services/balayage-highlights" className="btn btn--outline">View Color Services</Link>
             </div>
           </div>
         </section>
