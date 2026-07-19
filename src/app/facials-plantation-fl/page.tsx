@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/facials-plantation-fl`
 export const metadata: Metadata = {
   title: 'Facials in Plantation, FL | Blend Hair Boutique',
   description:
-    'Custom facials, hydrating treatments, and skin care services in Plantation, Florida at Blend Hair Boutique. Personalized to your skin type. 4.9★ · 1,218 reviews. Book your facial appointment online.',
+    'Custom facials, hydrating treatments, and skin care services in Plantation, Florida at Blend Hair Boutique. Personalized to your skin type. 4.9★ · 1,230+ reviews. Book your facial appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Facials in Plantation, FL | Blend Hair Boutique',
@@ -188,7 +188,7 @@ export default function FacialsPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Book your facial<br /><em>in Plantation, FL</em>
             </h2>

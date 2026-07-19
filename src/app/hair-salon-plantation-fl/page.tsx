@@ -9,11 +9,11 @@ const CANONICAL = `${SITE_URL}/hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Hair Salon Plantation FL | Best Hair Salon Near Me | Blend Hair Boutique',
   description:
-    'Blend Hair Boutique is Plantation\'s most-loved luxury hair salon — 4.9★ · 1,218 Google reviews. Balayage, haircuts, keratin treatments, nails, facials, waxing & more. 10035 Cleary Blvd. Book online 24/7.',
+    'Blend Hair Boutique is Plantation\'s most-loved luxury hair salon — 4.9★ · 1,230+ Google reviews. Balayage, haircuts, keratin treatments, nails, facials, waxing & more. 10035 Cleary Blvd. Book online 24/7.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Hair Salon Plantation FL | Blend Hair Boutique',
-    description: 'Plantation\'s most-loved luxury hair salon. 4.9★ · 1,218 Google reviews. Balayage, cuts, keratin, nails, facials & more. Book online 24/7.',
+    description: 'Plantation\'s most-loved luxury hair salon. 4.9★ · 1,230+ Google reviews. Balayage, cuts, keratin, nails, facials & more. Book online 24/7.',
     url: CANONICAL,
   },
 }
@@ -108,7 +108,7 @@ export default function HairSalonPlantationPage() {
               The Best Hair Salon<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,218 Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences — delivered with Brazilian warmth and precision.
+              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,230+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences — delivered with Brazilian warmth and precision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -127,7 +127,7 @@ export default function HairSalonPlantationPage() {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', alignItems: 'center' }}>
               {[
                 '4.9 ★ Google Rating',
-                '1,218 Verified Reviews',
+                '1,230+ Verified Reviews',
                 'Brazilian Specialists',
                 'Open Since 2012',
                 'Plantation, FL 33324',
@@ -212,7 +212,7 @@ export default function HairSalonPlantationPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: '4.9 Stars · 1,218 Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought — they\'re earned, one client at a time, over more than a decade of service.' },
+                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought — they\'re earned, one client at a time, over more than a decade of service.' },
                 { title: 'Brazilian Expertise', body: 'Our team brings the precision, warmth, and hair culture of Brazil to Plantation, FL. Brazilian stylists are world-renowned for their mastery of color, texture, and smoothing techniques.' },
                 { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish — ensuring every client can communicate exactly what they want and feel completely understood.' },
                 { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup — all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },
@@ -260,7 +260,7 @@ export default function HairSalonPlantationPage() {
         {/* CTA */}
         <section className="section section--dark">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem', color: 'var(--white)' }}>
               Plantation's luxury salon<br /><em>is ready for you.</em>
             </h2>

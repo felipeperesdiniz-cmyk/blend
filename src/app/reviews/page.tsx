@@ -6,13 +6,13 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/reviews`
 
 export const metadata: Metadata = {
-  title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,218 Google Reviews in Plantation, FL',
+  title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,230+ Google Reviews in Plantation, FL',
   description:
-    'Read what Plantation, FL clients say about Blend Hair Boutique. 4.9★ rated across 1,218 Google reviews. Balayage, haircuts, keratin, nails, and more. See why we\'re Broward\'s most-loved salon.',
+    'Read what Plantation, FL clients say about Blend Hair Boutique. 4.9★ rated across 1,230+ Google reviews. Balayage, haircuts, keratin, nails, and more. See why we\'re Broward\'s most-loved salon.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,218 Google Reviews',
-    description: 'See why Blend Hair Boutique in Plantation, FL has a 4.9★ rating from 1,218 Google reviews. Read client testimonials and book your visit.',
+    title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,230+ Google Reviews',
+    description: 'See why Blend Hair Boutique in Plantation, FL has a 4.9★ rating from 1,230+ Google reviews. Read client testimonials and book your visit.',
     url: CANONICAL,
   },
 }
@@ -41,7 +41,7 @@ const schema = {
       '@id': `${CANONICAL}#rating`,
       itemReviewed: { '@id': `${SITE_URL}/#business` },
       ratingValue: '4.9',
-      reviewCount: '1218',
+      reviewCount: '1230',
       bestRating: '5',
       worstRating: '1',
     },
@@ -140,7 +140,7 @@ export default function ReviewsPage() {
               What Our <em>Clients</em> Say
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique has earned a 4.9-star rating from over 1,218 Google reviews — not through advertising, but through consistent, exceptional work delivered one client at a time since 2012.
+              Blend Hair Boutique has earned a 4.9-star rating from over 1,230 Google reviews — not through advertising, but through consistent, exceptional work delivered one client at a time since 2012.
             </p>
           </div>
         </header>
@@ -156,7 +156,7 @@ export default function ReviewsPage() {
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
               <div style={{ textAlign: 'center' }}>
-                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>1,218</p>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>1,230+</p>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Verified Reviews</p>
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
@@ -209,7 +209,7 @@ export default function ReviewsPage() {
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
             <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>On Google</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
-              Read All 1,218<br /><em>Google Reviews</em>
+              Read All 1,230+<br /><em>Google Reviews</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Every one of our reviews is real, verified, and earned. See what Broward County clients say about Blend Hair Boutique on Google.
@@ -234,7 +234,7 @@ export default function ReviewsPage() {
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
             <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
-              Join 1,218+ Happy Clients
+              Join 1,230+ Happy Clients
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Your turn to experience<br /><em>the Blend difference.</em>

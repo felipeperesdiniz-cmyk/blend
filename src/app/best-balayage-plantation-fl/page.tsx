@@ -9,12 +9,12 @@ const CANONICAL = `${SITE_URL}/best-balayage-plantation-fl`
 export const metadata: Metadata = {
   title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',
   description:
-    'Looking for the best balayage in Plantation, FL? Blend Hair Boutique has 1,218 Google reviews and a 4.9★ rating. Expert hand-painted balayage by certified color specialists. Book online.',
+    'Looking for the best balayage in Plantation, FL? Blend Hair Boutique has 1,230+ Google reviews and a 4.9★ rating. Expert hand-painted balayage by certified color specialists. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',
     description:
-      'Plantation\'s top-rated balayage salon. 1,218 Google reviews · 4.9★ · Expert hand-painted color by certified colorists. Book your balayage appointment at Blend Hair Boutique.',
+      'Plantation\'s top-rated balayage salon. 1,230+ Google reviews · 4.9★ · Expert hand-painted color by certified colorists. Book your balayage appointment at Blend Hair Boutique.',
     url: CANONICAL,
   },
 }
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Why is Blend Hair Boutique considered one of the best balayage salons in Plantation?',
-    a: 'Blend has a 4.9-star rating across over 1,218 Google reviews — the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.',
+    a: 'Blend has a 4.9-star rating across over 1,230 Google reviews — the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.',
   },
   {
     q: 'How do I know if my hair is a good candidate for balayage?',
@@ -86,7 +86,7 @@ export default function BestBalayagePage() {
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
-              4.9★ · 1,218 Google Reviews · Plantation, FL
+              4.9★ · 1,230+ Google Reviews · Plantation, FL
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Balayage<br /><em>in Plantation, FL</em>
@@ -213,7 +213,7 @@ export default function BestBalayagePage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Book your balayage<br /><em>at Blend today</em>
             </h2>

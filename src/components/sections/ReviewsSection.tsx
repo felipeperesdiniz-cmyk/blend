@@ -86,7 +86,7 @@ export default function ReviewsSection() {
         >
           <span className="reviews-rating-strip__stars">★★★★★</span>
           <span className="reviews-rating-strip__text">
-            <strong>4.9</strong> &nbsp;·&nbsp; 1,218 {t.googleRating}
+            <strong>4.9</strong> &nbsp;·&nbsp; 1,230+ {t.googleRating}
           </span>
         </motion.div>
 

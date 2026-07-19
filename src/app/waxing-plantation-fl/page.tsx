@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/waxing-plantation-fl`
 export const metadata: Metadata = {
   title: 'Waxing in Plantation, FL | Eyebrow Waxing & Body Waxing | Blend Hair Boutique',
   description:
-    'Professional waxing services in Plantation, Florida — eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,218 reviews. Book online.',
+    'Professional waxing services in Plantation, Florida — eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Waxing in Plantation, FL | Blend Hair Boutique',
@@ -188,7 +188,7 @@ export default function WaxingPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Book your waxing<br /><em>in Plantation, FL</em>
             </h2>

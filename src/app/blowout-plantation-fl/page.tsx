@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/blowout-plantation-fl`
 export const metadata: Metadata = {
   title: 'Blowout in Plantation, FL | Blend Hair Boutique',
   description:
-    'Professional blowout and styling services in Plantation, Florida. Smooth, voluminous, or beachy wave blowouts at Blend Hair Boutique. 4.9★ · 1,218 reviews. Walk-in friendly. Book online.',
+    'Professional blowout and styling services in Plantation, Florida. Smooth, voluminous, or beachy wave blowouts at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Walk-in friendly. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Blowout in Plantation, FL | Blend Hair Boutique',
@@ -188,7 +188,7 @@ export default function BlowoutPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Book your blowout<br /><em>in Plantation, FL</em>
             </h2>

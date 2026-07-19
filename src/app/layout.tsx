@@ -150,7 +150,7 @@ const globalSchema = {
       aggregateRating: {
         '@type': 'AggregateRating',
         ratingValue: '4.9',
-        reviewCount: '1218',
+        reviewCount: '1230',
         bestRating: '5',
         worstRating: '1',
       },

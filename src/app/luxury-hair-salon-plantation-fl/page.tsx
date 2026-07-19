@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/luxury-hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Luxury Hair Salon in Plantation, FL | Blend Hair Boutique',
   description:
-    'Blend Hair Boutique is a luxury hair salon in Plantation, Florida offering world-class balayage, color, keratin treatments, extensions, and bridal beauty. 4.9★ · 1,218 reviews. Book online.',
+    'Blend Hair Boutique is a luxury hair salon in Plantation, Florida offering world-class balayage, color, keratin treatments, extensions, and bridal beauty. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Luxury Hair Salon in Plantation, FL | Blend Hair Boutique',
@@ -189,7 +189,7 @@ export default function LuxuryHairSalonPage() {
           <div className="container" style={{ maxWidth: '820px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', textAlign: 'center' }}>
               {[
-                { stat: '1,218+', label: 'Five-Star Google Reviews' },
+                { stat: '1,230+', label: 'Five-Star Google Reviews' },
                 { stat: '4.9★', label: 'Average Google Rating' },
                 { stat: 'Est. 2012', label: 'Years Serving South Florida' },
               ].map((s) => (
@@ -233,7 +233,7 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Ready to experience<br /><em>Plantation's most loved salon?</em>
             </h2>

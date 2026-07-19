@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/haircuts-plantation-fl`
 export const metadata: Metadata = {
   title: 'Haircuts in Plantation, FL | Blend Hair Boutique',
   description:
-    'Precision haircuts for women and men in Plantation, Florida at Blend Hair Boutique. Lived-in layers, bobs, curtain bangs, blunt cuts, and custom styling by expert stylists. 4.9★ · 1,218 reviews. Book online.',
+    'Precision haircuts for women and men in Plantation, Florida at Blend Hair Boutique. Lived-in layers, bobs, curtain bangs, blunt cuts, and custom styling by expert stylists. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Haircuts in Plantation, FL | Blend Hair Boutique',
@@ -213,7 +213,7 @@ export default function HaircutsPlantationPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,218 Google Reviews</p>
+            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Ready for your best<br /><em>haircut in Plantation?</em>
             </h2>
