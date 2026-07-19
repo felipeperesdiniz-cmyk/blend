@@ -568,8 +568,8 @@ export const T = {
       },
       testimonial: {
         eyebrow: 'Client Story',
-        quote: 'I’ve been to many salons in South Florida and Blend is simply on another level. My balayage looked effortlessly natural and the color lasted beautifully. I finally found my salon.',
-        author: 'Mariana T. · Balayage',
+        quote: 'I luckily landed in Beatriz’s hands after many failed attempts with hairstylists. Beatriz restored my hair from highlights gone wrong — she does the best balayage in town.',
+        author: 'Nashua S. · Balayage',
       },
     },
 
@@ -582,11 +582,11 @@ export const T = {
     },
 
     reviewsData: [
-      { quote: "I got a balayage done with Beatriz as well as a haircut and I can't thank her enough. She listened to my concerns and did exactly what I wanted, which is hard to find in a hairstylist.", author: 'Melissa R.', service: 'Balayage & Haircut' },
-      { quote: 'Roger and his assistant do an amazing job!!!', author: 'Lynn R.', service: 'Hair Color & Style' },
-      { quote: 'Really like the way Debora cuts and styles my hair. Everybody is really nice.', author: 'Doug M.', service: 'Haircut & Style' },
-      { quote: 'Nana and Olivia always make me feel welcome and take great care of me.', author: 'Kris S.', service: 'Color & Style' },
-      { quote: 'I love the cut and the color. Lea really listened to what I wanted and delivered on and exceeded my expectations.', author: 'Pamela B.', service: 'Haircut & Color' },
+      { quote: '2nd time at this salon. Roger has magic hands! The first time I came I fell in love, returned 4 months later and fell in love all over again! Roger is an artist and does exactly what you ask, if not better. 10/10', author: 'Miliani C.', service: 'Hair Color & Style' },
+      { quote: 'Beatriz always does a great job and makes me feel so confident with my hair. Super professional, friendly, and talented. Highly recommend!', author: 'Mayra D.', service: 'Color & Haircut' },
+      { quote: 'Five stars all the way! Nana did an amazing job on my hair and brought all of my highlights back to life. She is a true artist and everybody at the salon is so amazing and nice.', author: 'Kat E.', service: 'Highlights' },
+      { quote: "I got my hair cut before an event and Lea understood the assignment — giving me the fresh layered look I've been looking for. Worth every dollar.", author: 'Sarah J.', service: 'Haircut & Blowout' },
+      { quote: "Deborah did my cut and blow dry and I'm very pleased with how it turned out! I will definitely be returning and would recommend this salon.", author: 'Megan G.', service: 'Haircut & Blow Dry' },
     ],
 
     cta: {
@@ -1372,8 +1372,8 @@ export const T = {
       },
       testimonial: {
         eyebrow: 'História da Cliente',
-        quote: 'Já fui a muitos salões no Sul da Flórida e o Blend é simplesmente outro nível. Meu balayage ficou naturalmente impecável e a cor durou muito tempo. Finalmente encontrei meu salão.',
-        author: 'Mariana T. · Balayage',
+        quote: 'Tive a sorte de cair nas mãos da Beatriz depois de muitas tentativas frustradas com outros cabeleireiros. A Beatriz recuperou meu cabelo de luzes que deram errado — ela faz o melhor balayage da cidade.',
+        author: 'Nashua S. · Balayage',
       },
     },
 
@@ -1386,11 +1386,11 @@ export const T = {
     },
 
     reviewsData: [
-      { quote: 'Fiz um balayage com a Beatriz e também um corte, e não consigo agradecer o suficiente. Ela ouviu minhas preocupações e fez exatamente o que eu queria, algo difícil de encontrar em uma cabeleireira.', author: 'Melissa R.', service: 'Balayage & Corte' },
-      { quote: 'O Roger e a assistente dele fazem um trabalho incrível!!!', author: 'Lynn R.', service: 'Coloração & Penteado' },
-      { quote: 'Adoro como a Debora corta e penteia meu cabelo. Todo mundo é muito simpático.', author: 'Doug M.', service: 'Corte & Penteado' },
-      { quote: 'A Nana e a Olivia sempre me fazem sentir bem-vinda e cuidam muito bem de mim.', author: 'Kris S.', service: 'Coloração & Penteado' },
-      { quote: 'Adorei o corte e a cor. A Lea realmente ouviu o que eu queria e superou minhas expectativas.', author: 'Pamela B.', service: 'Corte & Coloração' },
+      { quote: 'Segunda vez neste salão. O Roger tem mãos mágicas! Na primeira vez me apaixonei, voltei 4 meses depois e me apaixonei de novo! O Roger é um artista e faz exatamente o que você pede, ou melhor ainda. 10/10', author: 'Miliani C.', service: 'Coloração & Penteado' },
+      { quote: 'A Beatriz sempre faz um trabalho incrível e me deixa muito confiante com meu cabelo. Super profissional, simpática e talentosa. Recomendo muito!', author: 'Mayra D.', service: 'Coloração & Corte' },
+      { quote: 'Cinco estrelas em tudo! A Nana fez um trabalho incrível no meu cabelo e devolveu a vida às minhas luzes. Ela é uma verdadeira artista e todo mundo no salão é maravilhoso e gentil.', author: 'Kat E.', service: 'Luzes' },
+      { quote: 'Cortei o cabelo antes de um evento e a Lea entendeu perfeitamente — me deu o corte em camadas fresquinho que eu estava procurando. Valeu cada centavo.', author: 'Sarah J.', service: 'Corte & Escova' },
+      { quote: 'A Deborah fez meu corte e escova e adorei o resultado! Com certeza vou voltar e recomendo este salão.', author: 'Megan G.', service: 'Corte & Escova' },
     ],
 
     cta: {
@@ -2175,8 +2175,8 @@ export const T = {
       },
       testimonial: {
         eyebrow: 'Historia de Clienta',
-        quote: 'He ido a muchos salones en el sur de Florida y Blend simplemente está en otro nivel. Mi balayage quedó naturalmente impecable y el color duró muchísimo. Por fin encontré mi salón.',
-        author: 'Mariana T. · Balayage',
+        quote: 'Tuve la suerte de caer en manos de Beatriz después de muchos intentos fallidos con otros estilistas. Beatriz recuperó mi cabello de unas mechas mal hechas — hace el mejor balayage de la ciudad.',
+        author: 'Nashua S. · Balayage',
       },
     },
 
@@ -2189,11 +2189,11 @@ export const T = {
     },
 
     reviewsData: [
-      { quote: 'Me hice un balayage con Beatriz y también un corte, y no puedo agradecerle lo suficiente. Escuchó mis inquietudes e hizo exactamente lo que quería, algo difícil de encontrar en una estilista.', author: 'Melissa R.', service: 'Balayage & Corte' },
-      { quote: '¡Roger y su asistente hacen un trabajo increíble!', author: 'Lynn R.', service: 'Color & Peinado' },
-      { quote: 'Me encanta cómo Debora corta y peina mi cabello. Todos son muy amables.', author: 'Doug M.', service: 'Corte & Peinado' },
-      { quote: 'Nana y Olivia siempre me hacen sentir bienvenida y me cuidan muy bien.', author: 'Kris S.', service: 'Color & Peinado' },
-      { quote: 'Me encantó el corte y el color. Lea realmente escuchó lo que quería y superó mis expectativas.', author: 'Pamela B.', service: 'Corte & Color' },
+      { quote: 'Segunda vez en este salón. ¡Roger tiene manos mágicas! La primera vez me enamoré, volví 4 meses después ¡y me enamoré otra vez! Roger es un artista y hace exactamente lo que pides, o mejor. 10/10', author: 'Miliani C.', service: 'Color & Peinado' },
+      { quote: 'Beatriz siempre hace un trabajo increíble y me hace sentir muy segura con mi cabello. Súper profesional, amable y talentosa. ¡La recomiendo totalmente!', author: 'Mayra D.', service: 'Color & Corte' },
+      { quote: '¡Cinco estrellas en todo! Nana hizo un trabajo increíble en mi cabello y devolvió la vida a mis mechas. Es una verdadera artista y todos en el salón son maravillosos y amables.', author: 'Kat E.', service: 'Mechas' },
+      { quote: 'Me corté el cabello antes de un evento y Lea entendió perfectamente — me dio el look en capas fresco que estaba buscando. Valió cada dólar.', author: 'Sarah J.', service: 'Corte & Brushing' },
+      { quote: 'Deborah hizo mi corte y brushing ¡y quedé encantada con el resultado! Sin duda volveré y recomiendo este salón.', author: 'Megan G.', service: 'Corte & Brushing' },
     ],
 
     cta: {
