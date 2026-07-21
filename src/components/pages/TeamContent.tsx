@@ -8,6 +8,8 @@ import CTASection from '@/components/sections/CTASection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
+const OWNER_IDS = ['juliana', 'fernanda']
+
 export default function TeamContent() {
   const { lang } = useLang()
   const t = T[lang].pages.team
@@ -97,9 +99,11 @@ export default function TeamContent() {
                       <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.82rem' }}>
                         View Profile
                       </Link>
-                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
-                        {t.bookBtn}
-                      </a>
+                      {!OWNER_IDS.includes(member.id) && (
+                        <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
+                          {t.bookBtn}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </motion.article>

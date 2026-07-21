@@ -6,6 +6,8 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
 
+const OWNER_IDS = ['juliana', 'fernanda']
+
 export default function TeamSection() {
   return (
     <section className="section section--ivory2" id="team">
@@ -40,26 +42,29 @@ export default function TeamSection() {
               <div className="team-card__body">
                 <h3 className="team-card__name">{member.name}</h3>
                 <p className="team-card__specialty">{member.specialty}</p>
-                {member.instagram && (
+                {member.instagram ? (
                   <a
                     className="team-card__langs"
                     href={member.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none' }}
                   >
                     <Instagram size={15} />
                     @{member.instagram.replace(/\/+$/, '').split('/').pop()}
                   </a>
+                ) : (
+                  <span className="team-card__langs" aria-hidden="true" />
                 )}
-                <a
-                  href={BUSINESS.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="team-card__book"
-                >
-                  Book an Appointment
-                </a>
+                {!OWNER_IDS.includes(member.id) && (
+                  <a
+                    href={BUSINESS.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="team-card__book"
+                  >
+                    Book an Appointment
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}
