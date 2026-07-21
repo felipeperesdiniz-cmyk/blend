@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { TEAM } from '@/data/team'
@@ -39,7 +40,18 @@ export default function TeamSection() {
               <div className="team-card__body">
                 <h3 className="team-card__name">{member.name}</h3>
                 <p className="team-card__specialty">{member.specialty}</p>
-                <p className="team-card__langs">Languages: {member.languages}</p>
+                {member.instagram && (
+                  <a
+                    className="team-card__langs"
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', textDecoration: 'none' }}
+                  >
+                    <Instagram size={15} />
+                    @{member.instagram.replace(/\/+$/, '').split('/').pop()}
+                  </a>
+                )}
                 <a
                   href={BUSINESS.bookingUrl}
                   target="_blank"

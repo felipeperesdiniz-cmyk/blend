@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
@@ -80,7 +81,17 @@ export default function TeamContent() {
                       </Link>
                     </div>
                     <p style={{ fontSize: '0.82rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
-                    <p style={{ fontSize: '0.8rem', color: 'var(--text-2)', marginBottom: '0.5rem', fontWeight: 300 }}>{t.languages}: {td.languages}</p>
+                    {member.instagram && (
+                      <a
+                        href={member.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: 'var(--text-2)', marginBottom: '0.5rem', fontWeight: 300, textDecoration: 'none' }}
+                      >
+                        <Instagram size={15} />
+                        @{member.instagram.replace(/\/+$/, '').split('/').pop()}
+                      </a>
+                    )}
                     <p style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>{td.bio}</p>
                     <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                       <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.82rem' }}>

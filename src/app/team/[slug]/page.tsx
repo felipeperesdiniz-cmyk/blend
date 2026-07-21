@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { Instagram } from 'lucide-react'
 import { BUSINESS } from '@/data/constants'
 import { TEAM } from '@/data/team'
 
@@ -164,6 +165,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
         worksFor: { '@id': `${SITE_URL}/#business` },
         image: member.image,
         knowsLanguage: member.languages.split(', '),
+        ...(member.instagram ? { sameAs: [member.instagram] } : {}),
         url: canonical,
       },
       {
@@ -199,9 +201,17 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '0.5rem', fontWeight: 300 }}>
               {member.specialty}
             </p>
-            <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em', fontFamily: 'var(--sans)', marginBottom: '2rem' }}>
-              Languages: {member.languages}
-            </p>
+            {member.instagram && (
+              <a
+                href={member.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em', fontFamily: 'var(--sans)', marginBottom: '2rem', textDecoration: 'none' }}
+              >
+                <Instagram size={16} />
+                @{member.instagram.replace(/\/+$/, '').split('/').pop()}
+              </a>
+            )}
             <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
               Book with {shortName}
             </a>

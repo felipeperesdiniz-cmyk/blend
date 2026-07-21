@@ -4,6 +4,7 @@ export interface TeamMember {
   specialty: string
   bio: string
   languages: string
+  instagram?: string
   image: string
 }
 
@@ -31,6 +32,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'With over 20 years in the beauty industry and part of Blend since day one, Debora specializes in hair color and precision haircuts.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/hairbydebora.us',
     image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -39,6 +41,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Brazil and with Blend for over six years, Léa is known for her expertise in hair color — especially blondes — precision curly cuts, and hair extensions.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/leaaraujooficial',
     image: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -47,6 +50,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Colombia and with Blend since 2020, Bia specializes in hair color and precision haircuts, known for her meticulous detail and gentle approach.',
     languages: 'English, Spanish',
+    instagram: 'https://www.instagram.com/beatrizbalderramastylist',
     image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -55,6 +59,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Brazil, Nana specializes in hair color, styling, smoothing treatments, and elegant updos, always with a thoughtful and detail-oriented approach.',
     languages: 'English, Spanish, Portuguese',
+    instagram: 'https://www.instagram.com/nanareishairstylist',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -63,6 +68,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Brazil and with Blend since 2022, Roger specializes in hair color, precision haircuts, smoothing treatments, extensions, and men’s grooming.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/rogeriogalego11',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -71,6 +77,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Brazil and with Blend since 2022, Ketty specializes in color correction, highlights, hair extensions, and is the salon’s perm specialist.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/ketty.hairstylist',
     image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -79,6 +86,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Originally from Brazil, Jeniffer specializes in hair color, precision haircuts, smoothing treatments, and professional makeup — and is especially known for her beautiful blowouts.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/jeniffertorreshair',
     image: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -87,6 +95,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'A Florida native, Tabby specializes in hair color, precision haircuts, styling, and men’s grooming, personally performing every step of each appointment.',
     languages: 'English',
+    instagram: 'https://www.instagram.com/saintzstyles',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -103,6 +112,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Wax & Nail Specialist',
     bio: 'Part of Blend since the very beginning, Nilza brings decades of experience in waxing and nail services, combining exceptional skill with remarkable efficiency.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/nilza.brazil',
     image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -119,6 +129,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Eyebrow & Facial Specialist',
     bio: 'Originally from Brazil, Adriana enhances each client’s natural beauty through personalized eyebrow and facial services, with a meticulous eye for detail.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/adriana.eyebrows',
     image: 'https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=600&q=80',
   },
   {
@@ -127,6 +138,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Facial Specialist',
     bio: 'Originally from Brazil, Fran is passionate about skin health and takes a personalized approach to every facial, carefully evaluating each client’s unique skin needs.',
     languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/fran_aesthetics',
     image: 'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&w=600&q=80',
   },
   {
