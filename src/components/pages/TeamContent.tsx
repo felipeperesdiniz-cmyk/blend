@@ -54,9 +54,42 @@ export default function TeamContent() {
 
       <section className="section">
         <div className="container">
+          <div className="founders">
+            <div className="founders__label"><span>Ownership</span></div>
+            <div className="founders-grid">
+              {TEAM.map((member, i) => ({ member, td: teamData[i] }))
+                .filter(({ member }) => OWNER_IDS.includes(member.id))
+                .map(({ member, td }, idx) => (
+                  <motion.article
+                    key={member.id}
+                    id={member.id}
+                    className="founder-card"
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.01 }}
+                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
+                  >
+                    <Link href={`/team/${member.id}`} className="founder-card__img-wrap" style={{ textDecoration: 'none' }}>
+                      <img src={member.image} alt={`${member.name} — ${td.specialty}`} loading="lazy" />
+                    </Link>
+                    <div className="founder-card__body">
+                      <p className="founder-card__eyebrow">{member.id === 'juliana' ? 'Founder' : 'Co-Owner'}</p>
+                      <Link href={`/team/${member.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h2 className="founder-card__name">{member.name}</h2>
+                      </Link>
+                      <p className="founder-card__role">{td.specialty}</p>
+                      <p className="founder-card__bio">{td.bio}</p>
+                    </div>
+                  </motion.article>
+                ))}
+            </div>
+          </div>
+
+          <div className="team__label"><span>The Team</span></div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
-            {TEAM.map((member, i) => {
-              const td = teamData[i]
+            {TEAM.map((member, i) => ({ member, td: teamData[i], i }))
+              .filter(({ member }) => !OWNER_IDS.includes(member.id))
+              .map(({ member, td, i }) => {
               return (
                 <motion.article
                   key={member.id}
@@ -99,11 +132,9 @@ export default function TeamContent() {
                       <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.82rem' }}>
                         View Profile
                       </Link>
-                      {!OWNER_IDS.includes(member.id) && (
-                        <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
-                          {t.bookBtn}
-                        </a>
-                      )}
+                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
+                        {t.bookBtn}
+                      </a>
                     </div>
                   </div>
                 </motion.article>

@@ -8,6 +8,9 @@ import { BUSINESS } from '@/data/constants'
 
 const OWNER_IDS = ['juliana', 'fernanda']
 
+const founders = TEAM.filter((m) => OWNER_IDS.includes(m.id))
+const staff = TEAM.filter((m) => !OWNER_IDS.includes(m.id))
+
 export default function TeamSection() {
   return (
     <section className="section section--ivory2" id="team">
@@ -22,8 +25,39 @@ export default function TeamSection() {
           </Link>
         </div>
 
+        <div className="founders">
+          <div className="founders__label"><span>Ownership</span></div>
+          <div className="founders-grid">
+            {founders.map((member, i) => (
+              <motion.article
+                key={member.id}
+                className="founder-card"
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.01 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.1 }}
+              >
+                <div className="founder-card__img-wrap">
+                  <img
+                    src={member.image}
+                    alt={`${member.name} — ${member.specialty} at Blend Hair Boutique`}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="founder-card__body">
+                  <p className="founder-card__eyebrow">{member.id === 'juliana' ? 'Founder' : 'Co-Owner'}</p>
+                  <h3 className="founder-card__name">{member.name}</h3>
+                  <p className="founder-card__role">{member.specialty}</p>
+                  <p className="founder-card__bio">{member.bio}</p>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+
+        <div className="team__label"><span>The Team</span></div>
         <div className="team-grid">
-          {TEAM.map((member, i) => (
+          {staff.map((member, i) => (
             <motion.article
               key={member.id}
               className="team-card"
@@ -55,16 +89,14 @@ export default function TeamSection() {
                 ) : (
                   <span className="team-card__langs" aria-hidden="true" />
                 )}
-                {!OWNER_IDS.includes(member.id) && (
-                  <a
-                    href={BUSINESS.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="team-card__book"
-                  >
-                    Book an Appointment
-                  </a>
-                )}
+                <a
+                  href={BUSINESS.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="team-card__book"
+                >
+                  Book an Appointment
+                </a>
               </div>
             </motion.article>
           ))}
