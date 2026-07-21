@@ -112,7 +112,7 @@ export default function BrazilianHairSalonPage() {
                   Born in Brazil.<br /><em>Built for South Florida.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Blend Hair Boutique was founded in 2012 by Fernanda Macedo and Juliana Mammana Chen — two Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
+                  Blend Hair Boutique was founded in 2012 by Juliana Chen, alongside co-owner and salon manager Fernanda Macedo — Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Brazilian beauty culture is world-renowned for its emphasis on healthy, luminous hair, intensive conditioning rituals, and the seamless blend of technical skill and personal warmth. These values are embedded in every appointment at Blend — from the consultation through to the finishing blow-dry.

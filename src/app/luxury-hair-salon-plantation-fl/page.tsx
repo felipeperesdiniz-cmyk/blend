@@ -112,7 +112,7 @@ export default function LuxuryHairSalonPage() {
                   A Different Kind of<br /><em>Salon Experience</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Blend Hair Boutique was founded by Fernanda Macedo and Juliana Mammana Chen, two Brazilian beauty professionals with a combined vision: to bring the artistry and warmth of Brazilian salon culture to Plantation, Florida. Since 2012, Blend has served thousands of South Florida clients with a level of care and expertise that sets it apart from conventional salons.
+                  Blend Hair Boutique was founded by Juliana Chen, with co-owner and salon manager Fernanda Macedo, on a shared vision: to bring the artistry and warmth of Brazilian salon culture to Plantation, Florida. Since 2012, Blend has served thousands of South Florida clients with a level of care and expertise that sets it apart from conventional salons.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   As an authorized Kérastase salon, we use only professional-grade products across all services. Our team of certified stylists and estheticians undergoes ongoing education to stay current with the most advanced techniques in color, smoothing, and hair care.
