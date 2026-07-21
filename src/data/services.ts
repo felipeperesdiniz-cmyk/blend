@@ -395,7 +395,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'What are your hours?',
-    a: 'We are open Monday 10 AM–5 PM, Tuesday through Saturday 10 AM–7 PM, and closed on Sunday. Walk-ins are welcome, but appointments are recommended to secure your preferred time and stylist.',
+    a: 'We are open Monday through Wednesday 9 AM–6 PM, Thursday through Saturday 9 AM–7 PM, and closed on Sunday. Walk-ins are welcome, but appointments are recommended to secure your preferred time and stylist.',
   },
   {
     q: 'What should I expect at my first visit?',

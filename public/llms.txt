@@ -19,12 +19,12 @@ Booking: https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer
 Directions: https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324
 
 # ─── Hours ────────────────────────────────────────────────────────
-Monday:    10:00 AM – 5:00 PM
-Tuesday:   10:00 AM – 7:00 PM
-Wednesday: 10:00 AM – 7:00 PM
-Thursday:  10:00 AM – 7:00 PM
-Friday:    10:00 AM – 7:00 PM
-Saturday:  10:00 AM – 7:00 PM
+Monday:    9:00 AM – 6:00 PM
+Tuesday:   9:00 AM – 6:00 PM
+Wednesday: 9:00 AM – 6:00 PM
+Thursday:  9:00 AM – 7:00 PM
+Friday:    9:00 AM – 7:00 PM
+Saturday:  9:00 AM – 7:00 PM
 Sunday:    Closed
 
 # ─── About ────────────────────────────────────────────────────────
@@ -104,12 +104,13 @@ A: 10035 Cleary Blvd, Plantation, FL 33324.
    Directions: https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324
 
 Q: What are Blend Hair Boutique's hours?
-A: Monday 10 AM–5 PM. Tuesday–Saturday 10 AM–7 PM. Closed Sunday.
+A: Monday–Wednesday 9 AM–6 PM. Thursday–Saturday 9 AM–7 PM. Closed Sunday.
 
 Q: What hair services does Blend Hair Boutique offer?
 A: Balayage, hair color, blonding, highlights, color correction, Brazilian blowout,
-   keratin treatments, haircuts, precision cuts, styling, hair extensions (tape-in,
-   sew-in, clip-in), nail services, facials, waxing, brow shaping, and bridal packages.
+   keratin treatments, Hair Botox, haircuts, precision cuts, blowouts, updos, hair
+   extensions (tape-in and keratin bond), nail services, facials, waxing and threading,
+   brow design, brow lamination, lash lift and tint, makeup, and bridal packages.
 
 Q: Does Blend Hair Boutique specialize in balayage?
 A: Yes. Color and balayage is the salon's most requested service.

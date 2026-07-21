@@ -106,20 +106,20 @@ const globalSchema = {
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Monday',
-          opens: '10:00',
-          closes: '17:00',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
+          opens: '09:00',
+          closes: '18:00',
         },
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          opens: '10:00',
+          dayOfWeek: ['Thursday', 'Friday', 'Saturday'],
+          opens: '09:00',
           closes: '19:00',
         },
       ],
       priceRange: '$$$',
       currenciesAccepted: 'USD',
-      paymentAccepted: 'Cash, Credit Card, Debit Card',
+      paymentAccepted: 'Cash, Credit Card, Debit Card, Zelle',
       knowsLanguage: ['en', 'pt', 'es'],
       hasMap: 'https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324',
       sameAs: [
