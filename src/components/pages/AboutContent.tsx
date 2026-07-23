@@ -38,8 +38,8 @@ export default function AboutContent() {
         </div>
         <div className="about-hero__img">
           <img
-            src="https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=900&q=80"
-            alt="Blend Hair Boutique salon interior — Plantation, Florida"
+            src="/images/gallery/stylist-blend-wall.webp"
+            alt="A Blend Hair Boutique stylist at the salon in Plantation, Florida"
             loading="eager"
           />
         </div>
@@ -66,8 +66,8 @@ export default function AboutContent() {
             <AnimatedSection delay={0.2}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
-                  alt="Blend Hair Boutique styling station — Plantation, FL"
+                  src="/images/gallery/bronde-waves-smile.webp"
+                  alt="Finished balayage and styling at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

@@ -5,60 +5,19 @@ import CTASection from '@/components/sections/CTASection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 import { BUSINESS } from '@/data/constants'
+import { GALLERY_ITEMS, gallerySrc, type GallerySize } from '@/data/gallery'
 
 const EN_CATS = ['All', 'Color', 'Blonde', 'Brunette', 'Smoothing', 'Nails', 'Bridal'] as const
 type Cat = typeof EN_CATS[number]
-type Size = 'tall' | 'portrait' | 'square'
 
-interface Item {
-  id: string; src: string; enLabel: string; cat: Cat; size: Size
-}
+const ITEMS = GALLERY_ITEMS.map(i => ({ ...i, src: gallerySrc(i.file) }))
 
-const ITEMS: Item[] = [
-  { id: '1',  cat: 'Blonde',    size: 'tall',     src: 'https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=80', enLabel: 'Sun-Kissed Balayage' },
-  { id: '2',  cat: 'Smoothing', size: 'portrait', src: 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80', enLabel: 'Smooth Blowout' },
-  { id: '3',  cat: 'Brunette',  size: 'square',   src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80', enLabel: 'Rich Brunette Color' },
-  { id: '4',  cat: 'Nails',     size: 'portrait', src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80', enLabel: 'Nail Art' },
-  { id: '5',  cat: 'Blonde',    size: 'tall',     src: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80', enLabel: 'Highlights & Dimension' },
-  { id: '6',  cat: 'Bridal',    size: 'square',   src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80', enLabel: 'Bridal Elegance' },
-  { id: '7',  cat: 'Color',     size: 'portrait', src: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=900&q=80', enLabel: 'Lived-in Color' },
-  { id: '8',  cat: 'Smoothing', size: 'tall',     src: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=900&q=80', enLabel: 'Blowout & Style' },
-  { id: '9',  cat: 'Smoothing', size: 'portrait', src: 'https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=900&q=80', enLabel: 'Keratin Treatment' },
-  { id: '10', cat: 'Blonde',    size: 'square',   src: 'https://images.unsplash.com/photo-1634896941598-b6b500a502a7?auto=format&fit=crop&w=900&q=80', enLabel: 'Extensions & Volume' },
-  { id: '11', cat: 'Color',     size: 'tall',     src: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80', enLabel: 'Glow Facial' },
-  { id: '12', cat: 'Brunette',  size: 'portrait', src: 'https://images.unsplash.com/photo-1587614387466-0a72ca909e16?auto=format&fit=crop&w=900&q=80', enLabel: 'Color Transformation' },
-]
+const ASPECT: Record<GallerySize, string> = { tall: '2/3', portrait: '3/4', square: '1/1' }
 
-const ASPECT: Record<Size, string> = { tall: '2/3', portrait: '3/4', square: '1/1' }
-
-const BA_SRCS = [
-  { before: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1523263685509-57c1d050d19b?auto=format&fit=crop&w=700&q=80' },
-  { before: 'https://images.unsplash.com/photo-1522337094846-8a818192de1f?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=700&q=80' },
-  { before: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80', after: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80' },
-]
-
-function BeforeAfter({ before, after, label, beforeLabel, afterLabel }: { before: string; after: string; label: string; beforeLabel: string; afterLabel: string }) {
-  const [pos, setPos] = useState(38)
-  return (
-    <div className="gal-ba__item">
-      <img src={after} alt={`${label} after — Blend Hair Boutique`} className="gal-ba__after" loading="lazy" />
-      <div className="gal-ba__before-wrap" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
-        <img src={before} alt={`${label} before — Blend Hair Boutique`} className="gal-ba__before" loading="lazy" />
-      </div>
-      <div className="gal-ba__handle" style={{ left: `${pos}%` }}>
-        <div className="gal-ba__handle-btn">
-          <svg width="13" height="10" viewBox="0 0 13 10" fill="none" aria-hidden="true">
-            <path d="M1 5H12M1 5L4 2M1 5L4 8M12 5L9 2M12 5L9 8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
-      </div>
-      <input type="range" min={0} max={100} value={pos} onChange={e => setPos(+e.target.value)} className="gal-ba__range" aria-label={`Compare before and after: ${label}`} />
-      <span className="gal-ba__label-before">{beforeLabel}</span>
-      <span className="gal-ba__label-after">{afterLabel}</span>
-      <span className="gal-ba__title">{label}</span>
-    </div>
-  )
-}
+// NOTE: The interactive Before/After slider was removed because the only assets
+// available for it were stock photos presented as "real results, real clients."
+// The markup + `gal-ba__*` styles are still in globals.css — restore this section
+// as soon as real before/after pairs of Blend clients are available.
 
 export default function GalleryContent() {
   const [active, setActive] = useState<Cat>('All')
@@ -104,7 +63,6 @@ export default function GalleryContent() {
 
   const currentItem = lightbox !== null ? filtered[lightbox] : null
   const statsNums = ['1,230+', '4.9 ★', '13+', '100%']
-  const ba = tg.baSection
   const ed = tg.editorial
   const tm = tg.testimonial
 
@@ -177,21 +135,6 @@ export default function GalleryContent() {
         </div>
       </motion.section>
 
-      <section className="gal-ba">
-        <motion.div className="gal-ba__header" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }}>{ba.eyebrow}</p>
-          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.9rem, 3.8vw, 3.2rem)', fontWeight: 300, letterSpacing: '-0.025em', lineHeight: 1.05, color: 'var(--text)', marginBottom: '1rem' }}>
-            {ba.h2a}<em style={{ fontStyle: 'italic', color: 'var(--gold-dk)' }}>{ba.h2b}</em>
-          </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--text-2)', maxWidth: '40ch', margin: '0 auto', lineHeight: 1.82, fontWeight: 300 }}>{ba.sub}</p>
-        </motion.div>
-        <div className="gal-ba__grid">
-          {BA_SRCS.map((pair, i) => (
-            <BeforeAfter key={i} before={pair.before} after={pair.after} label={tg.baPairs[i]} beforeLabel={ba.before} afterLabel={ba.after} />
-          ))}
-        </div>
-      </section>
-
       <motion.section style={{ padding: 'clamp(5rem, 9vw, 8rem) var(--gutter)', background: 'var(--parchment)', textAlign: 'center' }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           <p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
@@ -210,7 +153,7 @@ export default function GalleryContent() {
             <motion.div className="gal-lightbox__bg" onClick={closeLightbox} />
             <motion.div className="gal-lightbox__inner" initial={{ scale: 0.96, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.97, opacity: 0 }} transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}>
               <div className="gal-lightbox__img-wrap">
-                <img src={currentItem.src.replace('w=900', 'w=1400')} alt={`${labelMap[currentItem.enLabel] ?? currentItem.enLabel} — Blend Hair Boutique`} className="gal-lightbox__img" />
+                <img src={currentItem.src} alt={`${labelMap[currentItem.enLabel] ?? currentItem.enLabel} — Blend Hair Boutique`} className="gal-lightbox__img" />
               </div>
               <div className="gal-lightbox__meta">
                 <p className="gal-lightbox__cat">{catLabel[currentItem.cat] ?? currentItem.cat}</p>

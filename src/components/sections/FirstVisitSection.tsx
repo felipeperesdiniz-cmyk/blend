@@ -20,8 +20,8 @@ export default function FirstVisitSection() {
           transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
         >
           <img
-            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85"
-            alt="The Blend Hair Boutique experience — premium salon in Plantation, FL"
+            src="/images/gallery/blonde-highlights-smile.webp"
+            alt="A client after her appointment at Blend Hair Boutique in Plantation, FL"
             loading="lazy"
           />
         </motion.div>

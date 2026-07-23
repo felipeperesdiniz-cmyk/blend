@@ -123,8 +123,8 @@ export default function BlowoutPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional blowout styling at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/honey-blonde-blowout.webp"
+                  alt="Honey blonde blowout styled at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

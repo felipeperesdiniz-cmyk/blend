@@ -123,8 +123,8 @@ export default function HighlightsPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-                  alt="Hair highlights result at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/blonde-balayage-straight.webp"
+                  alt="Blonde highlights with soft dimension at Blend Hair Boutique, Plantation FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

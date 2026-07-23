@@ -120,8 +120,8 @@ export default function BrazilianHairSalonPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
-                  alt="Brazilian hair salon treatment at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/brunette-glam-waves.webp"
+                  alt="Brazilian styling and glam waves at Blend Hair Boutique, Plantation FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

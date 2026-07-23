@@ -98,7 +98,7 @@ export default function BridalHairPage() {
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Bridal hair styling at Blend Hair Boutique, South Florida" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/gallery/bridal-updo.webp" alt="Bridal updo created at Blend Hair Boutique in Plantation, South Florida" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </div>
           </div>

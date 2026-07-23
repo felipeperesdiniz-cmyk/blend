@@ -120,8 +120,8 @@ export default function LuxuryHairSalonPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury hair salon interior at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/salon-wine-service.webp"
+                  alt="Wine service at Blend Hair Boutique, a luxury salon in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
@@ -161,8 +161,8 @@ export default function LuxuryHairSalonPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional hair color treatment at Blend Hair Boutique, luxury salon Plantation FL"
+                  src="/images/gallery/brunette-glam-waves.webp"
+                  alt="Luxury blowout and styling at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

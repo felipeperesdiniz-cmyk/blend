@@ -18,8 +18,8 @@ export default function ProductSection() {
           <AnimatedSection delay={0.1}>
             <div className="product-section__img">
               <img
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-                alt="Professional hair care products used at Blend Hair Boutique in Plantation, Florida"
+                src="/images/gallery/kerastase-chroma-absolu.webp"
+                alt="Kerastase Chroma Absolu products carried at Blend Hair Boutique, Plantation FL"
                 loading="lazy"
               />
             </div>

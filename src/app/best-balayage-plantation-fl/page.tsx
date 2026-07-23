@@ -124,8 +124,8 @@ export default function BestBalayagePage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80"
-                  alt="Best balayage results at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/caramel-balayage-brunette.webp"
+                  alt="Caramel balayage on brunette hair at Blend Hair Boutique, Plantation FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

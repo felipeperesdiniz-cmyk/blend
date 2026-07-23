@@ -163,8 +163,8 @@ export default function HairSalonPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
-                  alt="Blend Hair Boutique luxury hair salon interior in Plantation, FL"
+                  src="/images/gallery/blonde-highlights-long.webp"
+                  alt="Blonde highlights at Blend Hair Boutique, a hair salon in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

@@ -140,8 +140,8 @@ export default function BestHairColorPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional hair color at Blend Hair Boutique Plantation FL"
+                  src="/images/gallery/rich-brunette-waves.webp"
+                  alt="Rich dimensional brunette color at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

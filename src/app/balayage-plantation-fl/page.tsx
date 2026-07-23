@@ -109,8 +109,8 @@ export default function BalayagePlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
-                  alt="Balayage hair color result at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/bronde-balayage-back.webp"
+                  alt="Bronde balayage hand-painted at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

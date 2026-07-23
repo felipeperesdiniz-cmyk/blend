@@ -123,8 +123,8 @@ export default function MakeupPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80"
-                  alt="Professional makeup application at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/makeup-special-occasion.webp"
+                  alt="Special occasion hair and makeup at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

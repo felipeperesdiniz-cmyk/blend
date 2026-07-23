@@ -86,7 +86,7 @@ export default function KeratinTreatmentPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Brazilian blowout keratin treatment result at Blend Hair Boutique, Plantation FL" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/images/gallery/glossy-straight-lob.webp" alt="Keratin-smoothed glossy hair at Blend Hair Boutique in Plantation, FL" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
                 <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>Why Keratin at Blend</p>

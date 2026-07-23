@@ -5,20 +5,14 @@ import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import { GALLERY_ITEMS, FEATURED_IDS, gallerySrc } from '@/data/gallery'
 
-const EN_CATS = ['All', 'Blonde', 'Brunette', 'Smoothing', 'Nails'] as const
+const EN_CATS = ['All', 'Blonde', 'Brunette', 'Smoothing', 'Nails', 'Bridal'] as const
 type Category = typeof EN_CATS[number]
 
-interface GalleryItem { id: string; src: string; enLabel: string; category: Category }
-
-const GALLERY: GalleryItem[] = [
-  { id: 'g1', src: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1200&q=85', enLabel: 'Sun-Kissed Balayage',     category: 'Blonde' },
-  { id: 'g2', src: 'https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=85',    enLabel: 'Smooth Blowout',          category: 'Smoothing' },
-  { id: 'g3', src: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85', enLabel: 'Rich Brunette Color',     category: 'Brunette' },
-  { id: 'g4', src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85', enLabel: 'Nail Art',                category: 'Nails' },
-  { id: 'g5', src: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=85', enLabel: 'Highlights & Dimension',  category: 'Blonde' },
-  { id: 'g6', src: 'https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=85', enLabel: 'Bridal Elegance',         category: 'Brunette' },
-]
+const GALLERY = FEATURED_IDS
+  .map(id => GALLERY_ITEMS.find(i => i.id === id)!)
+  .map(i => ({ id: i.id, src: gallerySrc(i.file), enLabel: i.enLabel, category: i.cat }))
 
 export default function GallerySection() {
   const [activeCat, setActiveCat] = useState<Category>('All')

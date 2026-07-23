@@ -123,8 +123,8 @@ export default function NailsPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
-                  alt="Nail services at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/nails-red-blend-wall.webp"
+                  alt="Red gel manicure at Blend Hair Boutique nail services in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

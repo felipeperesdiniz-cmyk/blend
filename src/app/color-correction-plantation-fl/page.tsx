@@ -123,8 +123,8 @@ export default function ColorCorrectionPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
-                  alt="Color correction service at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/ash-silver-blend.webp"
+                  alt="Ash and silver color correction at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />

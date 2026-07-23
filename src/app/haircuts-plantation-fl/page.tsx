@@ -123,8 +123,8 @@ export default function HaircutsPlantationPage() {
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80"
-                  alt="Precision haircut at Blend Hair Boutique in Plantation, FL"
+                  src="/images/gallery/blonde-shag-bob.webp"
+                  alt="Layered blonde bob haircut at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
