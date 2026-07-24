@@ -18,19 +18,19 @@ export default function AboutContent() {
       <div className="about-hero">
         <div className="about-hero__content">
           <motion.p
-            style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
+            style={{ fontSize: '1.05rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1.25rem' }}
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
             {t.eyebrow}
           </motion.p>
           <motion.h1
-            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.1rem, 4vw, 4.3rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '14ch', marginBottom: '1.75rem' }}
+            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.6rem, 5.2vw, 5.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.02, maxWidth: '17ch', marginBottom: '2rem' }}
             initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
             {t.h1a}<em style={{ fontStyle: 'italic' }}>{t.h1b}</em>
           </motion.h1>
           <motion.p
-            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(0.84rem, 1.2vw, 0.94rem)', color: 'rgba(255,255,255,0.44)', lineHeight: 1.92, maxWidth: '42ch', fontWeight: 300 }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1.05rem, 1.5vw, 1.2rem)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.85, maxWidth: '46ch', fontWeight: 300 }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
           >
             {t.sub}

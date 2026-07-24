@@ -2229,10 +2229,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   z-index: 1;
 }
 .about-hero__content {
-  padding: clamp(3rem, 5vw, 4.5rem) clamp(3rem, 5vw, 5.5rem);
+  padding: clamp(3.5rem, 6vw, 5rem) clamp(3rem, 5vw, 5.5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
 }
