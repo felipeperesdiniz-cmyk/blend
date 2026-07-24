@@ -1,60 +1,32 @@
-'use client'
-import { motion } from 'framer-motion'
-
+// Reveal is CSS-driven (.fade-in-up runs on mount with animation-fill-mode: both),
+// so this full-viewport statement never renders as a blank white band while JS
+// hydrates. The decorative rules grow via .philosophy__line--grow.
 export default function PhilosophySection() {
   return (
     <section className="philosophy" aria-label="Our Philosophy">
       <div className="philosophy__inner">
 
-        <motion.div
-          className="philosophy__line"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-          aria-hidden
-        />
+        <div className="philosophy__line philosophy__line--grow" aria-hidden />
 
-        <motion.p
-          className="philosophy__eyebrow"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.3 }}
-        >
+        <p className="philosophy__eyebrow fade-in-up" style={{ animationDelay: '0.15s' }}>
           The Blend Philosophy
-        </motion.p>
+        </p>
 
-        <motion.blockquote
-          className="philosophy__quote"
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-        >
+        <blockquote className="philosophy__quote fade-in-up" style={{ animationDelay: '0.25s' }}>
           Beauty is a ritual.
           <br />
           Artistry is our craft.
           <br />
           <em>Warmth is our nature.</em>
-        </motion.blockquote>
+        </blockquote>
 
-        <motion.p
-          className="philosophy__meta"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.65 }}
-        >
+        <p className="philosophy__meta fade-in-up" style={{ animationDelay: '0.5s' }}>
           Blend Hair Boutique · Plantation, Florida · Est. 2012
-        </motion.p>
+        </p>
 
-        <motion.div
-          className="philosophy__line"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
+        <div
+          className="philosophy__line philosophy__line--grow"
+          style={{ animationDelay: '0.4s' }}
           aria-hidden
         />
 

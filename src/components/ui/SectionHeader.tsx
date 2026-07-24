@@ -1,6 +1,3 @@
-'use client'
-import { motion } from 'framer-motion'
-
 interface Props {
   eyebrow?: string
   h2: React.ReactNode
@@ -10,14 +7,8 @@ interface Props {
   className?: string
 }
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.1 },
-  }),
-}
-
+// Reveal is CSS-driven (.fade-in-up runs on mount, animation-fill-mode: both),
+// so the heading is never left invisible if JS is slow to hydrate or disabled.
 export default function SectionHeader({ eyebrow, h2, body, center, light, className = '' }: Props) {
   const cls = [
     'section-header',
@@ -27,25 +18,18 @@ export default function SectionHeader({ eyebrow, h2, body, center, light, classN
   ].filter(Boolean).join(' ')
 
   return (
-    <motion.div
-      className={cls}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.01 }}
-    >
+    <div className={cls}>
       {eyebrow && (
-        <motion.p className="section-header__eyebrow" custom={0} variants={fadeUp}>
-          {eyebrow}
-        </motion.p>
+        <p className="section-header__eyebrow fade-in-up">{eyebrow}</p>
       )}
-      <motion.h2 className="section-header__h2" custom={1} variants={fadeUp}>
+      <h2 className="section-header__h2 fade-in-up" style={{ animationDelay: '0.08s' }}>
         {h2}
-      </motion.h2>
+      </h2>
       {body && (
-        <motion.p className="section-header__body" custom={2} variants={fadeUp}>
+        <p className="section-header__body fade-in-up" style={{ animationDelay: '0.16s' }}>
           {body}
-        </motion.p>
+        </p>
       )}
-    </motion.div>
+    </div>
   )
 }

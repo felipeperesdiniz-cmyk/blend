@@ -1,7 +1,7 @@
 /* ─── Design System ─────────────────────────────────────────── */
 :root {
-  --serif: 'Cormorant Garamond', Georgia, serif;
-  --sans:  'Inter', -apple-system, system-ui, sans-serif;
+  --serif: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --sans:  var(--font-sans), 'Inter', -apple-system, system-ui, sans-serif;
 
   /* Palette */
   --white:         #ffffff;
@@ -313,7 +313,17 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 /* nav--home: placeholder for future transparent nav implementation */
 /* nav--home: used for transparent styling, no layout changes needed */
 
-@media (max-width: 1024px) {
+/* Between the collapse point and the max container width the horizontal nav is
+   tight — pull the gaps in so links never overlap the language switcher. */
+@media (max-width: 1400px) {
+  .nav__inner  { gap: 28px; }
+  .nav__links  { gap: 1.75rem; }
+  .nav__actions { gap: 1rem; }
+}
+
+/* Collapse to the hamburger while there is still comfortable room, so the full
+   row (9 links + language switcher + Book Now) is never crammed edge-to-edge. */
+@media (max-width: 1200px) {
   .nav__inner { padding: 16px var(--gutter); gap: 16px; }
   .nav__links  { display: none; }
   .nav__book   { display: none; }
@@ -504,7 +514,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 
 .hero__eyebrow {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.46em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
@@ -615,7 +625,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .hero__rating-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.25);
@@ -678,10 +688,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .hero { min-height: 95svh; }
   .hero__h1 { font-size: clamp(3rem, 12vw, 5rem); line-height: 0.92; }
   .hero__eyebrow { margin-bottom: 1.5rem; }
+  /* Portrait crop shows a vertical slice — keep the focal point on the branded
+     "Blend" wall (~68% across) instead of the product shelves in the middle. */
+  .hero__bg img { object-position: 68% center; }
 }
 @media (max-width: 480px) {
   .hero { min-height: 92svh; }
-  .hero__content { padding-bottom: clamp(3rem, 8vw, 4.5rem); }
+  /* Clear the sticky Call/Book/WhatsApp bar so the headline + CTAs stay visible. */
+  .hero__content { padding-bottom: calc(clamp(3rem, 8vw, 4.5rem) + 4.5rem); }
   .hero__h1 {
     font-size: clamp(2.9rem, 13vw, 4rem);
     line-height: 0.93;
@@ -825,7 +839,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   background: var(--bg-2);
 }
 .svc-featured__badge {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
@@ -870,7 +884,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   max-width: 50ch;
 }
 .svc-featured__cta {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.20em;
   text-transform: uppercase;
   font-weight: 500;
@@ -928,7 +942,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   line-height: 1.2;
 }
 .svc-list__cat {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -937,7 +951,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   flex-shrink: 0;
 }
 .svc-list__book {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
@@ -1526,8 +1540,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   background: rgba(201,168,117,0.32);
   transform-origin: center;
 }
+.philosophy__line--grow { animation: lineGrow 1.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .philosophy__line--grow { animation: none; }
+}
 .philosophy__eyebrow {
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.44em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1546,7 +1568,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   color: var(--gold);
 }
 .philosophy__meta {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.16);
@@ -1746,7 +1768,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   pointer-events: none;
 }
 .cta-section__eyebrow {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2230,7 +2252,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .gal-tabs__inner::-webkit-scrollbar { display: none; }
 .gal-tab {
   padding: 1rem 1.5rem;
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 500;
@@ -2269,7 +2291,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   letter-spacing: -0.02em;
 }
 .gal-stat__label {
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -2317,7 +2339,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .gal-item:hover .gal-item__overlay { opacity: 1; }
 .gal-item__cat {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2385,7 +2407,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   pointer-events: none;
 }
 .gal-editorial__eyebrow {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2565,7 +2587,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   text-align: center;
 }
 .gal-lightbox__cat {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2632,7 +2654,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   position: fixed;
   bottom: 1.5rem; left: 50%;
   transform: translateX(-50%);
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
@@ -2821,7 +2843,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .lang-switcher__btn {
   font-family: var(--sans);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2836,7 +2858,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .lang-switcher__btn:hover { color: var(--ink); }
 .lang-switcher__btn.active { color: var(--caramel); font-weight: 600; }
 .lang-switcher__dot {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--line);
   user-select: none;
   pointer-events: none;
@@ -2884,7 +2906,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .trust-bar__inner {
     gap: clamp(1rem, 3vw, 2.5rem);
   }
-  .trust-bar__item { font-size: 9px; letter-spacing: 0.14em; }
+  .trust-bar__item { font-size: 11px; letter-spacing: 0.14em; }
 
   /* ── Section headers ── */
   .section-header { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
@@ -2958,7 +2980,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
   /* ── Announcement bar ── */
   .announcement-bar {
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 0.1em;
     padding: 8px 14px;
   }
@@ -2970,7 +2992,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── Trust bar ── */
   .trust-bar { padding: 1rem var(--gutter); }
   .trust-bar__inner { gap: 0.75rem 1.5rem; }
-  .trust-bar__item { font-size: 8.5px; }
+  .trust-bar__item { font-size: 11px; }
 
   /* ── Section header ── */
   .section-header { margin-bottom: clamp(1.75rem, 6vw, 2.75rem); }
@@ -2985,7 +3007,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── Gallery ── */
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .gallery-filters { gap: 0.3rem; }
-  .gallery-filter { padding: 6px 12px; font-size: 9px; }
+  .gallery-filter { padding: 6px 12px; font-size: 11px; }
 
   /* ── Gallery page ── */
   .gallery-page-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }

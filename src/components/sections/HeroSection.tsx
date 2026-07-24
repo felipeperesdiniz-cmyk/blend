@@ -22,13 +22,23 @@ export default function HeroSection() {
     <section className="hero" aria-label="Hero">
       {/* Cinematic background with slow Ken Burns */}
       <div className="hero__bg">
-        <img
-          src="/hero-interior.png"
-          alt="Blend Hair Boutique — luxury salon interior in Plantation, Florida"
-          loading="eager"
-          fetchPriority="high"
-          decoding="sync"
-        />
+        <picture>
+          <source
+            media="(max-width: 640px)"
+            srcSet="/hero-interior-mobile.webp"
+            type="image/webp"
+          />
+          <source srcSet="/hero-interior.webp" type="image/webp" />
+          <img
+            src="/hero-interior.jpg"
+            alt="Blend Hair Boutique — luxury salon interior in Plantation, Florida"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+            width={1586}
+            height={992}
+          />
+        </picture>
       </div>
 
       {/* Atmospheric overlay — heavier left and bottom */}
@@ -40,7 +50,7 @@ export default function HeroSection() {
 
           <motion.div
             className="hero__eyebrow"
-            variants={fadeIn(0.5)}
+            variants={fadeIn(0.2)}
             initial="hidden"
             animate="visible"
           >
@@ -49,7 +59,7 @@ export default function HeroSection() {
 
           <motion.h1
             className="hero__h1"
-            variants={fadeUp(0.7)}
+            variants={fadeUp(0.3)}
             initial="hidden"
             animate="visible"
           >
@@ -62,7 +72,7 @@ export default function HeroSection() {
 
           <motion.p
             className="hero__sub"
-            variants={fadeIn(1.1)}
+            variants={fadeIn(0.5)}
             initial="hidden"
             animate="visible"
           >
@@ -72,7 +82,7 @@ export default function HeroSection() {
           {/* Inline trust signal */}
           <motion.div
             className="hero__trust"
-            variants={fadeIn(1.3)}
+            variants={fadeIn(0.6)}
             initial="hidden"
             animate="visible"
           >
@@ -82,7 +92,7 @@ export default function HeroSection() {
 
           <motion.div
             className="hero__ctas"
-            variants={fadeIn(1.5)}
+            variants={fadeIn(0.7)}
             initial="hidden"
             animate="visible"
           >
