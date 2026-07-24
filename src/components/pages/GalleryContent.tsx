@@ -106,7 +106,7 @@ export default function GalleryContent() {
               {filtered.map((item, idx) => (
                 <div key={item.id} className="gal-masonry__item">
                   <motion.div className="gal-item" style={{ aspectRatio: ASPECT[item.size] }} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: Math.min(idx * 0.055, 0.4) }} onClick={() => setLightbox(idx)}>
-                    <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique, Plantation FL`} loading="lazy" />
+                    <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique, Plantation FL`} loading="lazy" style={item.focus ? { objectPosition: item.focus } : undefined} />
                     <div className="gal-item__overlay">
                       <span className="gal-item__cat">{catLabel[item.cat] ?? item.cat}</span>
                       <span className="gal-item__label">{labelMap[item.enLabel] ?? item.enLabel}</span>

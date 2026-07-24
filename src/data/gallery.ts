@@ -14,6 +14,9 @@ export interface GalleryItem {
   enLabel: string
   cat: GalleryCat
   size: GallerySize
+  // Optional CSS object-position for the cropped tile (e.g. 'center 22%').
+  // Use when a `cover` crop would otherwise cut off the subject's hair/face.
+  focus?: string
 }
 
 export const gallerySrc = (file: string) => `/images/gallery/${file}.webp`
@@ -24,7 +27,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'g03', file: 'bronde-balayage-long-back', enLabel: 'Bronde Balayage',          cat: 'Color',     size: 'tall' },
   { id: 'g04', file: 'nails-red-blend-wall',      enLabel: 'Signature Red Manicure',   cat: 'Nails',     size: 'square' },
   { id: 'g05', file: 'blonde-highlights-long',    enLabel: 'Highlights & Dimension',   cat: 'Blonde',    size: 'tall' },
-  { id: 'g06', file: 'bridal-updo',               enLabel: 'Bridal Elegance',          cat: 'Bridal',    size: 'portrait' },
+  { id: 'g06', file: 'bridal-updo',               enLabel: 'Bridal Elegance',          cat: 'Bridal',    size: 'portrait', focus: 'center 12%' },
   { id: 'g07', file: 'caramel-balayage-brunette', enLabel: 'Caramel Balayage',         cat: 'Color',     size: 'portrait' },
   { id: 'g08', file: 'honey-blonde-blowout',      enLabel: 'Honey Blonde Blowout',     cat: 'Smoothing', size: 'portrait' },
   { id: 'g09', file: 'glossy-straight-lob',       enLabel: 'Keratin Smooth Lob',       cat: 'Smoothing', size: 'portrait' },
@@ -37,7 +40,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'g15', file: 'ash-silver-blend',          enLabel: 'Ash & Silver Blend',       cat: 'Color',     size: 'square' },
   { id: 'g26', file: 'copper-half-up-knot',       enLabel: 'Copper Half-Up Knot',      cat: 'Color',     size: 'tall' },
   { id: 'g16', file: 'bronde-balayage-profile',   enLabel: 'Lived-in Bronde',          cat: 'Color',     size: 'tall' },
-  { id: 'g17', file: 'balayage-lob-back',         enLabel: 'Balayage Lob',             cat: 'Brunette',  size: 'square' },
+  { id: 'g17', file: 'balayage-lob-back',         enLabel: 'Balayage Lob',             cat: 'Blonde',    size: 'square' },
   { id: 'g18', file: 'half-up-braid-waves',       enLabel: 'Braided Half-Up',          cat: 'Bridal',    size: 'tall' },
   { id: 'g27', file: 'brunette-layers-teen',      enLabel: 'Brunette Layers',          cat: 'Brunette',  size: 'portrait' },
   { id: 'g19', file: 'nails-nude-manicure',       enLabel: 'Nude Gel Manicure',        cat: 'Nails',     size: 'portrait' },
@@ -50,8 +53,24 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   { id: 'g24', file: 'icy-blonde-curls',          enLabel: 'Icy Blonde Curls',         cat: 'Blonde',    size: 'portrait' },
 ]
 
-// Homepage teaser — the six strongest frames, one per category shown there.
-export const FEATURED_IDS = ['g01', 'g09', 'g02', 'g04', 'g05', 'g06'] as const
+// Homepage teaser — a diverse, filter-safe set. Every category shown in the
+// home filter bar (Blonde, Brunette, Smoothing, Nails, Bridal) has at least two
+// frames so no filter ever renders a near-empty grid. Order is interleaved so
+// the "All" view reads as a varied editorial wall.
+export const FEATURED_IDS = [
+  'g01', // Blonde   — Sun-Kissed Balayage
+  'g02', // Brunette — Brunette Glam Waves
+  'g06', // Bridal   — Bridal Elegance
+  'g09', // Smoothing— Keratin Smooth Lob
+  'g04', // Nails    — Signature Red Manicure
+  'g24', // Blonde   — Icy Blonde Curls
+  'g21', // Brunette — Espresso Waves
+  'g18', // Bridal   — Braided Half-Up
+  'g08', // Smoothing— Honey Blonde Blowout
+  'g19', // Nails    — Nude Gel Manicure
+  'g29', // Brunette — Men's Textured Cut
+  'g10', // Blonde   — Platinum Blonde
+] as const
 
 // Other photos in /public/images/gallery, referenced directly by the pages that
 // use them rather than through this file:

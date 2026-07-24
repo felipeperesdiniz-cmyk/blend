@@ -12,7 +12,7 @@ type Category = typeof EN_CATS[number]
 
 const GALLERY = FEATURED_IDS
   .map(id => GALLERY_ITEMS.find(i => i.id === id)!)
-  .map(i => ({ id: i.id, src: gallerySrc(i.file), enLabel: i.enLabel, category: i.cat }))
+  .map(i => ({ id: i.id, src: gallerySrc(i.file), enLabel: i.enLabel, category: i.cat, focus: i.focus }))
 
 export default function GallerySection() {
   const [activeCat, setActiveCat] = useState<Category>('All')
@@ -77,7 +77,7 @@ export default function GallerySection() {
                   src={item.src}
                   alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique`}
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: item.focus ?? 'center' }}
                 />
                 <div className="gallery-item__overlay">
                   <span className="gallery-item__label">{labelMap[item.enLabel] ?? item.enLabel}</span>
