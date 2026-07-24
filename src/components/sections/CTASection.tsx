@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
@@ -35,43 +34,19 @@ export default function CTASection({
     <section className="cta-section">
       <div className="cta-section__bg" aria-hidden />
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-        <motion.p
-          className="cta-section__eyebrow"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
+        <p className="cta-section__eyebrow fade-in-up">
           {resolvedEyebrow}
-        </motion.p>
+        </p>
 
-        <motion.h2
-          className="cta-section__h2"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-        >
+        <h2 className="cta-section__h2 fade-in-up" style={{ animationDelay: '0.08s' }}>
           {resolvedHeading}
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="cta-section__sub"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-        >
+        <p className="cta-section__sub fade-in-up" style={{ animationDelay: '0.16s' }}>
           {resolvedSub}
-        </motion.p>
+        </p>
 
-        <motion.div
-          className="cta-section__btns"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-        >
+        <div className="cta-section__btns fade-in-up" style={{ animationDelay: '0.24s' }}>
           <a
             href={BUSINESS.bookingUrl}
             target="_blank"
@@ -83,7 +58,7 @@ export default function CTASection({
           <Link href={secondHref} className="btn btn--outline-light">
             {resolvedSecondary}
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

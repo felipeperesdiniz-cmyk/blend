@@ -1,13 +1,10 @@
 'use client'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { SERVICES } from '@/data/services'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
-
-const MotionLink = motion(Link)
 
 export default function ServicesSection() {
   const { lang } = useLang()
@@ -35,19 +32,15 @@ export default function ServicesSection() {
           </Link>
         </div>
 
-        <MotionLink
+        <Link
           href={`/services/${featuredService.id}`}
-          className="svc-featured"
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.08 }}
-          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          className="svc-featured fade-in-up"
         >
           <div className="svc-featured__img">
             <img
               src={featuredService.image}
               alt={`${featuredData.title} at Blend Hair Boutique`}
-              loading="lazy"
+              loading="lazy" decoding="async"
             />
           </div>
           <div className="svc-featured__body">
@@ -59,17 +52,14 @@ export default function ServicesSection() {
             <p className="svc-featured__desc">{featuredData.description}</p>
             <span className="svc-featured__cta">{t.viewDetails}</span>
           </div>
-        </MotionLink>
+        </Link>
 
         <div className="svc-list">
           {listServices.map((s, i) => (
-            <motion.div
+            <div
               key={s.id}
-              className="svc-list__row"
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.01 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 }}
+              className="svc-list__row fade-in-up"
+              style={{ animationDelay: `${i * 0.06}s` }}
             >
               <Link href={`/services/${s.id}`} className="svc-list__left" aria-label={`View ${listData[i].title} at Blend Hair Boutique`}>
                 <span className="svc-list__name">{listData[i].title}</span>
@@ -82,7 +72,7 @@ export default function ServicesSection() {
                 className="svc-list__book"
                 aria-label={`Book ${listData[i].title} at Blend Hair Boutique`}
               >{t.bookNow}</a>
-            </motion.div>
+            </div>
           ))}
         </div>
 

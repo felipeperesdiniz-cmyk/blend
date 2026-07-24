@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
@@ -12,60 +11,32 @@ export default function FirstVisitSection() {
   return (
     <section className="experience" id="experience">
       <div className="experience__inner">
-        <motion.div
-          className="experience__image"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.01 }}
-          transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="experience__image fade-in-up">
           <img
             src="/images/gallery/blonde-highlights-smile.webp"
             alt="A client after her appointment at Blend Hair Boutique in Plantation, FL"
-            loading="lazy"
+            loading="lazy" decoding="async"
           />
-        </motion.div>
+        </div>
 
         <div className="experience__content">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.01 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          >
+          <div className="fade-in-up" style={{ animationDelay: '0.08s' }}>
             <SectionHeader
               eyebrow={t.eyebrow}
               h2={<>{t.h2a}<br /><em>{t.h2b}</em></>}
               body={t.body}
             />
-          </motion.div>
+          </div>
 
-          <motion.ul
-            className="experience__list"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, amount: 0.01 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
+          <ul className="experience__list fade-in-up" style={{ animationDelay: '0.16s' }}>
             {t.highlights.map((item, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: 16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.01 }}
-                transition={{ duration: 0.6, delay: 0.3 + i * 0.06 }}
-              >
-                {item}
-              </motion.li>
+              <li key={i}>{item}</li>
             ))}
-          </motion.ul>
+          </ul>
 
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.01 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-            style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
+          <div
+            className="fade-in-up"
+            style={{ animationDelay: '0.24s', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
           >
             <Link href="/team" className="btn btn--primary">
               {t.cta1}
@@ -73,7 +44,7 @@ export default function FirstVisitSection() {
             <Link href="/about" className="btn btn--outline">
               {t.cta2}
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

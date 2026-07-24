@@ -30,7 +30,7 @@ export default function ServiceDetailContent({ id }: { id: string }) {
           <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
             {sd.category}
           </p>
-          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.6rem, 6vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '20ch' }}>
+          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.5vw, 4.6rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '20ch' }}>
             <em style={{ fontStyle: 'italic' }}>{sd.title}</em>
           </h1>
           <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300 }}>

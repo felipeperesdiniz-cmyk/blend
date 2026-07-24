@@ -31,7 +31,7 @@ export default function TeamContent() {
               {t.eyebrow}
             </motion.p>
           </div>
-          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', margin: 0, lineHeight: 1 }}>
+          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.8vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', margin: 0, lineHeight: 1 }}>
             <div style={{ overflow: 'hidden', lineHeight: 1.05 }}>
               <motion.span style={{ display: 'block', lineHeight: 1.05 }} initial={{ y: '108%' }} animate={{ y: '0%' }} transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1], delay: 0.22 }}>
                 {t.h1a}
@@ -60,17 +60,14 @@ export default function TeamContent() {
               {TEAM.map((member, i) => ({ member, td: teamData[i] }))
                 .filter(({ member }) => OWNER_IDS.includes(member.id))
                 .map(({ member, td }, idx) => (
-                  <motion.article
+                  <article
                     key={member.id}
                     id={member.id}
-                    className="founder-card"
-                    initial={{ opacity: 0, y: 28 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.01 }}
-                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
+                    className="founder-card fade-in-up"
+                    style={{ animationDelay: `${idx * 0.08}s` }}
                   >
                     <Link href={`/team/${member.id}`} className="founder-card__img-wrap" style={{ textDecoration: 'none' }}>
-                      <img src={member.image} alt={`${member.name} — ${td.specialty}`} loading="lazy" />
+                      <img src={member.image} alt={`${member.name} — ${td.specialty}`} loading="lazy" decoding="async" />
                     </Link>
                     <div className="founder-card__body">
                       <p className="founder-card__eyebrow">{member.id === 'juliana' ? 'Founder' : 'Co-Owner'}</p>
@@ -80,7 +77,7 @@ export default function TeamContent() {
                       <p className="founder-card__role">{td.specialty}</p>
                       <p className="founder-card__bio">{td.bio}</p>
                     </div>
-                  </motion.article>
+                  </article>
                 ))}
             </div>
           </div>
@@ -91,19 +88,17 @@ export default function TeamContent() {
               .filter(({ member }) => !OWNER_IDS.includes(member.id))
               .map(({ member, td, i }) => {
               return (
-                <motion.article
+                <article
                   key={member.id}
                   id={member.id}
-                  initial={{ opacity: 0, y: 32 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.07 }}
+                  className="fade-in-up"
+                  style={{ animationDelay: `${(i % 3) * 0.06}s` }}
                 >
                   <Link href={`/team/${member.id}`} style={{ display: 'block', overflow: 'hidden', aspectRatio: '3/4', background: 'var(--bg-soft)', marginBottom: '1.75rem', textDecoration: 'none' }}>
                     <img
                       src={member.image}
                       alt={`${member.name} — ${td.specialty}`}
-                      loading="lazy"
+                      loading="lazy" decoding="async"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', transition: 'transform 0.7s var(--ease)' }}
                       onMouseEnter={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1.04)' }}
                       onMouseLeave={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1)' }}
@@ -137,7 +132,7 @@ export default function TeamContent() {
                       </a>
                     </div>
                   </div>
-                </motion.article>
+                </article>
               )
             })}
           </div>

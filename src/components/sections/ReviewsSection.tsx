@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import { Star } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
@@ -26,13 +25,7 @@ export default function ReviewsSection() {
         </div>
 
         {/* Featured review — editorial pullquote */}
-        <motion.div
-          className="review-featured"
-          initial={{ opacity: 0, y: 32 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <div className="review-featured fade-in-up">
           <div className="review-featured__stars" aria-label="5 out of 5 stars">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={11} fill="currentColor" />
@@ -46,18 +39,15 @@ export default function ReviewsSection() {
             <span className="review-featured__divider" aria-hidden>·</span>
             <span className="review-featured__service">{featured.service}</span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Secondary reviews */}
         <div className="reviews-secondary">
           {secondary.map((r, i) => (
-            <motion.article
+            <article
               key={i}
-              className="review-secondary__card"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.01 }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: i * 0.12 }}
+              className="review-secondary__card fade-in-up"
+              style={{ animationDelay: `${i * 0.08}s` }}
             >
               <div className="review-secondary__stars" aria-label="5 stars">
                 {Array.from({ length: 5 }).map((_, idx) => (
@@ -72,23 +62,17 @@ export default function ReviewsSection() {
                   <span className="review-secondary__service">{r.service}</span>
                 </div>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
 
         {/* Google rating strip */}
-        <motion.div
-          className="reviews-rating-strip"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        <div className="reviews-rating-strip fade-in-up">
           <span className="reviews-rating-strip__stars">★★★★★</span>
           <span className="reviews-rating-strip__text">
             <strong>4.9</strong> &nbsp;·&nbsp; 1,230+ {t.googleRating}
           </span>
-        </motion.div>
+        </div>
 
       </div>
     </section>

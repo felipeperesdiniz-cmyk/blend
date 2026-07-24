@@ -73,7 +73,7 @@ export default function GalleryContent() {
           <motion.p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             {tp.eyebrow}
           </motion.p>
-          <motion.h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.2vw, 4.8rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '12ch' }} initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}>
+          <motion.h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.3rem, 4.2vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '12ch' }} initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}>
             {tp.h1a}<em style={{ fontStyle: 'italic' }}>{tp.h1b}</em>
           </motion.h1>
         </div>
@@ -106,7 +106,7 @@ export default function GalleryContent() {
               {filtered.map((item, idx) => (
                 <div key={item.id} className="gal-masonry__item">
                   <motion.div className="gal-item" style={{ aspectRatio: ASPECT[item.size] }} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: Math.min(idx * 0.055, 0.4) }} onClick={() => setLightbox(idx)}>
-                    <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique, Plantation FL`} loading="lazy" style={item.focus ? { objectPosition: item.focus } : undefined} />
+                    <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique, Plantation FL`} loading="lazy" decoding="async" style={item.focus ? { objectPosition: item.focus } : undefined} />
                     <div className="gal-item__overlay">
                       <span className="gal-item__cat">{catLabel[item.cat] ?? item.cat}</span>
                       <span className="gal-item__label">{labelMap[item.enLabel] ?? item.enLabel}</span>
@@ -120,22 +120,22 @@ export default function GalleryContent() {
               ))}
             </motion.div>
           </AnimatePresence>
-          <motion.p style={{ textAlign: 'center', marginTop: 'clamp(2rem, 4vw, 3rem)', fontFamily: 'var(--serif)', fontStyle: 'italic', color: 'var(--text-3)', fontSize: '0.95rem' }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <p className="fade-in-up" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 4vw, 3rem)', fontFamily: 'var(--serif)', fontStyle: 'italic', color: 'var(--text-3)', fontSize: '0.95rem' }}>
             Blend Hair Boutique · Plantation, Florida
-          </motion.p>
+          </p>
         </div>
       </section>
 
-      <motion.section className="gal-editorial" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.9 }}>
+      <section className="gal-editorial fade-in-up">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <p className="gal-editorial__eyebrow">{ed.eyebrow}</p>
           <h2 className="gal-editorial__h2">{ed.h2a}<em>{ed.h2b}</em></h2>
           <p className="gal-editorial__sub">{ed.sub}</p>
           <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline-light">{ed.cta}</a>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.section style={{ padding: 'clamp(5rem, 9vw, 8rem) var(--gutter)', background: 'var(--parchment)', textAlign: 'center' }} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}>
+      <section className="fade-in-up" style={{ padding: 'clamp(5rem, 9vw, 8rem) var(--gutter)', background: 'var(--parchment)', textAlign: 'center' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
           <p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
           <blockquote style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.15rem, 2.4vw, 1.65rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.58, letterSpacing: '-0.01em', marginBottom: '1.75rem' }}>
@@ -143,7 +143,7 @@ export default function GalleryContent() {
           </blockquote>
           <p style={{ fontSize: '0.82rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-2)', fontWeight: 500 }}>{tm.author}</p>
         </div>
-      </motion.section>
+      </section>
 
       <CTASection />
 

@@ -42,7 +42,7 @@ export default function ContactContent() {
             {t.eyebrow}
           </motion.p>
           <motion.h1
-            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch' }}
+            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.8vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch' }}
             initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
             {t.h1a}<em style={{ fontStyle: 'italic' }}>{t.h1b}</em>

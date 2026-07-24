@@ -52,7 +52,7 @@ export default function ServicesContent() {
           </p>
           <h1
             className="fade-in-up"
-            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch', animationDelay: '0.15s' }}
+            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.8vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '14ch', animationDelay: '0.15s' }}
           >
             <em style={{ fontStyle: 'italic' }}>{t.h1}</em>
           </h1>

@@ -26,7 +26,7 @@ export default function FAQContent() {
           <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.hero.eyebrow}
           </p>
-          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--ink)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '16ch' }}>
+          <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 4vw, 4.4rem)', fontWeight: 300, color: 'var(--ink)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '16ch' }}>
             {t.hero.heading} <em>{t.hero.em}</em>
           </h1>
           <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'var(--text-2)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>

@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import SectionHeader from '@/components/ui/SectionHeader'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
@@ -20,7 +19,7 @@ export default function ProductSection() {
               <img
                 src="/images/gallery/kerastase-chroma-absolu.webp"
                 alt="Kerastase Chroma Absolu products carried at Blend Hair Boutique, Plantation FL"
-                loading="lazy"
+                loading="lazy" decoding="async"
               />
             </div>
           </AnimatedSection>
@@ -35,19 +34,16 @@ export default function ProductSection() {
 
             <div style={{ marginTop: '2.5rem' }}>
               {features.map((f, i) => (
-                <motion.div
+                <div
                   key={f.label}
-                  className="product-feature"
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.15 + i * 0.1 }}
+                  className="product-feature fade-in-up"
+                  style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <div className="product-feature__dot" />
                   <p className="product-feature__text">
                     <strong>{f.label}</strong> — {f.body}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

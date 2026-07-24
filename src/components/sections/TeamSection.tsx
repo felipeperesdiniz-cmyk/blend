@@ -1,5 +1,4 @@
 'use client'
-import { motion } from 'framer-motion'
 import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
@@ -29,19 +28,16 @@ export default function TeamSection() {
           <div className="founders__label"><span>Ownership</span></div>
           <div className="founders-grid">
             {founders.map((member, i) => (
-              <motion.article
+              <article
                 key={member.id}
-                className="founder-card"
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.01 }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.1 }}
+                className="founder-card fade-in-up"
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="founder-card__img-wrap">
                   <img
                     src={member.image}
                     alt={`${member.name} — ${member.specialty} at Blend Hair Boutique`}
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                   />
                 </div>
                 <div className="founder-card__body">
@@ -50,7 +46,7 @@ export default function TeamSection() {
                   <p className="founder-card__role">{member.specialty}</p>
                   <p className="founder-card__bio">{member.bio}</p>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -58,19 +54,16 @@ export default function TeamSection() {
         <div className="team__label"><span>The Team</span></div>
         <div className="team-grid">
           {staff.map((member, i) => (
-            <motion.article
+            <article
               key={member.id}
-              className="team-card"
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.01 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.1 }}
+              className="team-card fade-in-up"
+              style={{ animationDelay: `${(i % 4) * 0.06}s` }}
             >
               <div className="team-card__img-wrap">
                 <img
                   src={member.image}
                   alt={`${member.name} — ${member.specialty} at Blend Hair Boutique`}
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div className="team-card__body">
@@ -98,7 +91,7 @@ export default function TeamSection() {
                   Book an Appointment
                 </a>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

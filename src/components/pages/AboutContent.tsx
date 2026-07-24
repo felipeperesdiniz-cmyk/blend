@@ -24,7 +24,7 @@ export default function AboutContent() {
             {t.eyebrow}
           </motion.p>
           <motion.h1
-            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 4.8vw, 5.2rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '14ch', marginBottom: '1.75rem' }}
+            style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.1rem, 4vw, 4.3rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '14ch', marginBottom: '1.75rem' }}
             initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
             {t.h1a}<em style={{ fontStyle: 'italic' }}>{t.h1b}</em>
@@ -68,7 +68,7 @@ export default function AboutContent() {
                 <img
                   src="/images/gallery/bronde-waves-smile.webp"
                   alt="Finished balayage and styling at Blend Hair Boutique in Plantation, FL"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
@@ -82,18 +82,15 @@ export default function AboutContent() {
           <SectionHeader eyebrow={t.valuesEyebrow} h2={<>{t.valuesH2a}<em>{t.valuesH2b}</em></>} center />
           <div className="about-values">
             {t.values.map((v, i) => (
-              <motion.div
+              <div
                 key={v.title}
-                className="about-value"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.1 }}
+                className="about-value fade-in-up"
+                style={{ animationDelay: `${i * 0.08}s` }}
               >
                 <div className="about-value__icon">{icons[i]}</div>
                 <h3 className="about-value__title">{v.title}</h3>
                 <p className="about-value__body">{v.body}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
