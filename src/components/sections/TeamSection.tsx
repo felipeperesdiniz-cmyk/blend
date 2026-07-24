@@ -2,12 +2,12 @@
 import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
+import FoundersFeature from '@/components/FoundersFeature'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
 
 const OWNER_IDS = ['juliana', 'fernanda']
 
-const founders = TEAM.filter((m) => OWNER_IDS.includes(m.id))
 const staff = TEAM.filter((m) => !OWNER_IDS.includes(m.id))
 
 export default function TeamSection() {
@@ -24,32 +24,7 @@ export default function TeamSection() {
           </Link>
         </div>
 
-        <div className="founders">
-          <div className="founders__label"><span>Ownership</span></div>
-          <div className="founders-grid">
-            {founders.map((member, i) => (
-              <article
-                key={member.id}
-                className="founder-card fade-in-up"
-                style={{ animationDelay: `${i * 0.08}s` }}
-              >
-                <div className="founder-card__img-wrap">
-                  <img
-                    src={member.image}
-                    alt={`${member.name} — ${member.specialty} at Blend Hair Boutique`}
-                    loading="lazy" decoding="async"
-                  />
-                </div>
-                <div className="founder-card__body">
-                  <p className="founder-card__eyebrow">{member.id === 'juliana' ? 'Founder' : 'Co-Owner'}</p>
-                  <h3 className="founder-card__name">{member.name}</h3>
-                  <p className="founder-card__role">{member.specialty}</p>
-                  <p className="founder-card__bio">{member.bio}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <FoundersFeature />
 
         <div className="team__label"><span>The Team</span></div>
         <div className="team-grid">

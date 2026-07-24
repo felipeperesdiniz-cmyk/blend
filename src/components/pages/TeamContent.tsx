@@ -4,6 +4,7 @@ import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
+import FoundersFeature from '@/components/FoundersFeature'
 import CTASection from '@/components/sections/CTASection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
@@ -54,33 +55,7 @@ export default function TeamContent() {
 
       <section className="section">
         <div className="container">
-          <div className="founders">
-            <div className="founders__label"><span>Ownership</span></div>
-            <div className="founders-grid">
-              {TEAM.map((member, i) => ({ member, td: teamData[i] }))
-                .filter(({ member }) => OWNER_IDS.includes(member.id))
-                .map(({ member, td }, idx) => (
-                  <article
-                    key={member.id}
-                    id={member.id}
-                    className="founder-card fade-in-up"
-                    style={{ animationDelay: `${idx * 0.08}s` }}
-                  >
-                    <Link href={`/team/${member.id}`} className="founder-card__img-wrap" style={{ textDecoration: 'none' }}>
-                      <img src={member.image} alt={`${member.name} — ${td.specialty}`} loading="lazy" decoding="async" />
-                    </Link>
-                    <div className="founder-card__body">
-                      <p className="founder-card__eyebrow">{member.id === 'juliana' ? 'Founder' : 'Co-Owner'}</p>
-                      <Link href={`/team/${member.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <h2 className="founder-card__name">{member.name}</h2>
-                      </Link>
-                      <p className="founder-card__role">{td.specialty}</p>
-                      <p className="founder-card__bio">{td.bio}</p>
-                    </div>
-                  </article>
-                ))}
-            </div>
-          </div>
+          <FoundersFeature />
 
           <div className="team__label"><span>The Team</span></div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
