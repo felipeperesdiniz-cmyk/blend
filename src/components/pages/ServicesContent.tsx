@@ -70,17 +70,22 @@ export default function ServicesContent() {
           <div className="services-grid">
             {SERVICES.map((s, i) => {
               const sd = servicesData[i]
+              const featured = Boolean(sd.badge)
               return (
-                <Link key={s.id} href={`/services/${s.id}`} className="service-card">
+                <Link key={s.id} href={`/services/${s.id}`} className={`service-card${featured ? ' service-card--featured' : ''}`}>
                   <div className="service-card__img-wrap">
                     <img
                       src={s.image}
                       alt={`${sd.title} at Blend Hair Boutique, Plantation FL`}
-                      loading={i < 4 ? 'eager' : 'lazy'}
+                      loading={i < 3 ? 'eager' : 'lazy'}
                     />
+                    {sd.badge && <span className="service-card__badge">{sd.badge}</span>}
                   </div>
                   <div className="service-card__body">
-                    <p className="service-card__category">{sd.category}</p>
+                    <div className="service-card__head">
+                      <span className="service-card__index">{String(i + 1).padStart(2, '0')}</span>
+                      <p className="service-card__category">{sd.category}</p>
+                    </div>
                     <h2 className="service-card__title">{sd.title}</h2>
                     <p className="service-card__benefit">{sd.benefit}</p>
                     <span className="service-card__cta">{t.viewDetails}</span>
