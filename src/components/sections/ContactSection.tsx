@@ -76,8 +76,8 @@ export default function ContactSection() {
                 <p className="contact-info__label">{t.hours}</p>
                 <div className="contact-info__value">
                   {BUSINESS.hours.map((h) => (
-                    <div key={h.day} style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between', borderBottom: '1px solid var(--border)', padding: '0.4rem 0', fontSize: '0.9rem' }}>
-                      <span style={{ color: 'var(--text-3)', fontSize: '0.82rem' }}>{h.day}</span>
+                    <div key={h.day} style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between', borderBottom: '1px solid var(--border)', padding: '0.4rem 0', fontSize: '0.95rem' }}>
+                      <span style={{ color: 'var(--text-3)', fontSize: '0.88rem' }}>{h.day}</span>
                       <span style={{ fontWeight: 400 }}>{h.time}</span>
                     </div>
                   ))}

@@ -191,11 +191,11 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '1.25rem' }}>
-              <Link href="/team" style={{ fontSize: '0.78rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 400, textDecoration: 'none' }}>
+              <Link href="/team" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 400, textDecoration: 'none' }}>
                 Our Team
               </Link>
-              <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem' }}>›</span>
-              <span style={{ fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500 }}>
+              <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem' }}>›</span>
+              <span style={{ fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500 }}>
                 {member.specialty}
               </span>
             </div>
@@ -210,7 +210,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                 href={member.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em', fontFamily: 'var(--sans)', marginBottom: '2rem', textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em', fontFamily: 'var(--sans)', marginBottom: '2rem', textDecoration: 'none' }}
               >
                 <Instagram size={16} />
                 @{member.instagram.replace(/\/+$/, '').split('/').pop()}
@@ -234,7 +234,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                 />
               </div>
               <div>
-                <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
                   About {shortName}
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.6rem, 2.5vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
@@ -250,7 +250,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
                 {services.length > 0 && (
                   <>
-                    <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
                       Services
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
@@ -261,7 +261,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                           style={{
                             textDecoration: 'none',
                             color: 'var(--text-1)',
-                            fontSize: '0.95rem',
+                            fontSize: '1rem',
                             fontFamily: 'var(--serif)',
                             fontWeight: 400,
                             padding: '0.75rem 0',
@@ -272,7 +272,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                           }}
                         >
                           {s.label}
-                          <span style={{ color: 'var(--gold)', fontSize: '0.8rem' }}>→</span>
+                          <span style={{ color: 'var(--gold)', fontSize: '0.88rem' }}>→</span>
                         </Link>
                       ))}
                     </div>
@@ -289,7 +289,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
               Blend Hair Boutique · Plantation, FL
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

@@ -36,7 +36,7 @@ export default function ContactContent() {
       <header className="page-hero page-hero--dark">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <motion.p
-            style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
+            style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
             {t.eyebrow}
@@ -150,7 +150,7 @@ export default function ContactContent() {
                 <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.6rem', fontWeight: 400, marginBottom: '0.4rem' }}>
                   {t.formTitle}
                 </h3>
-                <p style={{ fontSize: '0.95rem', color: 'var(--text-2)', marginBottom: '1.75rem', fontWeight: 300 }}>
+                <p style={{ fontSize: '1rem', color: 'var(--text-2)', marginBottom: '1.75rem', fontWeight: 300 }}>
                   {t.formBody}
                 </p>
 
@@ -163,10 +163,10 @@ export default function ContactContent() {
                     <p style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>
                       {t.formSentTitle}
                     </p>
-                    <p style={{ fontSize: '0.95rem', color: 'var(--text-2)', fontWeight: 300 }}>
+                    <p style={{ fontSize: '1rem', color: 'var(--text-2)', fontWeight: 300 }}>
                       {t.formSentBody}
                     </p>
-                    <button onClick={() => setSent(false)} className="btn btn--outline" style={{ marginTop: '1.5rem', fontSize: '0.82rem' }}>
+                    <button onClick={() => setSent(false)} className="btn btn--outline" style={{ marginTop: '1.5rem', fontSize: '0.88rem' }}>
                       {fields.submit}
                     </button>
                   </motion.div>

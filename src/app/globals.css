@@ -98,8 +98,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .subtitle { font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 300; }
 .body-lg  { font-family: var(--sans); font-size: clamp(1.05rem, 1.5vw, 1.15rem); line-height: 1.75; font-weight: 300; }
 .body     { font-family: var(--sans); font-size: 1rem; line-height: 1.75; font-weight: 300; }
-.label    { font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
-.caption  { font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.06em; }
+.label    { font-family: var(--sans); font-size: 0.88rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
+.caption  { font-family: var(--sans); font-size: 0.95rem; letter-spacing: 0.06em; }
 
 /* ─── Layout Utilities ───────────────────────────────────────── */
 .container {
@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   padding: 0.85rem 2.5rem;
   border-radius: 0;
   font-family: var(--sans);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .btn--ghost {
   padding: 0;
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   color: var(--white);
   text-align: center;
   padding: 10px 20px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 400;
@@ -234,19 +234,19 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   min-width: 0;
 }
 .nav__links {
   display: flex;
-  gap: 1.35rem;
+  gap: 1.1rem;
   align-items: center;
   min-width: 0;
 }
 .nav__links--left  { justify-content: flex-end; }
 .nav__links--right { justify-content: flex-start; }
 .nav__link {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--ink);
@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .nav__link:hover { color: var(--caramel-dk); }
 .nav__book {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   padding: 10px 22px;
@@ -313,18 +313,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 /* nav--home: placeholder for future transparent nav implementation */
 /* nav--home: used for transparent styling, no layout changes needed */
 
-/* Approaching the collapse point, pull the gaps in further so the longer
-   Spanish / Portuguese labels never overlap the language switcher. */
-@media (max-width: 1340px) {
-  .nav__inner  { gap: 14px; }
-  .nav__links  { gap: 1.1rem; }
-  .nav__actions { gap: 0.85rem; }
-}
-
-/* Collapse to the hamburger while there is still comfortable room, so the full
-   row (9 links + language switcher + Book Now) is never crammed edge-to-edge.
-   The threshold is sized for the longest language (Spanish/Portuguese). */
-@media (max-width: 1280px) {
+/* Collapse to the hamburger below the width where the full horizontal row
+   (9 links + language switcher + Book Now) fits at the readable 11.5px size in
+   the longest language (Spanish/Portuguese). Above this, the bar shows in full;
+   below it, the menu opens as a hamburger where the links are large and legible. */
+@media (max-width: 1400px) {
   .nav__inner { padding: 16px var(--gutter); gap: 16px; }
   .nav__links  { display: none; }
   .nav__book   { display: none; }
@@ -365,7 +358,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   padding: 1.2rem 2.5rem;
   background: var(--gold);
   color: var(--ink);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 600;
@@ -382,7 +375,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   gap: 2rem;
 }
 .mobile-menu__contact-link {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.45);
@@ -450,7 +443,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .sticky-cta__icon { color: var(--white); width: 18px; height: 18px; }
 .sticky-cta__btn--book .sticky-cta__icon { color: var(--ink); }
 .sticky-cta__label {
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 600;
@@ -515,7 +508,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 
 .hero__eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.46em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.4);
@@ -578,7 +571,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   border: 1px solid var(--white);
   border-radius: 0;
   font-family: var(--sans);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
@@ -602,7 +595,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: 0;
   font-family: var(--sans);
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
@@ -626,7 +619,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .hero__rating-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.25);
@@ -662,12 +655,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .hero__trust-stars {
   color: var(--gold);
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 3px;
   opacity: 0.85;
 }
 .hero__trust-label {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.48);
@@ -702,7 +695,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
     line-height: 0.93;
     margin-bottom: 2rem;
   }
-  .hero__sub { font-size: 13.5px; line-height: 1.85; margin-bottom: 2rem; }
+  .hero__sub { font-size: 15px; line-height: 1.85; margin-bottom: 2rem; }
   .hero__ctas {
     flex-direction: column;
     align-items: stretch;
@@ -739,7 +732,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.32);
@@ -840,7 +833,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   background: var(--bg-2);
 }
 .svc-featured__badge {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
@@ -885,7 +878,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   max-width: 50ch;
 }
 .svc-featured__cta {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.20em;
   text-transform: uppercase;
   font-weight: 500;
@@ -943,7 +936,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   line-height: 1.2;
 }
 .svc-list__cat {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -952,7 +945,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   flex-shrink: 0;
 }
 .svc-list__book {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 500;
@@ -981,7 +974,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .gallery-filter {
   padding: 9px 20px;
   border-radius: 0;
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 500;
@@ -1143,7 +1136,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: 0.5rem;
 }
 .visit-step__body {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text-2);
   font-weight: 300;
@@ -1201,7 +1194,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   letter-spacing: -0.01em;
 }
 .team-card__specialty {
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1213,7 +1206,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   align-items: center;
   gap: 0.4rem;
   min-height: 20px;
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-2);
   font-weight: 300;
   text-decoration: none;
@@ -1221,7 +1214,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .team-card__langs:hover { color: var(--gold-dk); }
 .team-card__book {
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
@@ -1245,7 +1238,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 .founders__label span {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1293,7 +1286,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   justify-content: center;
 }
 .founder-card__eyebrow {
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1309,7 +1302,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: 0.35rem;
 }
 .founder-card__role {
-  font-size: 10.5px;
+  font-size: 11.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -1317,7 +1310,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: 1rem;
 }
 .founder-card__bio {
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--text-2);
   font-weight: 300;
@@ -1329,7 +1322,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 .team__label span {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1388,7 +1381,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: 0.4rem;
 }
 .founders-feature__role {
-  font-size: 10.5px;
+  font-size: 11.5px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1396,7 +1389,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-bottom: 1.4rem;
 }
 .founders-feature__bio {
-  font-size: 14.5px;
+  font-size: 15.5px;
   line-height: 1.8;
   color: var(--text-2);
   font-weight: 300;
@@ -1466,7 +1459,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   z-index: 2;
   background: var(--gold-dk);
   color: var(--white);
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 600;
@@ -1498,7 +1491,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   flex-shrink: 0;
 }
 .service-card__category {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -1524,7 +1517,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   flex: 1;
 }
 .service-card__cta {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
@@ -1599,19 +1592,19 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   flex-shrink: 0;
 }
 .review-card__author-info { flex: 1; }
 .review-card__author {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--ink);
   display: block;
 }
 .review-card__service {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -1670,7 +1663,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .philosophy__line--grow { animation: none; }
 }
 .philosophy__eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.44em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1689,7 +1682,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   color: var(--gold);
 }
 .philosophy__meta {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.16);
@@ -1746,7 +1739,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -1813,7 +1806,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   flex-shrink: 0;
 }
@@ -1826,7 +1819,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .review-secondary__service {
   display: block;
-  font-size: 9.5px;
+  font-size: 11.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -1846,7 +1839,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .reviews-rating-strip__stars {
   color: var(--gold);
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 3px;
 }
 .reviews-rating-strip__text {
@@ -1889,7 +1882,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   pointer-events: none;
 }
 .cta-section__eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
   color: var(--gold);
@@ -1951,7 +1944,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   margin-top: 0.1rem;
 }
 .contact-info__label {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 500;
@@ -2012,7 +2005,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   flex-shrink: 0;
   margin-top: 0.55rem;
 }
-.product-feature__text { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.65); font-weight: 300; }
+.product-feature__text { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.65); font-weight: 300; }
 .product-feature__text strong { color: var(--white); font-weight: 500; }
 @media (max-width: 768px) {
   .product-section__inner { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -2042,7 +2035,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   display: block;
 }
 .footer__tagline {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.65;
   color: rgba(255,255,255,0.42);
   font-weight: 300;
@@ -2067,7 +2060,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .footer__social:hover { border-color: var(--gold); color: var(--gold); }
 .footer__col-title {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2080,14 +2073,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   gap: 0.75rem;
 }
 .footer__link {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255,255,255,0.5);
   font-weight: 300;
   transition: color var(--t-fast);
 }
 .footer__link:hover { color: var(--white); }
 .footer__contact-item {
-  font-size: 13px;
+  font-size: 14px;
   color: rgba(255,255,255,0.5);
   font-weight: 300;
   line-height: 1.7;
@@ -2103,13 +2096,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   gap: 1rem;
 }
 .footer__copy {
-  font-size: 11px;
+  font-size: 12px;
   color: rgba(255,255,255,0.22);
   font-weight: 300;
   letter-spacing: 0.05em;
 }
 .footer__book-btn {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
@@ -2164,7 +2157,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .service-detail__img img { width: 100%; height: 100%; object-fit: cover; }
 .service-detail__eyebrow {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-dk);
@@ -2188,11 +2181,28 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   font-weight: 300;
 }
 .service-detail__body {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--text-2);
   font-weight: 300;
   margin-bottom: 2rem;
+}
+/* "Have questions? Visit our FAQ…" callout linking to the FAQ section below */
+.service-faq-prompt {
+  display: block;
+  margin: 0.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--gold);
+  background: var(--bg-soft);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-2);
+  font-weight: 400;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.service-faq-prompt:hover {
+  background: var(--accent-lt);
+  color: var(--text);
 }
 @media (max-width: 768px) {
   .service-detail__inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -2290,7 +2300,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   letter-spacing: -0.01em;
 }
 .about-value__body {
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   color: var(--text-2);
   line-height: 1.78;
   font-weight: 300;
@@ -2373,7 +2383,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .gal-tabs__inner::-webkit-scrollbar { display: none; }
 .gal-tab {
   padding: 1rem 1.5rem;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 500;
@@ -2412,7 +2422,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   letter-spacing: -0.02em;
 }
 .gal-stat__label {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -2460,7 +2470,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .gal-item:hover .gal-item__overlay { opacity: 1; }
 .gal-item__cat {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2481,7 +2491,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-family: var(--sans);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 300;
   color: rgba(255,255,255,0.68);
   line-height: 1.55;
@@ -2528,7 +2538,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   pointer-events: none;
 }
 .gal-editorial__eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2547,7 +2557,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .gal-editorial__h2 em { font-style: italic; color: var(--gold); }
 .gal-editorial__sub {
-  font-size: 0.875rem;
+  font-size: 0.92rem;
   color: rgba(255,255,255,0.42);
   max-width: 42ch;
   margin: 0 auto 2.5rem;
@@ -2625,7 +2635,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .gal-ba__label-after {
   position: absolute;
   bottom: 1.1rem;
-  font-size: 7.5px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.82);
@@ -2644,7 +2654,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   transform: translateX(-50%);
   font-family: var(--serif);
   font-style: italic;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: rgba(255,255,255,0.9);
   white-space: nowrap;
   pointer-events: none;
@@ -2708,7 +2718,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   text-align: center;
 }
 .gal-lightbox__cat {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
@@ -2775,7 +2785,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   position: fixed;
   bottom: 1.5rem; left: 50%;
   transform: translateX(-50%);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
@@ -2829,7 +2839,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   display: flex;
   justify-content: space-between;
   padding: 14px 16px;
-  font-size: 13px;
+  font-size: 14px;
   border-bottom: 1px solid var(--line);
   font-weight: 300;
 }
@@ -2873,7 +2883,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .faq-body { overflow: hidden; }
 .faq-body__inner {
   padding: 0 0 1.5rem;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--text-2);
   font-weight: 300;
@@ -2915,7 +2925,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .contact-form { display: grid; gap: 1.25rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 .form-group label {
-  font-size: 10px;
+  font-size: 11.5px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 500;
@@ -2929,7 +2939,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   border: 1px solid var(--line);
   border-radius: 0;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 15px;
   color: var(--ink);
   background: var(--white);
   transition: border-color var(--t-fast);
@@ -2944,7 +2954,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   padding: 14px 28px;
   background: var(--ink);
   color: var(--white);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 500;
@@ -2964,7 +2974,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 .lang-switcher__btn {
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2979,7 +2989,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .lang-switcher__btn:hover { color: var(--ink); }
 .lang-switcher__btn.active { color: var(--caramel); font-weight: 600; }
 .lang-switcher__dot {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--line);
   user-select: none;
   pointer-events: none;
@@ -2994,7 +3004,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .mobile-lang-switcher .lang-switcher__btn {
-  font-size: 10px;
+  font-size: 11.5px;
   padding: 6px 8px;
   color: rgba(255,255,255,0.45);
 }
@@ -3012,7 +3022,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
   /* ── Announcement bar ── */
   .announcement-bar {
-    font-size: 9.5px;
+    font-size: 11.5px;
     letter-spacing: 0.12em;
     padding: 9px 16px;
     white-space: normal;
@@ -3027,7 +3037,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .trust-bar__inner {
     gap: clamp(1rem, 3vw, 2.5rem);
   }
-  .trust-bar__item { font-size: 11px; letter-spacing: 0.14em; }
+  .trust-bar__item { font-size: 12px; letter-spacing: 0.14em; }
 
   /* ── Section headers ── */
   .section-header { margin-bottom: clamp(2rem, 4vw, 3.5rem); }
@@ -3038,7 +3048,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── Gallery ── */
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   .gallery-filters { gap: 0.4rem; }
-  .gallery-filter { padding: 7px 14px; font-size: 9.5px; }
+  .gallery-filter { padding: 7px 14px; font-size: 11.5px; }
 
   /* ── Team ── */
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
@@ -3101,7 +3111,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
   /* ── Announcement bar ── */
   .announcement-bar {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.1em;
     padding: 8px 14px;
   }
@@ -3113,12 +3123,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── Trust bar ── */
   .trust-bar { padding: 1rem var(--gutter); }
   .trust-bar__inner { gap: 0.75rem 1.5rem; }
-  .trust-bar__item { font-size: 11px; }
+  .trust-bar__item { font-size: 12px; }
 
   /* ── Section header ── */
   .section-header { margin-bottom: clamp(1.75rem, 6vw, 2.75rem); }
   .section-header__h2 { font-size: clamp(1.65rem, 7vw, 2.5rem); }
-  .section-header__body { font-size: 0.95rem; }
+  .section-header__body { font-size: 1rem; }
   .section-header__eyebrow { font-size: 12px; }
 
   /* ── Services: single column on iPhone ── */
@@ -3128,7 +3138,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── Gallery ── */
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .gallery-filters { gap: 0.3rem; }
-  .gallery-filter { padding: 6px 12px; font-size: 11px; }
+  .gallery-filter { padding: 6px 12px; font-size: 12px; }
 
   /* ── Gallery page ── */
   .gallery-page-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
@@ -3139,11 +3149,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .experience__content {
     padding: clamp(32px,8vw,48px) 20px;
   }
-  .experience__list li { font-size: 13px; padding: 14px 0; }
+  .experience__list li { font-size: 14px; padding: 14px 0; }
 
   /* ── Visit steps ── */
   .visit-step__title { font-size: 1rem; }
-  .visit-step__body { font-size: 12.5px; }
+  .visit-step__body { font-size: 13px; }
 
   /* ── Team: single column on iPhone ── */
   .team-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -3160,7 +3170,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   /* ── CTA section ── */
   .cta-section { padding: clamp(3rem,10vw,5rem) var(--gutter); }
   .cta-section__h2 { font-size: clamp(2rem, 8vw, 3.2rem); }
-  .cta-section__sub { font-size: 0.875rem; }
+  .cta-section__sub { font-size: 0.92rem; }
   .cta-section__btns {
     flex-direction: column;
     align-items: stretch;
@@ -3186,7 +3196,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .product-section__inner { gap: 2rem; }
   .product-section__img { aspect-ratio: 4/3; }
   .product-feature { gap: 0.75rem; }
-  .product-feature__text { font-size: 13.5px; }
+  .product-feature__text { font-size: 15px; }
 
   /* ── Services page ── */
   .service-detail__inner { gap: 1.5rem; }
@@ -3199,7 +3209,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .footer__tagline { max-width: 100%; }
 
   /* ── Buttons ── */
-  .btn { padding: 0.85rem 1.5rem; font-size: 0.68rem; min-height: 48px; }
+  .btn { padding: 0.85rem 1.5rem; font-size: 0.72rem; min-height: 48px; }
 
   /* ── Forms (prevent iOS zoom on focus — needs 16px min) ── */
   .form-group input,
@@ -3208,7 +3218,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
     font-size: 16px;
     padding: 14px;
   }
-  .submit { width: 100%; padding: 16px; font-size: 11px; }
+  .submit { width: 100%; padding: 16px; font-size: 12px; }
 
   /* ── FAQ ── */
   .faq-trigger { padding: 1.25rem 0; }
@@ -3227,7 +3237,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   box-shadow: var(--shadow-sm);
 }
 
-.faq-body__inner { font-size: 13.5px; }
+.faq-body__inner { font-size: 15px; }
 
   /* ── Page heroes ── */
   .services-page-hero,
@@ -3240,10 +3250,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
   /* ── Hours grid ── */
   .hours-grid { grid-template-columns: 1fr; }
-  .hours-row { font-size: 12.5px; padding: 12px 14px; }
+  .hours-row { font-size: 13px; padding: 12px 14px; }
 
   /* ── Sticky CTA: bigger tap targets ── */
   .sticky-cta__btn { padding: 0.6rem 0.4rem; gap: 5px; }
-  .sticky-cta__label { font-size: 0.65rem; }
+  .sticky-cta__label { font-size: 0.72rem; }
   .sticky-cta__icon { width: 20px; height: 20px; }
 }

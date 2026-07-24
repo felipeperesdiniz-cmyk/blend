@@ -70,7 +70,7 @@ export default function GalleryContent() {
     <div className="page-enter">
       <header className="gal-hero">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <motion.p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             {tp.eyebrow}
           </motion.p>
           <motion.h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.3rem, 4.2vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '12ch' }} initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}>
@@ -120,7 +120,7 @@ export default function GalleryContent() {
               ))}
             </motion.div>
           </AnimatePresence>
-          <p className="fade-in-up" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 4vw, 3rem)', fontFamily: 'var(--serif)', fontStyle: 'italic', color: 'var(--text-3)', fontSize: '0.95rem' }}>
+          <p className="fade-in-up" style={{ textAlign: 'center', marginTop: 'clamp(2rem, 4vw, 3rem)', fontFamily: 'var(--serif)', fontStyle: 'italic', color: 'var(--text-3)', fontSize: '1rem' }}>
             Blend Hair Boutique · Plantation, Florida
           </p>
         </div>
@@ -137,11 +137,11 @@ export default function GalleryContent() {
 
       <section className="fade-in-up" style={{ padding: 'clamp(5rem, 9vw, 8rem) var(--gutter)', background: 'var(--parchment)', textAlign: 'center' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
           <blockquote style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.15rem, 2.4vw, 1.65rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.58, letterSpacing: '-0.01em', marginBottom: '1.75rem' }}>
             &ldquo;{tm.quote}&rdquo;
           </blockquote>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-2)', fontWeight: 500 }}>{tm.author}</p>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-2)', fontWeight: 500 }}>{tm.author}</p>
         </div>
       </section>
 

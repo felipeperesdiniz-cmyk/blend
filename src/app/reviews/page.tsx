@@ -133,7 +133,7 @@ export default function ReviewsPage() {
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
               Client Reviews · Plantation, FL
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -152,17 +152,17 @@ export default function ReviewsPage() {
               <div style={{ textAlign: 'center' }}>
                 <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>4.9</p>
                 <p style={{ color: 'var(--gold)', fontSize: '1.4rem', letterSpacing: '0.1em', marginTop: '0.25rem' }}>★★★★★</p>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Google Rating</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Google Rating</p>
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
               <div style={{ textAlign: 'center' }}>
                 <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>1,230+</p>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Verified Reviews</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Verified Reviews</p>
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
               <div style={{ textAlign: 'center' }}>
                 <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>13+</p>
-                <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Years in Plantation</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Years in Plantation</p>
               </div>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function ReviewsPage() {
         {/* Testimonials grid */}
         <section className="section">
           <div className="container" style={{ maxWidth: '1100px' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Client Testimonials
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -193,11 +193,11 @@ export default function ReviewsPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                     <div>
                       <p style={{ fontFamily: 'var(--serif)', fontSize: '1.05rem', fontWeight: 400, color: 'var(--text)' }}>{t.name}</p>
-                      <p style={{ fontSize: '0.8rem', color: 'var(--gold)', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.2rem' }}>{t.service}</p>
+                      <p style={{ fontSize: '0.88rem', color: 'var(--gold)', fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', marginTop: '0.2rem' }}>{t.service}</p>
                     </div>
-                    <span style={{ color: 'var(--gold)', fontSize: '0.9rem', letterSpacing: '0.05em' }}>{'★'.repeat(t.rating)}</span>
+                    <span style={{ color: 'var(--gold)', fontSize: '0.95rem', letterSpacing: '0.05em' }}>{'★'.repeat(t.rating)}</span>
                   </div>
-                  <p style={{ fontSize: '0.95rem', lineHeight: 1.8, color: 'var(--text-2)', fontWeight: 300, fontStyle: 'italic' }}>"{t.text}"</p>
+                  <p style={{ fontSize: '1rem', lineHeight: 1.8, color: 'var(--text-2)', fontWeight: 300, fontStyle: 'italic' }}>"{t.text}"</p>
                 </div>
               ))}
             </div>
@@ -207,7 +207,7 @@ export default function ReviewsPage() {
         {/* Google reviews link */}
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>On Google</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>On Google</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Read All 1,230+<br /><em>Google Reviews</em>
             </h2>
@@ -233,7 +233,7 @@ export default function ReviewsPage() {
         {/* CTA */}
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
               Join 1,230+ Happy Clients
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

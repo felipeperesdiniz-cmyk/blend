@@ -11,9 +11,9 @@ import {
   FAQ_SERVICE_LINKS,
 } from '@/data/faq'
 
-const EYEBROW_STYLE = { fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase' as const, color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' as const }
+const EYEBROW_STYLE = { fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase' as const, color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' as const }
 const HEADING_STYLE = { fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '0.75rem', textAlign: 'center' as const }
-const LINK_STYLE = { fontSize: '0.82rem', color: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.08em', fontWeight: 500 }
+const LINK_STYLE = { fontSize: '0.88rem', color: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.08em', fontWeight: 500 }
 
 export default function FAQContent() {
   const { lang } = useLang()
@@ -23,7 +23,7 @@ export default function FAQContent() {
     <div className="page-enter">
       <header className="page-hero page-hero--beige">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.hero.eyebrow}
           </p>
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 4vw, 4.4rem)', fontWeight: 300, color: 'var(--ink)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '16ch' }}>
@@ -39,7 +39,7 @@ export default function FAQContent() {
               <a
                 key={key}
                 href={`#${FAQ_ANCHORS[key]}`}
-                style={{ fontSize: '0.78rem', padding: '0.35rem 0.9rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.06em', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'var(--sans)', fontWeight: 500 }}
+                style={{ fontSize: '0.85rem', padding: '0.35rem 0.9rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.06em', textDecoration: 'none', textTransform: 'uppercase', fontFamily: 'var(--sans)', fontWeight: 500 }}
               >
                 {t.sections[key].eyebrow}
               </a>
@@ -80,7 +80,7 @@ export default function FAQContent() {
       {/* CTA */}
       <section className="section">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>{t.cta.eyebrow}</p>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>{t.cta.eyebrow}</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
             {t.cta.heading} <em>{t.cta.em}</em>
           </h2>
@@ -97,7 +97,7 @@ export default function FAQContent() {
       {/* Quick links to service pages */}
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '900px' }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>{t.explore.eyebrow}</p>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>{t.explore.eyebrow}</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2.5rem', textAlign: 'center' }}>
             {t.explore.heading} <em>{t.explore.em}</em>
           </h2>
@@ -106,7 +106,7 @@ export default function FAQContent() {
               <Link
                 key={s.href}
                 href={s.href}
-                style={{ fontSize: '0.85rem', padding: '0.5rem 1.25rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.05em', transition: 'border-color 0.2s, color 0.2s', textDecoration: 'none' }}
+                style={{ fontSize: '0.9rem', padding: '0.5rem 1.25rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.05em', transition: 'border-color 0.2s, color 0.2s', textDecoration: 'none' }}
               >
                 {s.label}
               </Link>

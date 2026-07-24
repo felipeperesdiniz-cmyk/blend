@@ -34,11 +34,11 @@ export default function ArticleContent({ article, schema }: Props) {
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: '860px' }}>
             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', marginBottom: '1.25rem', flexWrap: 'wrap' }}>
-              <Link href="/blog" style={{ fontSize: '0.78rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 400, textDecoration: 'none' }}>
+              <Link href="/blog" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 400, textDecoration: 'none' }}>
                 {t.breadcrumb}
               </Link>
-              <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.7rem' }}>›</span>
-              <span style={{ fontSize: '0.78rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500 }}>
+              <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '0.75rem' }}>›</span>
+              <span style={{ fontSize: '0.85rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500 }}>
                 {tBlog.categories[article.category as keyof typeof tBlog.categories] ?? article.category}
               </span>
             </div>
@@ -48,7 +48,7 @@ export default function ArticleContent({ article, schema }: Props) {
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.3vw, 1.05rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '54ch', fontWeight: 300, marginBottom: '1.5rem' }}>
               {article.excerpt}
             </p>
-            <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.08em', fontFamily: 'var(--sans)' }}>
+            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.08em', fontFamily: 'var(--sans)' }}>
               {t.byLine} {date}
             </p>
           </div>
@@ -84,7 +84,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.relatedServices.length > 0 && (
           <section className="section section--beige">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.atBlend}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -92,7 +92,7 @@ export default function ArticleContent({ article, schema }: Props) {
               </h2>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 {article.relatedServices.map((s) => (
-                  <Link key={s.href} href={s.href} className="btn btn--outline" style={{ fontSize: '0.85rem' }}>
+                  <Link key={s.href} href={s.href} className="btn btn--outline" style={{ fontSize: '0.9rem' }}>
                     {s.label}
                   </Link>
                 ))}
@@ -104,7 +104,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.faqs.length > 0 && (
           <section className="section" id="faq">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>{t.faqLabel}</p>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>{t.faqLabel}</p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2.5rem' }}>
                 {t.commonQuestions}
               </h2>
@@ -116,7 +116,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {others.length > 0 && (
           <section className="section">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.beautyResourceCenter}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -133,12 +133,12 @@ export default function ArticleContent({ article, schema }: Props) {
                       {tBlog.categories[a.category as keyof typeof tBlog.categories] ?? a.category}
                     </p>
                     <p style={{ fontFamily: 'var(--serif)', fontSize: '1.05rem', fontWeight: 400, color: 'var(--text-1)', marginBottom: '0.4rem' }}>{a.title}</p>
-                    <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', fontWeight: 300, lineHeight: 1.6 }}>{a.excerpt}</p>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', fontWeight: 300, lineHeight: 1.6 }}>{a.excerpt}</p>
                   </Link>
                 ))}
               </div>
               <div style={{ marginTop: '2rem' }}>
-                <Link href="/blog" className="btn btn--outline" style={{ fontSize: '0.85rem' }}>{t.allArticles}</Link>
+                <Link href="/blog" className="btn btn--outline" style={{ fontSize: '0.9rem' }}>{t.allArticles}</Link>
               </div>
             </div>
           </section>
@@ -146,7 +146,7 @@ export default function ArticleContent({ article, schema }: Props) {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '780px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
               {t.reviewsLine}
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

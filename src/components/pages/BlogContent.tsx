@@ -34,7 +34,7 @@ export default function BlogContent() {
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.eyebrow}
           </p>
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 4vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -86,7 +86,7 @@ export default function BlogContent() {
                   {article.title}
                 </h2>
                 <p style={{
-                  fontSize: '0.9rem',
+                  fontSize: '0.95rem',
                   lineHeight: 1.7,
                   color: 'var(--text-2)',
                   fontWeight: 300,
@@ -96,7 +96,7 @@ export default function BlogContent() {
                   {article.excerpt}
                 </p>
                 <span style={{
-                  fontSize: '0.78rem',
+                  fontSize: '0.85rem',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
                   color: 'var(--gold)',
@@ -112,12 +112,12 @@ export default function BlogContent() {
 
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '820px' }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
             {t.browseByCategory}
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
             {CATEGORY_ORDER.map((cat) => (
-              <span key={cat} style={{ fontSize: '0.8rem', padding: '0.4rem 1.2rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.05em', fontFamily: 'var(--sans)' }}>
+              <span key={cat} style={{ fontSize: '0.88rem', padding: '0.4rem 1.2rem', border: '1px solid var(--line)', color: 'var(--text-2)', letterSpacing: '0.05em', fontFamily: 'var(--sans)' }}>
                 {t.categories[cat as keyof typeof t.categories] ?? cat}
               </span>
             ))}
@@ -127,7 +127,7 @@ export default function BlogContent() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.82rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.readyToBook}
           </p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

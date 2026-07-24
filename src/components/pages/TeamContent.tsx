@@ -26,7 +26,7 @@ export default function TeamContent() {
               initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             />
             <motion.p
-              style={{ fontSize: '0.82rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, margin: 0 }}
+              style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, margin: 0 }}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.55 }}
             >
               {t.eyebrow}
@@ -85,24 +85,24 @@ export default function TeamContent() {
                         <h2 style={{ fontFamily: 'var(--serif)', fontSize: '1.8rem', fontWeight: 400, color: 'var(--ink)' }}>{member.name}</h2>
                       </Link>
                     </div>
-                    <p style={{ fontSize: '0.82rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
+                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
                     {member.instagram && (
                       <a
                         href={member.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.8rem', color: 'var(--text-2)', marginBottom: '0.5rem', fontWeight: 300, textDecoration: 'none' }}
+                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.88rem', color: 'var(--text-2)', marginBottom: '0.5rem', fontWeight: 300, textDecoration: 'none' }}
                       >
                         <Instagram size={15} />
                         @{member.instagram.replace(/\/+$/, '').split('/').pop()}
                       </a>
                     )}
-                    <p style={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>{td.bio}</p>
+                    <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>{td.bio}</p>
                     <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                      <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.82rem' }}>
+                      <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.88rem' }}>
                         View Profile
                       </Link>
-                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.82rem' }}>
+                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
                         {t.bookBtn}
                       </a>
                     </div>
