@@ -62,7 +62,7 @@ export default function GalleryContent() {
   }, [lightbox])
 
   const currentItem = lightbox !== null ? filtered[lightbox] : null
-  const statsNums = ['1,230+', '4.9 ★', '13+', '100%']
+  const statsNums = ['1,230+', '4.9 ★', '8+', '100%']
   const ed = tg.editorial
   const tm = tg.testimonial
 

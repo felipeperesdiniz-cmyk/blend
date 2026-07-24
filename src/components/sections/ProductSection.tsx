@@ -3,10 +3,9 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
 const features = [
-  { label: 'Professional-Grade Color', body: 'We use professional color lines selected for vibrancy, lasting power, and hair health — the same products trusted by top salons across South Florida.' },
-  { label: 'Smoothing Treatments', body: 'Our Brazilian blowout and keratin formulas are carefully chosen for safety, longevity, and results that stand up to Florida\'s humidity.' },
-  { label: 'Home-Care Guidance', body: 'Every client leaves with a personalized routine to protect and maintain their results between visits to our Plantation boutique.' },
-  { label: 'Luxury Products Available', body: 'We carry a curated selection of professional-grade products so you can extend the life of your services at home.' },
+  { label: 'Professional-Grade Color', body: 'We work with premium color lines — including Keune, Wella, and Truss — selected for vibrancy, lasting power, and hair health, the same products trusted by top salons across South Florida.' },
+  { label: 'Smoothing Treatments', body: 'Our Brazilian keratin and botox smoothing treatments use FDA-approved Brazilian products, chosen for safety, longevity, and results that stand up to Florida\'s humidity.' },
+  { label: 'Home-Care Guidance', body: 'Every client leaves with a personalized Kérastase home-care routine — a curated selection of professional-grade products to protect and extend their results between visits to our Plantation boutique.' },
 ]
 
 export default function ProductSection() {

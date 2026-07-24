@@ -161,7 +161,7 @@ export default function ReviewsPage() {
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
               <div style={{ textAlign: 'center' }}>
-                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>13+</p>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>8+</p>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Years in Plantation</p>
               </div>
             </div>

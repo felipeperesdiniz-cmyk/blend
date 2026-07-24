@@ -85,13 +85,23 @@ export default function GiftCardsPage() {
                   Gift cards are available in any amount and can be purchased online through our Fresha booking system. They're ideal for birthdays, holidays, anniversaries, bridal gifts, or simply letting someone you love know they deserve a day of beauty.
                 </p>
               </div>
-              <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
-                  src="/images/gallery/salon-wine-service.webp"
-                  alt="Complimentary wine service at Blend Hair Boutique in Plantation, FL"
-                  loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
+                  <img
+                    src="/images/gallery/salon-wine-service.webp"
+                    alt="Complimentary wine service at Blend Hair Boutique in Plantation, FL"
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
+                <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)', marginTop: '2rem' }}>
+                  <img
+                    src="/images/gallery/wine-blend-champagne.webp"
+                    alt="Champagne toast at Blend Hair Boutique in Plantation, FL"
+                    loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                </div>
               </div>
             </div>
           </div>
