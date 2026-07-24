@@ -2215,7 +2215,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   background: var(--ink);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 620px;
+  min-height: 520px;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -2239,6 +2239,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .about-hero__img {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 4 / 3;
 }
 .about-hero__img::before {
   content: '';
