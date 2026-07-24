@@ -7,6 +7,10 @@ import { TEAM } from '@/data/team'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
+// The owners are presented together in the unified FoundersFeature block on
+// /team, so they no longer have standalone profile pages.
+const OWNER_IDS = ['juliana', 'fernanda']
+
 const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
   juliana: [
     { label: 'Hair Color', href: '/hair-color-plantation' },
@@ -122,7 +126,7 @@ const STYLIST_EXTENDED_BIO: Record<string, string> = {
 }
 
 export function generateStaticParams() {
-  return TEAM.map((m) => ({ slug: m.id }))
+  return TEAM.filter((m) => !OWNER_IDS.includes(m.id)).map((m) => ({ slug: m.id }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -145,7 +149,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function StylistPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const member = TEAM.find((m) => m.id === slug)
-  if (!member) notFound()
+  if (!member || OWNER_IDS.includes(slug)) notFound()
 
   const canonical = `${SITE_URL}/team/${slug}`
   const services = STYLIST_SERVICES[member.id] || []

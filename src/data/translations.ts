@@ -635,6 +635,16 @@ export const T = {
       secondary: 'Get in Touch',
     },
 
+    founders: {
+      label: 'Ownership',
+      name: 'Juliana & Fernanda',
+      role: 'Owners',
+      bios: [
+        'Originally from Brazil, Juliana and Fernanda founded Blend Hair Boutique with a shared vision of bringing together exceptional beauty services and the warmth of Brazilian hospitality. Their goal was to create a salon where every client feels genuinely welcomed, cared for, and confident from the moment they arrive.',
+        'Together, they have built a team of talented professionals who share the same passion for excellence, personalized service, and attention to every detail. Their commitment to creating a warm, welcoming atmosphere and delivering an exceptional client experience continues to shape everything Blend Hair Boutique stands for today.',
+      ],
+    },
+
     contact: {
       eyebrow: 'Find Us',
       h2a: 'Come Visit ',
@@ -1483,6 +1493,16 @@ export const T = {
       secondary: 'Fale Conosco',
     },
 
+    founders: {
+      label: 'Proprietárias',
+      name: 'Juliana & Fernanda',
+      role: 'Proprietárias',
+      bios: [
+        'Naturais do Brasil, Juliana e Fernanda fundaram o Blend Hair Boutique com uma visão em comum: unir serviços de beleza excepcionais ao acolhimento da hospitalidade brasileira. O objetivo delas era criar um salão onde cada cliente se sinta genuinamente bem-vinda, cuidada e confiante desde o momento em que chega.',
+        'Juntas, elas construíram uma equipe de profissionais talentosos que compartilham a mesma paixão por excelência, atendimento personalizado e atenção a cada detalhe. O compromisso delas em criar um ambiente caloroso e acolhedor e em oferecer uma experiência excepcional continua a moldar tudo o que o Blend Hair Boutique representa hoje.',
+      ],
+    },
+
     contact: {
       eyebrow: 'Onde Estamos',
       h2a: 'Venha Visitar ',
@@ -2328,6 +2348,16 @@ export const T = {
       sub: 'Cada visita a Blend es un paso hacia la versión más bella y segura de ti. Reserva tu cita hoy.',
       book: 'Reservar Cita',
       secondary: 'Contáctanos',
+    },
+
+    founders: {
+      label: 'Propietarias',
+      name: 'Juliana & Fernanda',
+      role: 'Propietarias',
+      bios: [
+        'Originarias de Brasil, Juliana y Fernanda fundaron Blend Hair Boutique con una visión compartida: unir servicios de belleza excepcionales con la calidez de la hospitalidad brasileña. Su objetivo era crear un salón donde cada cliente se sienta genuinamente bienvenida, atendida y segura desde el momento en que llega.',
+        'Juntas, han formado un equipo de profesionales talentosos que comparten la misma pasión por la excelencia, el servicio personalizado y la atención a cada detalle. Su compromiso de crear un ambiente cálido y acogedor y de ofrecer una experiencia excepcional al cliente sigue moldeando todo lo que Blend Hair Boutique representa hoy.',
+      ],
     },
 
     contact: {

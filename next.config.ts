@@ -160,6 +160,11 @@ const nextConfig: NextConfig = {
       // Home variants
       { source: '/home', destination: '/', permanent: true },
 
+      // Owners no longer have standalone profiles — send to the team page
+      // where they appear together in the unified founders block.
+      { source: '/team/juliana', destination: '/team', permanent: true },
+      { source: '/team/fernanda', destination: '/team', permanent: true },
+
       // Contact / forms
       { source: '/client-form', destination: '/contact', permanent: true },
       { source: '/thank-you', destination: '/', permanent: true },
