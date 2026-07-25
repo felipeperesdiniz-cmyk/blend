@@ -30,7 +30,7 @@ export default function AboutContent() {
             {t.h1a}<em style={{ fontStyle: 'italic' }}>{t.h1b}</em>
           </motion.h1>
           <motion.p
-            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1.05rem, 1.5vw, 1.2rem)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.85, maxWidth: '46ch', fontWeight: 300 }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1.05rem, 1.5vw, 1.2rem)', color: 'rgba(255,255,255,0.75)', lineHeight: 1.85, maxWidth: '46ch', fontWeight: 300 }}
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.5 }}
           >
             {t.sub}

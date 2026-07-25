@@ -2329,7 +2329,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 /* Compact hero — ~40% shorter than standard page-hero */
 .gal-hero {
   background: var(--ink);
-  padding: clamp(4.5rem, 9vw, 7.5rem) var(--gutter) clamp(3.5rem, 6vw, 5.5rem);
+  padding: clamp(4.5rem, 9vw, 7.5rem) var(--gutter) clamp(90px, 10vw, 140px);
   position: relative;
   overflow: hidden;
 }
@@ -2344,7 +2344,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: clamp(110px, 20vw, 210px);
+  height: clamp(60px, 10vw, 110px);
   background: linear-gradient(to top,
     var(--white) 0%,
     color-mix(in srgb, var(--white) 95%, transparent) 15%,
@@ -2740,7 +2740,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
 .page-hero {
   --hero-fade-to: var(--white);
-  padding: clamp(5rem, 8vw, 7rem) var(--gutter) clamp(2.5rem, 4vw, 3.5rem);
+  /* Bottom padding must stay comfortably taller than the ::after fade below,
+     otherwise the fade washes out the eyebrow/h1/sub text sitting above it. */
+  padding: clamp(5rem, 8vw, 7rem) var(--gutter) clamp(90px, 10vw, 140px);
   position: relative;
   overflow: hidden;
 }
@@ -2753,7 +2755,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: clamp(110px, 20vw, 210px);
+  height: clamp(60px, 10vw, 110px);
   /* Eased opacity curve (not linear) so the fade reads as smooth, not banded */
   background: linear-gradient(to top,
     var(--hero-fade-to) 0%,

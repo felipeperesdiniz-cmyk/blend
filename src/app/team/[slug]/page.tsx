@@ -202,7 +202,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, marginBottom: '1rem' }}>
               {member.name}
             </h1>
-            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.6, marginBottom: '0.5rem', fontWeight: 300 }}>
+            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, marginBottom: '0.5rem', fontWeight: 300 }}>
               {member.specialty}
             </p>
             {member.instagram && (
@@ -210,7 +210,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                 href={member.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)', letterSpacing: '0.04em', fontFamily: 'var(--sans)', marginBottom: '2rem', textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem', fontSize: '0.9rem', color: 'rgba(255,255,255,0.78)', letterSpacing: '0.04em', fontFamily: 'var(--sans)', marginBottom: '2rem', textDecoration: 'none' }}
               >
                 <Instagram size={16} />
                 @{member.instagram.replace(/\/+$/, '').split('/').pop()}

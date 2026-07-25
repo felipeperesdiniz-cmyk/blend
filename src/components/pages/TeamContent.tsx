@@ -45,7 +45,7 @@ export default function TeamContent() {
             </div>
           </h1>
           <motion.p
-            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.52)', lineHeight: 1.78, maxWidth: '44ch', marginTop: '1.75rem', fontWeight: 300 }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.76)', lineHeight: 1.78, maxWidth: '44ch', marginTop: '1.75rem', fontWeight: 300 }}
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.72 }}
           >
             {t.sub}

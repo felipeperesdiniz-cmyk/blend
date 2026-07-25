@@ -107,7 +107,7 @@ export default function HairSalonPlantationPage() {
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Hair Salon<br /><em>in Plantation, FL</em>
             </h1>
-            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.6)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>
+            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>
               Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,230+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences — delivered with Brazilian warmth and precision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
@@ -264,7 +264,7 @@ export default function HairSalonPlantationPage() {
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem', color: 'var(--white)' }}>
               Plantation's luxury salon<br /><em>is ready for you.</em>
             </h2>
-            <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'rgba(255,255,255,0.6)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
+            <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'rgba(255,255,255,0.8)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7, call (754) 206-3501, or visit us at 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

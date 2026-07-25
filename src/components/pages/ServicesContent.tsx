@@ -58,7 +58,7 @@ export default function ServicesContent() {
           </h1>
           <p
             className="fade-in-up"
-            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300, animationDelay: '0.4s' }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.78)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300, animationDelay: '0.4s' }}
           >
             {t.sub}
           </p>

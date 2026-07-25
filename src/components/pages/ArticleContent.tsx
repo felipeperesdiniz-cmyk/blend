@@ -45,7 +45,7 @@ export default function ArticleContent({ article, schema }: Props) {
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem, 4.5vw, 4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.1, maxWidth: '22ch', marginBottom: '1.5rem' }}>
               {article.title}
             </h1>
-            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.3vw, 1.05rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '54ch', fontWeight: 300, marginBottom: '1.5rem' }}>
+            <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.3vw, 1.05rem)', color: 'rgba(255,255,255,0.78)', lineHeight: 1.75, maxWidth: '54ch', fontWeight: 300, marginBottom: '1.5rem' }}>
               {article.excerpt}
             </p>
             <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.08em', fontFamily: 'var(--sans)' }}>

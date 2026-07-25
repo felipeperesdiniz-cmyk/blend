@@ -23,7 +23,7 @@ export default function ServiceDetailContent({ id }: { id: string }) {
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <Link
             href="/services"
-            style={{ fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', fontWeight: 500, marginBottom: '1.25rem', display: 'inline-block' }}
+            style={{ fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', fontWeight: 500, marginBottom: '1.25rem', display: 'inline-block' }}
           >
             {t.backToServices}
           </Link>
@@ -33,7 +33,7 @@ export default function ServiceDetailContent({ id }: { id: string }) {
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.5vw, 4.6rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '20ch' }}>
             <em style={{ fontStyle: 'italic' }}>{sd.title}</em>
           </h1>
-          <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.55)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300 }}>
+          <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.78)', lineHeight: 1.75, maxWidth: '44ch', marginTop: '1.5rem', fontWeight: 300 }}>
             {sd.benefit}
           </p>
         </div>
