@@ -7,9 +7,6 @@ import { T } from '@/data/translations'
 import { BUSINESS } from '@/data/constants'
 import { GALLERY_ITEMS, gallerySrc, type GallerySize } from '@/data/gallery'
 
-const EN_CATS = ['All', 'Color', 'Blonde', 'Brunette', 'Smoothing', 'Nails', 'Bridal'] as const
-type Cat = typeof EN_CATS[number]
-
 const ITEMS = GALLERY_ITEMS.map(i => ({ ...i, src: gallerySrc(i.file) }))
 
 const ASPECT: Record<GallerySize, string> = { tall: '2/3', portrait: '3/4', square: '1/1' }
@@ -20,30 +17,18 @@ const ASPECT: Record<GallerySize, string> = { tall: '2/3', portrait: '3/4', squa
 // as soon as real before/after pairs of Blend clients are available.
 
 export default function GalleryContent() {
-  const [active, setActive] = useState<Cat>('All')
   const [lightbox, setLightbox] = useState<number | null>(null)
   const { lang } = useLang()
   const tp = T[lang].pages.gallery
   const tg = T[lang].gallery
 
-  const enCats = T.en.gallery.categories
-  const catLabel: Record<string, string> = {}
-  enCats.forEach((enCat, i) => { catLabel[enCat] = tg.categories[i] })
-
   const enLabels = T.en.gallery.labels
   const labelMap: Record<string, string> = {}
-  const shortDescMap: Record<string, string> = {}
-  const descMap: Record<string, string> = {}
-  enLabels.forEach((enLabel, i) => {
-    labelMap[enLabel] = tg.labels[i]
-    shortDescMap[enLabel] = tg.shortDescs[i]
-    descMap[enLabel] = tg.descs[i]
-  })
+  enLabels.forEach((enLabel, i) => { labelMap[enLabel] = tg.labels[i] })
 
-  const filtered = active === 'All' ? ITEMS : ITEMS.filter(i => i.cat === active)
   const closeLightbox = useCallback(() => setLightbox(null), [])
-  const prevItem = useCallback(() => setLightbox(i => i === null ? null : (i - 1 + filtered.length) % filtered.length), [filtered.length])
-  const nextItem = useCallback(() => setLightbox(i => i === null ? null : (i + 1) % filtered.length), [filtered.length])
+  const prevItem = useCallback(() => setLightbox(i => i === null ? null : (i - 1 + ITEMS.length) % ITEMS.length), [])
+  const nextItem = useCallback(() => setLightbox(i => i === null ? null : (i + 1) % ITEMS.length), [])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -61,7 +46,7 @@ export default function GalleryContent() {
     return () => { document.body.style.overflow = '' }
   }, [lightbox])
 
-  const currentItem = lightbox !== null ? filtered[lightbox] : null
+  const currentItem = lightbox !== null ? ITEMS[lightbox] : null
   const statsNums = ['1,230+', '4.9 ★', '8+', '100%']
   const ed = tg.editorial
   const tm = tg.testimonial
@@ -79,39 +64,20 @@ export default function GalleryContent() {
         </div>
       </header>
 
-      <nav className="gal-tabs" aria-label="Filter gallery by service category">
-        <div className="gal-tabs__inner">
-          {EN_CATS.map(c => (
-            <button key={c} className={`gal-tab${active === c ? ' active' : ''}`} onClick={() => setActive(c)}>
-              {catLabel[c] ?? c}
-            </button>
-          ))}
-        </div>
-      </nav>
-
-      <AnimatePresence>
-        {active === 'All' && (
-          <motion.div className="gal-stats" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }}>
-            {tg.statsLabels.map((label, i) => (
-              <div key={i} className="gal-stat"><span className="gal-stat__num">{statsNums[i]}</span><span className="gal-stat__label">{label}</span></div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className="gal-stats">
+        {tg.statsLabels.map((label, i) => (
+          <div key={i} className="gal-stat"><span className="gal-stat__num">{statsNums[i]}</span><span className="gal-stat__label">{label}</span></div>
+        ))}
+      </div>
 
       <section className="section" style={{ paddingTop: 'clamp(3rem, 5vw, 4.5rem)' }}>
         <div className="container">
           <AnimatePresence mode="wait">
-            <motion.div key={`${active}-${lang}`} className="gal-masonry" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.32 }}>
-              {filtered.map((item, idx) => (
+            <motion.div key={lang} className="gal-masonry" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.32 }}>
+              {ITEMS.map((item, idx) => (
                 <div key={item.id} className="gal-masonry__item">
                   <motion.div className="gal-item" style={{ aspectRatio: ASPECT[item.size] }} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: Math.min(idx * 0.055, 0.4) }} onClick={() => setLightbox(idx)}>
                     <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique, Plantation FL`} loading="lazy" decoding="async" style={item.focus ? { objectPosition: item.focus } : undefined} />
-                    <div className="gal-item__overlay">
-                      <span className="gal-item__cat">{catLabel[item.cat] ?? item.cat}</span>
-                      <span className="gal-item__label">{labelMap[item.enLabel] ?? item.enLabel}</span>
-                      <span className="gal-item__short-desc">{shortDescMap[item.enLabel] ?? item.enLabel}</span>
-                    </div>
                     <div className="gal-item__expand" aria-hidden="true">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M7.5 1H11V4.5M4.5 11H1V7.5M11 1L6.5 5.5M1 11L5.5 6.5" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </div>
@@ -155,16 +121,11 @@ export default function GalleryContent() {
               <div className="gal-lightbox__img-wrap">
                 <img src={currentItem.src} alt={`${labelMap[currentItem.enLabel] ?? currentItem.enLabel} — Blend Hair Boutique`} className="gal-lightbox__img" />
               </div>
-              <div className="gal-lightbox__meta">
-                <p className="gal-lightbox__cat">{catLabel[currentItem.cat] ?? currentItem.cat}</p>
-                <p className="gal-lightbox__title">{labelMap[currentItem.enLabel] ?? currentItem.enLabel}</p>
-                <p className="gal-lightbox__desc">{descMap[currentItem.enLabel] ?? currentItem.enLabel}</p>
-              </div>
             </motion.div>
             <button className="gal-lightbox__close" onClick={closeLightbox} aria-label="Close gallery">✕</button>
             <button className="gal-lightbox__nav gal-lightbox__nav--prev" onClick={prevItem} aria-label="Previous image">←</button>
             <button className="gal-lightbox__nav gal-lightbox__nav--next" onClick={nextItem} aria-label="Next image">→</button>
-            <span className="gal-lightbox__counter">{String(lightbox + 1).padStart(2, '0')} / {String(filtered.length).padStart(2, '0')}</span>
+            <span className="gal-lightbox__counter">{String(lightbox + 1).padStart(2, '0')} / {String(ITEMS.length).padStart(2, '0')}</span>
           </motion.div>
         )}
       </AnimatePresence>
