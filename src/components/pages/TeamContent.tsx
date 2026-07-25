@@ -85,7 +85,7 @@ export default function TeamContent() {
                         <h2 style={{ fontFamily: 'var(--serif)', fontSize: '1.8rem', fontWeight: 400, color: 'var(--ink)' }}>{member.name}</h2>
                       </Link>
                     </div>
-                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
+                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--caramel-dk)', fontWeight: 500, marginBottom: '0.75rem' }}>{td.specialty}</p>
                     {member.instagram && (
                       <a
                         href={member.instagram}

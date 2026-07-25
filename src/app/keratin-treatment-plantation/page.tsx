@@ -89,7 +89,7 @@ export default function KeratinTreatmentPage() {
                 <img src="/images/gallery/glossy-straight-lob.webp" alt="Keratin-smoothed glossy hair at Blend Hair Boutique in Plantation, FL" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>Why Keratin at Blend</p>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>Why Keratin at Blend</p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
                   Frizz-Free.<br /><em>For Months.</em>
                 </h2>
@@ -106,7 +106,7 @@ export default function KeratinTreatmentPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
               Keratin Treatment <em>Questions</em>
             </h2>

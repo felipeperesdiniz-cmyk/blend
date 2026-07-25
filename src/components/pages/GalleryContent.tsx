@@ -103,7 +103,7 @@ export default function GalleryContent() {
 
       <section className="fade-in-up" style={{ padding: 'clamp(5rem, 9vw, 8rem) var(--gutter)', background: 'var(--parchment)', textAlign: 'center' }}>
         <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '2rem' }}>{tm.eyebrow}</p>
           <blockquote style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.15rem, 2.4vw, 1.65rem)', fontWeight: 300, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.58, letterSpacing: '-0.01em', marginBottom: '1.75rem' }}>
             &ldquo;{tm.quote}&rdquo;
           </blockquote>

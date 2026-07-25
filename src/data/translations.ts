@@ -18,7 +18,7 @@ export const T = {
     },
 
     hero: {
-      eyebrow: 'Plantation, FL · Est. 2012',
+      eyebrow: 'Plantation, FL · Est. 2018',
       h1: ['Beauty', 'as a', 'ritual.'],
       sub: 'A sanctuary of artistry and Brazilian warmth in the heart of South Florida. Every visit, a transformation.',
       cta1: 'Reserve Your Visit',
@@ -31,7 +31,7 @@ export const T = {
       'Kérastase Salon',
       'Brazilian Specialists',
       '5-Star Rated · 1,230+ Reviews',
-      'Since 2012',
+      'Since 2018',
       'Plantation, Florida',
     ],
 
@@ -944,7 +944,7 @@ export const T = {
       'Salão Kérastase',
       'Especialistas Brasileiras',
       'Nota 5 Estrelas · 1,230+ Avaliações',
-      'Desde 2012',
+      'Desde 2018',
       'Plantation, Florida',
     ],
 
@@ -1844,7 +1844,7 @@ export const T = {
       'Salón Kérastase',
       'Especialistas Brasileñas',
       'Calificación 5 Estrellas · 1,230+ Reseñas',
-      'Desde 2012',
+      'Desde 2018',
       'Plantation, Florida',
     ],
 

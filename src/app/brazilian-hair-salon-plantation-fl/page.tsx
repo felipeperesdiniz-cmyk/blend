@@ -105,14 +105,14 @@ export default function BrazilianHairSalonPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                   Our Heritage
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
                   Born in Brazil.<br /><em>Built for South Florida.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Blend Hair Boutique was founded in 2012 by Juliana Chen, alongside co-owner and salon manager Fernanda Macedo — Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
+                  Blend Hair Boutique was founded in 2018 by Juliana Chen, alongside co-owner and salon manager Fernanda Macedo — Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Brazilian beauty culture is world-renowned for its emphasis on healthy, luminous hair, intensive conditioning rituals, and the seamless blend of technical skill and personal warmth. These values are embedded in every appointment at Blend — from the consultation through to the finishing blow-dry.
@@ -132,7 +132,7 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Brazilian Specialties
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -156,7 +156,7 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Areas We Serve
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -175,7 +175,7 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
               Brazilian Salon <em>Questions</em>
             </h2>
@@ -185,7 +185,7 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Experience Brazilian beauty<br /><em>in Plantation, FL</em>
             </h2>

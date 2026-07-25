@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <main style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '4rem var(--gutter)' }}>
       <div>
-        <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '1rem' }}>
+        <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold-dk)', marginBottom: '1rem' }}>
           Page Not Found
         </p>
         <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2rem, 5vw, 4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>

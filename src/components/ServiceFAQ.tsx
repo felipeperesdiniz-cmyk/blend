@@ -23,7 +23,7 @@ export default function ServiceFAQ({ faqs }: { faqs: FAQ[] }) {
           >
             <span>{faq.q}</span>
             <span style={{
-              fontSize: '1.4rem', color: 'var(--gold)', flexShrink: 0, lineHeight: 1,
+              fontSize: '1.4rem', color: 'var(--gold-dk)', flexShrink: 0, lineHeight: 1,
               display: 'inline-block',
               transform: open === i ? 'rotate(45deg)' : 'none',
               transition: 'transform 0.25s ease',

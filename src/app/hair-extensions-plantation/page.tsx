@@ -81,7 +81,7 @@ export default function HairExtensionsPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>Extension Methods</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>Extension Methods</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
               Choose Your <em>Method</em>
             </h2>
@@ -92,7 +92,7 @@ export default function HairExtensionsPage() {
                 { name: 'Clip-In Extensions', desc: 'Non-permanent extensions applied and removed at home. Ideal for special occasions or clients who want flexibility. A consultation ensures perfect color matching.', tag: 'No Commitment' },
               ].map((m) => (
                 <div key={m.name} style={{ padding: '1.75rem', border: '1px solid var(--line)', background: 'var(--bg-soft)' }}>
-                  <p style={{ fontSize: '0.58rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.75rem' }}>{m.tag}</p>
+                  <p style={{ fontSize: '0.58rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold-dk)', marginBottom: '0.75rem' }}>{m.tag}</p>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.3rem', fontWeight: 400, marginBottom: '0.75rem' }}>{m.name}</h3>
                   <p style={{ fontSize: '1rem', lineHeight: 1.75, color: 'var(--text-2)', fontWeight: 300 }}>{m.desc}</p>
                 </div>

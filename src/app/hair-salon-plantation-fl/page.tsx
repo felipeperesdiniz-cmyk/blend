@@ -129,7 +129,7 @@ export default function HairSalonPlantationPage() {
                 '4.9 ★ Google Rating',
                 '1,230+ Verified Reviews',
                 'Brazilian Specialists',
-                'Open Since 2012',
+                'Open Since 2018',
                 'Plantation, FL 33324',
                 'EN · PT · ES',
               ].map((item) => (
@@ -144,7 +144,7 @@ export default function HairSalonPlantationPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                   Plantation's Luxury Salon
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
@@ -176,7 +176,7 @@ export default function HairSalonPlantationPage() {
         {/* Services grid */}
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '1100px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Full-Service Beauty
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -194,7 +194,7 @@ export default function HairSalonPlantationPage() {
                 >
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.1rem', fontWeight: 400, marginBottom: '0.4rem', color: 'var(--text)' }}>{s.name}</h3>
                   <p style={{ fontSize: '0.95rem', color: 'var(--text-2)', lineHeight: 1.6, fontWeight: 300 }}>{s.desc}</p>
-                  <span style={{ display: 'inline-block', marginTop: '0.75rem', fontSize: '0.88rem', color: 'var(--gold)', letterSpacing: '0.1em', fontWeight: 500 }}>Learn more →</span>
+                  <span style={{ display: 'inline-block', marginTop: '0.75rem', fontSize: '0.88rem', color: 'var(--gold-dk)', letterSpacing: '0.1em', fontWeight: 500 }}>Learn more →</span>
                 </Link>
               ))}
             </div>
@@ -204,7 +204,7 @@ export default function HairSalonPlantationPage() {
         {/* Why Blend */}
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Why Plantation Chooses Blend
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -212,7 +212,7 @@ export default function HairSalonPlantationPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought — they\'re earned, one client at a time, over more than a decade of service.' },
+                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought — they\'re earned, one client at a time, since 2018.' },
                 { title: 'Brazilian Expertise', body: 'Our team brings the precision, warmth, and hair culture of Brazil to Plantation, FL. Brazilian stylists are world-renowned for their mastery of color, texture, and smoothing techniques.' },
                 { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish — ensuring every client can communicate exactly what they want and feel completely understood.' },
                 { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup — all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },
@@ -229,7 +229,7 @@ export default function HairSalonPlantationPage() {
         {/* Area served */}
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
               Serving All of South Florida
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -249,7 +249,7 @@ export default function HairSalonPlantationPage() {
         {/* FAQ */}
         <section className="section" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
               Common <em>Questions</em>
             </h2>
@@ -260,7 +260,7 @@ export default function HairSalonPlantationPage() {
         {/* CTA */}
         <section className="section section--dark">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem', color: 'var(--white)' }}>
               Plantation's luxury salon<br /><em>is ready for you.</em>
             </h2>

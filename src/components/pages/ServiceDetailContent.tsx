@@ -64,7 +64,7 @@ export default function ServiceDetailContent({ id }: { id: string }) {
                     {sd.priceGroups.map((group, gi) => (
                       <div key={gi}>
                         {group.heading && (
-                          <p style={{ fontSize: '0.85rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.75rem' }}>
+                          <p style={{ fontSize: '0.85rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '0.75rem' }}>
                             {group.heading}
                           </p>
                         )}

@@ -84,7 +84,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.relatedServices.length > 0 && (
           <section className="section section--beige">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.atBlend}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -104,7 +104,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.faqs.length > 0 && (
           <section className="section" id="faq">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>{t.faqLabel}</p>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{t.faqLabel}</p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2.5rem' }}>
                 {t.commonQuestions}
               </h2>
@@ -116,7 +116,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {others.length > 0 && (
           <section className="section">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.beautyResourceCenter}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -129,7 +129,7 @@ export default function ArticleContent({ article, schema }: Props) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {others.map((a) => (
                   <Link key={a.slug} href={`/blog/${a.slug}`} style={{ textDecoration: 'none', color: 'inherit', borderTop: '1px solid var(--line)', paddingTop: '1.25rem', display: 'block' }}>
-                    <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.4rem', fontFamily: 'var(--sans)' }}>
+                    <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '0.4rem', fontFamily: 'var(--sans)' }}>
                       {tBlog.categories[a.category as keyof typeof tBlog.categories] ?? a.category}
                     </p>
                     <p style={{ fontFamily: 'var(--serif)', fontSize: '1.05rem', fontWeight: 400, color: 'var(--text-1)', marginBottom: '0.4rem' }}>{a.title}</p>
@@ -146,7 +146,7 @@ export default function ArticleContent({ article, schema }: Props) {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '780px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
               {t.reviewsLine}
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

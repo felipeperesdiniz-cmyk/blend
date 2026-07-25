@@ -16,14 +16,14 @@ const CATEGORY_ORDER = [
 
 function getCategoryColor(category: string) {
   const map: Record<string, string> = {
-    'Balayage & Color': 'var(--gold)',
-    'Hair Treatments': '#a8c5b5',
-    'Hair Health': '#c5b5a8',
-    'Extensions & Styling': '#b5a8c5',
-    'Bridal & Events': '#c5a8b5',
-    'Salon Tips': '#a8b5c5',
+    'Balayage & Color': 'var(--gold-dk)',
+    'Hair Treatments': '#687a70',
+    'Hair Health': '#7e736b',
+    'Extensions & Styling': '#7c7387',
+    'Bridal & Events': '#837079',
+    'Salon Tips': '#6e7782',
   }
-  return map[category] || 'var(--gold)'
+  return map[category] || 'var(--gold-dk)'
 }
 
 export default function BlogContent() {
@@ -99,7 +99,7 @@ export default function BlogContent() {
                   fontSize: '0.85rem',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: 'var(--gold)',
+                  color: 'var(--gold-dk)',
                   fontWeight: 500,
                 }}>
                   {t.readArticle}
@@ -112,7 +112,7 @@ export default function BlogContent() {
 
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '820px' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
             {t.browseByCategory}
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -127,7 +127,7 @@ export default function BlogContent() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.readyToBook}
           </p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

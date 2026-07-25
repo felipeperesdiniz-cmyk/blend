@@ -21,7 +21,7 @@ export default function PhilosophySection() {
         </blockquote>
 
         <p className="philosophy__meta fade-in-up" style={{ animationDelay: '0.5s' }}>
-          Blend Hair Boutique · Plantation, Florida · Est. 2012
+          Blend Hair Boutique · Plantation, Florida · Est. 2018
         </p>
 
         <div

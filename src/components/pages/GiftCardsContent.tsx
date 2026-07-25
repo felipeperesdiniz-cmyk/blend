@@ -36,7 +36,7 @@ export default function GiftCardsContent() {
         <div className="container" style={{ maxWidth: '1200px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'clamp(2.5rem, 5vw, 4rem)', alignItems: 'center' }}>
             <div>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.experienceEyebrow}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
@@ -69,7 +69,7 @@ export default function GiftCardsContent() {
 
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '900px' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
             {t.chooseEyebrow}
           </p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -88,7 +88,7 @@ export default function GiftCardsContent() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '820px' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
             {t.howEyebrow}
           </p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -97,7 +97,7 @@ export default function GiftCardsContent() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '2rem' }}>
             {t.steps.map((s) => (
               <div key={s.step} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.5rem' }}>{s.step}</p>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '0.5rem' }}>{s.step}</p>
                 <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.1rem', fontWeight: 400, marginBottom: '0.5rem' }}>{s.title}</h3>
                 <p style={{ fontSize: '0.95rem', lineHeight: 1.75, color: 'var(--text-2)', fontWeight: 300 }}>{s.body}</p>
               </div>
@@ -108,7 +108,7 @@ export default function GiftCardsContent() {
 
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.ctaEyebrow}
           </p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>

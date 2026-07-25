@@ -234,7 +234,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                 />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                   About {shortName}
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.6rem, 2.5vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
@@ -250,7 +250,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
                 {services.length > 0 && (
                   <>
-                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                       Services
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
@@ -272,7 +272,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                           }}
                         >
                           {s.label}
-                          <span style={{ color: 'var(--gold)', fontSize: '0.88rem' }}>→</span>
+                          <span style={{ color: 'var(--gold-dk)', fontSize: '0.88rem' }}>→</span>
                         </Link>
                       ))}
                     </div>
@@ -289,7 +289,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
               Blend Hair Boutique · Plantation, FL
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
