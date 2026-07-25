@@ -34,7 +34,7 @@ export default function GiftCardsContent() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '1200px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '0.85fr 1.15fr', gap: 'clamp(2.5rem, 5vw, 4rem)', alignItems: 'center' }}>
+          <div className="gift-experience">
             <div>
               <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
                 {t.experienceEyebrow}
@@ -49,7 +49,7 @@ export default function GiftCardsContent() {
                 {t.experienceP2}
               </p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', aspectRatio: '8 / 5', overflow: 'hidden', background: 'var(--bg-soft)' }}>
+            <div className="gift-experience__imgs">
               <img
                 src="/images/gallery/salon-wine-service.webp"
                 alt="Complimentary wine service at Blend Hair Boutique in Plantation, FL"

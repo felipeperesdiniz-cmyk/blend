@@ -47,7 +47,6 @@ export default function GalleryContent() {
   }, [lightbox])
 
   const currentItem = lightbox !== null ? ITEMS[lightbox] : null
-  const statsNums = ['1,230+', '4.9 ★', '8+', '100%']
   const ed = tg.editorial
   const tm = tg.testimonial
 
@@ -58,17 +57,11 @@ export default function GalleryContent() {
           <motion.p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             {tp.eyebrow}
           </motion.p>
-          <motion.h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.3rem, 4.2vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '12ch' }} initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}>
+          <motion.h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.8rem, 5.6vw, 5.8rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.028em', lineHeight: 1.01, maxWidth: '13ch' }} initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}>
             {tp.h1a}<em style={{ fontStyle: 'italic' }}>{tp.h1b}</em>
           </motion.h1>
         </div>
       </header>
-
-      <div className="gal-stats">
-        {tg.statsLabels.map((label, i) => (
-          <div key={i} className="gal-stat"><span className="gal-stat__num">{statsNums[i]}</span><span className="gal-stat__label">{label}</span></div>
-        ))}
-      </div>
 
       <section className="section" style={{ paddingTop: 'clamp(3rem, 5vw, 4.5rem)' }}>
         <div className="container">
