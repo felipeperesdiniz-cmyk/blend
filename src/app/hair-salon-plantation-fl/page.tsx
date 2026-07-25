@@ -99,7 +99,7 @@ export default function HairSalonPlantationPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <div className="page-enter">
-        <header className="page-hero page-hero--dark">
+        <header className="page-hero page-hero--dark page-hero--fade-soft">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
               10035 Cleary Blvd · Plantation, FL 33324

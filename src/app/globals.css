@@ -1045,7 +1045,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
   font-family: var(--serif);
-  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  font-size: clamp(1.15rem, 1.7vw, 1.35rem);
   font-style: italic;
   color: var(--ink);
   font-weight: 300;
@@ -2344,11 +2344,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: clamp(90px, 18vw, 180px);
+  height: clamp(110px, 20vw, 210px);
   background: linear-gradient(to top,
     var(--white) 0%,
-    rgba(255,255,255,0.7) 35%,
-    rgba(255,255,255,0.28) 65%,
+    color-mix(in srgb, var(--white) 95%, transparent) 15%,
+    color-mix(in srgb, var(--white) 83%, transparent) 30%,
+    color-mix(in srgb, var(--white) 65%, transparent) 45%,
+    color-mix(in srgb, var(--white) 42%, transparent) 60%,
+    color-mix(in srgb, var(--white) 22%, transparent) 75%,
+    color-mix(in srgb, var(--white) 8%, transparent) 88%,
     transparent 100%);
   pointer-events: none;
 }
@@ -2735,6 +2739,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 
 .page-hero {
+  --hero-fade-to: var(--white);
   padding: clamp(5rem, 8vw, 7rem) var(--gutter) clamp(2.5rem, 4vw, 3.5rem);
   position: relative;
   overflow: hidden;
@@ -2742,15 +2747,22 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .page-hero--dark  { background: var(--ink); }
 .page-hero--mint  { background: var(--bg-mint); }
 .page-hero--beige { background: var(--bg-soft); }
+/* Use when the section right after the hero isn't plain white (e.g. Contact's bg-soft block) */
+.page-hero--fade-soft { --hero-fade-to: var(--bg-soft); }
 .page-hero::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: clamp(90px, 18vw, 180px);
+  height: clamp(110px, 20vw, 210px);
+  /* Eased opacity curve (not linear) so the fade reads as smooth, not banded */
   background: linear-gradient(to top,
-    var(--white) 0%,
-    rgba(255,255,255,0.7) 35%,
-    rgba(255,255,255,0.28) 65%,
+    var(--hero-fade-to) 0%,
+    color-mix(in srgb, var(--hero-fade-to) 95%, transparent) 15%,
+    color-mix(in srgb, var(--hero-fade-to) 83%, transparent) 30%,
+    color-mix(in srgb, var(--hero-fade-to) 65%, transparent) 45%,
+    color-mix(in srgb, var(--hero-fade-to) 42%, transparent) 60%,
+    color-mix(in srgb, var(--hero-fade-to) 22%, transparent) 75%,
+    color-mix(in srgb, var(--hero-fade-to) 8%, transparent) 88%,
     transparent 100%);
   pointer-events: none;
 }
@@ -2981,7 +2993,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .experience__content {
     padding: clamp(32px,8vw,48px) 20px;
   }
-  .experience__list li { font-size: 14px; padding: 14px 0; }
+  .experience__list li { font-size: 17px; padding: 14px 0; }
 
   /* ── Visit steps ── */
   .visit-step__title { font-size: 1rem; }
