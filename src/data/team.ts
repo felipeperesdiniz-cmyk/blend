@@ -8,7 +8,6 @@ export interface TeamMember {
   image: string
 }
 
-// Images are Unsplash placeholders — replace with real salon photography
 export const TEAM: TeamMember[] = [
   {
     id: 'juliana',
@@ -16,7 +15,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Founder & General Manager',
     bio: 'Originally from Brazil, Juliana founded Blend Hair Boutique with a vision of bringing exceptional service, talented professionals, and genuine hospitality together in one place.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80',
+    image: '/founders.webp',
   },
   {
     id: 'fernanda',
@@ -24,7 +23,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Co-Owner & Salon Manager',
     bio: 'Fernanda is the heart of the day-to-day experience at Blend, welcoming clients by name and overseeing every detail to ensure each visit is exceptional.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+    image: '/founders.webp',
   },
   {
     id: 'debora',
@@ -51,7 +50,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Colombia and with Blend since 2020, Bia specializes in hair color and precision haircuts, known for her meticulous detail and gentle approach.',
     languages: 'English, Spanish',
     instagram: 'https://www.instagram.com/beatrizbalderramastylist',
-    image: 'https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/beatriz.webp',
   },
   {
     id: 'nana',
@@ -60,7 +59,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Brazil, Nana specializes in hair color, styling, smoothing treatments, and elegant updos, always with a thoughtful and detail-oriented approach.',
     languages: 'English, Spanish, Portuguese',
     instagram: 'https://www.instagram.com/nanareishairstylist',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/nana.webp',
   },
   {
     id: 'roger',
@@ -69,7 +68,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Brazil and with Blend since 2022, Roger specializes in hair color, precision haircuts, smoothing treatments, extensions, and men’s grooming.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/rogeriogalego11',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/roger.webp',
   },
   {
     id: 'ketty',
@@ -87,7 +86,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Brazil, Jeniffer specializes in hair color, precision haircuts, smoothing treatments, and professional makeup — and is especially known for her beautiful blowouts.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/jeniffertorreshair',
-    image: 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/jeniffer.webp',
   },
   {
     id: 'tabby',
@@ -96,7 +95,7 @@ export const TEAM: TeamMember[] = [
     bio: 'A Florida native, Tabby specializes in hair color, precision haircuts, styling, and men’s grooming, personally performing every step of each appointment.',
     languages: 'English',
     instagram: 'https://www.instagram.com/saintzstyles',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/tabby.webp',
   },
   {
     id: 'nina',
@@ -130,7 +129,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Brazil, Adriana enhances each client’s natural beauty through personalized eyebrow and facial services, with a meticulous eye for detail.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/adriana.eyebrows',
-    image: 'https://images.unsplash.com/photo-1595475207225-428b62bda831?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/adriana.webp',
   },
   {
     id: 'fran',
@@ -139,7 +138,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Originally from Brazil, Fran is passionate about skin health and takes a personalized approach to every facial, carefully evaluating each client’s unique skin needs.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/fran_aesthetics',
-    image: 'https://images.unsplash.com/photo-1601412436009-d964bd02edbc?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/fran.webp',
   },
   {
     id: 'vitoria',
@@ -147,7 +146,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Salon Assistant',
     bio: 'Vitória creates the warm, welcoming atmosphere that defines the Blend experience — from our signature cappuccino to keeping the salon running smoothly.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/vitoria.webp',
   },
   {
     id: 'marcelle',
@@ -155,7 +154,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Stylist Assistant',
     bio: 'Originally from Brazil, Marcelle worked as a hairstylist before moving to the United States. As Roger’s assistant, she helps deliver seamless, high-quality services.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/marcelle.webp',
   },
   {
     id: 'maggie',
@@ -163,7 +162,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Front Desk Coordinator',
     bio: 'With over five years at Blend, Maggie is often the first friendly face and voice our clients meet, coordinating appointments with warmth and professionalism.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/maggie.webp',
   },
   {
     id: 'vanessa-hanna',
@@ -171,6 +170,6 @@ export const TEAM: TeamMember[] = [
     specialty: 'Stylist Assistants',
     bio: 'Working alongside Léa, Vanessa and Hanna combine teamwork, impeccable timing, and attention to detail to keep every appointment flowing seamlessly.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/vanessa-hanna.webp',
   },
 ]
