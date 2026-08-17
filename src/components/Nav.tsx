@@ -44,7 +44,11 @@ export default function Nav() {
           </ul>
 
           <Link href="/" className="nav__logo" aria-label="Blend Hair Boutique">
-            <img src="/logo.png" alt="Blend Hair Boutique" className="nav__logo-img" />
+            {/* logo.png has an opaque white background, so it cannot sit over
+                the homepage film. The keyed mark is swapped in by CSS while the
+                nav is transparent. */}
+            <img src="/logo.png" alt="Blend Hair Boutique" className="nav__logo-img nav__logo-img--dark" />
+            <img src="/blend-mark-white.png" alt="" aria-hidden className="nav__logo-img nav__logo-img--light" />
           </Link>
 
           <div className="nav__actions">

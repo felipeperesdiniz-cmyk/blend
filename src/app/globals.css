@@ -734,6 +734,234 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   }
 }
 
+/* ─── Film hero — full-bleed loop with the mark centred ───────
+   Declared after the hero media queries above so these win without
+   needing !important. Only .hero--film picks these up. */
+.hero--film {
+  justify-content: center;
+  align-items: center;
+  background: var(--charcoal);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+}
+.hero__video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+/* Centre-weighted scrim: holds the white mark on the brightest frames
+   without reading as a dark overlay across the whole frame. */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 50% at 50% 47%, rgba(14,10,6,0.56) 0%, rgba(14,10,6,0.30) 58%, rgba(14,10,6,0.08) 100%),
+    linear-gradient(to bottom, rgba(14,10,6,0.24) 0%, transparent 18%),
+    linear-gradient(to top,    rgba(14,10,6,0.38) 0%, transparent 30%);
+}
+
+.hero__mark {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  width: min(26vw, 25rem);
+  min-width: 14rem;
+  /* Base state is visible; the keyframe supplies the entry via `backwards`
+     fill. If animations never run, the mark still renders. */
+  opacity: 1;
+  animation: heroMarkIn 1.8s var(--ease) 0.35s backwards;
+}
+@keyframes heroMarkIn {
+  from { opacity: 0; transform: scale(1.035); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.hero__mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Tight shadow for edge definition on light frames, wide one for lift. */
+  filter:
+    drop-shadow(0 1px 3px rgba(14,10,6,0.55))
+    drop-shadow(0 4px 30px rgba(14,10,6,0.50));
+}
+
+.hero__cue {
+  position: absolute;
+  z-index: 2;
+  bottom: clamp(2rem, 4vw, 3.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  opacity: 1;
+  animation: heroCueIn 1.2s ease-out 1.5s backwards;
+}
+@keyframes heroCueIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.hero__cue-label {
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.52);
+  font-weight: 400;
+  text-align: center;
+  padding-left: 0.4em; /* optical centring against the tracked caps */
+}
+
+@media (max-width: 1024px) {
+  .hero__mark { width: min(38vw, 22rem); }
+}
+@media (max-width: 768px) {
+  .hero--film { min-height: 95svh; }
+  .hero__mark { width: min(62vw, 20rem); }
+  .hero__video video { object-position: center 42%; }
+}
+@media (max-width: 480px) {
+  .hero--film { min-height: 92svh; }
+  .hero__mark { width: 68vw; }
+  /* The sticky action bar is hidden over the film, so the cue can sit low. */
+  .hero__cue { bottom: 1.75rem; }
+  .hero__cue-label { font-size: 10px; letter-spacing: 0.32em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-line,
+  .hero__mark,
+  .hero__cue { animation: none; }
+}
+
+/* ─── Overlaid chrome on the film hero ────────────────────────
+   Scoped with :has() rather than a route flag so it is correct on the
+   very first paint — no JS needed to avoid a flash of solid chrome over
+   the video. Browsers without :has() simply keep the standard chrome.
+   The film hero is the only thing using it, so no other page is touched.
+
+   Note the default direction: over the film is the UNFLAGGED state, and
+   [data-past-hero] (set once the hero scrolls away) restores the normal
+   solid bars. */
+
+/* The promo strip would be a black band across the top of the film. */
+body:has(.hero--film) .announcement-bar { display: none; }
+
+/* Out of flow, so the video starts at the very top of the viewport. */
+body:has(.hero--film) .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition:
+    background-color var(--t-mid) var(--ease),
+    border-color     var(--t-mid) var(--ease),
+    box-shadow       var(--t-mid) var(--ease);
+}
+
+/* Two logo files: the dark one has a baked white background and cannot sit
+   over footage, so the keyed mark stands in while the bar is transparent. */
+.nav__logo-img--light { display: none; }
+body:has(.hero--film) .nav__logo-img--dark  { display: none; }
+body:has(.hero--film) .nav__logo-img--light { display: block; }
+
+/* The centred mark is already the logo, so the nav copy would be the same
+   thing twice on the same screen. Faded rather than removed so the nav's
+   1fr/auto/1fr grid keeps its centre column and nothing shifts when it
+   returns. The mobile menu is an exception: its header needs the mark. */
+body:has(.hero--film) .nav__logo {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-mid) var(--ease);
+}
+html[data-past-hero] body:has(.hero--film) .nav__logo,
+body:has(.hero--film):has(.mobile-menu) .nav__logo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body:has(.hero--film) .nav__link,
+body:has(.hero--film) .lang-switcher__btn,
+body:has(.hero--film) .lang-switcher__dot {
+  color: rgba(255,255,255,0.86);
+}
+body:has(.hero--film) .nav__link:hover,
+body:has(.hero--film) .lang-switcher__btn.active { color: var(--white); }
+
+body:has(.hero--film) .nav__book {
+  background: transparent;
+  border-color: rgba(255,255,255,0.55);
+  color: var(--white);
+}
+body:has(.hero--film) .nav__book:hover {
+  background: var(--white);
+  color: var(--ink);
+}
+
+body:has(.hero--film) .nav__hamburger span { background: var(--white); }
+
+/* The mobile action bar stays out of the film, then slides up after it. */
+body:has(.hero--film) .sticky-cta {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform var(--t-slow) var(--ease),
+    opacity   var(--t-mid)  var(--ease);
+}
+
+/* ── Past the film: everything returns to the standard treatment ── */
+html[data-past-hero] body:has(.hero--film) .nav {
+  background: rgba(255,255,255,0.97);
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 20px rgba(31,26,22,0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+html[data-past-hero] body:has(.hero--film) .nav__logo-img--dark  { display: block; }
+html[data-past-hero] body:has(.hero--film) .nav__logo-img--light { display: none; }
+
+html[data-past-hero] body:has(.hero--film) .nav__link,
+html[data-past-hero] body:has(.hero--film) .lang-switcher__btn,
+html[data-past-hero] body:has(.hero--film) .lang-switcher__dot { color: var(--ink); }
+html[data-past-hero] body:has(.hero--film) .nav__link:hover { color: var(--caramel-dk); }
+
+html[data-past-hero] body:has(.hero--film) .nav__book {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
+}
+html[data-past-hero] body:has(.hero--film) .nav__book:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+html[data-past-hero] body:has(.hero--film) .nav__hamburger span { background: var(--ink); }
+
+html[data-past-hero] body:has(.hero--film) .sticky-cta {
+  transform: none;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* The hamburger's open state is drawn on the dark mobile menu, so its bars
+   must stay light regardless of scroll position. */
+body:has(.hero--film) .nav__hamburger.open span,
+html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
+  background: var(--white);
+}
+
 /* ─── Section background variants ───────────────────────────── */
 .section--parchment  { background: var(--parchment); }
 .section--warm-white { background: var(--warm-white); }

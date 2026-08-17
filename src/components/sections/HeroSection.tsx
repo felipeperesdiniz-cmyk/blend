@@ -1,120 +1,101 @@
 'use client'
-import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
-const fadeUp = (delay: number) => ({
-  hidden:  { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1], delay } },
-})
-
-const fadeIn = (delay: number) => ({
-  hidden:  { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1.0, ease: 'easeOut', delay } },
-})
-
 export default function HeroSection() {
   const { lang } = useLang()
   const t = T[lang].hero
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  // Flags the document once the film has scrolled away, which is what turns the
+  // nav solid and brings the mobile action bar back. The default (attribute
+  // absent) is the overlaid state, so the first paint is already correct and
+  // there is no flash of solid chrome over the video.
+  useEffect(() => {
+    const root = document.documentElement
+
+    const onScroll = () => {
+      const el = sectionRef.current
+      if (!el) return
+      const nav = document.querySelector('.nav')
+      const navH = nav ? nav.getBoundingClientRect().height : 80
+      const past = el.getBoundingClientRect().bottom <= navH
+      root.toggleAttribute('data-past-hero', past)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    onScroll()
+
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      // Leaving the homepage must not strand other pages in the scrolled state.
+      root.removeAttribute('data-past-hero')
+    }
+  }, [])
+
+  // The mark's entry is CSS-driven on purpose — it is the only content in this
+  // hero, so it must never depend on JS having run. This effect only governs
+  // playback.
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      v.removeAttribute('autoplay')
+      v.pause()
+      return
+    }
+
+    // Autoplay is best-effort: a browser may reject the promise until the user
+    // interacts. The poster stays up in that case, so nothing looks broken.
+    v.play().catch(() => {})
+  }, [])
 
   return (
-    <section className="hero" aria-label="Hero">
-      {/* Cinematic background with slow Ken Burns */}
-      <div className="hero__bg">
-        <picture>
-          <source
-            media="(max-width: 640px)"
-            srcSet="/hero-interior-mobile.webp"
-            type="image/webp"
-          />
-          <source srcSet="/hero-interior.webp" type="image/webp" />
-          <img
-            src="/hero-interior.jpg"
-            alt="Blend Hair Boutique — luxury salon interior in Plantation, Florida"
-            loading="eager"
-            fetchPriority="high"
-            decoding="sync"
-            width={1586}
-            height={992}
-          />
-        </picture>
+    <section className="hero hero--film" aria-label="Hero" ref={sectionRef}>
+      <div className="hero__video">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/hero-interior.webp"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src="/hero-loop.webm" type="video/webm" />
+          <source src="/hero-loop.mp4" type="video/mp4" />
+        </video>
       </div>
 
-      {/* Atmospheric overlay — heavier left and bottom */}
-      <div className="hero__overlay" aria-hidden />
+      {/* Centre-weighted scrim — just enough to hold the mark on the brightest
+          frames without reading as a dark overlay. */}
+      <div className="hero__scrim" aria-hidden />
 
-      {/* Main content — bottom-anchored */}
-      <div className="hero__content">
-        <div className="hero__main">
+      <h1 className="hero__mark">
+        <img
+          src="/blend-mark-white.png"
+          alt=""
+          width={1200}
+          height={765}
+          fetchPriority="high"
+          decoding="sync"
+        />
+        <span className="sr-only">
+          {`${BUSINESS.name} — ${t.h1.join(' ')} ${t.sub}`}
+        </span>
+      </h1>
 
-          <motion.div
-            className="hero__eyebrow"
-            variants={fadeIn(0.2)}
-            initial="hidden"
-            animate="visible"
-          >
-            {t.eyebrow}
-          </motion.div>
-
-          <motion.h1
-            className="hero__h1"
-            variants={fadeUp(0.3)}
-            initial="hidden"
-            animate="visible"
-          >
-            <span className="hero__h1-float">
-              {t.h1[0]}<br />
-              {t.h1[1]}{' '}
-              <em>{t.h1[2]}</em>
-            </span>
-          </motion.h1>
-
-          <motion.p
-            className="hero__sub"
-            variants={fadeIn(0.5)}
-            initial="hidden"
-            animate="visible"
-          >
-            {t.sub}
-          </motion.p>
-
-          {/* Inline trust signal */}
-          <motion.div
-            className="hero__trust"
-            variants={fadeIn(0.6)}
-            initial="hidden"
-            animate="visible"
-          >
-            <span className="hero__trust-stars">★ ★ ★ ★ ★</span>
-            <span className="hero__trust-label">{t.badge}</span>
-          </motion.div>
-
-          <motion.div
-            className="hero__ctas"
-            variants={fadeIn(0.7)}
-            initial="hidden"
-            animate="visible"
-          >
-            <a
-              href={BUSINESS.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn--hero-primary"
-            >
-              {t.cta1}
-            </a>
-            <a href={BUSINESS.phoneHref} className="btn--hero-ghost">
-              {t.cta2}
-            </a>
-          </motion.div>
-        </div>
-
-        {/* Vertical editorial aside */}
-        <div className="hero__aside" aria-hidden>
-          <span className="hero__rating-text">{t.badgeSub}</span>
-          <div className="hero__scroll-line" />
-        </div>
+      <div className="hero__cue" aria-hidden>
+        <span className="hero__cue-label">{t.eyebrow}</span>
+        <div className="hero__scroll-line" />
       </div>
     </section>
   )
