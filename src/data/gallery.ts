@@ -76,7 +76,7 @@ export const FEATURED_IDS = [
 // use them rather than through this file:
 //   bronde-balayage-back .... /balayage-plantation-fl
 //   blonde-shag-bob ......... /haircuts-plantation-fl
-//   blonde-highlights-smile . homepage, FirstVisitSection
+//   blonde-highlights-smile . unused — spare (was homepage FirstVisitSection)
 //   bronde-waves-smile ...... /about
 //   stylist-blend-wall ...... /about (hero)
 //   salon-wine-service ...... /gift-cards, /luxury-hair-salon-plantation-fl

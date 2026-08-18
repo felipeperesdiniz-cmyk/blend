@@ -1903,6 +1903,29 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-style: italic;
   color: var(--gold);
 }
+/* Scroll-driven per-line reveal. Scoped to [data-reveal-armed], which only
+   PhilosophySection's effect sets, so this cannot leak to other sections and
+   cannot hide anything if JS never runs. */
+.philosophy__quote-line { display: block; }
+.philosophy__inner[data-reveal-armed] [data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .philosophy__inner[data-reveal-armed] [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .philosophy__meta {
   font-size: 12px;
   letter-spacing: 0.38em;

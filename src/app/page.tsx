@@ -4,7 +4,6 @@ import TrustBar from '@/components/sections/TrustBar'
 import ServicesSection from '@/components/sections/ServicesSection'
 import PhilosophySection from '@/components/sections/PhilosophySection'
 import GallerySection from '@/components/sections/GallerySection'
-import FirstVisitSection from '@/components/sections/FirstVisitSection'
 import TeamSection from '@/components/sections/TeamSection'
 import ProductSection from '@/components/sections/ProductSection'
 import ReviewsSection from '@/components/sections/ReviewsSection'
@@ -34,7 +33,6 @@ export default function HomePage() {
       <ServicesSection />
       <PhilosophySection />
       <GallerySection />
-      <FirstVisitSection />
       <TeamSection />
       <ProductSection />
       <ReviewsSection />
