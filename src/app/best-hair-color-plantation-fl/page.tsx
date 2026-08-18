@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/best-hair-color-plantation-fl`
 
 export const metadata: Metadata = {
-  title: 'Best Hair Color in Plantation, FL | Blend Hair Boutique',
+  title: 'Best Hair Color in Plantation, FL',
   description:
     'Find the best hair color in Plantation, FL at Blend Hair Boutique. Balayage, highlights, all-over color, and color correction by expert colorists. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
@@ -90,7 +90,7 @@ export default function BestHairColorPage() {
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
-              4.9★ · 1,230+ Google Reviews · Plantation, FL
+              {REVIEW_LINE_LOCATED.en}
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Hair Color<br /><em>in Plantation, FL</em>
@@ -192,7 +192,7 @@ export default function BestHairColorPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Ready for beautiful<br /><em>hair color in Plantation?</em>
             </h2>

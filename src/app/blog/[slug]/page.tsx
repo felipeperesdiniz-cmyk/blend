@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ARTICLES } from '@/data/articles'
 import ArticleContent from '@/components/pages/ArticleContent'
+import { pageTitle } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -15,7 +16,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return {}
   const canonical = `${SITE_URL}/blog/${slug}`
   return {
-    title: `${article.title} | Blend Hair Boutique`,
+    // Brand is appended by the root layout's title template, and dropped again
+    // by pageTitle when the headline leaves no room for it. The openGraph title
+    // below always spells it out, since the template does not apply there.
+    title: pageTitle(article.title),
     description: article.excerpt,
     alternates: { canonical },
     openGraph: {

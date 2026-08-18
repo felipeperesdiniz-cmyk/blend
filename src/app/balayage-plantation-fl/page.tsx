@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/balayage-plantation-fl`
 
 export const metadata: Metadata = {
-  title: 'Balayage in Plantation, FL | Blend Hair Boutique',
+  title: 'Balayage in Plantation, FL',
   description:
     'Expert balayage in Plantation, Florida at Blend Hair Boutique. Hand-painted, custom balayage, highlights, and ombre tailored to your hair texture and skin tone. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },
@@ -175,7 +175,7 @@ export default function BalayagePlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Ready to book your<br /><em>balayage in Plantation?</em>
             </h2>

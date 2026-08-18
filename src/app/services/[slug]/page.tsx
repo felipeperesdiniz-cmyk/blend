@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { SERVICES } from '@/data/services'
 import ServiceDetailContent from '@/components/pages/ServiceDetailContent'
+import { pageTitle } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -14,12 +15,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const s = SERVICES.find((service) => service.id === slug)
   if (!s) return {}
 
-  const title = `${s.title} | Blend Hair Boutique, Plantation FL`
+  // The document title gets the brand from the root layout's title template,
+  // so it must not carry it here. The template does not apply to openGraph, so
+  // that one spells the brand out.
+  const title = `${s.title} in Plantation, FL`
   return {
-    title,
+    title: pageTitle(title),
     description: s.description,
     alternates: { canonical: `${SITE_URL}/services/${s.id}` },
-    openGraph: { title, description: s.description, url: `${SITE_URL}/services/${s.id}` },
+    openGraph: {
+      title: `${title} | Blend Hair Boutique`,
+      description: s.description,
+      url: `${SITE_URL}/services/${s.id}`,
+    },
   }
 }
 

@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/faq`
 
 export const metadata: Metadata = {
-  title: 'FAQ | Blend Hair Boutique, Plantation, FL Hair Salon Questions Answered',
+  title: 'Hair Salon FAQ · Plantation, FL',
   description:
     'Answers to 130+ questions about Blend Hair Boutique in Plantation, FL: booking, policies, balayage, keratin, extensions, haircuts, nails, brows, lashes, facials, waxing, and makeup. 4.9★ salon.',
   alternates: { canonical: CANONICAL },

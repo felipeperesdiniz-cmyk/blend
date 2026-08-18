@@ -45,6 +45,23 @@
   --warm-white:    #faf8f4;
   --parchment:     #f0ebe2;
 
+  /* Text on the dark grounds (--charcoal #191510 / --ink #1f1a16).
+     White needs 45% alpha to clear 4.5:1 on both and 33% to clear 3:1, so every
+     value below carries deliberate headroom over the floor. These exist as
+     tokens because the failures they replace were six different hand-picked
+     alphas between 0.16 and 0.42, none of which passed. Use the token. */
+  --on-dark-strong: rgba(255,255,255,0.94);  /* 16:1 — hours, trust bar */
+  --on-dark:        rgba(255,255,255,0.72);  /*  9:1 — body copy */
+  --on-dark-muted:  rgba(255,255,255,0.58);  /*  6:1 — de-emphasised, still AA */
+
+  /* Height reserved by the mobile action bar. Shared by the body padding that
+     keeps the footer clear of it and by the hero cue that has to sit above it.
+     Measured, not guessed: 12.75px padding + a 65px button + 12.75px + the 1px
+     top border comes to 91px. The previous 70px under-reserved by 21px, so the
+     bar was already clipping the bottom of the footer before the hero cue ever
+     had to share the space with it. */
+  --sticky-cta-h: calc(92px + env(safe-area-inset-bottom, 0px));
+
   /* Spacing */
   --section-pad: clamp(3.25rem, 6vw, 5rem);
   --container:   1400px;
@@ -320,8 +337,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .nav__hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
-  padding: 10px;
+  /* 10px padding gave a 42x35 box for the one control that opens navigation on
+     every phone. Sized explicitly to 44 square instead. */
+  padding: 10px 11px;
+  min-width: 44px;
+  min-height: 44px;
   cursor: pointer;
   margin-left: auto;
   flex-shrink: 0;
@@ -479,7 +501,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 @media (max-width: 1024px) {
   .sticky-cta { display: block; }
-  body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+  body { padding-bottom: var(--sticky-cta-h); }
 }
 
 /* ─── Hero (Cinematic Full-Screen) ──────────────────────────── */
@@ -765,12 +787,31 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   inset: 0;
   background:
     radial-gradient(60% 50% at 50% 47%, rgba(14,10,6,0.56) 0%, rgba(14,10,6,0.30) 58%, rgba(14,10,6,0.08) 100%),
-    /* The nav sits in the top ~8% of the hero and the footage there is mostly
-       white coats and walls (luma up to 198), so the old 0.24/18% ramp left the
-       hamburger and lang switcher under 2.5:1. This is deeper and stronger but
-       fully decayed by 30%, which is above the mark, so the centre is unchanged. */
-    linear-gradient(to bottom, rgba(14,10,6,0.62) 0%, rgba(14,10,6,0.28) 14%, transparent 30%),
-    linear-gradient(to top,    rgba(14,10,6,0.38) 0%, transparent 30%);
+    /* Nav scrim. Measured in px against the nav's own height rather than as a
+       percentage of the hero: a percentage ramp scales with the viewport, so on
+       a tall window it reached far past the bar and on a short one it stopped
+       short of it. The footage brightens hard around 11s (an out-of-focus macro
+       shot, luma up to 198) and the old 0.62/14%/30% ramp bottomed the nav out
+       at 3.42:1 there. This holds a constant 110px band — the bar is ~100px at
+       its tallest — and is fully decayed well above the mark, so the centre of
+       frame is untouched. */
+    linear-gradient(to bottom, rgba(14,10,6,0.60) 0px, rgba(14,10,6,0.37) 70px, transparent 110px),
+    /* Cue band, px-bound for the same reason as the nav band above: the cue
+       sits a fixed distance off the bottom (further up on mobile, to clear the
+       action bar), so a percentage ramp landed it in a different part of the
+       gradient at every viewport height. 220px covers both positions. */
+    linear-gradient(to top,    rgba(14,10,6,0.78) 0px, rgba(14,10,6,0.54) 130px, transparent 230px),
+    /* Base grade. A flat black at alpha a is exactly `brightness(1 - a)`, so
+       this is a brightness(0.72) pass on the footage without putting a filter
+       on the video element and forcing it onto its own compositing layer.
+       It exists because a top gradient alone could not carry the nav: the
+       footage peaks near white around 11s, and white-on-near-white only
+       improves by darkening the ground — raising the text alpha measured as
+       worth under 0.2 of a contrast point. A gradient strong enough on its own
+       needed 0.86 peak, which reads as a black bar across the film. Graded
+       this way the whole frame goes moodier, which suits the footage, and the
+       nav band stays close to the light touch it was designed with. */
+    linear-gradient(rgba(14,10,6,0.28), rgba(14,10,6,0.28));
 }
 
 .hero__mark {
@@ -822,7 +863,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   font-size: 11px;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.52);
+  /* Was 0.52, which measured 1.82:1 against the brightest frames. At 11px with
+     0.4em tracking there is no spare contrast to give away, so this is solid. */
+  color: #fff;
   font-weight: 400;
   text-align: center;
   padding-left: 0.4em; /* optical centring against the tracked caps */
@@ -831,6 +874,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 @media (max-width: 1024px) {
   .hero__mark { width: min(30vw, 18rem, 48svh); }
 }
+/* The action bar now arrives over the film, so the cue can no longer sit at
+   the bottom of the viewport — it has to clear the bar's reserved height.
+   Bound to the same token the body padding uses, so the two cannot drift. */
+@media (max-width: 1024px) {
+  .hero__cue { bottom: calc(1.5rem + var(--sticky-cta-h)); }
+}
+
 @media (max-width: 768px) {
   /* Full height, matching desktop. The shorter 95/92svh that the other heroes
      use let the trust bar wrap into the gap below the film, so the first paint
@@ -845,8 +895,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 @media (max-width: 480px) {
   .hero--film { min-height: 100svh; }
   .hero__mark { width: min(42vw, 48svh); }
-  /* The sticky action bar is hidden over the film, so the cue can sit low. */
-  .hero__cue { bottom: 1.75rem; }
+  /* Bottom offset comes from the 1024px rule above, which clears the action
+     bar; only the type needs tightening at this width. */
   .hero__cue-label { font-size: 10px; letter-spacing: 0.32em; }
 }
 
@@ -933,14 +983,25 @@ body:has(.hero--film) .nav__book:hover {
 
 body:has(.hero--film) .nav__hamburger span { background: var(--white); }
 
-/* The mobile action bar stays out of the film, then slides up after it. */
+/* The mobile action bar rises into the film rather than waiting for it to end.
+   It used to stay hidden until [data-past-hero], which left the entire first
+   screen on a phone with no way to book: no Book Now button (hidden below
+   1400px) and the menu's own booking link 494px below its fold. It now holds
+   off long enough for the mark's entry to land, then arrives.
+
+   `backwards` fill keeps the from-state during the delay, so nothing shows
+   before 1.5s; after the animation ends the element rests at its normal
+   visible state, which is also what [data-past-hero] below asserts. */
 body:has(.hero--film) .sticky-cta {
-  transform: translateY(110%);
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    transform var(--t-slow) var(--ease),
-    opacity   var(--t-mid)  var(--ease);
+  animation: stickyCtaIn var(--t-slow) var(--ease) 1.5s backwards;
+}
+@keyframes stickyCtaIn {
+  from { transform: translateY(110%); opacity: 0; pointer-events: none; }
+  to   { transform: none;             opacity: 1; pointer-events: auto; }
+}
+/* Reduced motion: no slide, and no reason to withhold the booking control. */
+@media (prefers-reduced-motion: reduce) {
+  body:has(.hero--film) .sticky-cta { animation: none; }
 }
 
 /* ── Past the film: everything returns to the standard treatment ── */
@@ -1010,7 +1071,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-size: 11.5px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.32);
+  color: var(--on-dark-strong);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -1201,6 +1262,9 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  position: relative;
+  min-height: 44px;
+  align-content: center;
 }
 .svc-list__name {
   font-family: var(--serif);
@@ -1219,6 +1283,13 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-weight: 400;
   flex-shrink: 0;
 }
+/* Hit area, not appearance. These links are 19–21px tall as drawn, which is
+   under both the 24px WCAG 2.2 minimum and the 44px both platform guidelines
+   ask for — and they are booking entry points, so a missed tap is a lost
+   appointment. An absolutely-positioned ::after grows the touch target without
+   taking part in layout, so nothing moves and the type stays the size the
+   design intends. Expansion is vertical only: these sit in flex rows beside
+   other links, and growing sideways would let one swallow the other. */
 .svc-list__book {
   font-size: 12px;
   letter-spacing: 0.18em;
@@ -1229,6 +1300,16 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   flex-shrink: 0;
   transition: color var(--t-mid) var(--ease);
   text-decoration: none;
+  position: relative;
+}
+.svc-list__book::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 44px;
+  transform: translateY(-50%);
 }
 @media (max-width: 640px) {
   .svc-list__row { padding: 1.35rem 0; gap: 1rem; }
@@ -1437,6 +1518,18 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   text-decoration: none;
   margin-bottom: 1.25rem;
 }
+.team-card__langs { position: relative; }
+.team-card__langs[href]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  /* 48 rather than 44: the Book link's own expander sits close enough below to
+     clip the last couple of pixels off a 44px band. */
+  height: 48px;
+  transform: translateY(-50%);
+}
 .team-card__langs:hover { color: var(--gold-dk); }
 .team-card__book {
   font-size: 11.5px;
@@ -1449,6 +1542,16 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   align-self: flex-start;
   margin-top: auto;
   transition: color var(--t-fast), border-color var(--t-fast);
+}
+.team-card__book { position: relative; }
+.team-card__book::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 44px;
+  transform: translateY(-50%);
 }
 .team-card__book:hover { color: var(--gold-dk); border-color: var(--gold); }
 
@@ -1916,7 +2019,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-size: 12px;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.16);
+  color: var(--on-dark-muted);
   font-weight: 400;
 }
 @media (max-width: 768px) {
@@ -2134,7 +2237,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
 .cta-section__h2 em { font-style: italic; color: var(--gold); }
 .cta-section__sub {
   font-size: clamp(0.875rem, 1.3vw, 0.975rem);
-  color: rgba(255,255,255,0.42);
+  color: var(--on-dark);
   line-height: 1.9;
   max-width: 46ch;
   margin: 0 auto 2.75rem;
@@ -2189,7 +2292,15 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   color: var(--text);
   line-height: 1.5;
 }
-.contact-info__value a { transition: color var(--t-fast); }
+.contact-info__value a {
+  transition: color var(--t-fast);
+  /* Address, phone, WhatsApp and email are the four things someone opens this
+     section to tap. They were 21px tall; the negative margin keeps the block's
+     spacing exactly as designed while the hit box reaches 45px. */
+  display: inline-block;
+  padding-block: 12px;
+  margin-block: -12px;
+}
 .contact-info__value a:hover { color: var(--gold-dk); }
 .contact-map {
   border-radius: 0;
@@ -2268,7 +2379,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
 .footer__tagline {
   font-size: 14px;
   line-height: 1.65;
-  color: rgba(255,255,255,0.42);
+  color: var(--on-dark-muted);
   font-weight: 300;
   max-width: 28ch;
   margin-bottom: 1.5rem;
@@ -2279,8 +2390,8 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   margin-top: 1.5rem;
 }
 .footer__social {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.15);
   display: flex;
@@ -2298,16 +2409,21 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-weight: 500;
   margin-bottom: 1.25rem;
 }
+/* The gap shrinks as the links grow, so the column keeps its rhythm while each
+   link becomes a 44px target instead of a 17px one. Padding on the link rather
+   than spacing on the container, because it is the link that has to be hit. */
 .footer__links {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0;
 }
 .footer__link {
   font-size: 14px;
   color: rgba(255,255,255,0.5);
   font-weight: 300;
   transition: color var(--t-fast);
+  padding-block: 13px;
+  line-height: 1.25;
 }
 .footer__link:hover { color: var(--white); }
 .footer__contact-item {
@@ -2317,7 +2433,14 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   line-height: 1.7;
   margin-bottom: 0.5rem;
 }
-.footer__contact-item a { transition: color var(--t-fast); }
+.footer__contact-item a {
+  transition: color var(--t-fast);
+  /* Inline links in a text block: grow the hit box without breaking the line
+     rhythm the surrounding copy sets. */
+  display: inline-block;
+  padding-block: 12px;
+  margin-block: -12px;
+}
 .footer__contact-item a:hover { color: var(--gold); }
 .footer__bottom {
   display: flex;
@@ -2326,9 +2449,20 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   flex-wrap: wrap;
   gap: 1rem;
 }
+/* Opening hours are core business information and were the worst offender in
+   the audit at 2.43:1. Both halves now clear AA, and the emphasis sits on the
+   time rather than the day — the day is the label, the time is the answer
+   someone came to the footer for. */
+.footer__hours-day {
+  color: var(--on-dark-muted);
+  font-size: 0.75rem;
+}
+.footer__hours-time {
+  color: var(--on-dark-strong);
+}
 .footer__copy {
   font-size: 12px;
-  color: rgba(255,255,255,0.22);
+  color: var(--on-dark-muted);
   font-weight: 300;
   letter-spacing: 0.05em;
 }
@@ -2339,7 +2473,8 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-weight: 600;
   color: var(--ink);
   background: var(--gold);
-  padding: 10px 20px;
+  display: inline-block;
+  padding: 15px 20px;
   border-radius: 0;
   transition: background var(--t-fast);
 }
@@ -3088,7 +3223,11 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px 5px;
+  /* Was 4px 5px, giving a 30x20 target — three of them adjacent, so a mis-tap
+     switched the whole site's language. Padding rather than a pseudo-element
+     here because these are the only things in the row and can afford the space. */
+  padding: 16px 8px;
+  margin: -12px 0;
   line-height: 1;
   transition: color var(--t-fast);
 }

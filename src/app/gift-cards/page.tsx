@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/gift-cards`
 
 export const metadata: Metadata = {
-  title: 'Gift Cards | Blend Hair Boutique, Luxury Salon in Plantation, FL',
+  title: 'Salon Gift Cards · Plantation, FL',
   description:
     'Give the gift of luxury beauty at Blend Hair Boutique in Plantation, FL. Salon gift cards redeemable for any service: balayage, color, keratin, nails, facials, and more. Buy online.',
   alternates: { canonical: CANONICAL },

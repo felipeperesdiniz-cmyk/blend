@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/best-balayage-plantation-fl`
 
 export const metadata: Metadata = {
-  title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',
+  title: 'Best Balayage in Plantation, FL',
   description:
     'Looking for the best balayage in Plantation, FL? Blend Hair Boutique has 1,230+ Google reviews and a 4.9★ rating. Expert hand-painted balayage by certified color specialists. Book online.',
   alternates: { canonical: CANONICAL },
@@ -86,7 +86,7 @@ export default function BestBalayagePage() {
         <header className="page-hero page-hero--dark">
           <div className="container" style={{ position: 'relative', zIndex: 1 }}>
             <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
-              4.9★ · 1,230+ Google Reviews · Plantation, FL
+              {REVIEW_LINE_LOCATED.en}
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Balayage<br /><em>in Plantation, FL</em>
@@ -213,7 +213,7 @@ export default function BestBalayagePage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Book your balayage<br /><em>at Blend today</em>
             </h2>

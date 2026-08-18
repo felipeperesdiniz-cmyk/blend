@@ -23,6 +23,7 @@ import AnnouncementBar from '@/components/AnnouncementBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
+import { REVIEWS } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -167,8 +168,8 @@ const globalSchema = {
       },
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '1230',
+        ratingValue: REVIEWS.rating,
+        reviewCount: String(REVIEWS.count),
         bestRating: '5',
         worstRating: '1',
       },

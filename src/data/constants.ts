@@ -46,6 +46,58 @@ export const BUSINESS = {
   ],
 } as const
 
+// ─── Page titles ──────────────────────────────────────────────
+// The root layout appends ' | Blend Hair Boutique' to every child segment, so
+// page-level titles must not repeat it — doing so is what produced 29 tags
+// reading "… | Blend Hair Boutique | Blend Hair Boutique", several over 100
+// characters against the ~60 a search result displays.
+//
+// Static routes are written to fit. Dynamic ones cannot be: an article headline
+// is content, and truncating it to make room for the brand is the wrong trade.
+// So for those, hand the title through this helper — it keeps the brand when it
+// fits and drops it when it doesn't, because the brand is the half a reader can
+// infer from the result's domain and the headline is the half they can't.
+const BRAND_SUFFIX = ' | Blend Hair Boutique'
+export const TITLE_BUDGET = 60
+
+export function pageTitle(title: string): string | { absolute: string } {
+  return title.length + BRAND_SUFFIX.length <= TITLE_BUDGET
+    ? title
+    : { absolute: title }
+}
+
+// ─── Social proof ─────────────────────────────────────────────
+// Single source of truth for the Google rating. Every locale, every landing
+// page and the LocalBusiness schema derive their copy from these two values.
+// They used to be retyped per string, which is how English reached 1,230 while
+// Portuguese and Spanish were still quoting 1,218 — and how the trust bar came
+// to advertise "5-Star Rated" over a 4.9 rating stated one scroll below it.
+export const REVIEWS = {
+  rating: '4.9',
+  count:  1230,
+} as const
+
+// Grouped by hand rather than toLocaleString: Intl's output can differ between
+// the Node render and the browser, and a mismatch here would be a hydration
+// error on a string that appears in the trust bar of every page.
+const group = (n: number, sep: string) =>
+  n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, sep)
+
+// The figures are identical in all three locales; only the separator and the
+// surrounding words change. en-US groups with a comma, pt-BR and es with a period.
+export const REVIEW_LINE = {
+  en: `${REVIEWS.rating} ★ · ${group(REVIEWS.count, ',')}+ Google Reviews`,
+  pt: `${REVIEWS.rating} ★ · ${group(REVIEWS.count, '.')}+ Avaliações Google`,
+  es: `${REVIEWS.rating} ★ · ${group(REVIEWS.count, '.')}+ Reseñas de Google`,
+} as const
+
+// Same line with the city appended — used as an eyebrow above section headings.
+export const REVIEW_LINE_LOCATED = {
+  en: `${REVIEW_LINE.en} · Plantation, FL`,
+  pt: `${REVIEW_LINE.pt} · Plantation, FL`,
+  es: `${REVIEW_LINE.es} · Plantation, FL`,
+} as const
+
 export const NAV_LINKS = [
   { label: 'Services',  href: '/services' },
   { label: 'Gallery',   href: '/gallery' },

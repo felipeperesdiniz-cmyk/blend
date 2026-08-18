@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/color-correction-plantation-fl`
 
 export const metadata: Metadata = {
-  title: 'Color Correction in Plantation, FL | Blend Hair Boutique',
+  title: 'Color Correction in Plantation, FL',
   description:
     'Expert color correction in Plantation, Florida. Fix brassiness, uneven color, box dye damage, and over-processed hair at Blend Hair Boutique. Advanced colorists. 4.9★ · 1,230+ reviews. Book a consultation.',
   alternates: { canonical: CANONICAL },
@@ -188,7 +188,7 @@ export default function ColorCorrectionPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Let's fix your color<br /><em>the right way.</em>
             </h2>

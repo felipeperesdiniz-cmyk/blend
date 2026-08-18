@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/luxury-hair-salon-plantation-fl`
 
 export const metadata: Metadata = {
-  title: 'Luxury Hair Salon in Plantation, FL | Blend Hair Boutique',
+  title: 'Luxury Hair Salon in Plantation, FL',
   description:
     'Blend Hair Boutique is a luxury hair salon in Plantation, Florida offering world-class balayage, color, keratin treatments, extensions, and bridal beauty. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
@@ -233,7 +233,7 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>4.9 ★ · 1,230+ Google Reviews</p>
+            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Ready to experience<br /><em>Plantation's most loved salon?</em>
             </h2>

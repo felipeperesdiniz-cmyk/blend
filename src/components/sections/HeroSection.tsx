@@ -70,13 +70,24 @@ export default function HeroSection() {
           aria-hidden="true"
           tabIndex={-1}
         >
-          {/* Sources are trimmed to 0.667s–26.367s of the master. The master
-              fades up from black and fades back to black, so looping it raw
-              dipped through ~0.8s of black at every wrap. The trim starts and
-              ends on full-brightness frames (luma 132 vs 136), so the wrap is
-              an ordinary cut — which matches an edit that cuts every ~2s.
-              The dip-to-black at 21.8s is the editor's scene transition and is
-              deliberately kept.
+          {/* Two segments of the master, cut on the editor's own scene
+              boundaries and concatenated: 2.6–9.4s and 12.5–20.23s, giving a
+              14.5s loop in place of the previous 25.7s one.
+
+              Three things came out of the middle. The shot at 9.4–12.5s is a
+              near-white macro (mean luma 199 rising to 225 against 95–162 for
+              everything else) and it was the reason the overlaid nav bottomed
+              out at 3.4:1 — no scrim bound to the nav could rescue text over a
+              frame that bright. The 0.83–2.6s shot is the stylist in front of
+              the painted Blend wall, so the white wordmark overlay landed on
+              top of the same wordmark painted behind it. The tail past 20.23s
+              was a second near-identical round-brush shot and a clinical
+              close-up of brow work.
+
+              The wrap still reads as an ordinary cut rather than a jump: last
+              frame luma 134.4, first frame 132.4. That matters because the
+              master fades up from and back to black, so looping it raw dipped
+              through ~0.8s of black at every wrap.
 
               `object-fit: cover` in a portrait viewport shows only the middle
               ~500px of the 1920-wide frame, so phones were downloading four

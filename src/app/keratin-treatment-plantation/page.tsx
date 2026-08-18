@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/keratin-treatment-plantation`
 
 export const metadata: Metadata = {
-  title: 'Keratin Treatment & Brazilian Blowout in Plantation, FL | Blend Hair Boutique',
+  title: 'Keratin Treatment in Plantation, FL',
   description:
     'Professional keratin treatments and Brazilian blowout in Plantation, Florida at Blend Hair Boutique. Eliminate frizz for 3–5 months. Ideal for Florida humidity. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },

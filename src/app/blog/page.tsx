@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/blog`
 
 export const metadata: Metadata = {
-  title: 'Beauty Resource Center | Hair & Beauty Guide | Blend Hair Boutique',
+  title: 'Hair & Beauty Resource Center',
   description:
     'Expert hair and beauty education from the colorists at Blend Hair Boutique in Plantation, FL. Balayage guides, color tips, keratin advice, extension care, and more.',
   alternates: { canonical: CANONICAL },

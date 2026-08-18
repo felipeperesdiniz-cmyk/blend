@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Instagram } from 'lucide-react'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, pageTitle } from '@/data/constants'
 import { TEAM } from '@/data/team'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -135,7 +135,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!member) return {}
   const canonical = `${SITE_URL}/team/${slug}`
   return {
-    title: `${member.name} | ${member.specialty} at Blend Hair Boutique`,
+    // Brand is appended by the root layout's title template.
+    title: pageTitle(`${member.name} · ${member.specialty}`),
     description: `Meet ${member.name}, ${member.specialty} at Blend Hair Boutique in Plantation, FL. ${member.bio} Book your appointment online.`,
     alternates: { canonical },
     openGraph: {

@@ -4,7 +4,7 @@ import GalleryContent from '@/components/pages/GalleryContent'
 const SITE_URL = 'https://www.blendhairboutique.com'
 
 export const metadata: Metadata = {
-  title: 'Hair Color & Styling Gallery | Blend Hair Boutique, Plantation FL',
+  title: 'Hair Color & Styling Gallery',
   description:
     'Browse the Blend Hair Boutique gallery: balayage, blonde highlights, brunette color, Brazilian blowout, keratin, bridal hair, and nail art. Located in Plantation, Florida.',
   alternates: { canonical: `${SITE_URL}/gallery` },

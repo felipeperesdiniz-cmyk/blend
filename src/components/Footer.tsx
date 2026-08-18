@@ -102,9 +102,9 @@ export default function Footer() {
             <div style={{ marginTop: '1.25rem' }}>
               {BUSINESS.hours.map((h) => (
                 <p key={h.day} className="footer__contact-item">
-                  <span style={{ color: 'rgba(250,247,242,0.28)', fontSize: '0.75rem' }}>{h.day}</span>
+                  <span className="footer__hours-day">{h.day}</span>
                   <br />
-                  <span>{h.time}</span>
+                  <span className="footer__hours-time">{h.time}</span>
                 </p>
               ))}
             </div>

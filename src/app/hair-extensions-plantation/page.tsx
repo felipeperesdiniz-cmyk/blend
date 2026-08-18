@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/hair-extensions-plantation`
 
 export const metadata: Metadata = {
-  title: 'Hair Extensions in Plantation, FL | Blend Hair Boutique',
+  title: 'Hair Extensions in Plantation, FL',
   description:
     'Premium hair extensions in Plantation, Florida at Blend Hair Boutique. Tape-in, sew-in, and clip-in methods. Ethically sourced hair, seamless blending. Consultation required. Book online.',
   alternates: { canonical: CANONICAL },

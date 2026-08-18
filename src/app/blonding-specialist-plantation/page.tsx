@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/blonding-specialist-plantation`
 
 export const metadata: Metadata = {
-  title: 'Blonding Specialist in Plantation, FL | Blend Hair Boutique',
+  title: 'Blonding Specialist in Plantation, FL',
   description:
     'Expert blonde hair coloring and blonding specialist in Plantation, Florida. Full bleach, highlights, toning, and blonde corrections at Blend Hair Boutique. 4.9★ rated. Book online.',
   alternates: { canonical: CANONICAL },
