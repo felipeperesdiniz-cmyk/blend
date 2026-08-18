@@ -120,7 +120,7 @@ export const TEAM: TeamMember[] = [
     specialty: 'Nail Specialist',
     bio: 'Originally from Colombia, Edith creates beautiful, long-lasting nail services tailored to each client’s style, with precision, creativity, and genuine care.',
     languages: 'English, Spanish',
-    image: 'https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/edith.webp',
   },
   {
     id: 'adriana',
