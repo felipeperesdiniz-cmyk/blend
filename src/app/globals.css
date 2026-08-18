@@ -829,7 +829,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .hero__mark { width: min(30vw, 18rem, 48svh); }
 }
 @media (max-width: 768px) {
-  .hero--film { min-height: 95svh; }
+  /* Full height, matching desktop. The shorter 95/92svh that the other heroes
+     use let the trust bar wrap into the gap below the film, so the first paint
+     showed crunched-up copy instead of just the footage. */
+  .hero--film { min-height: 100svh; }
   /* Deliberately below Belmond's ~51vw so the film, not the mark, carries the
      hero. The desktop min-width floor sits above this, so it must be released
      here or it wins. */
@@ -837,7 +840,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .hero__video video { object-position: center 42%; }
 }
 @media (max-width: 480px) {
-  .hero--film { min-height: 92svh; }
+  .hero--film { min-height: 100svh; }
   .hero__mark { width: min(42vw, 48svh); }
   /* The sticky action bar is hidden over the film, so the cue can sit low. */
   .hero__cue { bottom: 1.75rem; }
