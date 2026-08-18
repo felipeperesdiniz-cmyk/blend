@@ -1907,27 +1907,29 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
    PhilosophySection's effect sets, so this cannot leak to other sections and
    cannot hide anything if JS never runs. */
 .philosophy__quote-line { display: block; }
+/* No transition on the hidden state — only on the revealed one. With the
+   transition here, arming animated the copy from opacity 1 down to 0, so the
+   statement visibly faded out a beat after the page settled. Hiding must be
+   instantaneous; only the reveal is animated. */
 .philosophy__inner[data-reveal-armed] [data-reveal] {
   opacity: 0;
   transform: translateY(26px);
-  transition:
-    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
   opacity: 1;
   transform: none;
+  transition:
+    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media (prefers-reduced-motion: reduce) {
   /* Keep the per-line reveal, drop the travel. A cross-fade carries no motion
      signal, so this honours the setting's intent without deleting the effect —
      which is what cancelling it outright did. */
-  .philosophy__inner[data-reveal-armed] [data-reveal] {
-    transform: none;
-    transition: opacity 0.5s linear;
-  }
+  .philosophy__inner[data-reveal-armed] [data-reveal] { transform: none; }
   .philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
     transform: none;
+    transition: opacity 0.5s linear;
   }
 }
 

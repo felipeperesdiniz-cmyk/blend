@@ -44,10 +44,12 @@ export default function Nav() {
           </ul>
 
           <Link href="/" className="nav__logo" aria-label="Blend Hair Boutique">
-            {/* logo.png has an opaque white background, so it cannot sit over
-                the homepage film. The keyed mark is swapped in by CSS while the
-                nav is transparent. */}
-            <img src="/logo.png" alt="Blend Hair Boutique" className="nav__logo-img nav__logo-img--dark" />
+            {/* Both marks are keyed to transparency. logo.png is kept as-is for
+                OG/schema, where a white card is safer than an alpha channel, but
+                it cannot be used here: its opaque white background sat as a hard
+                white rectangle against the nav, which is rgba(255,255,255,0.97)
+                over a blurred backdrop and so reads warmer than pure white. */}
+            <img src="/blend-mark-ink.png" alt="Blend Hair Boutique" className="nav__logo-img nav__logo-img--dark" />
             <img src="/blend-mark-white.png" alt="" aria-hidden className="nav__logo-img nav__logo-img--light" />
           </Link>
 
