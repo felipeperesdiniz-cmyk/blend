@@ -1,86 +1,70 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
+import { useLenis } from 'lenis/react'
 
-// Each line reveals as it is scrolled to, rather than the whole block animating
-// once on mount.
-//
-// Driven by scroll position rather than IntersectionObserver. IO does not fire
-// while a document is hidden, so a page opened in a background tab, restored
-// from bfcache, or prerendered would arm the hide and then never undo it —
-// leaving the statement permanently invisible. A scroll/rAF check has no such
-// dependency, and anything already on screen when the effect runs is revealed
-// immediately, so nothing can end up hidden without a scroll available to
-// bring it back.
-//
-// The hiding itself is applied by JS (`data-reveal-armed`) rather than sitting
-// in the stylesheet, so a no-JS client — or the frame before hydration — still
-// renders the statement in full.
+// Where a line starts and finishes its reveal, as a fraction of viewport height.
+// Because every line is mapped against its own position, the stagger falls out
+// of the layout itself — no per-element delay to keep in sync with the spacing.
+const ENTER = 0.92
+const SETTLE = 0.55
+const TRAVEL = 30 // px the line rises through
+
 export default function PhilosophySection() {
   const innerRef = useRef<HTMLDivElement>(null)
+  const linesRef = useRef<HTMLElement[]>([])
+  const reducedRef = useRef(false)
+
+  // Scroll-linked rather than a one-shot trigger: the line is tied to scroll
+  // position, so it scrubs both ways and tracks the reader instead of firing
+  // once and being over. Nothing here hides anything until it has measured, so
+  // a failure before the first pass leaves the copy plainly visible rather than
+  // stranded invisible — which is what the previous observer-based version did.
+  const update = useCallback(() => {
+    const vh = window.innerHeight
+    const enter = vh * ENTER
+    const settle = vh * SETTLE
+    for (const el of linesRef.current) {
+      const { top } = el.getBoundingClientRect()
+      const raw = (enter - top) / (enter - settle)
+      const p = raw < 0 ? 0 : raw > 1 ? 1 : raw
+      const eased = 1 - Math.pow(1 - p, 3)
+      el.style.opacity = String(eased)
+      // Reduced motion keeps the cross-fade but drops the travel.
+      el.style.transform = reducedRef.current
+        ? ''
+        : `translate3d(0, ${((1 - eased) * TRAVEL).toFixed(2)}px, 0)`
+    }
+  }, [])
 
   useEffect(() => {
     const root = innerRef.current
     if (!root) return
 
-    const pending = new Set(Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]')))
-    if (!pending.size) return
+    linesRef.current = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]'))
+    if (!linesRef.current.length) return
 
-    // Reduced motion is handled in CSS: the reveal degrades to a plain
-    // cross-fade with no travel. Skipping the mechanism entirely here meant it
-    // simply never ran for anyone with the OS setting on.
-    root.setAttribute('data-reveal-armed', '')
+    reducedRef.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    update()
 
-    let frame = 0
+    // Lenis drives the frames during its eased glide, where native scroll
+    // events are sparser than the animation. The window listener stays as the
+    // floor: it covers keyboard paging, anchor jumps, and the case where Lenis
+    // is not smoothing at all.
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
 
-    const check = () => {
-      frame = 0
-      // Commit a line once it is properly in frame rather than the instant it
-      // clips the bottom edge.
-      const line = window.innerHeight * 0.78
-      let batch = 0
-      for (const el of Array.from(pending)) {
-        const rect = el.getBoundingClientRect()
-        if (rect.top < line && rect.bottom > 0) {
-          // Anything crossing in the same pass is staggered against its
-          // neighbours: the lines sit close together, so on an ordinary scroll
-          // they all arrive at once and would otherwise fade as a single block.
-          // Arriving one at a time they each take a zero delay, so a slow
-          // scroll keeps its own pacing.
-          el.style.transitionDelay = `${batch++ * 140}ms`
-          el.classList.add('is-revealed')
-          pending.delete(el)
-        }
-      }
-      if (!pending.size) stop()
-    }
-
-    const schedule = () => {
-      if (!frame) frame = requestAnimationFrame(check)
-    }
-
-    const stop = () => {
-      window.removeEventListener('scroll', schedule)
-      window.removeEventListener('resize', schedule)
-      document.removeEventListener('visibilitychange', check)
-      if (frame) cancelAnimationFrame(frame)
-      frame = 0
-    }
-
-    window.addEventListener('scroll', schedule, { passive: true })
-    window.addEventListener('resize', schedule)
-    // Covers the background-tab case. Deliberately calls check directly rather
-    // than going through schedule: requestAnimationFrame is also paused while a
-    // document is hidden, so routing this through it would defer the very work
-    // that needs to happen the moment the page becomes visible.
-    document.addEventListener('visibilitychange', check)
-
-    check() // anything already on screen reveals right away
-
+    const lines = linesRef.current
     return () => {
-      stop()
-      root.removeAttribute('data-reveal-armed')
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+      for (const el of lines) {
+        el.style.opacity = ''
+        el.style.transform = ''
+      }
     }
-  }, [])
+  }, [update])
+
+  useLenis(update)
 
   return (
     <section className="philosophy" id="philosophy" aria-label="Our Philosophy">

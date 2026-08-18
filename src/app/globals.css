@@ -73,7 +73,10 @@
 
 /* ─── Reset ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 17px; }
+/* No CSS smooth-scroll: Lenis owns scrolling now, and the two fight — the
+   native behaviour hijacks anchor jumps and Lenis's own easing on top of it
+   reads as a double animation. */
+html { -webkit-text-size-adjust: 100%; font-size: 17px; }
 body {
   font-family: var(--sans);
   background: var(--bg);
@@ -1903,35 +1906,11 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-style: italic;
   color: var(--gold);
 }
-/* Scroll-driven per-line reveal. Scoped to [data-reveal-armed], which only
-   PhilosophySection's effect sets, so this cannot leak to other sections and
-   cannot hide anything if JS never runs. */
+/* The per-line reveal is scroll-linked and written as inline style by
+   PhilosophySection, so there is deliberately no hidden state here: nothing is
+   concealed until JS has measured it. A stylesheet-level hide is what let the
+   copy strand itself invisible when the trigger never fired. */
 .philosophy__quote-line { display: block; }
-/* No transition on the hidden state — only on the revealed one. With the
-   transition here, arming animated the copy from opacity 1 down to 0, so the
-   statement visibly faded out a beat after the page settled. Hiding must be
-   instantaneous; only the reveal is animated. */
-.philosophy__inner[data-reveal-armed] [data-reveal] {
-  opacity: 0;
-  transform: translateY(26px);
-}
-.philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
-  opacity: 1;
-  transform: none;
-  transition:
-    opacity   0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@media (prefers-reduced-motion: reduce) {
-  /* Keep the per-line reveal, drop the travel. A cross-fade carries no motion
-     signal, so this honours the setting's intent without deleting the effect —
-     which is what cancelling it outright did. */
-  .philosophy__inner[data-reveal-armed] [data-reveal] { transform: none; }
-  .philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
-    transform: none;
-    transition: opacity 0.5s linear;
-  }
-}
 
 .philosophy__meta {
   font-size: 12px;

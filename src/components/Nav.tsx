@@ -1,5 +1,6 @@
 'use client'
 import { Fragment, useState, useEffect } from 'react'
+import { useLenis } from 'lenis/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { BUSINESS } from '@/data/constants'
@@ -26,10 +27,19 @@ export default function Nav() {
 
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
+  const lenis = useLenis()
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [menuOpen])
+    // body overflow alone no longer locks the page: Lenis drives scrolling off
+    // wheel/touch events, so it would keep gliding the page behind the menu.
+    if (menuOpen) lenis?.stop()
+    else lenis?.start()
+    return () => {
+      document.body.style.overflow = ''
+      lenis?.start()
+    }
+  }, [menuOpen, lenis])
 
   return (
     <>
