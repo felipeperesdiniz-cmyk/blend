@@ -1919,10 +1919,15 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   transform: none;
 }
 @media (prefers-reduced-motion: reduce) {
+  /* Keep the per-line reveal, drop the travel. A cross-fade carries no motion
+     signal, so this honours the setting's intent without deleting the effect —
+     which is what cancelling it outright did. */
   .philosophy__inner[data-reveal-armed] [data-reveal] {
-    opacity: 1;
     transform: none;
-    transition: none;
+    transition: opacity 0.5s linear;
+  }
+  .philosophy__inner[data-reveal-armed] [data-reveal].is-revealed {
+    transform: none;
   }
 }
 

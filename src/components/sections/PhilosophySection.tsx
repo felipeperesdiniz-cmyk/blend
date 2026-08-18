@@ -15,8 +15,11 @@ export default function PhilosophySection() {
     const lines = Array.from(root.querySelectorAll<HTMLElement>('[data-reveal]'))
     if (!lines.length) return
 
-    // Nothing to arm under reduced motion — the copy just stays visible.
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    // Reduced motion is handled in CSS, not here: the reveal degrades to a
+    // plain cross-fade with no travel, which keeps the per-line effect the
+    // section is built around without moving anything on screen. Bailing out
+    // entirely (as this used to) meant the whole thing simply never ran for
+    // anyone with the OS setting on.
 
     // Build the observer BEFORE hiding anything. Arming first and failing here
     // would strand the statement invisible with no way back, so the hide is only
@@ -25,16 +28,23 @@ export default function PhilosophySection() {
     try {
       io = new IntersectionObserver(
         entries => {
-          for (const entry of entries) {
-            if (!entry.isIntersecting) continue
-            entry.target.classList.add('is-revealed')
-            io.unobserve(entry.target) // one-way: it must not re-hide on scroll back
-          }
+          // Anything crossing in the same tick is staggered against its
+          // neighbours. The lines sit close together, so on an ordinary scroll
+          // they all arrive in one batch — without this they fade as a single
+          // block and the per-line effect is lost. Scrolled slowly they arrive
+          // one at a time and each gets a zero delay, so the pacing stays the
+          // reader's.
+          const arriving = entries.filter(entry => entry.isIntersecting)
+          arriving.forEach((entry, i) => {
+            const el = entry.target as HTMLElement
+            el.style.transitionDelay = `${i * 140}ms`
+            el.classList.add('is-revealed')
+            io.unobserve(el) // one-way: it must not re-hide on scroll back
+          })
         },
-        // Pulled up from the bottom edge so a line commits only once it is properly
-        // in frame. That is what staggers them: the reader's scroll sets the pace,
-        // not a fixed delay.
-        { rootMargin: '0px 0px -22% 0px', threshold: 0.2 },
+        // Pulled up from the bottom edge so a line commits only once it is
+        // properly in frame rather than the instant it clips the boundary.
+        { rootMargin: '0px 0px -25% 0px', threshold: 0.35 },
       )
     } catch {
       return
