@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Color Correction in Plantation, FL | Blend Hair Boutique',
-    description: 'Expert color correction in Plantation, FL — fix brassiness, box dye damage, uneven color. Advanced colorists at Blend Hair Boutique. 4.9★. Book a consultation.',
+    description: 'Expert color correction in Plantation, FL: fix brassiness, box dye damage, uneven color. Advanced colorists at Blend Hair Boutique. 4.9★. Book a consultation.',
     url: CANONICAL,
   },
 }
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is color correction and when do I need it?',
-    a: 'Color correction is a multi-step process to fix hair color that has gone wrong — whether from box dye, uneven application, excessive brassiness, over-lightening, or previous chemical damage. If your hair color is not the shade you wanted, has turned orange or green, or has uneven tones throughout, a color correction appointment is the right next step.',
+    a: 'Color correction is a multi-step process to fix hair color that has gone wrong, whether from box dye, uneven application, excessive brassiness, over-lightening, or previous chemical damage. If your hair color is not the shade you wanted, has turned orange or green, or has uneven tones throughout, a color correction appointment is the right next step.',
   },
   {
     q: 'How many appointments does color correction take?',
-    a: 'That depends entirely on the starting condition of your hair and how dramatic the correction needs to be. Some corrections can be achieved in a single extended session. Others — particularly those involving box dye removal, very dark to very light transformations, or heavily over-processed hair — may require two or more spaced appointments to protect hair integrity. We will give you an honest, realistic timeline during your consultation.',
+    a: 'That depends entirely on the starting condition of your hair and how dramatic the correction needs to be. Some corrections can be achieved in a single extended session. Others, particularly those involving box dye removal, very dark to very light transformations, or heavily over-processed hair, may require two or more spaced appointments to protect hair integrity. We will give you an honest, realistic timeline during your consultation.',
   },
   {
     q: 'Can you fix orange or brassy hair at Blend Hair Boutique?',
@@ -91,7 +91,7 @@ export default function ColorCorrectionPlantationPage() {
               Color <em>Correction</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              When hair color goes wrong — brassiness, uneven tones, box dye buildup, over-lightening — Blend Hair Boutique's advanced colorists have the expertise to fix it. We approach every color correction with precision, transparency, and deep respect for your hair's integrity.
+              When hair color goes wrong, whether from brassiness, uneven tones, box dye buildup, or over-lightening, Blend Hair Boutique's advanced colorists have the expertise to fix it. We approach every color correction with precision, transparency, and deep respect for your hair's integrity.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,7 +115,7 @@ export default function ColorCorrectionPlantationPage() {
                   Honest Results.<br /><em>Hair First.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Color correction is one of the most technically demanding services in the salon. At Blend Hair Boutique, we never rush it. Our colorists begin with an in-depth consultation that includes strand testing, a full color history review, and a frank conversation about what is realistically achievable in one session — and what will require a phased approach.
+                  Color correction is one of the most technically demanding services in the salon. At Blend Hair Boutique, we never rush it. Our colorists begin with an in-depth consultation that includes strand testing, a full color history review, and a frank conversation about what is realistically achievable in one session, and what will require a phased approach.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Our priority is always the long-term health of your hair. We use bond-building technology, professional-grade toners, and carefully selected lighteners to achieve the best possible result while keeping your hair strong, shiny, and intact throughout the process.
@@ -193,7 +193,7 @@ export default function ColorCorrectionPlantationPage() {
               Let's fix your color<br /><em>the right way.</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
-              Book a color correction consultation at Blend Hair Boutique — 10035 Cleary Blvd, Plantation, FL 33324 — or call us at (754) 206-3501.
+              Book a color correction consultation at Blend Hair Boutique, 10035 Cleary Blvd, Plantation, FL 33324, or call us at (754) 206-3501.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book a Consultation</a>

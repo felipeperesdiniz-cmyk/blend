@@ -6,12 +6,12 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/reviews`
 
 export const metadata: Metadata = {
-  title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,230+ Google Reviews in Plantation, FL',
+  title: 'Reviews | Blend Hair Boutique · 4.9★ · 1,230+ Google Reviews in Plantation, FL',
   description:
     'Read what Plantation, FL clients say about Blend Hair Boutique. 4.9★ rated across 1,230+ Google reviews. Balayage, haircuts, keratin, nails, and more. See why we\'re Broward\'s most-loved salon.',
   alternates: { canonical: CANONICAL },
   openGraph: {
-    title: 'Reviews | Blend Hair Boutique — 4.9★ · 1,230+ Google Reviews',
+    title: 'Reviews | Blend Hair Boutique · 4.9★ · 1,230+ Google Reviews',
     description: 'See why Blend Hair Boutique in Plantation, FL has a 4.9★ rating from 1,230+ Google reviews. Read client testimonials and book your visit.',
     url: CANONICAL,
   },
@@ -24,7 +24,7 @@ const schema = {
       '@type': 'WebPage',
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: 'Client Reviews — Blend Hair Boutique',
+      name: 'Client Reviews at Blend Hair Boutique',
       description: 'Client reviews and testimonials for Blend Hair Boutique, luxury hair salon in Plantation, Florida.',
       isPartOf: { '@id': `${SITE_URL}/#website` },
       about: { '@id': `${SITE_URL}/#business` },
@@ -61,19 +61,19 @@ const testimonials = [
     name: 'Geraldine U.',
     service: 'Balayage with Beatriz',
     rating: 5,
-    text: 'Got my hair done by the amazing Beatriz, and I\'m SO glad I went for this balayage look! As a brunette, it definitely takes some time — but the end result was so worth it. My husband was speechless! I don\'t let anyone else touch my hair — Beatriz is truly the best. She\'s friendly, professional, and actually listens to what you want.',
+    text: 'Got my hair done by the amazing Beatriz, and I\'m SO glad I went for this balayage look! As a brunette, it definitely takes some time, but the end result was so worth it. My husband was speechless! I don\'t let anyone else touch my hair. Beatriz is truly the best. She\'s friendly, professional, and actually listens to what you want.',
   },
   {
     name: 'Tatiana F.',
     service: 'Color & Blowout with Nana',
     rating: 5,
-    text: 'My hair professional is Nana Reis — she is amazing! From start to finish she is professional, attentive, and truly passionate about her work. She listened to what I want, gives me great hair advice, and executed the color and blowout flawlessly. The end result exceeded my expectations.',
+    text: 'My hair professional is Nana Reis, and she is amazing! From start to finish she is professional, attentive, and truly passionate about her work. She listened to what I want, gives me great hair advice, and executed the color and blowout flawlessly. The end result exceeded my expectations.',
   },
   {
     name: 'Michelle V.',
     service: 'Blowout & Style with Lea',
     rating: 5,
-    text: 'When I say I\'m picky, I\'m super picky! Lea did an amazing job on my hair — volume bangs and beach waves, unbelievable job! The salon is beautiful, clean and all the girls are super nice. Definitely recommend this place and will be coming back.',
+    text: 'When I say I\'m picky, I\'m super picky! Lea did an amazing job on my hair, volume bangs and beach waves, unbelievable job! The salon is beautiful, clean and all the girls are super nice. Definitely recommend this place and will be coming back.',
   },
   {
     name: 'Megan G.',
@@ -85,7 +85,7 @@ const testimonials = [
     name: 'Erika P.',
     service: 'Nails & Waxing with Nilza',
     rating: 5,
-    text: 'This place is great, always clean, they are all very professional and the atmosphere is super nice. Nilza is my favorite — she does the perfect Brazilian wax, and the nails she does are impeccable! Highly recommend.',
+    text: 'This place is great, always clean, they are all very professional and the atmosphere is super nice. Nilza is my favorite. She does the perfect Brazilian wax, and the nails she does are impeccable! Highly recommend.',
   },
   {
     name: 'Carolina S.',
@@ -103,7 +103,7 @@ const testimonials = [
     name: 'Heather B.',
     service: 'Haircut with Juliana',
     rating: 5,
-    text: 'I was so scared to find someone new to cut my hair. They did a wonderful job accommodating me — I was given coffee and water, had my hair washed and brushed, and Juliana cut my hair. She was fast and did exactly what I asked for. I\'m very happy with my experience and results.',
+    text: 'I was so scared to find someone new to cut my hair. They did a wonderful job accommodating me. I was given coffee and water, had my hair washed and brushed, and Juliana cut my hair. She was fast and did exactly what I asked for. I\'m very happy with my experience and results.',
   },
   {
     name: 'Domonique R.',
@@ -115,7 +115,7 @@ const testimonials = [
     name: 'Katarina C.',
     service: 'Color Transformation with Roger',
     rating: 5,
-    text: 'I needed desperately to go from natural dark brown to a light brown! Roger looked at my reference photo and it came out EXACTLY like it. I didn\'t think it would be possible to come out as light as it did, but they made it possible — an amazing experience in a short time! I\'m so in love with my new hair.',
+    text: 'I needed desperately to go from natural dark brown to a light brown! Roger looked at my reference photo and it came out EXACTLY like it. I didn\'t think it would be possible to come out as light as it did, but they made it possible, an amazing experience in a short time! I\'m so in love with my new hair.',
   },
   {
     name: 'Cynthia M.',
@@ -140,7 +140,7 @@ export default function ReviewsPage() {
               What Our <em>Clients</em> Say
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique has earned a 4.9-star rating from over 1,230 Google reviews — not through advertising, but through consistent, exceptional work delivered one client at a time since 2018.
+              Blend Hair Boutique has earned a 4.9-star rating from over 1,230 Google reviews, not through advertising, but through consistent, exceptional work delivered one client at a time since 2018.
             </p>
           </div>
         </header>

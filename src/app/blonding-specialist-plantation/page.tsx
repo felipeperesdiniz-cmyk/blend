@@ -32,7 +32,7 @@ const schema = {
     {
       '@type': 'Service',
       name: 'Blonding Specialist in Plantation, FL',
-      description: 'Expert blonding services at Blend Hair Boutique in Plantation, Florida — bleach and tone, highlights, balayage, and blonde color corrections performed by trained color specialists.',
+      description: 'Expert blonding services at Blend Hair Boutique in Plantation, Florida: bleach and tone, highlights, balayage, and blonde color corrections performed by trained color specialists.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: { '@type': 'City', name: 'Plantation, FL' },
       url: CANONICAL,
@@ -69,7 +69,7 @@ export default function BlondingSpecialistPage() {
               <em>Blonding</em> Specialist in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is Plantation&apos;s trusted destination for blonde hair — from sun-kissed highlights and balayage to full platinum transformations. Our color specialists are trained in bleach and tone, toning, and blonde color correction for every starting color.
+              Blend Hair Boutique is Plantation&apos;s trusted destination for blonde hair, from sun-kissed highlights and balayage to full platinum transformations. Our color specialists are trained in bleach and tone, toning, and blonde color correction for every starting color.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">Book Blonding Appointment</a>
@@ -87,9 +87,9 @@ export default function BlondingSpecialistPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
               {[
                 { name: 'Full Blonding', desc: 'Complete blonde transformation from root to tip. Achievable in one session for lighter starting colors, or safely executed in multiple stages for dark hair.' },
-                { name: 'Bleach & Tone', desc: 'Precision lightening followed by a professional toning treatment to achieve your exact target — platinum, icy, honey, or champagne blonde.' },
+                { name: 'Bleach & Tone', desc: 'Precision lightening followed by a professional toning treatment to achieve your exact target: platinum, icy, honey, or champagne blonde.' },
                 { name: 'Blonde Highlights', desc: 'Dimensional blonde highlights woven through your natural color for a sunlit, multi-tonal effect with a natural-looking grow-out.' },
-                { name: 'Blonde Color Correction', desc: 'Specializing in correcting brassiness, orange tones, patchy color, and previous blonde gone wrong — safely and precisely.' },
+                { name: 'Blonde Color Correction', desc: 'Specializing in correcting brassiness, orange tones, patchy color, and previous blonde gone wrong, safely and precisely.' },
               ].map((s) => (
                 <div key={s.name} style={{ padding: '1.75rem', border: '1px solid var(--line)' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.6rem' }}>{s.name}</h3>

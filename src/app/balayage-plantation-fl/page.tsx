@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: 'How long does a balayage appointment take at Blend Hair Boutique?', a: 'Balayage appointments at Blend Hair Boutique typically take 2.5 to 4 hours, depending on your hair length, density, and the result you\'re aiming for. We provide a realistic time estimate during your consultation or booking.' },
-  { q: 'What is the difference between balayage and highlights?', a: 'Balayage is a freehand painting technique that creates soft, sun-kissed color with no harsh lines — it grows out naturally and requires less frequent touch-ups. Traditional highlights use foils for more defined, uniform brightness. Our colorists will recommend the best technique for your goals during your consultation.' },
+  { q: 'What is the difference between balayage and highlights?', a: 'Balayage is a freehand painting technique that creates soft, sun-kissed color with no harsh lines, and it grows out naturally and requires less frequent touch-ups. Traditional highlights use foils for more defined, uniform brightness. Our colorists will recommend the best technique for your goals during your consultation.' },
   { q: 'How do I maintain my balayage at home?', a: 'Use a sulfate-free shampoo to protect color longevity, apply a deep conditioning mask weekly, and use a UV-protective product before sun exposure. We recommend professional glossing treatments every 6–8 weeks to refresh vibrancy. Our team will provide a personalized home-care plan after your appointment.' },
-  { q: 'Is balayage suitable for all hair types?', a: 'Yes — balayage can be adapted for straight, wavy, curly, fine, and thick hair. Our colorists at Blend Hair Boutique customize the technique, placement, and formula to work with your specific hair texture and natural color for results that look effortless and intentional.' },
-  { q: 'What does balayage cost at Blend Hair Boutique in Plantation?', a: 'Balayage pricing at Blend Hair Boutique varies based on hair length, density, and the complexity of the color goal. Starting prices are available upon booking through our online system. We believe in transparent pricing — you\'ll receive a full quote during your consultation.' },
+  { q: 'Is balayage suitable for all hair types?', a: 'Yes. Balayage can be adapted for straight, wavy, curly, fine, and thick hair. Our colorists at Blend Hair Boutique customize the technique, placement, and formula to work with your specific hair texture and natural color for results that look effortless and intentional.' },
+  { q: 'What does balayage cost at Blend Hair Boutique in Plantation?', a: 'Balayage pricing at Blend Hair Boutique varies based on hair length, density, and the complexity of the color goal. Starting prices are available upon booking through our online system. We believe in transparent pricing, and you\'ll receive a full quote during your consultation.' },
 ]
 
 const schema = {
@@ -77,7 +77,7 @@ export default function BalayagePlantationPage() {
               <em>Balayage</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is a luxury balayage salon in Plantation, Florida, specializing in custom hand-painted color, highlights, and ombre. Our colorists create dimensional, sun-kissed results tailored to your hair texture and lifestyle — naturally beautiful, low-maintenance color that grows out gracefully.
+              Blend Hair Boutique is a luxury balayage salon in Plantation, Florida, specializing in custom hand-painted color, highlights, and ombre. Our colorists create dimensional, sun-kissed results tailored to your hair texture and lifestyle: naturally beautiful, low-maintenance color that grows out gracefully.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -101,10 +101,10 @@ export default function BalayagePlantationPage() {
                   Custom Color.<br /><em>Natural Results.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Balayage at Blend Hair Boutique begins with a thorough consultation — our colorists assess your natural hair color, texture, density, and growth patterns before any color is applied. We then hand-paint each section using a freehand technique that mimics how the sun naturally lightens hair, creating seamless transitions and dimension that look intentional, never overdone.
+                  Balayage at Blend Hair Boutique begins with a thorough consultation. Our colorists assess your natural hair color, texture, density, and growth patterns before any color is applied. We then hand-paint each section using a freehand technique that mimics how the sun naturally lightens hair, creating seamless transitions and dimension that look intentional, never overdone.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  The result grows out beautifully, requires fewer touch-ups than traditional highlights, and adapts to your lifestyle. Whether you want sun-kissed warmth, bold brightness, or subtle dimension, our colorists at Blend craft a formula made for you — using professional-grade color lines that protect hair integrity while delivering vibrant, lasting results.
+                  The result grows out beautifully, requires fewer touch-ups than traditional highlights, and adapts to your lifestyle. Whether you want sun-kissed warmth, bold brightness, or subtle dimension, our colorists at Blend craft a formula made for you, using professional-grade color lines that protect hair integrity while delivering vibrant, lasting results.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
@@ -130,8 +130,8 @@ export default function BalayagePlantationPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
                 { step: '01', title: 'In-Depth Consultation', body: 'We review your hair history, natural color, texture, and maintenance lifestyle. We then map out a custom color plan.' },
-                { step: '02', title: 'Color Application', body: 'Our colorist hand-paints each section using the freehand balayage technique — no foils, no harsh lines, just natural dimension.' },
-                { step: '03', title: 'Processing & Toning', body: 'After processing, we apply a professional toner to dial in your exact shade — warm, cool, or perfectly neutral.' },
+                { step: '02', title: 'Color Application', body: 'Our colorist hand-paints each section using the freehand balayage technique: no foils, no harsh lines, just natural dimension.' },
+                { step: '03', title: 'Processing & Toning', body: 'After processing, we apply a professional toner to dial in your exact shade: warm, cool, or perfectly neutral.' },
                 { step: '04', title: 'Blowout & Style', body: 'We finish with a professional blowout to reveal your final result and show you exactly how to maintain your color at home.' },
               ].map((s) => (
                 <div key={s.step} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>

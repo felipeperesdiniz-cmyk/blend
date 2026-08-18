@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: 'Do you offer consultations before the haircut?',
-    a: 'Yes — every appointment at Blend Hair Boutique begins with a thorough consultation. Our stylists review your hair history, goals, lifestyle, and maintenance preferences before picking up any shears. We believe the consultation is as important as the cut itself.',
+    a: 'Yes. Every appointment at Blend Hair Boutique begins with a thorough consultation. Our stylists review your hair history, goals, lifestyle, and maintenance preferences before picking up any shears. We believe the consultation is as important as the cut itself.',
   },
   {
     q: 'What types of haircuts does Blend Hair Boutique specialize in?',
-    a: 'Our stylists specialize in a wide range of cuts: precision bobs, lived-in layers, curtain bangs, blunt cuts, face-framing layers, wolf cuts, shags, and classic salon cuts for all hair textures — straight, wavy, curly, and coily. We tailor every cut to your face shape, hair texture, and lifestyle.',
+    a: 'Our stylists specialize in a wide range of cuts: precision bobs, lived-in layers, curtain bangs, blunt cuts, face-framing layers, wolf cuts, shags, and classic salon cuts for all hair textures: straight, wavy, curly, and coily. We tailor every cut to your face shape, hair texture, and lifestyle.',
   },
   {
     q: 'Can I book a haircut and color in the same appointment?',
@@ -91,7 +91,7 @@ export default function HaircutsPlantationPage() {
               <em>Haircuts</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is Plantation's destination for precision haircuts that honor your hair's natural texture and suit your lifestyle. Our stylists are trained in the most sought-after techniques — lived-in layers, bobs, curtain bangs, and modern cuts for all hair types — delivered with the warmth and artistry of a true Brazilian luxury salon.
+              Blend Hair Boutique is Plantation's destination for precision haircuts that honor your hair's natural texture and suit your lifestyle. Our stylists are trained in the most sought-after techniques: lived-in layers, bobs, curtain bangs, and modern cuts for all hair types, delivered with the warmth and artistry of a true Brazilian luxury salon.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,7 +115,7 @@ export default function HaircutsPlantationPage() {
                   The Right Cut.<br /><em>For You.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  A great haircut at Blend Hair Boutique starts before the scissors ever touch your hair. Our stylists dedicate time to understanding your face shape, hair density, growth patterns, and daily routine. This consultation isn't a formality — it's how we ensure the cut we give you is one you can actually live in and love every day.
+                  A great haircut at Blend Hair Boutique starts before the scissors ever touch your hair. Our stylists dedicate time to understanding your face shape, hair density, growth patterns, and daily routine. This consultation isn't a formality. It's how we ensure the cut we give you is one you can actually live in and love every day.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Whether you're looking for a transformative change or a flawless maintenance cut, our team's precision and attention to detail ensure consistent, beautiful results every visit. We believe a truly excellent haircut should look just as good on day ten as it does on day one.
@@ -146,7 +146,7 @@ export default function HaircutsPlantationPage() {
                 { title: 'Lived-In Layers', body: 'Soft, effortless layers that move naturally and frame your face without looking over-styled. Perfect for straight, wavy, and curly hair alike.' },
                 { title: 'Precision Bobs', body: 'From classic blunt bobs to stacked and textured variations, our stylists craft bobs that complement your face shape and hair texture beautifully.' },
                 { title: 'Curtain Bangs', body: 'The ultimate face-framing fringe. Our stylists cut curtain bangs to fall in perfect symmetry with your natural part and facial structure.' },
-                { title: 'Curly & Textured Cuts', body: 'We have deep expertise in cutting curly and textured hair — understanding how curl pattern affects length and ensuring the cut works with your natural movement.' },
+                { title: 'Curly & Textured Cuts', body: 'We have deep expertise in cutting curly and textured hair, understanding how curl pattern affects length and ensuring the cut works with your natural movement.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.6rem' }}>{s.title}</h3>

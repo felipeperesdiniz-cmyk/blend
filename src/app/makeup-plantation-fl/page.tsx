@@ -9,11 +9,11 @@ const CANONICAL = `${SITE_URL}/makeup-plantation-fl`
 export const metadata: Metadata = {
   title: 'Makeup Artist in Plantation, FL | Blend Hair Boutique',
   description:
-    'Professional makeup application in Plantation, Florida — bridal makeup, event makeup, and everyday glam at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your makeup appointment online.',
+    'Professional makeup application in Plantation, Florida: bridal makeup, event makeup, and everyday glam at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your makeup appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Makeup Artist in Plantation, FL | Blend Hair Boutique',
-    description: 'Professional makeup application — bridal, event, and everyday makeup in Plantation, FL at Blend Hair Boutique. 4.9★. Book online.',
+    description: 'Professional makeup application: bridal, event, and everyday makeup in Plantation, FL at Blend Hair Boutique. 4.9★. Book online.',
     url: CANONICAL,
   },
 }
@@ -33,11 +33,11 @@ const faqs = [
   },
   {
     q: 'What brands of makeup do you use?',
-    a: 'We use a curated selection of professional cosmetics brands that perform beautifully on camera and in real life, in a wide range of skin tones. Our makeup artists select products based on your skin type, the event lighting, and the desired aesthetic — from fresh and natural to glamorous and bold.',
+    a: 'We use a curated selection of professional cosmetics brands that perform beautifully on camera and in real life, in a wide range of skin tones. Our makeup artists select products based on your skin type, the event lighting, and the desired aesthetic, from fresh and natural to glamorous and bold.',
   },
   {
     q: 'Can I request a specific makeup style or look?',
-    a: 'Absolutely. We encourage you to bring inspiration images — from social media, magazines, or Pinterest — to your appointment. Your makeup artist will review the reference images and give an honest assessment of what\'s achievable for your skin type and features. We pride ourselves on understanding and delivering the look you have in mind.',
+    a: 'Absolutely. We encourage you to bring inspiration images from social media, magazines, or Pinterest to your appointment. Your makeup artist will review the reference images and give an honest assessment of what\'s achievable for your skin type and features. We pride ourselves on understanding and delivering the look you have in mind.',
   },
 ]
 
@@ -48,7 +48,7 @@ const schema = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Makeup Application in Plantation, FL',
-      description: 'Professional makeup application services at Blend Hair Boutique in Plantation, Florida — bridal makeup, event makeup, and everyday glam.',
+      description: 'Professional makeup application services at Blend Hair Boutique in Plantation, Florida: bridal makeup, event makeup, and everyday glam.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -91,7 +91,7 @@ export default function MakeupPlantationPage() {
               <em>Makeup</em> Artist in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Professional makeup application for every occasion — weddings, quinceañeras, galas, photoshoots, and everyday confidence. Our makeup artists at Blend Hair Boutique in Plantation, FL bring skill, artistry, and professional-grade products to deliver a look that photographs beautifully and lasts all day.
+              Professional makeup application for every occasion: weddings, quinceañeras, galas, photoshoots, and everyday confidence. Our makeup artists at Blend Hair Boutique in Plantation, FL bring skill, artistry, and professional-grade products to deliver a look that photographs beautifully and lasts all day.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,10 +115,10 @@ export default function MakeupPlantationPage() {
                   Your Most Beautiful<br /><em>Self.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  A great makeup application isn't about covering up — it's about enhancing what's already there. Our makeup artists at Blend Hair Boutique are trained to work with your natural features, skin tone, and the occasion, creating looks that feel like you — only elevated.
+                  A great makeup application isn't about covering up. It's about enhancing what's already there. Our makeup artists at Blend Hair Boutique are trained to work with your natural features, skin tone, and the occasion, creating looks that feel like you, only elevated.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  We understand that South Florida's heat and humidity require long-wearing, humidity-resistant formulas. Our artists know which products perform in the Florida climate — so your makeup stays fresh from the ceremony to the last song of the night.
+                  We understand that South Florida's heat and humidity require long-wearing, humidity-resistant formulas. Our artists know which products perform in the Florida climate, so your makeup stays fresh from the ceremony to the last song of the night.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>

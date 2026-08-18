@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 const faqs = [
   { q: 'How long does a Brazilian blowout last?', a: 'Brazilian blowout and keratin treatments at Blend Hair Boutique typically last 3–5 months, depending on your hair type, texture, and home care routine. Using sulfate-free shampoo and professional after-care products extends results significantly.' },
   { q: 'Can I wash my hair immediately after a keratin treatment?', a: 'Most keratin treatments require a waiting period of 48–72 hours before washing. During your appointment, our specialists will give you specific care instructions based on the formula used. We provide a complete aftercare guide for every client.' },
-  { q: 'Is a Brazilian blowout safe for color-treated hair?', a: 'Yes — a Brazilian blowout is generally safe for color-treated hair and can often enhance color vibrancy by sealing the cuticle. Our specialists will assess your hair\'s condition and color history before selecting the appropriate formula to protect your existing color treatment.' },
+  { q: 'Is a Brazilian blowout safe for color-treated hair?', a: 'Yes. A Brazilian blowout is generally safe for color-treated hair and can often enhance color vibrancy by sealing the cuticle. Our specialists will assess your hair\'s condition and color history before selecting the appropriate formula to protect your existing color treatment.' },
   { q: 'What is the difference between a Brazilian blowout and keratin treatment?', a: 'Both eliminate frizz and smooth the hair cuticle, but they differ in formula and technique. Brazilian blowout formulas allow for washing immediately after in some versions and maintain some wave/curl pattern. Keratin treatments typically provide a straighter result and require a longer wait before washing. Our specialists recommend the right option based on your hair goals.' },
-  { q: 'Is a keratin treatment suitable for all hair types in Florida\'s humidity?', a: 'Yes — keratin treatments are particularly effective in Florida\'s humid climate, which is why they\'re one of our most popular services at Blend Hair Boutique. They significantly reduce drying time, frizz, and humidity-induced puffiness for any hair type, from fine to coarse.' },
+  { q: 'Is a keratin treatment suitable for all hair types in Florida\'s humidity?', a: 'Yes. Keratin treatments are particularly effective in Florida\'s humid climate, which is why they\'re one of our most popular services at Blend Hair Boutique. They significantly reduce drying time, frizz, and humidity-induced puffiness for any hair type, from fine to coarse.' },
 ]
 
 const schema = {
@@ -73,7 +73,7 @@ export default function KeratinTreatmentPage() {
               Keratin Treatment &amp; <em>Brazilian Blowout</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is Plantation&apos;s trusted destination for Brazilian blowout and keratin smoothing treatments. Eliminate frizz, reduce styling time, and achieve brilliantly smooth hair that lasts 3–5 months — especially powerful in Florida&apos;s humid climate.
+              Blend Hair Boutique is Plantation&apos;s trusted destination for Brazilian blowout and keratin smoothing treatments. Eliminate frizz, reduce styling time, and achieve brilliantly smooth hair that lasts 3–5 months, especially powerful in Florida&apos;s humid climate.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">Book Keratin Treatment</a>
@@ -94,10 +94,10 @@ export default function KeratinTreatmentPage() {
                   Frizz-Free.<br /><em>For Months.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Brazilian blowout and keratin treatments are a signature service at Blend Hair Boutique — and for good reason. In South Florida&apos;s year-round humidity, frizz is a constant challenge. Our smoothing treatments infuse proteins deep into the hair shaft, sealing the cuticle to eliminate frizz and significantly reduce styling time.
+                  Brazilian blowout and keratin treatments are a signature service at Blend Hair Boutique, and for good reason. In South Florida&apos;s year-round humidity, frizz is a constant challenge. Our smoothing treatments infuse proteins deep into the hair shaft, sealing the cuticle to eliminate frizz and significantly reduce styling time.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  We calibrate every treatment to your specific hair type — from a gentle smoothing formula for fine or sensitive hair to a full Brazilian blowout for dramatically frizzy or coarse textures. The result is smooth, healthy-looking hair that requires less heat, less effort, and stays polished through Florida weather.
+                  We calibrate every treatment to your specific hair type, from a gentle smoothing formula for fine or sensitive hair to a full Brazilian blowout for dramatically frizzy or coarse textures. The result is smooth, healthy-looking hair that requires less heat, less effort, and stays polished through Florida weather.
                 </p>
               </div>
             </div>

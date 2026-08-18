@@ -72,7 +72,7 @@ export default function TeamContent() {
                   <Link href={`/team/${member.id}`} style={{ display: 'block', overflow: 'hidden', aspectRatio: '3/4', background: 'var(--bg-soft)', marginBottom: '1.75rem', textDecoration: 'none' }}>
                     <img
                       src={member.image}
-                      alt={`${member.name} — ${td.specialty}`}
+                      alt={`${member.name}, ${td.specialty}`}
                       loading="lazy" decoding="async"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', transition: 'transform 0.7s var(--ease)' }}
                       onMouseEnter={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1.04)' }}

@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'Can I book a manicure and pedicure together?',
-    a: 'Yes — many of our clients book a mani-pedi combination. We can schedule both services in one appointment so you leave with completely polished nails from fingertip to toe. Just select both services when booking online.',
+    a: 'Yes. Many of our clients book a mani-pedi combination. We can schedule both services in one appointment so you leave with completely polished nails from fingertip to toe. Just select both services when booking online.',
   },
   {
     q: 'Do you offer nail services for special events like weddings or quinceañeras?',
@@ -91,7 +91,7 @@ export default function NailsPlantationPage() {
               Nail Services in<br /><em>Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Manicures, pedicures, gel nails, and nail art — all within the luxurious setting of Blend Hair Boutique in Plantation, FL. Our nail technicians combine precision technique with the warm, attentive service our boutique is known for. Because beautiful nails are part of the full picture.
+              Manicures, pedicures, gel nails, and nail art, all within the luxurious setting of Blend Hair Boutique in Plantation, FL. Our nail technicians combine precision technique with the warm, attentive service our boutique is known for. Because beautiful nails are part of the full picture.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,7 +115,7 @@ export default function NailsPlantationPage() {
                   Nails Done.<br /><em>Beautifully.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  At Blend Hair Boutique, nail care isn't an afterthought — it's an essential part of our full-service beauty experience. Our nail technicians are skilled professionals who care deeply about quality, precision, and the longevity of every set they create.
+                  At Blend Hair Boutique, nail care isn't an afterthought. It's an essential part of our full-service beauty experience. Our nail technicians are skilled professionals who care deeply about quality, precision, and the longevity of every set they create.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Whether you're coming in for a quick gel touch-up, a luxurious spa pedicure, or getting fully polished from head to toe before a special event, our nail services are designed to complement the full Blend experience. Clean, professional, and worth every visit.
@@ -146,9 +146,9 @@ export default function NailsPlantationPage() {
                 { title: 'Classic Manicure', body: 'Nail shaping, cuticle care, hand massage, and your choice of polish. Clean, classic, and always polished.' },
                 { title: 'Gel Manicure', body: 'Long-lasting gel polish that stays chip-free for 2–3 weeks. Available in hundreds of shades with a glossy or matte finish.' },
                 { title: 'Classic Pedicure', body: 'Foot soak, exfoliation, callus treatment, nail shaping, cuticle care, massage, and polish. Your feet will thank you.' },
-                { title: 'Spa Pedicure', body: 'Our most luxurious pedicure experience — extended massage, premium exfoliation, hydrating mask, and hot towel wrap.' },
-                { title: 'French Manicure', body: 'The timeless classic — clean pink or nude base with bright white tips. Available in regular or gel polish for longer wear.' },
-                { title: 'Nail Art', body: 'From minimalist designs to intricate patterns — our nail technicians create custom nail art for any occasion or aesthetic.' },
+                { title: 'Spa Pedicure', body: 'Our most luxurious pedicure experience: extended massage, premium exfoliation, hydrating mask, and hot towel wrap.' },
+                { title: 'French Manicure', body: 'The timeless classic: a clean pink or nude base with bright white tips. Available in regular or gel polish for longer wear.' },
+                { title: 'Nail Art', body: 'From minimalist designs to intricate patterns, our nail technicians create custom nail art for any occasion or aesthetic.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.6rem' }}>{s.title}</h3>

@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const s = SERVICES.find((service) => service.id === slug)
   if (!s) return {}
 
-  const title = `${s.title} | Blend Hair Boutique — Plantation, FL`
+  const title = `${s.title} | Blend Hair Boutique, Plantation FL`
   return {
     title,
     description: s.description,

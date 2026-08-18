@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/micropigmentation-plantation-fl`
 export const metadata: Metadata = {
   title: 'Micropigmentation in Plantation, FL | Blend Hair Boutique',
   description:
-    'Professional micropigmentation and permanent makeup in Plantation, Florida — eyebrow microblading, ombre brows, and lip blushing at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book a consultation.',
+    'Professional micropigmentation and permanent makeup in Plantation, Florida: eyebrow microblading, ombre brows, and lip blushing at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book a consultation.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Micropigmentation in Plantation, FL | Blend Hair Boutique',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is micropigmentation and how long does it last?',
-    a: 'Micropigmentation — also called permanent makeup or semi-permanent makeup — is a cosmetic tattooing technique that deposits pigment into the superficial layers of the skin to define and enhance facial features. Results typically last 1–3 years depending on your skin type, sun exposure, and aftercare. A touch-up session is usually recommended 6–8 weeks after the initial procedure and then annually or as needed.',
+    a: 'Micropigmentation, also called permanent makeup or semi-permanent makeup, is a cosmetic tattooing technique that deposits pigment into the superficial layers of the skin to define and enhance facial features. Results typically last 1–3 years depending on your skin type, sun exposure, and aftercare. A touch-up session is usually recommended 6–8 weeks after the initial procedure and then annually or as needed.',
   },
   {
     q: 'What micropigmentation services does Blend Hair Boutique offer?',
-    a: 'We specialize in eyebrow micropigmentation — including microblading (hair-stroke technique for natural-looking brows), ombre powder brows (soft, powdered effect for defined, long-lasting brows), and combination brows. We also offer lip blushing to enhance lip color, definition, and symmetry. All procedures begin with a thorough consultation.',
+    a: 'We specialize in eyebrow micropigmentation, including microblading (hair-stroke technique for natural-looking brows), ombre powder brows (soft, powdered effect for defined, long-lasting brows), and combination brows. We also offer lip blushing to enhance lip color, definition, and symmetry. All procedures begin with a thorough consultation.',
   },
   {
     q: 'Is micropigmentation painful?',
-    a: 'A topical numbing cream is applied prior to the procedure to minimize discomfort significantly. Most clients describe the sensation as mild scratching or pressure — quite manageable. Pain tolerance varies by individual, but our practitioners work carefully to keep you comfortable throughout.',
+    a: 'A topical numbing cream is applied prior to the procedure to minimize discomfort significantly. Most clients describe the sensation as mild scratching or pressure, and quite manageable. Pain tolerance varies by individual, but our practitioners work carefully to keep you comfortable throughout.',
   },
   {
     q: 'How should I prepare for a micropigmentation appointment?',
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'What is the aftercare for microblading or ombre brows?',
-    a: 'For the first 7–10 days, keep the area dry and avoid swimming, sweating heavily, and direct sun exposure. Apply the aftercare ointment provided by your practitioner as directed. Do not pick, scratch, or peel any flaking skin — this is a critical part of the healing process. Full healing takes approximately 4–6 weeks, after which colors settle to their final tone.',
+    a: 'For the first 7–10 days, keep the area dry and avoid swimming, sweating heavily, and direct sun exposure. Apply the aftercare ointment provided by your practitioner as directed. Do not pick, scratch, or peel any flaking skin. This is a critical part of the healing process. Full healing takes approximately 4–6 weeks, after which colors settle to their final tone.',
   },
 ]
 
@@ -48,7 +48,7 @@ const schema = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Micropigmentation in Plantation, FL',
-      description: 'Professional micropigmentation and permanent makeup services at Blend Hair Boutique in Plantation, Florida — eyebrow microblading, ombre brows, and lip blushing.',
+      description: 'Professional micropigmentation and permanent makeup services at Blend Hair Boutique in Plantation, Florida: eyebrow microblading, ombre brows, and lip blushing.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -91,7 +91,7 @@ export default function MicropigmentationPlantationPage() {
               <em>Micropigmentation</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Wake up beautiful — every day. Blend Hair Boutique offers expert eyebrow microblading, ombre brows, and lip blushing in Plantation, FL. Semi-permanent results that enhance your natural features and eliminate your daily makeup routine.
+              Wake up beautiful, every day. Blend Hair Boutique offers expert eyebrow microblading, ombre brows, and lip blushing in Plantation, FL. Semi-permanent results that enhance your natural features and eliminate your daily makeup routine.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,10 +115,10 @@ export default function MicropigmentationPlantationPage() {
                   Effortless Beauty.<br /><em>Every Morning.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Micropigmentation at Blend Hair Boutique begins with an in-depth consultation. Our certified practitioners assess your facial structure, natural brow or lip shape, skin tone, and lifestyle to design a result that enhances — not overpowers — your natural features.
+                  Micropigmentation at Blend Hair Boutique begins with an in-depth consultation. Our certified practitioners assess your facial structure, natural brow or lip shape, skin tone, and lifestyle to design a result that enhances your natural features rather than overpowering them.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  We use premium pigments, professional-grade tools, and meticulous technique to create results that look genuinely natural and beautifully crafted. Whether you want barely-there definition or bold, defined brows — we'll create the look that's right for you.
+                  We use premium pigments, professional-grade tools, and meticulous technique to create results that look genuinely natural and beautifully crafted. Whether you want barely-there definition or bold, defined brows, we'll create the look that's right for you.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
@@ -145,7 +145,7 @@ export default function MicropigmentationPlantationPage() {
               {[
                 { title: 'Microblading', body: 'Hair-stroke technique that creates ultra-realistic, individual brow hairs. Ideal for sparse or thin brows seeking a natural, fluffy appearance.' },
                 { title: 'Ombre Powder Brows', body: 'A soft, powdered brow effect that mimics the look of filled brows. Longer-lasting than microblading and better suited to oily skin types.' },
-                { title: 'Combination Brows', body: 'The best of both worlds — hair strokes at the front for a natural inner brow with ombre powder through the body and tail for definition and longevity.' },
+                { title: 'Combination Brows', body: 'The best of both worlds: hair strokes at the front for a natural inner brow with ombre powder through the body and tail for definition and longevity.' },
                 { title: 'Lip Blushing', body: 'Semi-permanent lip color that enhances your lip shape, adds symmetry, and creates a soft, natural-looking flush of color. No more re-applying lip liner throughout the day.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
@@ -191,7 +191,7 @@ export default function MicropigmentationPlantationPage() {
               Ready for effortless beauty<br /><em>every morning?</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
-              Book a micropigmentation consultation at Blend Hair Boutique — 10035 Cleary Blvd, Plantation, FL 33324 — or call (754) 206-3501.
+              Book a micropigmentation consultation at Blend Hair Boutique, 10035 Cleary Blvd, Plantation, FL 33324, or call (754) 206-3501.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book a Consultation</a>

@@ -107,7 +107,7 @@ export default function HeroSection() {
           decoding="sync"
         />
         <span className="sr-only">
-          {`${BUSINESS.name} — ${t.h1.join(' ')} ${t.sub}`}
+          {`${BUSINESS.name}. ${t.h1.join(' ')} ${t.sub}`}
         </span>
       </h1>
 

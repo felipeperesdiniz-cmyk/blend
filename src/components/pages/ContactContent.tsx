@@ -139,7 +139,7 @@ export default function ContactContent() {
               <div className="contact-map" style={{ marginBottom: '2rem' }}>
                 <iframe
                   src={BUSINESS.mapsEmbedUrl}
-                  title={`Blend Hair Boutique — ${BUSINESS.address}`}
+                  title={`Blend Hair Boutique at ${BUSINESS.address}`}
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"

@@ -29,11 +29,11 @@ const faqs = [
   },
   {
     q: 'Will a facial cause breakouts?',
-    a: 'Some clients experience minor purging after a deep-cleansing facial — this is normal and temporary, typically resolving within 5–7 days. It occurs because the treatment dislodges debris from the pores. This is especially common in first-time facial clients with congested skin. Let your esthetician know your skin history and concerns beforehand.',
+    a: 'Some clients experience minor purging after a deep-cleansing facial. This is normal and temporary, typically resolving within 5–7 days. It occurs because the treatment dislodges debris from the pores. This is especially common in first-time facial clients with congested skin. Let your esthetician know your skin history and concerns beforehand.',
   },
   {
     q: 'Is a facial safe for sensitive skin?',
-    a: 'Yes — we offer gentle, calming facial protocols specifically formulated for sensitive skin. We use fragrance-free, hypoallergenic products and avoid aggressive exfoliation or extraction techniques for clients with reactive or sensitive skin. Always mention any skin conditions, allergies, or topical medications when booking.',
+    a: 'Yes. We offer gentle, calming facial protocols specifically formulated for sensitive skin. We use fragrance-free, hypoallergenic products and avoid aggressive exfoliation or extraction techniques for clients with reactive or sensitive skin. Always mention any skin conditions, allergies, or topical medications when booking.',
   },
   {
     q: 'What should I do after my facial to maintain results?',
@@ -48,7 +48,7 @@ const schema = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Facials in Plantation, FL',
-      description: 'Custom facials and skin care treatments at Blend Hair Boutique in Plantation, Florida — cleansing, hydrating, brightening, and anti-aging facials personalized to each client.',
+      description: 'Custom facials and skin care treatments at Blend Hair Boutique in Plantation, Florida: cleansing, hydrating, brightening, and anti-aging facials personalized to each client.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -91,7 +91,7 @@ export default function FacialsPlantationPage() {
               <em>Facials</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Your skin is as unique as you are. At Blend Hair Boutique in Plantation, FL, our estheticians design each facial around your individual skin type, concerns, and goals — delivering real results in a luxurious, relaxing environment.
+              Your skin is as unique as you are. At Blend Hair Boutique in Plantation, FL, our estheticians design each facial around your individual skin type, concerns, and goals, delivering real results in a luxurious, relaxing environment.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,10 +115,10 @@ export default function FacialsPlantationPage() {
                   Custom Care.<br /><em>Visible Results.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Every facial at Blend Hair Boutique begins with a skin analysis. Your esthetician evaluates hydration levels, pore size, texture, tone, and any specific concerns — whether that's congestion, dryness, fine lines, or uneven pigmentation — and selects the appropriate protocol and products accordingly.
+                  Every facial at Blend Hair Boutique begins with a skin analysis. Your esthetician evaluates hydration levels, pore size, texture, tone, and any specific concerns, whether that's congestion, dryness, fine lines, or uneven pigmentation, then selects the appropriate protocol and products accordingly.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  South Florida's climate — hot, humid, and sun-intensive — places unique demands on skin. Our facials are designed with this environment in mind, helping to address sun damage, clogged pores from sweat and humidity, and dehydration from excessive air conditioning exposure.
+                  South Florida's climate, hot, humid, and sun-intensive, places unique demands on skin. Our facials are designed with this environment in mind, helping to address sun damage, clogged pores from sweat and humidity, and dehydration from excessive air conditioning exposure.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>

@@ -24,7 +24,7 @@ const schema = {
       '@type': 'WebPage',
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
-      name: 'Beauty Resource Center — Blend Hair Boutique',
+      name: 'Beauty Resource Center at Blend Hair Boutique',
       description: 'Hair and beauty education from the professionals at Blend Hair Boutique in Plantation, Florida.',
       isPartOf: { '@id': `${SITE_URL}/#website` },
     },

@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/waxing-plantation-fl`
 export const metadata: Metadata = {
   title: 'Waxing in Plantation, FL | Eyebrow Waxing & Body Waxing | Blend Hair Boutique',
   description:
-    'Professional waxing services in Plantation, Florida — eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,230+ reviews. Book online.',
+    'Professional waxing services in Plantation, Florida: eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Waxing in Plantation, FL | Blend Hair Boutique',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Does eyebrow waxing hurt?',
-    a: 'There is minimal discomfort involved in eyebrow waxing — most clients describe it as a quick, brief sting followed by immediate relief. We use a high-quality soft wax that adheres to hair and not skin, minimizing irritation. If you have sensitive skin, let your esthetician know and we\'ll take extra precautions.',
+    a: 'There is minimal discomfort involved in eyebrow waxing. Most clients describe it as a quick, brief sting followed by immediate relief. We use a high-quality soft wax that adheres to hair and not skin, minimizing irritation. If you have sensitive skin, let your esthetician know and we\'ll take extra precautions.',
   },
   {
     q: 'How long does waxing last?',
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'How should I prepare for a waxing appointment?',
-    a: 'Hair should be at least ¼ inch long for wax to adhere properly — typically 2–3 weeks of growth after shaving. Avoid retinol or exfoliating acids on the area for 48 hours before your appointment, and arrive with clean, dry skin. Avoid sun exposure immediately after waxing as skin will be more sensitive.',
+    a: 'Hair should be at least ¼ inch long for wax to adhere properly, typically 2–3 weeks of growth after shaving. Avoid retinol or exfoliating acids on the area for 48 hours before your appointment, and arrive with clean, dry skin. Avoid sun exposure immediately after waxing as skin will be more sensitive.',
   },
   {
     q: 'Can I get waxed if I have sensitive skin?',
@@ -48,7 +48,7 @@ const schema = {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Waxing in Plantation, FL',
-      description: 'Professional waxing services at Blend Hair Boutique in Plantation, Florida — eyebrow waxing, facial waxing, and full and partial body waxing.',
+      description: 'Professional waxing services at Blend Hair Boutique in Plantation, Florida: eyebrow waxing, facial waxing, and full and partial body waxing.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -91,7 +91,7 @@ export default function WaxingPlantationPage() {
               <em>Waxing</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Professional eyebrow shaping, facial waxing, and body waxing at Blend Hair Boutique in Plantation, FL. Our estheticians work with precision and care — removing unwanted hair cleanly while keeping your skin smooth, calm, and comfortable.
+              Professional eyebrow shaping, facial waxing, and body waxing at Blend Hair Boutique in Plantation, FL. Our estheticians work with precision and care, removing unwanted hair cleanly while keeping your skin smooth, calm, and comfortable.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,7 +115,7 @@ export default function WaxingPlantationPage() {
                   Smooth Skin.<br /><em>Every Time.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Waxing at Blend Hair Boutique is performed by experienced estheticians who prioritize your comfort and skin health. We use professional wax formulas that grip the hair — not the skin — to minimize irritation and deliver the cleanest possible result.
+                  Waxing at Blend Hair Boutique is performed by experienced estheticians who prioritize your comfort and skin health. We use professional wax formulas that grip the hair, not the skin, to minimize irritation and deliver the cleanest possible result.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   From a quick eyebrow cleanup to a full-body wax before vacation, we take every service seriously. Our team will assess your skin sensitivity and hair type to select the right technique and wax formula for your specific needs.
@@ -147,7 +147,7 @@ export default function WaxingPlantationPage() {
                 { title: 'Upper Lip & Chin', body: 'Quick and effective facial waxing for the upper lip, chin, and sideburns. Clean skin in minutes with minimal discomfort.' },
                 { title: 'Full Facial Wax', body: 'Comprehensive facial waxing covering brows, upper lip, chin, cheeks, and forehead for completely smooth skin.' },
                 { title: 'Underarm Waxing', body: 'Clean, smooth underarms with results that last 3–4 weeks. Faster and longer-lasting than shaving, with less irritation over time.' },
-                { title: 'Leg Waxing', body: 'Available as half-leg or full-leg. Smooth, hair-free legs with 4–6 weeks of results — perfect for Florida\'s year-round warm weather.' },
+                { title: 'Leg Waxing', body: 'Available as half-leg or full-leg. Smooth, hair-free legs with 4–6 weeks of results, perfect for Florida\'s year-round warm weather.' },
                 { title: 'Bikini Waxing', body: 'Standard and extended bikini waxing options. Performed with care, precision, and a focus on your comfort throughout the service.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>

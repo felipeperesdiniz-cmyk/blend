@@ -23,7 +23,7 @@ const faqs = [
   { q: 'How long do hair extensions last?', a: 'Tape-in extensions typically require maintenance every 6–8 weeks as your natural hair grows. Sew-in extensions usually last 2–3 months. With proper care and maintenance appointments at Blend, your extensions can last much longer before needing replacement.' },
   { q: 'How much do hair extensions cost at Blend Hair Boutique?', a: 'Extension pricing varies based on the method, the amount of hair needed, and the length you\'re targeting. A consultation is required before booking an extensions appointment, during which we provide a complete, transparent quote.' },
   { q: 'Will hair extensions damage my natural hair?', a: 'When applied correctly by a trained specialist and maintained properly, hair extensions should not damage your natural hair. Our extension specialists at Blend Hair Boutique are trained in proper application and will guide you through the care needed to protect your natural hair during wear.' },
-  { q: 'Do you use ethically sourced hair for extensions?', a: 'Yes — Blend Hair Boutique works with high-quality, ethically sourced hair for all extension services. We select premium hair that blends naturally with your own hair color and texture for a seamless, undetectable result.' },
+  { q: 'Do you use ethically sourced hair for extensions?', a: 'Yes. Blend Hair Boutique works with high-quality, ethically sourced hair for all extension services. We select premium hair that blends naturally with your own hair color and texture for a seamless, undetectable result.' },
 ]
 
 const schema = {
@@ -70,7 +70,7 @@ export default function HairExtensionsPage() {
               Hair <em>Extensions</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique offers premium hair extensions in Plantation, Florida — tape-in, sew-in, and clip-in methods using ethically sourced, high-quality hair. Our extension specialists deliver seamless, natural-looking length and volume with minimal damage to your existing hair.
+              Blend Hair Boutique offers premium hair extensions in Plantation, Florida: tape-in, sew-in, and clip-in methods using ethically sourced, high-quality hair. Our extension specialists deliver seamless, natural-looking length and volume with minimal damage to your existing hair.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">Book a Consultation</a>

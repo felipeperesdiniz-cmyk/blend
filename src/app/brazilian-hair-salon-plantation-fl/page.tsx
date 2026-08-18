@@ -22,23 +22,23 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is a Brazilian hair salon and how is it different?',
-    a: 'A Brazilian hair salon brings the traditions of Brazilian beauty culture to every service — a philosophy that prizes hair health, natural movement, and intensive conditioning alongside technical precision. Brazilian beauty professionals are trained with a particular emphasis on smoothing treatments, color vibrancy, and hair care rituals. At Blend, our Brazilian co-founders built this philosophy into every aspect of the salon experience.',
+    a: 'A Brazilian hair salon brings the traditions of Brazilian beauty culture to every service, a philosophy that prizes hair health, natural movement, and intensive conditioning alongside technical precision. Brazilian beauty professionals are trained with a particular emphasis on smoothing treatments, color vibrancy, and hair care rituals. At Blend, our Brazilian co-founders built this philosophy into every aspect of the salon experience.',
   },
   {
     q: 'What is a Brazilian Blowout and how long does it last?',
-    a: 'A Brazilian Blowout is a professional smoothing treatment that bonds a keratin-infused formula to the hair shaft, dramatically reducing frizz and cutting blowout time by up to 70%. Results typically last 10–12 weeks and can be extended with proper aftercare. Unlike traditional keratin treatments, a Brazilian Blowout does not change your hair\'s natural wave pattern — it simply manages frizz and adds shine.',
+    a: 'A Brazilian Blowout is a professional smoothing treatment that bonds a keratin-infused formula to the hair shaft, dramatically reducing frizz and cutting blowout time by up to 70%. Results typically last 10–12 weeks and can be extended with proper aftercare. Unlike traditional keratin treatments, a Brazilian Blowout does not change your hair\'s natural wave pattern. It simply manages frizz and adds shine.',
   },
   {
     q: 'Is a Brazilian Blowout safe for color-treated or highlighted hair?',
-    a: 'Yes — a Brazilian Blowout is safe for most color-treated hair, including highlighted and balayaged hair. In some cases, a smoothing treatment can actually enhance color vibrancy and extend color life by sealing the cuticle. Our stylists will assess your hair\'s condition and recommend the right formula for your specific color history.',
+    a: 'Yes. A Brazilian Blowout is safe for most color-treated hair, including highlighted and balayaged hair. In some cases, a smoothing treatment can actually enhance color vibrancy and extend color life by sealing the cuticle. Our stylists will assess your hair\'s condition and recommend the right formula for your specific color history.',
   },
   {
     q: 'What is the difference between a Brazilian Blowout and a keratin treatment?',
-    a: 'Both are professional smoothing treatments, but they differ in formula and results. A Brazilian Blowout is formaldehyde-free, works on freshly colored hair, and allows you to wash your hair the same day. A traditional keratin treatment typically requires a 72-hour wait before washing. The right choice depends on your hair type, texture, and goals — our stylists will guide you during your consultation.',
+    a: 'Both are professional smoothing treatments, but they differ in formula and results. A Brazilian Blowout is formaldehyde-free, works on freshly colored hair, and allows you to wash your hair the same day. A traditional keratin treatment typically requires a 72-hour wait before washing. The right choice depends on your hair type, texture, and goals, and our stylists will guide you during your consultation.',
   },
   {
     q: 'Do I need to speak Portuguese to visit Blend Hair Boutique?',
-    a: 'Not at all. Blend Hair Boutique serves clients of all backgrounds and our team communicates fluently in English, Portuguese, and Spanish. The "Brazilian" in our name refers to our heritage, training philosophy, and approach — not a language requirement. All clients are welcomed warmly regardless of background.',
+    a: 'Not at all. Blend Hair Boutique serves clients of all backgrounds and our team communicates fluently in English, Portuguese, and Spanish. The "Brazilian" in our name refers to our heritage, training philosophy, and approach, not a language requirement. All clients are welcomed warmly regardless of background.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function BrazilianHairSalonPage() {
               <em>Brazilian</em> Hair Salon<br />in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique brings the artistry and warmth of Brazilian beauty culture to the heart of South Florida. Our Brazilian co-founders and their team of certified professionals deliver the full range of Brazilian hair techniques — from our signature blowout to customized color and smoothing treatments.
+              Blend Hair Boutique brings the artistry and warmth of Brazilian beauty culture to the heart of South Florida. Our Brazilian co-founders and their team of certified professionals deliver the full range of Brazilian hair techniques, from our signature blowout to customized color and smoothing treatments.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -112,10 +112,10 @@ export default function BrazilianHairSalonPage() {
                   Born in Brazil.<br /><em>Built for South Florida.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Blend Hair Boutique was founded in 2018 by Juliana Chen, alongside co-owner and salon manager Fernanda Macedo — Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
+                  Blend Hair Boutique was founded in 2018 by Juliana Chen, alongside co-owner and salon manager Fernanda Macedo, Brazilian beauty professionals who relocated to Florida with a shared mission: to make the full Brazilian salon experience accessible to South Florida clients.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  Brazilian beauty culture is world-renowned for its emphasis on healthy, luminous hair, intensive conditioning rituals, and the seamless blend of technical skill and personal warmth. These values are embedded in every appointment at Blend — from the consultation through to the finishing blow-dry.
+                  Brazilian beauty culture is world-renowned for its emphasis on healthy, luminous hair, intensive conditioning rituals, and the seamless blend of technical skill and personal warmth. These values are embedded in every appointment at Blend, from the consultation through to the finishing blow-dry.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
@@ -140,10 +140,10 @@ export default function BrazilianHairSalonPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
               {[
-                { title: 'Brazilian Blowout', body: 'Our signature smoothing treatment — frizz-free, glossy, and long-lasting. Safe for color-treated hair and ready to wash the same day.', href: '/blowout-plantation-fl' },
+                { title: 'Brazilian Blowout', body: 'Our signature smoothing treatment: frizz-free, glossy, and long-lasting. Safe for color-treated hair and ready to wash the same day.', href: '/blowout-plantation-fl' },
                 { title: 'Keratin Treatment', body: 'Advanced keratin smoothing for dramatically smoother, more manageable hair. Results last 3–5 months with proper aftercare.', href: '/keratin-treatment-plantation' },
                 { title: 'Balayage & Color', body: 'Brazilian colorists are known for their mastery of natural, dimensional color. Our hand-painted balayage reflects this tradition.', href: '/balayage-plantation-fl' },
-                { title: 'Blow Dry & Styling', body: 'The Brazilian blowout technique delivers volume, smoothness, and shine that lasts beyond the salon — the gold standard in finishing.', href: '/blowout-plantation-fl' },
+                { title: 'Blow Dry & Styling', body: 'The Brazilian blowout technique delivers volume, smoothness, and shine that lasts beyond the salon. The gold standard in finishing.', href: '/blowout-plantation-fl' },
               ].map((s) => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit', borderTop: '1px solid var(--line)', paddingTop: '1.5rem', display: 'block' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.5rem' }}>{s.title}</h3>

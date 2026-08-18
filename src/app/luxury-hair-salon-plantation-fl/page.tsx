@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Luxury Hair Salon in Plantation, FL | Blend Hair Boutique',
     description:
-      'Blend Hair Boutique — luxury hair salon in Plantation, FL. Expert color, balayage, keratin, extensions, and bridal beauty in a premium environment. Book online 24/7.',
+      'Blend Hair Boutique is a luxury hair salon in Plantation, FL. Expert color, balayage, keratin, extensions, and bridal beauty in a premium environment. Book online 24/7.',
     url: CANONICAL,
   },
 }
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What makes Blend Hair Boutique a luxury salon?',
-    a: 'Blend Hair Boutique distinguishes itself through four pillars: expert technicians with international training, professional-grade products including the Kérastase line, a beautifully appointed boutique environment, and a consultation-first process that ensures every result is personalized. Every detail — from the products we use to the music we play — is curated for an elevated experience.',
+    a: 'Blend Hair Boutique distinguishes itself through four pillars: expert technicians with international training, professional-grade products including the Kérastase line, a beautifully appointed boutique environment, and a consultation-first process that ensures every result is personalized. Every detail, from the products we use to the music we play, is curated for an elevated experience.',
   },
   {
     q: 'What professional hair products does Blend Hair Boutique use?',
@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: 'How far in advance should I book at Blend Hair Boutique?',
-    a: 'Our most sought-after stylists book 2–4 weeks in advance, particularly for color and balayage services. If you need a same-week appointment, we recommend calling us directly at (754) 206-3501 — we occasionally have cancellations and can often accommodate flexible clients.',
+    a: 'Our most sought-after stylists book 2–4 weeks in advance, particularly for color and balayage services. If you need a same-week appointment, we recommend calling us directly at (754) 206-3501. We occasionally have cancellations and can often accommodate flexible clients.',
   },
   {
     q: 'Does Blend Hair Boutique offer a consultation before services?',
-    a: 'Yes. All color, balayage, extension, and chemical treatment services include a consultation at the start of your appointment. For complex transformations — such as color correction or significant lightening — we strongly recommend scheduling a standalone consultation so your stylist can assess your hair thoroughly and plan the right approach.',
+    a: 'Yes. All color, balayage, extension, and chemical treatment services include a consultation at the start of your appointment. For complex transformations, such as color correction or significant lightening, we strongly recommend scheduling a standalone consultation so your stylist can assess your hair thoroughly and plan the right approach.',
   },
 ]
 
@@ -88,7 +88,7 @@ export default function LuxuryHairSalonPage() {
               <em>Luxury</em> Hair Salon<br />in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is Plantation's premier luxury hair salon — a boutique environment where world-class technique meets Brazilian warmth. From custom balayage to smoothing treatments and bridal beauty, every service is designed to exceed expectations.
+              Blend Hair Boutique is Plantation's premier luxury hair salon, a boutique environment where world-class technique meets Brazilian warmth. From custom balayage to smoothing treatments and bridal beauty, every service is designed to exceed expectations.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -142,10 +142,10 @@ export default function LuxuryHairSalonPage() {
               {[
                 { title: 'Balayage & Color', body: 'Custom hand-painted color, highlights, ombre, and all-over color crafted for your unique hair.', href: '/balayage-plantation-fl' },
                 { title: 'Keratin & Smoothing', body: 'Brazilian blowout and keratin treatments that eliminate frizz and deliver months of effortless smoothness.', href: '/keratin-treatment-plantation' },
-                { title: 'Hair Extensions', body: 'Volume and length added seamlessly — weft, tape-in, and fusion techniques by certified specialists.', href: '/hair-extensions-plantation' },
+                { title: 'Hair Extensions', body: 'Volume and length added seamlessly with weft, tape-in, and fusion techniques by certified specialists.', href: '/hair-extensions-plantation' },
                 { title: 'Bridal Beauty', body: 'Full-service bridal hair and beauty for your most important day, with trial runs and day-of coordination.', href: '/bridal-hair-south-florida' },
                 { title: 'Facials & Skin', body: 'Personalized facials and skin treatments by licensed estheticians for radiant, healthy skin.', href: '/facials-plantation-fl' },
-                { title: 'Nails', body: 'Manicures, pedicures, gel, and nail art — precision and polish in every detail.', href: '/nails-plantation-fl' },
+                { title: 'Nails', body: 'Manicures, pedicures, gel, and nail art, with precision and polish in every detail.', href: '/nails-plantation-fl' },
               ].map((s) => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit', borderTop: '1px solid var(--line)', paddingTop: '1.5rem', display: 'block' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.5rem' }}>{s.title}</h3>
@@ -175,10 +175,10 @@ export default function LuxuryHairSalonPage() {
                   The Blend<br /><em>Standard of Excellence</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Every stylist at Blend is carefully selected for technical skill, professional character, and commitment to continued education. We believe luxury is not just about the environment — it is about the confidence that comes from being in skilled, caring hands.
+                  Every stylist at Blend is carefully selected for technical skill, professional character, and commitment to continued education. We believe luxury is not just about the environment. It is about the confidence that comes from being in skilled, caring hands.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  Our color services use zero-damage formulas wherever possible. Our smoothing treatments are calibrated to your hair type. Our consultations are mandatory, not optional — because getting it right the first time is a non-negotiable standard.
+                  Our color services use zero-damage formulas wherever possible. Our smoothing treatments are calibrated to your hair type. Our consultations are mandatory, not optional, because getting it right the first time is a non-negotiable standard.
                 </p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function LuxuryHairSalonPage() {
               Ready to experience<br /><em>Plantation's most loved salon?</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
-              Book online 24/7 or call (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324 — open Monday through Saturday.
+              Book online 24/7 or call (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324, open Monday through Saturday.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online Now</a>

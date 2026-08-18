@@ -6,7 +6,7 @@ export const faqEn: FAQTranslation = {
     heading: 'Frequently Asked',
     em: 'Questions',
     intro:
-      '130+ questions answered by our team of stylists and beauty specialists — covering booking and salon policies, hair, nails, brows, lashes, skincare, and South Florida hair care.',
+      '130+ questions answered by our team of stylists and beauty specialists, covering booking and salon policies, hair, nails, brows, lashes, skincare, and South Florida hair care.',
   },
   cta: {
     eyebrow: 'Still Have Questions?',
@@ -30,19 +30,19 @@ export const faqEn: FAQTranslation = {
       faqs: [
         {
           q: "What are Blend Hair Boutique's hours?",
-          a: 'We are open Monday through Wednesday from 9:00 AM to 6:00 PM, and Thursday through Saturday from 9:00 AM to 7:00 PM. We are closed on Sundays. Holiday hours may vary — call (754) 206-3501 or check our booking system to confirm availability on specific dates.',
+          a: 'We are open Monday through Wednesday from 9:00 AM to 6:00 PM, and Thursday through Saturday from 9:00 AM to 7:00 PM. We are closed on Sundays. Holiday hours may vary, so call (754) 206-3501 or check our booking system to confirm availability on specific dates.',
         },
         {
           q: 'How do I book an appointment at Blend Hair Boutique?',
-          a: 'You can book online 24/7 through our Fresha booking system, accessible via our website. You can also call us at (754) 206-3501 or message us on WhatsApp at (954) 544-6792. We recommend booking in advance for color services and special occasions — our most requested stylists book 2–4 weeks ahead. For blowout and styling appointments, same-week availability is more common.',
+          a: 'You can book online 24/7 through our Fresha booking system, accessible via our website. You can also call us at (754) 206-3501 or message us on WhatsApp at (954) 544-6792. We recommend booking in advance for color services and special occasions. Our most requested stylists book 2–4 weeks ahead. For blowout and styling appointments, same-week availability is more common.',
         },
         {
           q: 'Do you accept walk-ins?',
-          a: 'Walk-ins are always welcome based on availability. For shorter services such as blowouts, haircuts, and root touch-ups, there is a better chance of accommodating walk-ins during weekdays. For color services, balayage, smoothing treatments, hair extensions, and other longer appointments, we strongly recommend booking in advance, as same-week availability — especially on weekends — is often limited.',
+          a: 'Walk-ins are always welcome based on availability. For shorter services such as blowouts, haircuts, and root touch-ups, there is a better chance of accommodating walk-ins during weekdays. For color services, balayage, smoothing treatments, hair extensions, and other longer appointments, we strongly recommend booking in advance, as same-week availability, especially on weekends, is often limited.',
         },
         {
           q: 'What is your cancellation policy?',
-          a: 'For longer services such as keratin treatments, highlights, and balayage, a $100 deposit is required. The deposit is charged when the appointment is booked and applied toward your final balance at checkout. Reschedules and cancellations can be made up to 24 hours in advance — if you reschedule before that window, your deposit is automatically transferred to the new appointment. If you are unable to reschedule, please contact us at least 24 hours in advance. After this period, the deposit is forfeited.',
+          a: 'For longer services such as keratin treatments, highlights, and balayage, a $100 deposit is required. The deposit is charged when the appointment is booked and applied toward your final balance at checkout. Reschedules and cancellations can be made up to 24 hours in advance. If you reschedule before that window, your deposit is automatically transferred to the new appointment. If you are unable to reschedule, please contact us at least 24 hours in advance. After this period, the deposit is forfeited.',
         },
         {
           q: 'What payment methods do you accept?',
@@ -50,19 +50,19 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Do you offer gift cards?',
-          a: "Yes — Blend Hair Boutique offers both digital and physical gift cards. Digital gift cards can be purchased online through our website, while physical gift cards are available for purchase in the salon. They make the perfect gift for birthdays, anniversaries, Mother's Day, bridal showers, holidays, or any special occasion. Gift cards can be used toward any service or retail product at Blend Hair Boutique.",
+          a: "Yes. Blend Hair Boutique offers both digital and physical gift cards. Digital gift cards can be purchased online through our website, while physical gift cards are available for purchase in the salon. They make the perfect gift for birthdays, anniversaries, Mother's Day, bridal showers, holidays, or any special occasion. Gift cards can be used toward any service or retail product at Blend Hair Boutique.",
         },
         {
           q: 'Is there parking available at Blend Hair Boutique?',
-          a: 'Yes — free parking is available in the shopping center at 10035 Cleary Blvd, Plantation, FL 33324. We are located in western Broward County, easily accessible from Plantation, Davie, Weston, Fort Lauderdale, and Sunrise.',
+          a: 'Yes. Free parking is available in the shopping center at 10035 Cleary Blvd, Plantation, FL 33324. We are located in western Broward County, easily accessible from Plantation, Davie, Weston, Fort Lauderdale, and Sunrise.',
         },
         {
           q: 'Do you offer services in Portuguese or Spanish?',
-          a: 'Yes — we welcome clients in English, Portuguese, and Spanish. While not every team member speaks all three languages, we always make sure you can communicate comfortably throughout your visit. Blend Hair Boutique was founded by Brazilian beauty professionals, and we are committed to making every client feel comfortable, understood, and confident from consultation to final results — regardless of the language they speak.',
+          a: 'Yes. We welcome clients in English, Portuguese, and Spanish. While not every team member speaks all three languages, we always make sure you can communicate comfortably throughout your visit. Blend Hair Boutique was founded by Brazilian beauty professionals, and we are committed to making every client feel comfortable, understood, and confident from consultation to final results, regardless of the language they speak.',
         },
         {
           q: 'Do you offer consultations before booking a service?',
-          a: 'Yes. We offer complimentary consultations before booking any complex service — color correction, hair extensions, balayage transformations, and bridal packages. A standalone consultation allows your stylist to assess your hair in person, give you an honest timeline and pricing, and plan the right approach before any product is applied. Contact us to schedule a consultation appointment.',
+          a: 'Yes. We offer complimentary consultations before booking any complex service: color correction, hair extensions, balayage transformations, and bridal packages. A standalone consultation allows your stylist to assess your hair in person, give you an honest timeline and pricing, and plan the right approach before any product is applied. Contact us to schedule a consultation appointment.',
         },
         {
           q: 'Can I request a specific stylist?',
@@ -70,7 +70,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can I get multiple services in one appointment?',
-          a: 'Yes — many Blend clients combine services in a single visit. Popular combinations include color + blowout, keratin + trim, and root touch-up + manicure. Nail services can often be done during color processing time, but cannot be scheduled alongside haircuts, balayage, or highlights. When booking, select all the services you want and the system will allocate the appropriate time. For complex combinations, contact our front desk so we can schedule you properly.',
+          a: 'Yes. Many Blend clients combine services in a single visit. Popular combinations include color + blowout, keratin + trim, and root touch-up + manicure. Nail services can often be done during color processing time, but cannot be scheduled alongside haircuts, balayage, or highlights. When booking, select all the services you want and the system will allocate the appropriate time. For complex combinations, contact our front desk so we can schedule you properly.',
         },
         {
           q: 'Where is Blend Hair Boutique located?',
@@ -86,19 +86,19 @@ export const faqEn: FAQTranslation = {
       faqs: [
         {
           q: "What's the difference between balayage and highlights?",
-          a: 'Traditional highlights usually start closer to the root and create a more uniform brightness from top to ends. Balayage focuses on a softer, more blended look with a more diffused or "shadowed" root, creating natural dimension and a lower-maintenance grow-out. Neither is universally better — many clients at Blend benefit from a combination: foil highlights for face-framing brightness and balayage through the lengths. Your colorist will recommend the right approach during your consultation.',
+          a: 'Traditional highlights usually start closer to the root and create a more uniform brightness from top to ends. Balayage focuses on a softer, more blended look with a more diffused or "shadowed" root, creating natural dimension and a lower-maintenance grow-out. Neither is universally better, and many clients at Blend benefit from a combination: foil highlights for face-framing brightness and balayage through the lengths. Your colorist will recommend the right approach during your consultation.',
         },
         {
           q: 'How do I know if I need partial or full highlights?',
-          a: 'The choice between partial and full highlights depends on how much brightness and coverage you want. Partial highlights focus on specific areas — typically around the face and top layers — creating a more subtle, natural effect and requiring less maintenance. Full highlights are applied throughout the entire head, offering a brighter, more uniform result with more noticeable dimension. If you are unsure, your stylist will assess your hair, goals, and lifestyle to recommend the best option for you.',
+          a: 'The choice between partial and full highlights depends on how much brightness and coverage you want. Partial highlights focus on specific areas, typically around the face and top layers, creating a more subtle, natural effect and requiring less maintenance. Full highlights are applied throughout the entire head, offering a brighter, more uniform result with more noticeable dimension. If you are unsure, your stylist will assess your hair, goals, and lifestyle to recommend the best option for you.',
         },
         {
           q: 'How long does a balayage appointment take?',
-          a: 'Most balayage appointments take between 3 and 5 hours, depending on your starting color, hair length, density, and desired result. Your first appointment may take slightly longer to allow for a thorough consultation. Complex work — like going very light from dark hair — may require the full 5 hours and potentially a follow-up appointment.',
+          a: 'Most balayage appointments take between 3 and 5 hours, depending on your starting color, hair length, density, and desired result. Your first appointment may take slightly longer to allow for a thorough consultation. Complex work, like going very light from dark hair, may require the full 5 hours and potentially a follow-up appointment.',
         },
         {
           q: 'How often does balayage need maintenance?',
-          a: 'Many clients refresh their balayage every 3 to 6 months. Because balayage is a freehand technique with no harsh root line, it grows out naturally — there is no abrupt regrowth demarcation the way foil highlights produce. Toners or glosses may be recommended between appointments to maintain brightness and tone.',
+          a: 'Many clients refresh their balayage every 3 to 6 months. Because balayage is a freehand technique with no harsh root line, it grows out naturally, with no abrupt regrowth demarcation the way foil highlights produce. Toners or glosses may be recommended between appointments to maintain brightness and tone.',
         },
         {
           q: 'How often should highlights be refreshed?',
@@ -122,7 +122,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can balayage or highlights be done on dark hair?',
-          a: 'Yes — lightening on dark hair produces some of the most stunning results, and dark hair creates beautiful natural contrast. However, significant lift on dark hair typically requires multiple sessions spread weeks apart to protect hair integrity. In one appointment on dark hair, we can typically achieve warm caramel, honey, or copper results. Going platinum or ash blonde from very dark hair requires a multi-session plan, and your colorist will set realistic expectations at your consultation.',
+          a: 'Yes. Lightening on dark hair produces some of the most stunning results, and dark hair creates beautiful natural contrast. However, significant lift on dark hair typically requires multiple sessions spread weeks apart to protect hair integrity. In one appointment on dark hair, we can typically achieve warm caramel, honey, or copper results. Going platinum or ash blonde from very dark hair requires a multi-session plan, and your colorist will set realistic expectations at your consultation.',
         },
         {
           q: 'Can balayage cover gray hair?',
@@ -130,11 +130,11 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can balayage make hair look thicker?',
-          a: 'Yes — one of the underappreciated benefits of balayage is that dimensional color creates the visual illusion of fullness and texture. The variation between lighter and darker tones throughout the hair adds depth and makes each strand appear more distinct. For fine or thin hair, a well-executed balayage with multiple tones can make hair appear significantly fuller.',
+          a: 'Yes. One of the underappreciated benefits of balayage is that dimensional color creates the visual illusion of fullness and texture. The variation between lighter and darker tones throughout the hair adds depth and makes each strand appear more distinct. For fine or thin hair, a well-executed balayage with multiple tones can make hair appear significantly fuller.',
         },
         {
           q: 'What is lived-in balayage?',
-          a: 'Lived-in balayage (sometimes called "lived-in color") describes a balayage result with a very gradual, seamless transition from natural roots to lighter ends — with minimal contrast. The grow-out looks intentional from day one and continues to look natural for months without any harsh demarcation. It is the most low-maintenance balayage result and is ideal for clients who want beautiful color without frequent salon visits.',
+          a: 'Lived-in balayage (sometimes called "lived-in color") describes a balayage result with a very gradual, seamless transition from natural roots to lighter ends, with minimal contrast. The grow-out looks intentional from day one and continues to look natural for months without any harsh demarcation. It is the most low-maintenance balayage result and is ideal for clients who want beautiful color without frequent salon visits.',
         },
       ],
     },
@@ -178,15 +178,15 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can I color damaged hair?',
-          a: "It depends on the extent of the damage. Mildly damaged hair can often be colored safely with the right formula and bond-building treatments. Severely damaged hair — characterized by extreme dryness, breakage, gumminess when wet, or severe split ends throughout the length — may need a conditioning and restoration phase before any color is applied. At Blend, we assess your hair honestly before every service. If we believe color is not safe for your hair's current condition, we will tell you, and create a plan to get your hair healthy first.",
+          a: "It depends on the extent of the damage. Mildly damaged hair can often be colored safely with the right formula and bond-building treatments. Severely damaged hair, characterized by extreme dryness, breakage, gumminess when wet, or severe split ends throughout the length, may need a conditioning and restoration phase before any color is applied. At Blend, we assess your hair honestly before every service. If we believe color is not safe for your hair's current condition, we will tell you, and create a plan to get your hair healthy first.",
         },
         {
           q: 'What is color correction?',
-          a: "Color correction is the process of fixing hair color that did not achieve the desired result — whether it is too brassy, too dark, uneven, or damaged from box color. It is one of the most technically complex services in a professional salon. Color correction almost always requires multiple sessions and a consultation before booking, as the number of steps depends entirely on your hair's starting point and your goal. At Blend, color correction is one of our specialties.",
+          a: "Color correction is the process of fixing hair color that did not achieve the desired result, whether it is too brassy, too dark, uneven, or damaged from box color. It is one of the most technically complex services in a professional salon. Color correction almost always requires multiple sessions and a consultation before booking, as the number of steps depends entirely on your hair's starting point and your goal. At Blend, color correction is one of our specialties.",
         },
         {
           q: 'How do I maintain color-treated hair at home?',
-          a: "The three most important steps are: (1) Use a sulfate-free, color-safe shampoo — sulfates strip pigment aggressively. (2) Deep condition weekly — color-treated hair loses moisture faster than natural hair. (3) Apply UV protection before sun exposure — UV rays break down color pigment and cause brassiness. In South Florida's climate, UV protection is a year-round necessity. Your Blend colorist will recommend specific products suited to your hair type and color service.",
+          a: "The three most important steps are: (1) Use a sulfate-free, color-safe shampoo, since sulfates strip pigment aggressively. (2) Deep condition weekly, because color-treated hair loses moisture faster than natural hair. (3) Apply UV protection before sun exposure, since UV rays break down color pigment and cause brassiness. In South Florida's climate, UV protection is a year-round necessity. Your Blend colorist will recommend specific products suited to your hair type and color service.",
         },
       ],
     },
@@ -206,7 +206,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How often should I get a haircut?',
-          a: 'Most clients schedule a haircut every 6 to 8 weeks to maintain their style and keep their hair looking healthy. Longer hairstyles may be maintained with slightly longer intervals. If you are growing your hair out, a light trim every 10–12 weeks prevents split ends from traveling up the shaft — which ultimately costs more length over time.',
+          a: 'Most clients schedule a haircut every 6 to 8 weeks to maintain their style and keep their hair looking healthy. Longer hairstyles may be maintained with slightly longer intervals. If you are growing your hair out, a light trim every 10–12 weeks prevents split ends from traveling up the shaft, which ultimately costs more length over time.',
         },
         {
           q: 'Can my stylist recommend a haircut that suits me?',
@@ -218,7 +218,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can I bring inspiration photos to my haircut appointment?',
-          a: 'Yes — we encourage bringing inspiration photos so your stylist can better understand your preferences while tailoring the haircut to your hair type and facial features. If you can, also bring photos of cuts you have disliked. The same cut can look quite different on different hair types, and your stylist will tell you honestly what is achievable with your hair.',
+          a: 'Yes. We encourage bringing inspiration photos so your stylist can better understand your preferences while tailoring the haircut to your hair type and facial features. If you can, also bring photos of cuts you have disliked. The same cut can look quite different on different hair types, and your stylist will tell you honestly what is achievable with your hair.',
         },
         {
           q: 'Do you have professionals specialized in curly hair?',
@@ -290,7 +290,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How long do smoothing treatments last?',
-          a: 'Results typically last around 3 months, depending on your hair type, home care routine, and washing frequency. Using a sodium-chloride-free and sulfate-free shampoo significantly extends the treatment — clients who wash daily will see results fade sooner than those who wash 2–3 times per week.',
+          a: 'Results typically last around 3 months, depending on your hair type, home care routine, and washing frequency. Using a sodium-chloride-free and sulfate-free shampoo significantly extends the treatment. Clients who wash daily will see results fade sooner than those who wash 2–3 times per week.',
         },
         {
           q: 'Can I color my hair and get a smoothing treatment on the same day?',
@@ -378,7 +378,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How often is extension maintenance required?',
-          a: 'Maintenance is typically recommended every 4 to 6 weeks, depending on your hair growth, extension method, and how well the extensions are maintained at home. Do not attempt to reposition or remove extensions yourself — improper removal can cause breakage and damage your natural hair.',
+          a: 'Maintenance is typically recommended every 4 to 6 weeks, depending on your hair growth, extension method, and how well the extensions are maintained at home. Do not attempt to reposition or remove extensions yourself. Improper removal can cause breakage and damage your natural hair.',
         },
         {
           q: 'Do I need a consultation before getting extensions?',
@@ -398,7 +398,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Can I swim with hair extensions?',
-          a: 'Yes, with precautions. Before swimming, wet your hair with fresh water and apply a leave-in conditioner or protective oil to the lengths — saturated hair absorbs less pool water. Avoid submerging repeatedly in chlorinated or salt water, as it can loosen the bonds. Always rinse hair thoroughly after swimming and follow with a deep conditioning treatment. Wearing a swim cap when possible is ideal for extension longevity.',
+          a: 'Yes, with precautions. Before swimming, wet your hair with fresh water and apply a leave-in conditioner or protective oil to the lengths, since saturated hair absorbs less pool water. Avoid submerging repeatedly in chlorinated or salt water, as it can loosen the bonds. Always rinse hair thoroughly after swimming and follow with a deep conditioning treatment. Wearing a swim cap when possible is ideal for extension longevity.',
         },
       ],
     },
@@ -586,7 +586,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How long should my hair be before a waxing appointment?',
-          a: 'For the best results, hair should be about ¼ inch long — approximately the length of a grain of rice.',
+          a: 'For the best results, hair should be about ¼ inch long, roughly the length of a grain of rice.',
         },
         {
           q: "Can I get waxed if I'm using Retinol or Accutane?",
@@ -622,7 +622,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Do you offer facials for teenagers?',
-          a: 'Yes. Teen skin needs more than a basic facial. Our Teen Facial is a safe, gentle treatment designed to help control excess oil, reduce breakouts and blackheads, prevent acne marks, and keep the skin healthy while protecting its natural barrier. We believe teenage skin deserves care, not aggressive extractions — so our focus is on balancing the skin, reducing inflammation, and teaching healthy skincare habits that support long-term results. Teen skin is often more sensitive, which is a natural part of adolescence, so we create a comfortable, supportive experience using products and techniques appropriate for young skin.',
+          a: 'Yes. Teen skin needs more than a basic facial. Our Teen Facial is a safe, gentle treatment designed to help control excess oil, reduce breakouts and blackheads, prevent acne marks, and keep the skin healthy while protecting its natural barrier. We believe teenage skin deserves care, not aggressive extractions, so our focus is on balancing the skin, reducing inflammation, and teaching healthy skincare habits that support long-term results. Teen skin is often more sensitive, which is a natural part of adolescence, so we create a comfortable, supportive experience using products and techniques appropriate for young skin.',
         },
         {
           q: 'How long does a facial appointment take?',
@@ -658,15 +658,15 @@ export const faqEn: FAQTranslation = {
       faqs: [
         {
           q: 'How does South Florida humidity affect hair?',
-          a: "South Florida's humidity — which averages 70–90% year-round — causes the hair cuticle to absorb moisture from the air and expand unevenly, resulting in frizz, puffiness, and loss of style. Color-treated and chemically processed hair is more porous and reacts more dramatically to humidity. The most effective solutions are keratin or smoothing treatments (which physically seal the cuticle), anti-humectant styling products (which block moisture absorption), and silk pillowcases (which reduce friction overnight).",
+          a: "South Florida's humidity, which averages 70–90% year-round, causes the hair cuticle to absorb moisture from the air and expand unevenly, resulting in frizz, puffiness, and loss of style. Color-treated and chemically processed hair is more porous and reacts more dramatically to humidity. The most effective solutions are keratin or smoothing treatments (which physically seal the cuticle), anti-humectant styling products (which block moisture absorption), and silk pillowcases (which reduce friction overnight).",
         },
         {
           q: 'How can I prevent frizz in Florida humidity?',
-          a: "The most effective professional treatment for Florida frizz is a keratin or smoothing treatment — both seal the cuticle and dramatically reduce the hair's ability to absorb humidity. For daily management: blow dry hair completely (partially dry hair frizzes dramatically in humidity), use a frizz-sealing serum on dry hair before going outside, and avoid glycerin-containing products in very high humidity. Silk or satin pillowcases also reduce overnight friction that lifts the cuticle.",
+          a: "The most effective professional treatment for Florida frizz is a keratin or smoothing treatment. Both seal the cuticle and dramatically reduce the hair's ability to absorb humidity. For daily management: blow dry hair completely (partially dry hair frizzes dramatically in humidity), use a frizz-sealing serum on dry hair before going outside, and avoid glycerin-containing products in very high humidity. Silk or satin pillowcases also reduce overnight friction that lifts the cuticle.",
         },
         {
           q: "What hair products work best in Florida's climate?",
-          a: "In South Florida's year-round heat and humidity, look for sulfate-free shampoos (gentler on color and the cuticle), anti-humectant styling creams and serums (they form a barrier against humidity), UV-protective leave-in sprays (essential for color-treated and blonde hair), and glycerin-free products for very humid days. Kérastase's discipline and elixir ranges are specifically designed for frizz-prone hair in humid climates — available at Blend.",
+          a: "In South Florida's year-round heat and humidity, look for sulfate-free shampoos (gentler on color and the cuticle), anti-humectant styling creams and serums (they form a barrier against humidity), UV-protective leave-in sprays (essential for color-treated and blonde hair), and glycerin-free products for very humid days. Kérastase's discipline and elixir ranges are specifically designed for frizz-prone hair in humid climates, and both are available at Blend.",
         },
         {
           q: 'How often should blondes tone their hair in South Florida?',
@@ -674,19 +674,19 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How do I protect colored hair from pool and ocean water in Florida?',
-          a: 'Before swimming: wet your hair with fresh water (saturated hair absorbs less pool water), apply a leave-in conditioner or coconut oil as a barrier, and wear a swim cap if possible. After swimming: rinse immediately with fresh water, apply a clarifying shampoo to remove chlorine or salt deposits, and follow with a deep conditioning mask. Chlorine is particularly harsh on lightened hair because it oxidizes the pigment — the damage is cumulative if you swim regularly without protection.',
+          a: 'Before swimming: wet your hair with fresh water (saturated hair absorbs less pool water), apply a leave-in conditioner or coconut oil as a barrier, and wear a swim cap if possible. After swimming: rinse immediately with fresh water, apply a clarifying shampoo to remove chlorine or salt deposits, and follow with a deep conditioning mask. Chlorine is particularly harsh on lightened hair because it oxidizes the pigment, and the damage is cumulative if you swim regularly without protection.',
         },
         {
           q: 'Why does blonde hair turn green after swimming in Florida?',
-          a: 'Green tones in blonde hair after swimming are caused by copper — specifically, copper oxidized by pool chlorine bonding to the hair protein. It is not the chlorine itself that causes the green color. Prevention: rinse with fresh water before and after swimming, apply a leave-in conditioner as a barrier, and use a clarifying or chelating shampoo immediately after pool exposure. For existing green tones, a professional clarifying treatment at Blend can remove copper deposits.',
+          a: 'Green tones in blonde hair after swimming are caused by copper, specifically copper oxidized by pool chlorine bonding to the hair protein. It is not the chlorine itself that causes the green color. Prevention: rinse with fresh water before and after swimming, apply a leave-in conditioner as a barrier, and use a clarifying or chelating shampoo immediately after pool exposure. For existing green tones, a professional clarifying treatment at Blend can remove copper deposits.',
         },
         {
           q: 'Is a smoothing treatment worth it for South Florida residents?',
-          a: "For most clients in Plantation and Broward County — yes. South Florida's year-round humidity and heat make keratin and Hair Botox among the most popular services at Blend. These treatments eliminate frizz for around 3 months, cut blowout time significantly, and are especially valuable during hurricane season and summer months.",
+          a: "For most clients in Plantation and Broward County, yes. South Florida's year-round humidity and heat make keratin and Hair Botox among the most popular services at Blend. These treatments eliminate frizz for around 3 months, cut blowout time significantly, and are especially valuable during hurricane season and summer months.",
         },
         {
           q: 'How do I care for hair extensions in Florida heat?',
-          a: "In Florida's heat, extensions require consistent hydration. Use a sulfate-free, extension-safe shampoo and condition only the mid-lengths and ends (never the bonds or tape tabs). Deep condition weekly — heat accelerates moisture loss from extensions. Before outdoor activities, apply a UV-protective spray to both the extension hair and your natural hair. Rinse hair immediately after swimming and deep condition after any salt or chlorine exposure.",
+          a: "In Florida's heat, extensions require consistent hydration. Use a sulfate-free, extension-safe shampoo and condition only the mid-lengths and ends (never the bonds or tape tabs). Deep condition weekly, because heat accelerates moisture loss from extensions. Before outdoor activities, apply a UV-protective spray to both the extension hair and your natural hair. Rinse hair immediately after swimming and deep condition after any salt or chlorine exposure.",
         },
       ],
     },
@@ -698,19 +698,19 @@ export const faqEn: FAQTranslation = {
       faqs: [
         {
           q: 'What should I expect on my first visit to Blend Hair Boutique?',
-          a: 'Your first visit begins with a consultation — your stylist wants to understand your hair history, current condition, and goals before any work begins. We will ask about previous color, chemical services, and your daily hair routine. Expect a welcoming, professional environment that takes your time seriously. We will provide a realistic assessment of what is achievable in your first appointment and what might require additional sessions.',
+          a: 'Your first visit begins with a consultation. Your stylist wants to understand your hair history, current condition, and goals before any work begins. We will ask about previous color, chemical services, and your daily hair routine. Expect a welcoming, professional environment that takes your time seriously. We will provide a realistic assessment of what is achievable in your first appointment and what might require additional sessions.',
         },
         {
           q: 'What should I wear to my salon appointment?',
-          a: 'For color appointments, wear a button-up or zip-up top that can easily come off over your head without risking color smudging — avoid white or light-colored shirts. A salon cape will protect your clothing during the service, but arriving in something comfortable and replaceable is smart for color appointments. For haircut appointments, any comfortable clothing works.',
+          a: 'For color appointments, wear a button-up or zip-up top that can easily come off over your head without risking color smudging, and avoid white or light-colored shirts. A salon cape will protect your clothing during the service, but arriving in something comfortable and replaceable is smart for color appointments. For haircut appointments, any comfortable clothing works.',
         },
         {
           q: 'Should I come in with clean hair?',
-          a: 'A regular shampoo and conditioner are included with all our hair services, so you do not need to arrive freshly washed. For color appointments, avoid heavy styling products (dry shampoo, hairspray, serums) on appointment day — these can interfere with color application, and some natural scalp oil is actually protective during lightening services.',
+          a: 'A regular shampoo and conditioner are included with all our hair services, so you do not need to arrive freshly washed. For color appointments, avoid heavy styling products (dry shampoo, hairspray, serums) on appointment day. These can interfere with color application, and some natural scalp oil is actually protective during lightening services.',
         },
         {
           q: 'How far in advance should I book at Blend?',
-          a: 'Our most requested stylists — particularly for color services — book 2–4 weeks in advance. Weekend appointments fill especially quickly. For bridal services, booking 6–9 months ahead is recommended. For blowouts and shorter services, same-week appointments are more available. To guarantee your preferred stylist and time, booking at least 2 weeks ahead is advisable.',
+          a: 'Our most requested stylists, particularly for color services, book 2–4 weeks in advance. Weekend appointments fill especially quickly. For bridal services, booking 6–9 months ahead is recommended. For blowouts and shorter services, same-week appointments are more available. To guarantee your preferred stylist and time, booking at least 2 weeks ahead is advisable.',
         },
       ],
     },
@@ -726,11 +726,11 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Do you offer bridal hair and beauty packages?',
-          a: 'Yes — bridal services are among our most requested offerings. We offer bridal hair styling, bridal makeup, trial run appointments, and full-day packages for the bride and bridal party. We accommodate groups for weddings, quinceañeras, and milestone events. Bridal bookings should be made as far in advance as possible — we recommend 6–9 months for popular dates. Contact us directly to discuss your date and vision.',
+          a: 'Yes. Bridal services are among our most requested offerings. We offer bridal hair styling, bridal makeup, trial run appointments, and full-day packages for the bride and bridal party. We accommodate groups for weddings, quinceañeras, and milestone events. Bridal bookings should be made as far in advance as possible. We recommend 6–9 months for popular dates. Contact us directly to discuss your date and vision.',
         },
         {
           q: 'What professional products do you use?',
-          a: 'Blend is an authorized Kérastase salon, and we work with professional color lines including Keune, Wella, and Truss. We do not use box-color formulas or drugstore products on our clients. We also carry Kérastase retail products in-salon — your stylist can recommend the right take-home products after your appointment.',
+          a: 'Blend is an authorized Kérastase salon, and we work with professional color lines including Keune, Wella, and Truss. We do not use box-color formulas or drugstore products on our clients. We also carry Kérastase retail products in-salon, and your stylist can recommend the right take-home products after your appointment.',
         },
       ],
     },

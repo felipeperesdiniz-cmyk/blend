@@ -37,7 +37,7 @@ export default function TeamSection() {
               <div className="team-card__img-wrap">
                 <img
                   src={member.image}
-                  alt={`${member.name} — ${member.specialty} at Blend Hair Boutique`}
+                  alt={`${member.name}, ${member.specialty} at Blend Hair Boutique`}
                   loading="lazy" decoding="async"
                 />
               </div>

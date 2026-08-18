@@ -47,7 +47,7 @@ export default function GallerySection() {
             >
               <img
                 src={item.src}
-                alt={`${labelMap[item.enLabel] ?? item.enLabel} — Blend Hair Boutique`}
+                alt={`${labelMap[item.enLabel] ?? item.enLabel} at Blend Hair Boutique`}
                 loading="lazy" decoding="async"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: item.focus ?? 'center' }}
               />

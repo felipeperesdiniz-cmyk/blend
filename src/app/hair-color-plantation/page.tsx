@@ -22,8 +22,8 @@ const faqs = [
   { q: 'What hair color services does Blend Hair Boutique offer?', a: 'Blend Hair Boutique offers a comprehensive range of hair color services including all-over color, highlights, lowlights, balayage, ombre, color glossing, toning, and professional color correction. Every service is customized to your hair type, skin tone, and lifestyle.' },
   { q: 'How long does all-over hair color last?', a: 'All-over permanent hair color typically lasts 4–6 weeks before roots become noticeable and 8–12 weeks before a full reapplication is needed. Semi-permanent color tends to fade gradually over 4–8 washes, making it ideal for clients who want less commitment.' },
   { q: 'What is a hair gloss treatment?', a: 'A hair gloss is a semi-permanent color treatment that adds shine, enhances your natural color, and neutralizes brassiness or unwanted tones. It\'s applied over your existing color or as a standalone treatment for luminous, healthy-looking hair. Results last approximately 4–6 weeks.' },
-  { q: 'Can Blend Hair Boutique fix a bad color job?', a: 'Yes — color correction is one of our specialties at Blend Hair Boutique. Whether you\'re dealing with brassiness, uneven color, damage from a previous treatment, or an unwanted tone, our colorists will assess your hair and create a safe, strategic correction plan.' },
-  { q: 'Do you offer color services for gray hair coverage?', a: 'Absolutely. Blend Hair Boutique offers seamless gray coverage in a range of formulas — full coverage, blended coverage, and gray blending techniques that soften the transition. Our colorists match your natural color precisely for a natural, polished result.' },
+  { q: 'Can Blend Hair Boutique fix a bad color job?', a: 'Yes. Color correction is one of our specialties at Blend Hair Boutique. Whether you\'re dealing with brassiness, uneven color, damage from a previous treatment, or an unwanted tone, our colorists will assess your hair and create a safe, strategic correction plan.' },
+  { q: 'Do you offer color services for gray hair coverage?', a: 'Absolutely. Blend Hair Boutique offers seamless gray coverage in a range of formulas: full coverage, blended coverage, and gray blending techniques that soften the transition. Our colorists match your natural color precisely for a natural, polished result.' },
 ]
 
 const schema = {
@@ -69,7 +69,7 @@ export default function HairColorPage() {
               Hair <em>Color</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is Plantation&apos;s premier destination for professional hair color — all-over color, highlights, balayage, glossing, toning, and color correction. Our colorists craft custom formulas tailored to your hair texture, skin tone, and maintenance lifestyle.
+              Blend Hair Boutique is Plantation&apos;s premier destination for professional hair color: all-over color, highlights, balayage, glossing, toning, and color correction. Our colorists craft custom formulas tailored to your hair texture, skin tone, and maintenance lifestyle.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">Book Color Appointment</a>
@@ -86,8 +86,8 @@ export default function HairColorPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
               {[
-                { name: 'All-Over Color', desc: 'Full-coverage hair color using professional permanent or demi-permanent formulas. Customized shade, coverage, and undertone — tailored to your skin tone and natural hair.' },
-                { name: 'Highlights & Lowlights', desc: 'Dimensional foil highlights or lowlights to add depth, contrast, and movement. More defined and precise than balayage — ideal for clients wanting bolder dimension.' },
+                { name: 'All-Over Color', desc: 'Full-coverage hair color using professional permanent or demi-permanent formulas. Customized shade, coverage, and undertone, tailored to your skin tone and natural hair.' },
+                { name: 'Highlights & Lowlights', desc: 'Dimensional foil highlights or lowlights to add depth, contrast, and movement. More defined and precise than balayage, and ideal for clients wanting bolder dimension.' },
                 { name: 'Hair Gloss & Toning', desc: 'Semi-permanent gloss treatments for intense shine, tonal refresh, and brassiness correction. A great maintenance service between full color appointments.' },
                 { name: 'Color Correction', desc: 'Professional correction for uneven color, unwanted tones, brassiness, and previous color damage. Strategic, multi-step planning ensures the best result for your hair\'s health.' },
                 { name: 'Gray Coverage', desc: 'Seamless gray blending or full coverage options. We match your natural shade precisely and can blend grays softly for a natural, low-maintenance result.' },

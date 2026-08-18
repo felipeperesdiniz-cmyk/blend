@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'Why is Blend Hair Boutique considered one of the best balayage salons in Plantation?',
-    a: 'Blend has a 4.9-star rating across over 1,230 Google reviews — the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.',
+    a: 'Blend has a 4.9-star rating across over 1,230 Google reviews, the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.',
   },
   {
     q: 'How do I know if my hair is a good candidate for balayage?',
@@ -34,11 +34,11 @@ const faqs = [
   },
   {
     q: 'How much does balayage cost at Blend Hair Boutique in Plantation?',
-    a: 'Balayage pricing at Blend varies based on hair length, density, and the complexity of your color goal. We provide transparent pricing — your stylist will give you a full quote during the consultation before any color is applied. Book online or call (754) 206-3501 to schedule a consultation and get an accurate estimate for your specific hair.',
+    a: 'Balayage pricing at Blend varies based on hair length, density, and the complexity of your color goal. We provide transparent pricing, and your stylist will give you a full quote during the consultation before any color is applied. Book online or call (754) 206-3501 to schedule a consultation and get an accurate estimate for your specific hair.',
   },
   {
     q: 'How long does balayage last before needing a touch-up?',
-    a: 'One of balayage\'s biggest advantages is how naturally it grows out — most clients can go 12–16 weeks between appointments, and many stretch to 6 months with a simple toning gloss at the 8–10 week mark. Your stylist at Blend will give you a personalized maintenance timeline based on your color goals and lifestyle.',
+    a: 'One of balayage\'s biggest advantages is how naturally it grows out. Most clients can go 12–16 weeks between appointments, and many stretch to 6 months with a simple toning gloss at the 8–10 week mark. Your stylist at Blend will give you a personalized maintenance timeline based on your color goals and lifestyle.',
   },
 ]
 
@@ -92,7 +92,7 @@ export default function BestBalayagePage() {
               The Best Balayage<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Plantation's most-reviewed salon for balayage. Our certified colorists deliver custom hand-painted color designed for your hair texture, skin tone, and maintenance lifestyle — results that look effortless because they are crafted with precision.
+              Plantation's most-reviewed salon for balayage. Our certified colorists deliver custom hand-painted color designed for your hair texture, skin tone, and maintenance lifestyle, for results that look effortless because they are crafted with precision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -116,10 +116,10 @@ export default function BestBalayagePage() {
                   Balayage That<br /><em>Actually Looks Natural</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Not all balayage is created equal. The difference between a result that looks painted-on and one that looks like you spent a summer at the beach comes down to technique, color theory knowledge, and — most importantly — a colorist who takes the time to understand your hair before touching it.
+                  Not all balayage is created equal. The difference between a result that looks painted-on and one that looks like you spent a summer at the beach comes down to technique, color theory knowledge, and, most importantly, a colorist who takes the time to understand your hair before touching it.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  At Blend, every balayage appointment begins with a consultation. Your colorist evaluates your hair's natural base, texture, density, and growth pattern — then maps a custom color placement plan. The result grows out naturally, requires fewer touch-ups, and adapts beautifully to South Florida's sun and lifestyle.
+                  At Blend, every balayage appointment begins with a consultation. Your colorist evaluates your hair's natural base, texture, density, and growth pattern, then maps a custom color placement plan. The result grows out naturally, requires fewer touch-ups, and adapts beautifully to South Florida's sun and lifestyle.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
@@ -144,10 +144,10 @@ export default function BestBalayagePage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: 'Soft Balayage', body: 'Subtle, natural-looking dimension with soft transitions — ideal for first-timers or low-maintenance color goals.' },
+                { title: 'Soft Balayage', body: 'Subtle, natural-looking dimension with soft transitions, ideal for first-timers or low-maintenance color goals.' },
                 { title: 'Bold Balayage', body: 'High-contrast, bright balayage for those who want visible sun-kissed brightness and defined dimension.' },
-                { title: 'Lived-In Color', body: 'A seamless blend of your natural base and lighter ends — effortlessly grown out from day one.' },
-                { title: 'Ombré', body: 'A deliberate, gradient fade from dark roots to lighter ends — bold and modern with soft or dramatic transitions.' },
+                { title: 'Lived-In Color', body: 'A seamless blend of your natural base and lighter ends, effortlessly grown out from day one.' },
+                { title: 'Ombré', body: 'A deliberate, gradient fade from dark roots to lighter ends, bold and modern with soft or dramatic transitions.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.5rem' }}>{s.title}</h3>
@@ -191,7 +191,7 @@ export default function BestBalayagePage() {
               Serving South Florida
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '56ch', margin: '0 auto 2.5rem' }}>
-              Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324 — a short drive from Davie, Weston, Fort Lauderdale, Sunrise, Cooper City, Pembroke Pines, Miramar, Boca Raton, and Miami.
+              Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324, a short drive from Davie, Weston, Fort Lauderdale, Sunrise, Cooper City, Pembroke Pines, Miramar, Boca Raton, and Miami.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               {['Plantation, FL', 'Davie, FL', 'Weston, FL', 'Fort Lauderdale, FL', 'Sunrise, FL', 'Cooper City, FL', 'Pembroke Pines, FL', 'Miramar, FL', 'Boca Raton, FL'].map((city) => (

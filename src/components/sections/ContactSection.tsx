@@ -90,7 +90,7 @@ export default function ContactSection() {
             <div className="contact-map">
               <iframe
                 src={BUSINESS.mapsEmbedUrl}
-                title={`Blend Hair Boutique location — ${BUSINESS.address}`}
+                title={`Blend Hair Boutique location at ${BUSINESS.address}`}
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"

@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
     title: 'Haircuts',
     benefit: 'A precision cut, wash included, for every hair type.',
     description: 'Precision haircuts with a relaxing shampoo wash included, performed by specialists trained for every hair type and texture. A professional blowdry is offered right after your cut.',
-    detail: 'Every cut begins with a consultation, assessing your natural texture and growth patterns before a single snip, followed by a shampoo wash. A blowdry is offered immediately after your haircut. Length is categorized as Short (ear length), Medium (shoulder length), Long (past the shoulder), and Extra Length (below the bra line). We have specialists for every hair type — straight, wavy, curly, and coily.',
+    detail: 'Every cut begins with a consultation, assessing your natural texture and growth patterns before a single snip, followed by a shampoo wash. A blowdry is offered immediately after your haircut. Length is categorized as Short (ear length), Medium (shoulder length), Long (past the shoulder), and Extra Length (below the bra line). We have specialists for every hair type: straight, wavy, curly, and coily.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
@@ -44,7 +44,7 @@ export const SERVICES: Service[] = [
         ],
       },
       {
-        heading: 'Cut & Blow Dry — by Length',
+        heading: 'Cut & Blow Dry by Length',
         items: [
           { label: 'Short (Ear Length)', price: '$115' },
           { label: 'Medium (Shoulder Length)', price: '$125' },
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
     category: 'Hair Color',
     title: 'Color Services',
     benefit: 'Rich, custom color crafted with the best products in the industry.',
-    description: 'We specialize in coloring and use only the best products in the industry — from a single-process root retouch to a complete all-over transformation, with ammonia-free formulas available on every service.',
+    description: 'We specialize in coloring and use only the best products in the industry, from a single-process root retouch to a complete all-over transformation, with ammonia-free formulas available on every service.',
     detail: 'Every color appointment starts with a consultation on your hair history, scalp sensitivity, and the result you want. Ammonia-free formulas are available across our root retouch and all-over color services for clients who prefer a gentler process without sacrificing vibrancy or coverage.',
     priceNote: 'See pricing below',
     priceGroups: [
@@ -72,16 +72,16 @@ export const SERVICES: Service[] = [
         ],
       },
       {
-        heading: 'All-Over Color — by Length',
+        heading: 'All-Over Color by Length',
         items: [
           { label: 'Short (Ear Length)', price: '$115' },
-          { label: 'Short (Ear Length) — Ammonia-Free', price: '$120' },
+          { label: 'Short (Ear Length), Ammonia-Free', price: '$120' },
           { label: 'Medium (Shoulder Length)', price: '$135' },
-          { label: 'Medium (Shoulder Length) — Ammonia-Free', price: '$140' },
+          { label: 'Medium (Shoulder Length), Ammonia-Free', price: '$140' },
           { label: 'Long (Past Shoulder)', price: '$155' },
-          { label: 'Long (Past Shoulder) — Ammonia-Free', price: '$160' },
+          { label: 'Long (Past Shoulder), Ammonia-Free', price: '$160' },
           { label: 'Extra Length (Below Bra Line)', price: '$175' },
-          { label: 'Extra Length (Below Bra Line) — Ammonia-Free', price: '$180' },
+          { label: 'Extra Length (Below Bra Line), Ammonia-Free', price: '$180' },
         ],
       },
     ],
@@ -93,7 +93,7 @@ export const SERVICES: Service[] = [
     title: 'Balayage & Highlights',
     benefit: 'Hand-painted dimension and sun-kissed brightness.',
     description: 'From a soft, hand-painted balayage to precise foiled highlights and face-framing contour pieces, our colorists build dimension that grows out beautifully and suits your skin tone.',
-    detail: 'Balayage and highlight services are fully customized in consultation — we\'ll talk through placement, maintenance, and tone before any foil or brush touches your hair. Color correction is quoted individually after an in-person consultation, since every case is different.',
+    detail: 'Balayage and highlight services are fully customized in consultation. We\'ll talk through placement, maintenance, and tone before any foil or brush touches your hair. Color correction is quoted individually after an in-person consultation, since every case is different.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
@@ -117,17 +117,17 @@ export const SERVICES: Service[] = [
     category: 'Hair Styling',
     title: 'Hair Styling',
     benefit: 'Beachy waves, glossy blowouts, or an unforgettable finish.',
-    description: 'Go for fun, beachy waves or a glossy, smooth style — let your imagination speak to you, and our stylists will create what you imagine. Our Brazilian-style blow dry is an unforgettable experience.',
+    description: 'Go for fun, beachy waves or a glossy, smooth style. Let your imagination speak to you, and our stylists will create what you imagine. Our Brazilian-style blow dry is an unforgettable experience.',
     detail: 'From an everyday blowdry to a full up-do for a special occasion, our styling menu covers every length and every look. Curls, flat-iron finishing, and perms are also available for clients who want lasting texture between salon visits.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
         heading: 'Hair Styling',
         items: [
-          { label: 'Blow Dry — Short', price: '$40' },
-          { label: 'Blow Dry — Medium', price: '$50' },
-          { label: 'Blow Dry — Long', price: '$60' },
-          { label: 'Blow Dry — Extra Long', price: '$70' },
+          { label: 'Blow Dry (Short)', price: '$40' },
+          { label: 'Blow Dry (Medium)', price: '$50' },
+          { label: 'Blow Dry (Long)', price: '$60' },
+          { label: 'Blow Dry (Extra Long)', price: '$70' },
           { label: 'Add Curls or Flat Iron', price: '$20' },
           { label: 'Curls Only', price: '$35+' },
           { label: 'Curl Styling', price: '$50' },
@@ -141,14 +141,14 @@ export const SERVICES: Service[] = [
   {
     id: 'smoothing',
     category: 'Smoothing Treatments',
-    title: 'Smoothing Treatment — Keratin / Hair Botox',
+    title: 'Smoothing Treatment: Keratin / Hair Botox',
     benefit: 'Frizz-free, smooth, and manageable hair for months.',
     description: 'Our Brazilian-inspired smoothing treatments eliminate frizz, reduce styling time, and leave your hair brilliantly smooth, soft, and healthy-looking.',
     detail: 'We offer a range of keratin and hair botox smoothing treatments calibrated to your hair type and length, from a gentle smoothing for sensitive hair to a full treatment for dramatically frizzy or coarse textures. Results typically last 3–5 months.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
-        heading: 'Smoothing Treatment — Keratin / Hair Botox',
+        heading: 'Smoothing Treatment: Keratin / Hair Botox',
         items: [
           { label: 'Short (Ear Length)', price: '$230+' },
           { label: 'Medium (Shoulder Length)', price: '$270+' },
@@ -163,7 +163,7 @@ export const SERVICES: Service[] = [
   {
     id: 'hair-care',
     category: 'Hair Care',
-    title: 'Hair Care — In-Salon Treatments',
+    title: 'Hair Care: In-Salon Treatments',
     benefit: 'Restorative Kérastase treatments customized to your hair.',
     description: 'A full menu of in-salon hair care treatments, including the Kérastase range, designed to repair, hydrate, and strengthen hair between major services.',
     detail: 'These treatments pair beautifully with any color, cut, or styling appointment, and can also be booked on their own. Our team will recommend the right combination based on your hair\'s condition that day.',
@@ -191,12 +191,12 @@ export const SERVICES: Service[] = [
     category: 'Extensions',
     title: 'Hair Extensions',
     benefit: 'Instant length, volume, and versatility.',
-    description: 'Premium hair extensions applied for a seamless, natural look that blends beautifully with your own hair — tape-in, keratin, or clip-in.',
+    description: 'Premium hair extensions applied for a seamless, natural look that blends beautifully with your own hair: tape-in, keratin, or clip-in.',
     detail: 'Our extension specialists assess your hair density and lifestyle to recommend the best method and guide you through ongoing maintenance. Pricing for tape extension services covers up to 2 packs; additional packs are charged $50 per pack.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
-        heading: 'Hair Extensions (tape services priced for up to 2 packs — additional packs $50 each)',
+        heading: 'Hair Extensions (tape services priced for up to 2 packs; additional packs $50 each)',
         items: [
           { label: 'Tape Extension Removal Only', price: '$80' },
           { label: 'Tape Extension Placement', price: '$250' },
@@ -222,10 +222,10 @@ export const SERVICES: Service[] = [
       {
         heading: 'Nail Services',
         items: [
-          { label: 'Manicure — Regular', price: '$27' },
-          { label: 'Manicure — Gel', price: '$32' },
-          { label: 'Pedicure — Regular', price: '$35' },
-          { label: 'Pedicure — Gel', price: '$40' },
+          { label: 'Manicure (Regular)', price: '$27' },
+          { label: 'Manicure (Gel)', price: '$32' },
+          { label: 'Pedicure (Regular)', price: '$35' },
+          { label: 'Pedicure (Gel)', price: '$40' },
           { label: 'Soak Off', price: '$7' },
           { label: 'Mani Dip Powder', price: '$55' },
           { label: 'Dip Soak Off', price: '$10' },
@@ -240,7 +240,7 @@ export const SERVICES: Service[] = [
     category: 'Brows',
     title: 'Eyebrow Services',
     benefit: 'Defined, beautifully shaped brows that frame your face.',
-    description: 'Brow design, tinting, and lamination shaped to complement your natural face structure — never to override it.',
+    description: 'Brow design, tinting, and lamination shaped to complement your natural face structure, never to override it.',
     detail: 'Brows are shaped using threading or tweezing, whichever suits your hair growth and skin best. Lamination gives brows a fuller, brushed-up finish that holds for weeks.',
     priceNote: 'See pricing below',
     priceGroups: [
@@ -261,7 +261,7 @@ export const SERVICES: Service[] = [
     category: 'Makeup',
     title: 'Makeup',
     benefit: 'Flawless, photo-ready makeup for every occasion.',
-    description: 'Professional makeup application for events, photoshoots, date nights, or simply treating yourself — tailored to your skin and the look you want.',
+    description: 'Professional makeup application for events, photoshoots, date nights, or simply treating yourself, tailored to your skin and the look you want.',
     detail: 'Our makeup artists work with premium products and a steady hand for a finish that photographs beautifully and lasts all day. Book alongside a blowout or up-do for the full glam experience.',
     priceNote: 'See pricing below',
     priceGroups: [
@@ -280,7 +280,7 @@ export const SERVICES: Service[] = [
     title: 'Waxing & Threading',
     benefit: 'Smooth skin and defined features, done with care.',
     description: 'Full and partial body waxing and threading using premium wax suited to sensitive skin, from a quick brow clean-up to a full leg wax.',
-    detail: 'Every wax service is performed with hygiene and comfort as the priority. Full Face waxing addresses peach fuzz and stray hairs but does not include eyebrow shaping — pair it with a Brow Design for a complete result.',
+    detail: 'Every wax service is performed with hygiene and comfort as the priority. Full Face waxing addresses peach fuzz and stray hairs but does not include eyebrow shaping. Pair it with a Brow Design for a complete result.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
@@ -324,27 +324,27 @@ export const SERVICES: Service[] = [
           {
             label: 'Facial Deep Hydration & Dermalogica Kit Combo',
             price: '$149',
-            note: 'Refresh and revitalize your skin with a deep hydration facial paired with a Dermalogica kit — designed to restore moisture and leave your complexion soft and nourished. Ideal for a gentle boost of hydration plus professional skincare essentials.',
+            note: 'Refresh and revitalize your skin with a deep hydration facial paired with a Dermalogica kit, designed to restore moisture and leave your complexion soft and nourished. Ideal for a gentle boost of hydration plus professional skincare essentials.',
           },
           {
             label: 'Microneedling with Vitamin C & Hyaluronic Acid',
             price: '$220',
-            note: 'Encourages collagen production using small, sterilized needles. Helps smooth, firm, and tone skin, and improves the appearance of scars, acne, and wrinkles. Priced per area — face, neck, or chest.',
+            note: 'Encourages collagen production using small, sterilized needles. Helps smooth, firm, and tone skin, and improves the appearance of scars, acne, and wrinkles. Priced per area: face, neck, or chest.',
           },
           {
             label: 'Skin Tag Removal',
             price: '$90',
-            note: 'Uses a plasma pen for fibroblast therapy, a non-surgical method that uses plasma energy to vaporize the skin tag — minimal downtime and potentially permanent results.',
+            note: 'Uses a plasma pen for fibroblast therapy, a non-surgical method that uses plasma energy to vaporize the skin tag, with minimal downtime and potentially permanent results.',
           },
           {
             label: 'Microneedling',
             price: '$160',
-            note: 'Encourages collagen production using small, sterilized needles. Helps smooth, firm, and tone skin, and improves the appearance of scars, acne, and wrinkles. Priced per area — face, neck, or chest.',
+            note: 'Encourages collagen production using small, sterilized needles. Helps smooth, firm, and tone skin, and improves the appearance of scars, acne, and wrinkles. Priced per area: face, neck, or chest.',
           },
           {
             label: 'Peeling Rosé de Mer',
             price: '$180',
-            note: 'A natural, mechanical dead sea coral-based peel from Israel, on the market for over 30 years. Rich in vitamins A, E, and C and minerals, it helps fight acne, dark spots, and expression lines, with visible results from the first session. Priced per area — face, chest, or back.',
+            note: 'A natural, mechanical dead sea coral-based peel from Israel, on the market for over 30 years. Rich in vitamins A, E, and C and minerals, it helps fight acne, dark spots, and expression lines, with visible results from the first session. Priced per area: face, chest, or back.',
           },
           {
             label: 'Dermaplaning (Add-On)',
@@ -369,7 +369,7 @@ export const SERVICES: Service[] = [
     title: 'Eyelash Services',
     benefit: 'Lifted, tinted lashes that open up the eyes.',
     description: 'Eyelash tinting and lifting services for natural-looking definition without daily mascara.',
-    detail: 'A lash lift curls and sets your natural lashes for weeks at a time, while a tint adds depth and color — both quick services that make a noticeable difference.',
+    detail: 'A lash lift curls and sets your natural lashes for weeks at a time, while a tint adds depth and color. Both are quick services that make a noticeable difference.',
     priceNote: 'See pricing below',
     priceGroups: [
       {
@@ -387,7 +387,7 @@ export const SERVICES: Service[] = [
 export const FAQ: { q: string; a: string }[] = [
   {
     q: 'How do I book an appointment at Blend Hair Boutique?',
-    a: 'You can book directly online through our Fresha booking system — available 24/7. Select your service, preferred stylist, and time. For bridal packages or consultations, contact us by phone at (754) 206-3501 or WhatsApp at (954) 544-6792.',
+    a: 'You can book directly online through our Fresha booking system, available 24/7. Select your service, preferred stylist, and time. For bridal packages or consultations, contact us by phone at (754) 206-3501 or WhatsApp at (954) 544-6792.',
   },
   {
     q: 'Where is Blend Hair Boutique located?',
@@ -399,7 +399,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'What should I expect at my first visit?',
-    a: 'Every new client begins with a thorough consultation. We ask about your hair history, current routine, lifestyle, and goals before recommending any service. This ensures we always deliver results tailored to you — never a generic outcome.',
+    a: 'Every new client begins with a thorough consultation. We ask about your hair history, current routine, lifestyle, and goals before recommending any service. This ensures we always deliver results tailored to you, never a generic outcome.',
   },
   {
     q: 'How long does a balayage appointment take?',
@@ -407,11 +407,11 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Do you specialize in balayage and blonding?',
-    a: 'Yes. Balayage and highlights is our most requested service. Our colorists specialize in custom balayage, highlights, blonding, and color correction — tailored to your hair texture, skin tone, and maintenance lifestyle. Blend Hair Boutique is one of Plantation\'s top-rated salons for color.',
+    a: 'Yes. Balayage and highlights is our most requested service. Our colorists specialize in custom balayage, highlights, blonding, and color correction, tailored to your hair texture, skin tone, and maintenance lifestyle. Blend Hair Boutique is one of Plantation\'s top-rated salons for color.',
   },
   {
     q: 'Do you do Brazilian blowouts and keratin treatments?',
-    a: 'Yes. Our Keratin / Hair Botox smoothing treatment is a signature service at Blend — especially popular given Florida\'s humidity. Results typically last 3–5 months. We calibrate the formula to your hair type and length.',
+    a: 'Yes. Our Keratin / Hair Botox smoothing treatment is a signature service at Blend, especially popular given Florida\'s humidity. Results typically last 3–5 months. We calibrate the formula to your hair type and length.',
   },
   {
     q: 'Do you offer hair extensions?',
@@ -419,22 +419,22 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Do you offer facials and skin treatments?',
-    a: 'Yes. Our esthetics menu includes deep cleansing facials, microneedling, Rosé de Mer peels, skin tag removal, and add-ons like dermaplaning, microdermabrasion, and LED therapy — all customized to your skin.',
+    a: 'Yes. Our esthetics menu includes deep cleansing facials, microneedling, Rosé de Mer peels, skin tag removal, and add-ons like dermaplaning, microdermabrasion, and LED therapy, all customized to your skin.',
   },
   {
     q: 'What languages does the Blend team speak?',
-    a: 'The Blend Hair Boutique team is multilingual — we serve clients in English, Portuguese, and Spanish. Our Brazilian-trained specialists bring both technical expertise and genuine warmth to every appointment.',
+    a: 'The Blend Hair Boutique team is multilingual. We serve clients in English, Portuguese, and Spanish. Our Brazilian-trained specialists bring both technical expertise and genuine warmth to every appointment.',
   },
   {
     q: 'Do you offer gift cards?',
-    a: 'Yes — we offer gift cards in any amount, perfect for the people in your life who deserve a little luxury. They can be purchased online through our booking platform or in the boutique.',
+    a: 'Yes. We offer gift cards in any amount, perfect for the people in your life who deserve a little luxury. They can be purchased online through our booking platform or in the boutique.',
   },
   {
     q: 'What is your cancellation policy?',
-    a: 'We ask for at least 24 hours\' notice for cancellations or rescheduling. Late cancellations or no-shows may be subject to a fee. We appreciate your understanding — it helps us serve all clients well.',
+    a: 'We ask for at least 24 hours\' notice for cancellations or rescheduling. Late cancellations or no-shows may be subject to a fee. We appreciate your understanding. It helps us serve all clients well.',
   },
   {
     q: 'Do you use Kérastase or professional hair care products?',
-    a: 'Yes. We offer a full menu of in-salon Kérastase treatments — including Chroma Gloss, Fusio Dose, Première, Chroma Max, and Caviar — and are always happy to recommend home-care products that complement your in-salon treatment.',
+    a: 'Yes. We offer a full menu of in-salon Kérastase treatments, including Chroma Gloss, Fusio Dose, Première, Chroma Max, and Caviar, and we are always happy to recommend home-care products that complement your in-salon treatment.',
   },
 ]

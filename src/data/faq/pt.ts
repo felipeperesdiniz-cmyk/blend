@@ -6,13 +6,13 @@ export const faqPt: FAQTranslation = {
     heading: 'Perguntas',
     em: 'Frequentes',
     intro:
-      'Mais de 130 perguntas respondidas pela nossa equipe de cabeleireiros e especialistas em beleza — sobre agendamento e políticas do salão, cabelo, unhas, sobrancelhas, cílios, cuidados com a pele e cuidados capilares no clima do Sul da Flórida.',
+      'Mais de 130 perguntas respondidas pela nossa equipe de cabeleireiros e especialistas em beleza, sobre agendamento e políticas do salão, cabelo, unhas, sobrancelhas, cílios, cuidados com a pele e cuidados capilares no clima do Sul da Flórida.',
   },
   cta: {
     eyebrow: 'Ainda tem dúvidas?',
     heading: 'Teremos prazer em',
     em: 'ajudar.',
-    body: 'Ligue para (754) 206-3501, mande mensagem no WhatsApp ou agende um horário — responderemos suas perguntas pessoalmente em 10035 Cleary Blvd, Plantation, FL 33324.',
+    body: 'Ligue para (754) 206-3501, mande mensagem no WhatsApp ou agende um horário. Responderemos suas perguntas pessoalmente em 10035 Cleary Blvd, Plantation, FL 33324.',
     book: 'Agendar Horário',
     whatsapp: 'Falar no WhatsApp',
   },
@@ -30,19 +30,19 @@ export const faqPt: FAQTranslation = {
       faqs: [
         {
           q: 'Qual é o horário de funcionamento do Blend Hair Boutique?',
-          a: 'Funcionamos de segunda a quarta-feira, das 9h às 18h, e de quinta a sábado, das 9h às 19h. Aos domingos permanecemos fechados. O horário pode variar em feriados — ligue para (754) 206-3501 ou consulte nosso sistema de agendamento para confirmar a disponibilidade em datas específicas.',
+          a: 'Funcionamos de segunda a quarta-feira, das 9h às 18h, e de quinta a sábado, das 9h às 19h. Aos domingos permanecemos fechados. O horário pode variar em feriados, então ligue para (754) 206-3501 ou consulte nosso sistema de agendamento para confirmar a disponibilidade em datas específicas.',
         },
         {
           q: 'Como faço para agendar um horário no Blend Hair Boutique?',
-          a: 'Você pode agendar online 24 horas por dia pelo nosso sistema Fresha, acessível pelo nosso site. Também pode ligar para (754) 206-3501 ou mandar mensagem no WhatsApp (954) 544-6792. Recomendamos agendar com antecedência para serviços de coloração e ocasiões especiais — nossos profissionais mais procurados costumam ter agenda cheia com 2 a 4 semanas de antecedência. Para escova e finalização, é mais comum haver disponibilidade na mesma semana.',
+          a: 'Você pode agendar online 24 horas por dia pelo nosso sistema Fresha, acessível pelo nosso site. Também pode ligar para (754) 206-3501 ou mandar mensagem no WhatsApp (954) 544-6792. Recomendamos agendar com antecedência para serviços de coloração e ocasiões especiais. Nossos profissionais mais procurados costumam ter agenda cheia com 2 a 4 semanas de antecedência. Para escova e finalização, é mais comum haver disponibilidade na mesma semana.',
         },
         {
           q: 'Vocês atendem sem agendamento?',
-          a: 'Atendimentos sem agendamento são sempre bem-vindos, conforme a disponibilidade. Para serviços mais rápidos, como escova, corte e retoque de raiz, há mais chance de conseguirmos encaixar durante a semana. Para coloração, balayage, tratamentos de alisamento, extensões e outros atendimentos mais longos, recomendamos fortemente agendar com antecedência, pois a disponibilidade na mesma semana — especialmente nos fins de semana — costuma ser limitada.',
+          a: 'Atendimentos sem agendamento são sempre bem-vindos, conforme a disponibilidade. Para serviços mais rápidos, como escova, corte e retoque de raiz, há mais chance de conseguirmos encaixar durante a semana. Para coloração, balayage, tratamentos de alisamento, extensões e outros atendimentos mais longos, recomendamos fortemente agendar com antecedência, pois a disponibilidade na mesma semana, especialmente nos fins de semana, costuma ser limitada.',
         },
         {
           q: 'Qual é a política de cancelamento?',
-          a: 'Para serviços mais longos, como tratamentos de queratina, mechas e balayage, é necessário um depósito de $100. O valor é cobrado no momento do agendamento e abatido do total no fechamento da conta. Remarcações e cancelamentos podem ser feitos com até 24 horas de antecedência — se você remarcar dentro desse prazo, o depósito é automaticamente transferido para o novo horário. Caso não consiga remarcar, entre em contato com pelo menos 24 horas de antecedência. Após esse prazo, o depósito não é reembolsado.',
+          a: 'Para serviços mais longos, como tratamentos de queratina, mechas e balayage, é necessário um depósito de $100. O valor é cobrado no momento do agendamento e abatido do total no fechamento da conta. Remarcações e cancelamentos podem ser feitos com até 24 horas de antecedência. Se você remarcar dentro desse prazo, o depósito é automaticamente transferido para o novo horário. Caso não consiga remarcar, entre em contato com pelo menos 24 horas de antecedência. Após esse prazo, o depósito não é reembolsado.',
         },
         {
           q: 'Quais formas de pagamento vocês aceitam?',
@@ -50,19 +50,19 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Vocês vendem gift cards?',
-          a: 'Sim — o Blend Hair Boutique oferece gift cards digitais e físicos. Os digitais podem ser comprados online pelo nosso site, e os físicos estão disponíveis para compra no salão. São o presente perfeito para aniversários, Dia das Mães, chás de panela, datas comemorativas ou qualquer ocasião especial. Os gift cards podem ser usados em qualquer serviço ou produto do Blend Hair Boutique.',
+          a: 'Sim. O Blend Hair Boutique oferece gift cards digitais e físicos. Os digitais podem ser comprados online pelo nosso site, e os físicos estão disponíveis para compra no salão. São o presente perfeito para aniversários, Dia das Mães, chás de panela, datas comemorativas ou qualquer ocasião especial. Os gift cards podem ser usados em qualquer serviço ou produto do Blend Hair Boutique.',
         },
         {
           q: 'Há estacionamento no Blend Hair Boutique?',
-          a: 'Sim — há estacionamento gratuito no shopping center em 10035 Cleary Blvd, Plantation, FL 33324. Estamos localizados no oeste do Broward County, com fácil acesso a partir de Plantation, Davie, Weston, Fort Lauderdale e Sunrise.',
+          a: 'Sim. Há estacionamento gratuito no shopping center em 10035 Cleary Blvd, Plantation, FL 33324. Estamos localizados no oeste do Broward County, com fácil acesso a partir de Plantation, Davie, Weston, Fort Lauderdale e Sunrise.',
         },
         {
           q: 'Vocês atendem em português ou espanhol?',
-          a: 'Sim — atendemos clientes em inglês, português e espanhol. Nem todos os membros da equipe falam os três idiomas, mas sempre garantimos que você consiga se comunicar com conforto durante toda a visita. O Blend Hair Boutique foi fundado por profissionais de beleza brasileiros, e temos o compromisso de fazer cada cliente se sentir confortável, compreendido e confiante, da consulta ao resultado final — independentemente do idioma que fale.',
+          a: 'Sim. Atendemos clientes em inglês, português e espanhol. Nem todos os membros da equipe falam os três idiomas, mas sempre garantimos que você consiga se comunicar com conforto durante toda a visita. O Blend Hair Boutique foi fundado por profissionais de beleza brasileiros, e temos o compromisso de fazer cada cliente se sentir confortável, compreendido e confiante, da consulta ao resultado final, independentemente do idioma que fale.',
         },
         {
           q: 'Vocês fazem consulta antes de agendar um serviço?',
-          a: 'Sim. Oferecemos consultas gratuitas antes do agendamento de qualquer serviço mais complexo — correção de cor, extensões, transformações com balayage e pacotes de noiva. A consulta permite que o profissional avalie seu cabelo pessoalmente, informe prazos e valores com transparência e planeje a melhor abordagem antes de qualquer aplicação. Entre em contato para agendar sua consulta.',
+          a: 'Sim. Oferecemos consultas gratuitas antes do agendamento de qualquer serviço mais complexo: correção de cor, extensões, transformações com balayage e pacotes de noiva. A consulta permite que o profissional avalie seu cabelo pessoalmente, informe prazos e valores com transparência e planeje a melhor abordagem antes de qualquer aplicação. Entre em contato para agendar sua consulta.',
         },
         {
           q: 'Posso escolher um profissional específico?',
@@ -70,7 +70,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Posso fazer vários serviços no mesmo atendimento?',
-          a: 'Sim — muitas clientes combinam serviços em uma única visita. As combinações mais comuns são coloração + escova, queratina + corte e retoque de raiz + manicure. Serviços de unhas podem ser feitos durante o tempo de pausa da coloração, mas não podem ser agendados junto com corte, balayage ou mechas. Ao agendar, selecione todos os serviços desejados e o sistema reservará o tempo adequado. Para combinações mais complexas, fale com a nossa recepção para que possamos organizar sua agenda corretamente.',
+          a: 'Sim. Muitas clientes combinam serviços em uma única visita. As combinações mais comuns são coloração + escova, queratina + corte e retoque de raiz + manicure. Serviços de unhas podem ser feitos durante o tempo de pausa da coloração, mas não podem ser agendados junto com corte, balayage ou mechas. Ao agendar, selecione todos os serviços desejados e o sistema reservará o tempo adequado. Para combinações mais complexas, fale com a nossa recepção para que possamos organizar sua agenda corretamente.',
         },
         {
           q: 'Onde fica o Blend Hair Boutique?',
@@ -86,19 +86,19 @@ export const faqPt: FAQTranslation = {
       faqs: [
         {
           q: 'Qual é a diferença entre balayage e mechas?',
-          a: 'As mechas tradicionais (luzes com papel alumínio) geralmente começam mais próximas da raiz e criam uma luminosidade mais uniforme do topo às pontas. O balayage busca um resultado mais suave e esfumado, com a raiz mais difusa ou "sombreada", criando dimensão natural e um crescimento de manutenção mais fácil. Nenhuma técnica é melhor que a outra — muitas clientes do Blend se beneficiam da combinação: mechas para iluminar o contorno do rosto e balayage ao longo do comprimento. Sua colorista indicará a melhor abordagem durante a consulta.',
+          a: 'As mechas tradicionais (luzes com papel alumínio) geralmente começam mais próximas da raiz e criam uma luminosidade mais uniforme do topo às pontas. O balayage busca um resultado mais suave e esfumado, com a raiz mais difusa ou "sombreada", criando dimensão natural e um crescimento de manutenção mais fácil. Nenhuma técnica é melhor que a outra, e muitas clientes do Blend se beneficiam da combinação: mechas para iluminar o contorno do rosto e balayage ao longo do comprimento. Sua colorista indicará a melhor abordagem durante a consulta.',
         },
         {
           q: 'Como sei se preciso de mechas parciais ou completas?',
-          a: 'A escolha entre mechas parciais e completas depende de quanta luminosidade e cobertura você deseja. As mechas parciais se concentram em áreas específicas — normalmente ao redor do rosto e nas camadas superiores — criando um efeito mais sutil e natural, com menos manutenção. As mechas completas são aplicadas em toda a cabeça, com resultado mais claro, uniforme e com dimensão mais evidente. Se estiver em dúvida, sua profissional avaliará seu cabelo, seus objetivos e seu estilo de vida para recomendar a melhor opção.',
+          a: 'A escolha entre mechas parciais e completas depende de quanta luminosidade e cobertura você deseja. As mechas parciais se concentram em áreas específicas, normalmente ao redor do rosto e nas camadas superiores, criando um efeito mais sutil e natural, com menos manutenção. As mechas completas são aplicadas em toda a cabeça, com resultado mais claro, uniforme e com dimensão mais evidente. Se estiver em dúvida, sua profissional avaliará seu cabelo, seus objetivos e seu estilo de vida para recomendar a melhor opção.',
         },
         {
           q: 'Quanto tempo dura um atendimento de balayage?',
-          a: 'A maioria dos atendimentos de balayage leva entre 3 e 5 horas, dependendo da cor inicial, do comprimento e da densidade do cabelo e do resultado desejado. O primeiro atendimento pode levar um pouco mais de tempo para permitir uma consulta completa. Trabalhos mais complexos — como clarear bastante um cabelo escuro — podem exigir as 5 horas completas e, possivelmente, uma sessão de retorno.',
+          a: 'A maioria dos atendimentos de balayage leva entre 3 e 5 horas, dependendo da cor inicial, do comprimento e da densidade do cabelo e do resultado desejado. O primeiro atendimento pode levar um pouco mais de tempo para permitir uma consulta completa. Trabalhos mais complexos, como clarear bastante um cabelo escuro, podem exigir as 5 horas completas e, possivelmente, uma sessão de retorno.',
         },
         {
           q: 'De quanto em quanto tempo o balayage precisa de manutenção?',
-          a: 'Muitas clientes renovam o balayage a cada 3 a 6 meses. Como o balayage é uma técnica feita à mão livre, sem marcação forte na raiz, o crescimento acontece de forma natural — não há aquela linha abrupta que as mechas com papel alumínio costumam deixar. Tonalizantes ou gloss podem ser recomendados entre os atendimentos para manter o brilho e o tom.',
+          a: 'Muitas clientes renovam o balayage a cada 3 a 6 meses. Como o balayage é uma técnica feita à mão livre, sem marcação forte na raiz, o crescimento acontece de forma natural, sem aquela linha abrupta que as mechas com papel alumínio costumam deixar. Tonalizantes ou gloss podem ser recomendados entre os atendimentos para manter o brilho e o tom.',
         },
         {
           q: 'De quanto em quanto tempo devo refazer as mechas?',
@@ -122,7 +122,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Balayage ou mechas podem ser feitos em cabelo escuro?',
-          a: 'Sim — o clareamento em cabelos escuros gera alguns dos resultados mais bonitos, e o cabelo escuro cria um contraste natural lindo. No entanto, um clareamento significativo em cabelo escuro normalmente exige várias sessões espaçadas por semanas, para preservar a integridade do fio. Em um único atendimento em cabelo escuro, geralmente conseguimos tons quentes de caramelo, mel ou acobreado. Chegar ao platinado ou loiro acinzentado partindo de um cabelo muito escuro exige um plano em várias sessões, e sua colorista alinhará expectativas realistas na consulta.',
+          a: 'Sim. O clareamento em cabelos escuros gera alguns dos resultados mais bonitos, e o cabelo escuro cria um contraste natural lindo. No entanto, um clareamento significativo em cabelo escuro normalmente exige várias sessões espaçadas por semanas, para preservar a integridade do fio. Em um único atendimento em cabelo escuro, geralmente conseguimos tons quentes de caramelo, mel ou acobreado. Chegar ao platinado ou loiro acinzentado partindo de um cabelo muito escuro exige um plano em várias sessões, e sua colorista alinhará expectativas realistas na consulta.',
         },
         {
           q: 'O balayage cobre cabelos brancos?',
@@ -130,11 +130,11 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'O balayage deixa o cabelo com aspecto mais volumoso?',
-          a: 'Sim — um dos benefícios pouco comentados do balayage é que a cor com dimensão cria a ilusão visual de mais volume e textura. A variação entre tons mais claros e mais escuros ao longo do cabelo acrescenta profundidade e faz cada fio parecer mais definido. Em cabelos finos ou ralos, um balayage bem executado com vários tons pode deixar o cabelo com aparência bem mais cheia.',
+          a: 'Sim. Um dos benefícios pouco comentados do balayage é que a cor com dimensão cria a ilusão visual de mais volume e textura. A variação entre tons mais claros e mais escuros ao longo do cabelo acrescenta profundidade e faz cada fio parecer mais definido. Em cabelos finos ou ralos, um balayage bem executado com vários tons pode deixar o cabelo com aparência bem mais cheia.',
         },
         {
           q: 'O que é o balayage "lived-in"?',
-          a: 'O balayage "lived-in" (às vezes chamado de "cor vivida") descreve um resultado com transição muito gradual e harmoniosa da raiz natural até as pontas mais claras — com contraste mínimo. O crescimento parece intencional desde o primeiro dia e continua natural por meses, sem qualquer marcação forte. É o resultado de balayage com menor manutenção e ideal para quem quer uma cor bonita sem visitas frequentes ao salão.',
+          a: 'O balayage "lived-in" (às vezes chamado de "cor vivida") descreve um resultado com transição muito gradual e harmoniosa da raiz natural até as pontas mais claras, com contraste mínimo. O crescimento parece intencional desde o primeiro dia e continua natural por meses, sem qualquer marcação forte. É o resultado de balayage com menor manutenção e ideal para quem quer uma cor bonita sem visitas frequentes ao salão.',
         },
       ],
     },
@@ -178,15 +178,15 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Posso colorir cabelo danificado?',
-          a: 'Depende do grau do dano. Cabelos com danos leves podem ser coloridos com segurança usando a fórmula certa e tratamentos reconstrutores. Cabelos muito danificados — com ressecamento extremo, quebra, aspecto elástico quando molhados ou pontas duplas em toda a extensão — podem precisar de uma fase de hidratação e reconstrução antes de qualquer coloração. No Blend, avaliamos seu cabelo com honestidade antes de cada serviço. Se acreditarmos que a coloração não é segura para a condição atual do seu cabelo, vamos dizer isso e criar um plano para recuperar a saúde dos fios primeiro.',
+          a: 'Depende do grau do dano. Cabelos com danos leves podem ser coloridos com segurança usando a fórmula certa e tratamentos reconstrutores. Cabelos muito danificados, com ressecamento extremo, quebra, aspecto elástico quando molhados ou pontas duplas em toda a extensão, podem precisar de uma fase de hidratação e reconstrução antes de qualquer coloração. No Blend, avaliamos seu cabelo com honestidade antes de cada serviço. Se acreditarmos que a coloração não é segura para a condição atual do seu cabelo, vamos dizer isso e criar um plano para recuperar a saúde dos fios primeiro.',
         },
         {
           q: 'O que é correção de cor?',
-          a: 'Correção de cor é o processo de corrigir uma coloração que não atingiu o resultado desejado — seja porque ficou amarelada, escura demais, desuniforme ou danificada por tintura de caixinha. É um dos serviços tecnicamente mais complexos de um salão profissional. A correção de cor quase sempre exige várias sessões e uma consulta antes do agendamento, já que o número de etapas depende inteiramente do ponto de partida do seu cabelo e do seu objetivo. No Blend, correção de cor é uma das nossas especialidades.',
+          a: 'Correção de cor é o processo de corrigir uma coloração que não atingiu o resultado desejado, seja porque ficou amarelada, escura demais, desuniforme ou danificada por tintura de caixinha. É um dos serviços tecnicamente mais complexos de um salão profissional. A correção de cor quase sempre exige várias sessões e uma consulta antes do agendamento, já que o número de etapas depende inteiramente do ponto de partida do seu cabelo e do seu objetivo. No Blend, correção de cor é uma das nossas especialidades.',
         },
         {
           q: 'Como cuidar do cabelo colorido em casa?',
-          a: 'Os três passos mais importantes são: (1) Use um shampoo sem sulfato e próprio para cabelos coloridos — os sulfatos removem o pigmento de forma agressiva. (2) Faça hidratação profunda semanalmente — o cabelo colorido perde umidade mais rápido que o natural. (3) Aplique proteção UV antes da exposição ao sol — os raios UV degradam o pigmento e causam o amarelado. No clima do Sul da Flórida, a proteção UV é necessária o ano todo. Sua colorista do Blend indicará produtos específicos para o seu tipo de cabelo e serviço de cor.',
+          a: 'Os três passos mais importantes são: (1) Use um shampoo sem sulfato e próprio para cabelos coloridos, já que os sulfatos removem o pigmento de forma agressiva. (2) Faça hidratação profunda semanalmente, porque o cabelo colorido perde umidade mais rápido que o natural. (3) Aplique proteção UV antes da exposição ao sol, porque os raios UV degradam o pigmento e causam o amarelado. No clima do Sul da Flórida, a proteção UV é necessária o ano todo. Sua colorista do Blend indicará produtos específicos para o seu tipo de cabelo e serviço de cor.',
         },
       ],
     },
@@ -206,7 +206,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'De quanto em quanto tempo devo cortar o cabelo?',
-          a: 'A maioria das clientes corta o cabelo a cada 6 a 8 semanas para manter o formato e a saúde dos fios. Cabelos mais longos podem ter intervalos um pouco maiores. Se você está deixando o cabelo crescer, aparar levemente a cada 10 a 12 semanas evita que as pontas duplas subam pelo fio — o que, no fim, custa mais comprimento com o tempo.',
+          a: 'A maioria das clientes corta o cabelo a cada 6 a 8 semanas para manter o formato e a saúde dos fios. Cabelos mais longos podem ter intervalos um pouco maiores. Se você está deixando o cabelo crescer, aparar levemente a cada 10 a 12 semanas evita que as pontas duplas subam pelo fio, o que, no fim, custa mais comprimento com o tempo.',
         },
         {
           q: 'Minha profissional pode indicar um corte que combine comigo?',
@@ -218,7 +218,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Posso levar fotos de inspiração para o atendimento de corte?',
-          a: 'Sim — incentivamos que traga fotos de inspiração para que sua profissional entenda melhor suas preferências e adapte o corte ao seu tipo de cabelo e às suas características faciais. Se possível, traga também fotos de cortes de que você não gostou. O mesmo corte pode ficar bem diferente em tipos de cabelo distintos, e sua profissional dirá com honestidade o que é possível alcançar com o seu.',
+          a: 'Sim. Incentivamos que traga fotos de inspiração para que sua profissional entenda melhor suas preferências e adapte o corte ao seu tipo de cabelo e às suas características faciais. Se possível, traga também fotos de cortes de que você não gostou. O mesmo corte pode ficar bem diferente em tipos de cabelo distintos, e sua profissional dirá com honestidade o que é possível alcançar com o seu.',
         },
         {
           q: 'Vocês têm profissionais especializados em cabelo cacheado?',
@@ -290,7 +290,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Quanto tempo duram os tratamentos de alisamento?',
-          a: 'Os resultados costumam durar cerca de 3 meses, dependendo do tipo de cabelo, da rotina de cuidados em casa e da frequência de lavagem. Usar um shampoo sem sal e sem sulfato prolonga bastante o tratamento — quem lava o cabelo diariamente verá o resultado desaparecer antes de quem lava 2 a 3 vezes por semana.',
+          a: 'Os resultados costumam durar cerca de 3 meses, dependendo do tipo de cabelo, da rotina de cuidados em casa e da frequência de lavagem. Usar um shampoo sem sal e sem sulfato prolonga bastante o tratamento. Quem lava o cabelo diariamente verá o resultado desaparecer antes de quem lava 2 a 3 vezes por semana.',
         },
         {
           q: 'Posso colorir o cabelo e fazer um tratamento de alisamento no mesmo dia?',
@@ -378,7 +378,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'De quanto em quanto tempo é preciso fazer manutenção?',
-          a: 'A manutenção costuma ser recomendada a cada 4 a 6 semanas, dependendo do crescimento do seu cabelo, do método de aplicação e dos cuidados em casa. Não tente reposicionar ou remover as extensões sozinha — a remoção incorreta pode causar quebra e danificar seu cabelo natural.',
+          a: 'A manutenção costuma ser recomendada a cada 4 a 6 semanas, dependendo do crescimento do seu cabelo, do método de aplicação e dos cuidados em casa. Não tente reposicionar ou remover as extensões sozinha. A remoção incorreta pode causar quebra e danificar seu cabelo natural.',
         },
         {
           q: 'Preciso fazer uma consulta antes de colocar extensões?',
@@ -398,7 +398,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Posso nadar com extensões?',
-          a: 'Sim, com alguns cuidados. Antes de nadar, molhe o cabelo com água doce e aplique um leave-in ou óleo protetor no comprimento — o cabelo saturado absorve menos água da piscina. Evite mergulhar repetidamente em água clorada ou salgada, pois isso pode soltar as fixações. Enxágue bem o cabelo após nadar e faça uma hidratação profunda em seguida. Usar touca de natação, quando possível, é o ideal para a durabilidade das extensões.',
+          a: 'Sim, com alguns cuidados. Antes de nadar, molhe o cabelo com água doce e aplique um leave-in ou óleo protetor no comprimento, já que o cabelo saturado absorve menos água da piscina. Evite mergulhar repetidamente em água clorada ou salgada, pois isso pode soltar as fixações. Enxágue bem o cabelo após nadar e faça uma hidratação profunda em seguida. Usar touca de natação, quando possível, é o ideal para a durabilidade das extensões.',
         },
       ],
     },
@@ -586,7 +586,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Qual deve ser o tamanho do pelo antes da depilação com cera?',
-          a: 'Para melhores resultados, o pelo deve ter cerca de 0,6 cm — aproximadamente o tamanho de um grão de arroz.',
+          a: 'Para melhores resultados, o pelo deve ter cerca de 0,6 cm, aproximadamente o tamanho de um grão de arroz.',
         },
         {
           q: 'Posso me depilar se estiver usando Retinol ou Roacutan?',
@@ -622,7 +622,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Vocês fazem tratamento facial para adolescentes?',
-          a: 'Sim. A pele adolescente precisa de mais do que um tratamento facial comum. Nosso Facial Teen é um tratamento seguro e suave, desenvolvido para ajudar a controlar a oleosidade, reduzir cravos e espinhas, prevenir marcas de acne e manter a pele saudável, protegendo sua barreira natural. Acreditamos que a pele adolescente merece cuidado, e não extrações agressivas — por isso, nosso foco está em equilibrar a pele, reduzir a inflamação e ensinar hábitos saudáveis de skincare que sustentam resultados a longo prazo. A pele adolescente costuma ser mais sensível, o que é natural nessa fase, então criamos uma experiência confortável e acolhedora, com produtos e técnicas adequados à pele jovem.',
+          a: 'Sim. A pele adolescente precisa de mais do que um tratamento facial comum. Nosso Facial Teen é um tratamento seguro e suave, desenvolvido para ajudar a controlar a oleosidade, reduzir cravos e espinhas, prevenir marcas de acne e manter a pele saudável, protegendo sua barreira natural. Acreditamos que a pele adolescente merece cuidado, e não extrações agressivas. Por isso, nosso foco está em equilibrar a pele, reduzir a inflamação e ensinar hábitos saudáveis de skincare que sustentam resultados a longo prazo. A pele adolescente costuma ser mais sensível, o que é natural nessa fase, então criamos uma experiência confortável e acolhedora, com produtos e técnicas adequados à pele jovem.',
         },
         {
           q: 'Quanto tempo dura um atendimento facial?',
@@ -658,15 +658,15 @@ export const faqPt: FAQTranslation = {
       faqs: [
         {
           q: 'Como a umidade do Sul da Flórida afeta o cabelo?',
-          a: 'A umidade do Sul da Flórida — que fica em média entre 70% e 90% o ano todo — faz a cutícula do cabelo absorver a umidade do ar e se expandir de forma irregular, resultando em frizz, volume indesejado e perda da finalização. Cabelos coloridos e quimicamente tratados são mais porosos e reagem de forma mais intensa à umidade. As soluções mais eficazes são tratamentos de queratina ou alisamento (que selam fisicamente a cutícula), produtos anti-umectantes (que bloqueiam a absorção de umidade) e fronhas de seda (que reduzem o atrito durante a noite).',
+          a: 'A umidade do Sul da Flórida, que fica em média entre 70% e 90% o ano todo, faz a cutícula do cabelo absorver a umidade do ar e se expandir de forma irregular, resultando em frizz, volume indesejado e perda da finalização. Cabelos coloridos e quimicamente tratados são mais porosos e reagem de forma mais intensa à umidade. As soluções mais eficazes são tratamentos de queratina ou alisamento (que selam fisicamente a cutícula), produtos anti-umectantes (que bloqueiam a absorção de umidade) e fronhas de seda (que reduzem o atrito durante a noite).',
         },
         {
           q: 'Como posso evitar o frizz na umidade da Flórida?',
-          a: 'O tratamento profissional mais eficaz contra o frizz na Flórida é a queratina ou um tratamento de alisamento — ambos selam a cutícula e reduzem drasticamente a capacidade do cabelo de absorver umidade. No dia a dia: seque o cabelo completamente (cabelo parcialmente úmido gera muito frizz na umidade), use um sérum antifrizz no cabelo seco antes de sair e evite produtos com glicerina em dias de umidade muito alta. Fronhas de seda ou cetim também reduzem o atrito noturno que levanta a cutícula.',
+          a: 'O tratamento profissional mais eficaz contra o frizz na Flórida é a queratina ou um tratamento de alisamento. Ambos selam a cutícula e reduzem drasticamente a capacidade do cabelo de absorver umidade. No dia a dia: seque o cabelo completamente (cabelo parcialmente úmido gera muito frizz na umidade), use um sérum antifrizz no cabelo seco antes de sair e evite produtos com glicerina em dias de umidade muito alta. Fronhas de seda ou cetim também reduzem o atrito noturno que levanta a cutícula.',
         },
         {
           q: 'Quais produtos funcionam melhor no clima da Flórida?',
-          a: 'No calor e na umidade do Sul da Flórida durante o ano todo, procure por shampoos sem sulfato (mais suaves com a cor e a cutícula), cremes e séruns anti-umectantes (que formam uma barreira contra a umidade), leave-ins com proteção UV (essenciais para cabelos coloridos e loiros) e produtos sem glicerina para dias muito úmidos. As linhas Discipline e Elixir da Kérastase são desenvolvidas especificamente para cabelos com tendência a frizz em climas úmidos — disponíveis no Blend.',
+          a: 'No calor e na umidade do Sul da Flórida durante o ano todo, procure por shampoos sem sulfato (mais suaves com a cor e a cutícula), cremes e séruns anti-umectantes (que formam uma barreira contra a umidade), leave-ins com proteção UV (essenciais para cabelos coloridos e loiros) e produtos sem glicerina para dias muito úmidos. As linhas Discipline e Elixir da Kérastase são desenvolvidas especificamente para cabelos com tendência a frizz em climas úmidos, e as duas estão disponíveis no Blend.',
         },
         {
           q: 'De quanto em quanto tempo as loiras devem matizar o cabelo no Sul da Flórida?',
@@ -674,19 +674,19 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Como proteger o cabelo colorido da água da piscina e do mar na Flórida?',
-          a: 'Antes de nadar: molhe o cabelo com água doce (o cabelo saturado absorve menos água da piscina), aplique um leave-in ou óleo de coco como barreira e use touca, se possível. Depois de nadar: enxágue imediatamente com água doce, use um shampoo antirresíduos para remover cloro ou sal e finalize com uma máscara de hidratação profunda. O cloro é especialmente agressivo com cabelos descoloridos porque oxida o pigmento — e o dano é cumulativo se você nada com frequência sem proteção.',
+          a: 'Antes de nadar: molhe o cabelo com água doce (o cabelo saturado absorve menos água da piscina), aplique um leave-in ou óleo de coco como barreira e use touca, se possível. Depois de nadar: enxágue imediatamente com água doce, use um shampoo antirresíduos para remover cloro ou sal e finalize com uma máscara de hidratação profunda. O cloro é especialmente agressivo com cabelos descoloridos porque oxida o pigmento, e o dano é cumulativo se você nada com frequência sem proteção.',
         },
         {
           q: 'Por que o cabelo loiro fica esverdeado depois da piscina na Flórida?',
-          a: 'Os tons esverdeados no cabelo loiro após a piscina são causados pelo cobre — mais especificamente, pelo cobre oxidado pelo cloro que se liga à proteína do cabelo. Não é o cloro em si que causa a cor verde. Prevenção: enxágue com água doce antes e depois de nadar, aplique um leave-in como barreira e use um shampoo antirresíduos ou quelante logo após a exposição à piscina. Para tons esverdeados já existentes, um tratamento profissional antirresíduos no Blend consegue remover os depósitos de cobre.',
+          a: 'Os tons esverdeados no cabelo loiro após a piscina são causados pelo cobre, mais especificamente pelo cobre oxidado pelo cloro que se liga à proteína do cabelo. Não é o cloro em si que causa a cor verde. Prevenção: enxágue com água doce antes e depois de nadar, aplique um leave-in como barreira e use um shampoo antirresíduos ou quelante logo após a exposição à piscina. Para tons esverdeados já existentes, um tratamento profissional antirresíduos no Blend consegue remover os depósitos de cobre.',
         },
         {
           q: 'Vale a pena fazer um tratamento de alisamento morando no Sul da Flórida?',
-          a: 'Para a maioria das clientes de Plantation e do Broward County — sim. A umidade e o calor do Sul da Flórida durante o ano todo fazem da queratina e do Botox Capilar alguns dos serviços mais procurados no Blend. Esses tratamentos eliminam o frizz por cerca de 3 meses, reduzem bastante o tempo de escova e são especialmente valiosos na temporada de furacões e nos meses de verão.',
+          a: 'Para a maioria das clientes de Plantation e do Broward County, sim. A umidade e o calor do Sul da Flórida durante o ano todo fazem da queratina e do Botox Capilar alguns dos serviços mais procurados no Blend. Esses tratamentos eliminam o frizz por cerca de 3 meses, reduzem bastante o tempo de escova e são especialmente valiosos na temporada de furacões e nos meses de verão.',
         },
         {
           q: 'Como cuidar das extensões no calor da Flórida?',
-          a: 'No calor da Flórida, as extensões precisam de hidratação constante. Use um shampoo sem sulfato e próprio para extensões e condicione apenas o comprimento e as pontas (nunca as fixações ou fitas). Faça hidratação profunda semanalmente — o calor acelera a perda de umidade das extensões. Antes de atividades ao ar livre, aplique um spray com proteção UV tanto nas extensões quanto no cabelo natural. Enxágue o cabelo logo após nadar e hidrate profundamente após qualquer exposição a sal ou cloro.',
+          a: 'No calor da Flórida, as extensões precisam de hidratação constante. Use um shampoo sem sulfato e próprio para extensões e condicione apenas o comprimento e as pontas (nunca as fixações ou fitas). Faça hidratação profunda semanalmente, porque o calor acelera a perda de umidade das extensões. Antes de atividades ao ar livre, aplique um spray com proteção UV tanto nas extensões quanto no cabelo natural. Enxágue o cabelo logo após nadar e hidrate profundamente após qualquer exposição a sal ou cloro.',
         },
       ],
     },
@@ -698,19 +698,19 @@ export const faqPt: FAQTranslation = {
       faqs: [
         {
           q: 'O que esperar na minha primeira visita ao Blend Hair Boutique?',
-          a: 'Sua primeira visita começa com uma consulta — sua profissional quer entender o histórico do seu cabelo, a condição atual dos fios e seus objetivos antes de começar qualquer serviço. Vamos perguntar sobre colorações anteriores, serviços químicos e sua rotina diária. Espere um ambiente acolhedor e profissional, que respeita o seu tempo. Faremos uma avaliação realista do que é possível alcançar no primeiro atendimento e do que pode exigir sessões adicionais.',
+          a: 'Sua primeira visita começa com uma consulta. Sua profissional quer entender o histórico do seu cabelo, a condição atual dos fios e seus objetivos antes de começar qualquer serviço. Vamos perguntar sobre colorações anteriores, serviços químicos e sua rotina diária. Espere um ambiente acolhedor e profissional, que respeita o seu tempo. Faremos uma avaliação realista do que é possível alcançar no primeiro atendimento e do que pode exigir sessões adicionais.',
         },
         {
           q: 'O que devo vestir para o atendimento?',
-          a: 'Para atendimentos de coloração, use uma blusa com botões ou zíper, que saia com facilidade sem passar pela cabeça e sem risco de manchar — evite peças brancas ou claras. A capa do salão protege sua roupa durante o serviço, mas chegar com algo confortável e que você não se importe de manchar é sempre mais seguro. Para atendimentos de corte, qualquer roupa confortável funciona.',
+          a: 'Para atendimentos de coloração, use uma blusa com botões ou zíper, que saia com facilidade sem passar pela cabeça e sem risco de manchar, e evite peças brancas ou claras. A capa do salão protege sua roupa durante o serviço, mas chegar com algo confortável e que você não se importe de manchar é sempre mais seguro. Para atendimentos de corte, qualquer roupa confortável funciona.',
         },
         {
           q: 'Devo chegar com o cabelo lavado?',
-          a: 'Shampoo e condicionador comuns estão incluídos em todos os nossos serviços de cabelo, então não é necessário chegar com o cabelo recém-lavado. Para atendimentos de coloração, evite produtos pesados de finalização (shampoo a seco, spray fixador, séruns) no dia do atendimento — eles podem interferir na aplicação da cor, e a oleosidade natural do couro cabeludo é até protetora durante a descoloração.',
+          a: 'Shampoo e condicionador comuns estão incluídos em todos os nossos serviços de cabelo, então não é necessário chegar com o cabelo recém-lavado. Para atendimentos de coloração, evite produtos pesados de finalização (shampoo a seco, spray fixador, séruns) no dia do atendimento. Eles podem interferir na aplicação da cor, e a oleosidade natural do couro cabeludo é até protetora durante a descoloração.',
         },
         {
           q: 'Com quanta antecedência devo agendar no Blend?',
-          a: 'Nossos profissionais mais procurados — especialmente para serviços de coloração — costumam ter agenda cheia com 2 a 4 semanas de antecedência. Os horários de fim de semana se esgotam ainda mais rápido. Para serviços de noiva, recomendamos agendar com 6 a 9 meses de antecedência. Para escovas e serviços mais rápidos, há mais disponibilidade na mesma semana. Para garantir seu profissional e horário preferidos, o ideal é agendar com pelo menos 2 semanas de antecedência.',
+          a: 'Nossos profissionais mais procurados, especialmente para serviços de coloração, costumam ter agenda cheia com 2 a 4 semanas de antecedência. Os horários de fim de semana se esgotam ainda mais rápido. Para serviços de noiva, recomendamos agendar com 6 a 9 meses de antecedência. Para escovas e serviços mais rápidos, há mais disponibilidade na mesma semana. Para garantir seu profissional e horário preferidos, o ideal é agendar com pelo menos 2 semanas de antecedência.',
         },
       ],
     },
@@ -726,11 +726,11 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Vocês oferecem pacotes de noiva?',
-          a: 'Sim — os serviços de noiva estão entre os mais procurados. Oferecemos penteado de noiva, maquiagem de noiva, atendimentos de teste e pacotes de dia inteiro para a noiva e as madrinhas. Atendemos grupos para casamentos, quinceañeras e datas marcantes. Os agendamentos de noiva devem ser feitos com a maior antecedência possível — recomendamos de 6 a 9 meses para datas concorridas. Entre em contato diretamente para conversarmos sobre sua data e sua ideia.',
+          a: 'Sim. Os serviços de noiva estão entre os mais procurados. Oferecemos penteado de noiva, maquiagem de noiva, atendimentos de teste e pacotes de dia inteiro para a noiva e as madrinhas. Atendemos grupos para casamentos, quinceañeras e datas marcantes. Os agendamentos de noiva devem ser feitos com a maior antecedência possível. Recomendamos de 6 a 9 meses para datas concorridas. Entre em contato diretamente para conversarmos sobre sua data e sua ideia.',
         },
         {
           q: 'Quais produtos profissionais vocês usam?',
-          a: 'O Blend é um salão autorizado Kérastase e trabalhamos com linhas profissionais de coloração como Keune, Wella e Truss. Não utilizamos colorações de caixinha nem produtos de farmácia em nossas clientes. Também vendemos produtos Kérastase no salão — sua profissional pode indicar os produtos ideais para você levar para casa após o atendimento.',
+          a: 'O Blend é um salão autorizado Kérastase e trabalhamos com linhas profissionais de coloração como Keune, Wella e Truss. Não utilizamos colorações de caixinha nem produtos de farmácia em nossas clientes. Também vendemos produtos Kérastase no salão, e sua profissional pode indicar os produtos ideais para você levar para casa após o atendimento.',
         },
       ],
     },

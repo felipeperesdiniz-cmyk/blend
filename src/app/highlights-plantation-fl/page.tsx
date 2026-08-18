@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/highlights-plantation-fl`
 export const metadata: Metadata = {
   title: 'Hair Highlights in Plantation, FL | Blend Hair Boutique',
   description:
-    'Professional hair highlights in Plantation, Florida — foil highlights, babylights, money piece, and partial highlights at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your color appointment online.',
+    'Professional hair highlights in Plantation, Florida: foil highlights, babylights, money piece, and partial highlights at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your color appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Hair Highlights in Plantation, FL | Blend Hair Boutique',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is the difference between highlights and balayage?',
-    a: 'Highlights use foils to apply color in precise sections, delivering a more defined, uniform brightness throughout the hair. Balayage is a freehand painting technique that creates a softer, sun-kissed gradient with no harsh lines. Both are beautiful — the right choice depends on your hair goals, lifestyle, and how much contrast you want. Our colorists will recommend the best option during your consultation.',
+    a: 'Highlights use foils to apply color in precise sections, delivering a more defined, uniform brightness throughout the hair. Balayage is a freehand painting technique that creates a softer, sun-kissed gradient with no harsh lines. Both are beautiful, and the right choice depends on your hair goals, lifestyle, and how much contrast you want. Our colorists will recommend the best option during your consultation.',
   },
   {
     q: 'What are babylights and how are they different from regular highlights?',
@@ -91,7 +91,7 @@ export default function HighlightsPlantationPage() {
               Hair <em>Highlights</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              From classic foil highlights and airy babylights to bold money pieces and sun-kissed partial color — Blend Hair Boutique's expert colorists in Plantation, FL deliver dimensional, luminous results tailored to your base color, texture, and brightness goal.
+              From classic foil highlights and airy babylights to bold money pieces and sun-kissed partial color, Blend Hair Boutique's expert colorists in Plantation, FL deliver dimensional, luminous results tailored to your base color, texture, and brightness goal.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,7 +115,7 @@ export default function HighlightsPlantationPage() {
                   Bright. Dimensional.<br /><em>Made for You.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Highlights at Blend Hair Boutique are not one-size-fits-all. Our colorists approach every highlights service as a custom color event — analyzing your natural base, skin undertones, hair texture, and desired maintenance level before choosing placement, technique, and formula.
+                  Highlights at Blend Hair Boutique are not one-size-fits-all. Our colorists approach every highlights service as a custom color event, analyzing your natural base, skin undertones, hair texture, and desired maintenance level before choosing placement, technique, and formula.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Whether you want all-over brightness with full foils, delicate babylights woven throughout, a bold money piece framing your face, or a subtle partial highlight refresh, we deliver results that look luminous, intentional, and completely natural to your hair type.
@@ -145,7 +145,7 @@ export default function HighlightsPlantationPage() {
               {[
                 { title: 'Full Foil Highlights', body: 'All-over brightness using foils placed throughout the entire head. Ideal for clients who want maximum luminosity and uniform lightening from roots to ends.' },
                 { title: 'Partial Highlights', body: 'Foils placed on the top and crown sections of the hair for face-framing brightness without the commitment or cost of full highlights. Perfect for maintenance and refresh visits.' },
-                { title: 'Babylights', body: 'Ultra-fine, delicate highlights applied in tiny sections that mimic the natural lightness of childhood hair. The most natural-looking highlight option — seamless and low-maintenance.' },
+                { title: 'Babylights', body: 'Ultra-fine, delicate highlights applied in tiny sections that mimic the natural lightness of childhood hair. The most natural-looking highlight option: seamless and low-maintenance.' },
                 { title: 'Money Piece', body: 'Bold, face-framing panels of lightened color placed at the front hairline. A high-impact look that requires minimal hair and creates maximum dimension.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>

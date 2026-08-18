@@ -26,11 +26,11 @@ const faqs = [
   },
   {
     q: 'How do I choose between balayage and highlights for my hair?',
-    a: 'Balayage creates a softer, more natural look with hand-painted placement and a gradual grow-out. Highlights use foils for more precise, defined brightness. If you want low-maintenance, sun-kissed color — choose balayage. If you want visible, uniform brightness or a more structured look — foil highlights may be a better fit. Our colorists will help you decide during your consultation.',
+    a: 'Balayage creates a softer, more natural look with hand-painted placement and a gradual grow-out. Highlights use foils for more precise, defined brightness. If you want low-maintenance, sun-kissed color, choose balayage. If you want visible, uniform brightness or a more structured look, foil highlights may be a better fit. Our colorists will help you decide during your consultation.',
   },
   {
     q: 'Can Blend fix a bad hair color from another salon?',
-    a: 'Yes — color correction is one of our specialties. Color correction can address issues including brassiness, uneven color, over-processed hair, box-color build-up, and color that came out too light or too dark. Color correction is a multi-step process that requires a consultation before booking, as the number of sessions depends on your hair\'s current condition and your goal.',
+    a: 'Yes. Color correction is one of our specialties. Color correction can address issues including brassiness, uneven color, over-processed hair, box-color build-up, and color that came out too light or too dark. Color correction is a multi-step process that requires a consultation before booking, as the number of sessions depends on your hair\'s current condition and your goal.',
   },
   {
     q: 'How long does hair color last at Blend Hair Boutique?',
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: 'How should I prepare for a hair color appointment at Blend?',
-    a: 'Come in with your hair in its natural state — avoid heavy styling products on appointment day. Bring reference photos of color you love (and, if possible, colors you want to avoid). Wear a top or shirt you don\'t mind getting color on. Arrive on time, as color appointments have precise timing requirements. If you have concerns about your hair\'s condition, mention them when booking.',
+    a: 'Come in with your hair in its natural state, and avoid heavy styling products on appointment day. Bring reference photos of color you love (and, if possible, colors you want to avoid). Wear a top or shirt you don\'t mind getting color on. Arrive on time, as color appointments have precise timing requirements. If you have concerns about your hair\'s condition, mention them when booking.',
   },
 ]
 
@@ -96,7 +96,7 @@ export default function BestHairColorPage() {
               The Best Hair Color<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              From custom balayage and foil highlights to full color correction and glossing treatments — Blend Hair Boutique's certified colorists deliver hair color that is healthy, vibrant, and designed to last in South Florida's climate.
+              From custom balayage and foil highlights to full color correction and glossing treatments, Blend Hair Boutique's certified colorists deliver hair color that is healthy, vibrant, and designed to last in South Florida's climate.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -120,10 +120,10 @@ export default function BestHairColorPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
               {[
                 { title: 'Balayage', body: 'Hand-painted, freehand color that creates natural sun-kissed dimension. Grows out beautifully with minimal maintenance.', href: '/balayage-plantation-fl' },
-                { title: 'Highlights', body: 'Foil highlights for precise, defined brightness and lift — customized to your desired level of contrast.', href: '/highlights-plantation-fl' },
+                { title: 'Highlights', body: 'Foil highlights for precise, defined brightness and lift, customized to your desired level of contrast.', href: '/highlights-plantation-fl' },
                 { title: 'All-Over Color', body: 'Single-process color for rich, uniform coverage. Ideal for root touch-ups, gray coverage, or a full refresh.', href: '/hair-color-plantation' },
                 { title: 'Color Correction', body: 'Expert correction for unwanted brassiness, uneven color, or previous results that didn\'t land as expected.', href: '/color-correction-plantation-fl' },
-                { title: 'Blonding', body: 'Specialized lightening for platinum, ash, pearl, and ultra-light blonde results — precision chemistry required.', href: '/blonding-specialist-plantation' },
+                { title: 'Blonding', body: 'Specialized lightening for platinum, ash, pearl, and ultra-light blonde results, where precision chemistry is required.', href: '/blonding-specialist-plantation' },
                 { title: 'Toning & Glossing', body: 'Refresh faded color, eliminate brassiness, and add glossy shine between color appointments.', href: '/hair-color-plantation' },
               ].map((s) => (
                 <Link key={s.title} href={s.href} style={{ textDecoration: 'none', color: 'inherit', borderTop: '1px solid var(--line)', paddingTop: '1.5rem', display: 'block' }}>
@@ -154,7 +154,7 @@ export default function BestHairColorPage() {
                   Color That Starts<br /><em>With Listening</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Every color appointment at Blend begins with a consultation — not because we're required to, but because we believe the only way to get color right is to understand the person wearing it. We ask about your history, your lifestyle, your maintenance habits, and what results you've loved or hated in the past.
+                  Every color appointment at Blend begins with a consultation, not because we're required to, but because we believe the only way to get color right is to understand the person wearing it. We ask about your history, your lifestyle, your maintenance habits, and what results you've loved or hated in the past.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   Then we make a recommendation. We'll tell you what's achievable in one session and what needs time. We won't over-promise. And when we apply the color, we follow a process that prioritizes your hair's integrity alongside the result.
@@ -170,7 +170,7 @@ export default function BestHairColorPage() {
               Serving South Florida
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '56ch', margin: '0 auto 2.5rem' }}>
-              Located at 10035 Cleary Blvd, Plantation, FL 33324 — serving clients from Broward County and across South Florida.
+              Located at 10035 Cleary Blvd, Plantation, FL 33324, serving clients from Broward County and across South Florida.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               {['Plantation, FL', 'Davie, FL', 'Weston, FL', 'Fort Lauderdale, FL', 'Sunrise, FL', 'Cooper City, FL', 'Pembroke Pines, FL', 'Miramar, FL', 'Boca Raton, FL'].map((city) => (

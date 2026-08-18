@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: 'Can I book a blowout for a special event or wedding?',
-    a: 'Absolutely. We book event blowouts and occasion styling regularly — including weddings, quinceañeras, galas, photoshoots, and parties. For bridal events, we offer on-site styling packages. Contact us directly to discuss group bookings or bridal party arrangements.',
+    a: 'Absolutely. We book event blowouts and occasion styling regularly, including weddings, quinceañeras, galas, photoshoots, and parties. For bridal events, we offer on-site styling packages. Contact us directly to discuss group bookings or bridal party arrangements.',
   },
 ]
 
@@ -91,7 +91,7 @@ export default function BlowoutPlantationPage() {
               <em>Blowout</em> in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Leave looking polished, radiant, and ready for anything. Blend Hair Boutique's professional blowout services in Plantation, FL deliver salon-quality results — whether you want silky smooth, full-volume, or beachy waves. The perfect finish for an ordinary day or a special occasion.
+              Leave looking polished, radiant, and ready for anything. Blend Hair Boutique's professional blowout services in Plantation, FL deliver salon-quality results, whether you want silky smooth, full-volume, or beachy waves. The perfect finish for an ordinary day or a special occasion.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -115,10 +115,10 @@ export default function BlowoutPlantationPage() {
                   Your Hair.<br /><em>At Its Best.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  A blowout at Blend Hair Boutique isn't just a quick dry — it's a full styling experience. We start with a nourishing shampoo and conditioning treatment, then use professional-grade blow dryers, round brushes, and heat protectants to build the foundation of your style from the roots up.
+                  A blowout at Blend Hair Boutique isn't just a quick dry. It's a full styling experience. We start with a nourishing shampoo and conditioning treatment, then use professional-grade blow dryers, round brushes, and heat protectants to build the foundation of your style from the roots up.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  Our stylists are trained in Brazilian blowout techniques, giving your hair a smoothness and shine that's characteristic of South American salon culture. Whether you're stepping into a meeting, attending a wedding, or just want to feel your best on a Tuesday — we've got you covered.
+                  Our stylists are trained in Brazilian blowout techniques, giving your hair a smoothness and shine that's characteristic of South American salon culture. Whether you're stepping into a meeting, attending a wedding, or just want to feel your best on a Tuesday, we've got you covered.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>

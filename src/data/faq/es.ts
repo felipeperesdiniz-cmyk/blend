@@ -6,7 +6,7 @@ export const faqEs: FAQTranslation = {
     heading: 'Preguntas',
     em: 'Frecuentes',
     intro:
-      'Más de 130 preguntas respondidas por nuestro equipo de estilistas y especialistas en belleza — sobre reservas y políticas del salón, cabello, uñas, cejas, pestañas, cuidado de la piel y cuidado capilar en el clima del sur de la Florida.',
+      'Más de 130 preguntas respondidas por nuestro equipo de estilistas y especialistas en belleza, sobre reservas y políticas del salón, cabello, uñas, cejas, pestañas, cuidado de la piel y cuidado capilar en el clima del sur de la Florida.',
   },
   cta: {
     eyebrow: '¿Aún tienes dudas?',
@@ -30,19 +30,19 @@ export const faqEs: FAQTranslation = {
       faqs: [
         {
           q: '¿Cuál es el horario de Blend Hair Boutique?',
-          a: 'Abrimos de lunes a miércoles de 9:00 AM a 6:00 PM, y de jueves a sábado de 9:00 AM a 7:00 PM. Los domingos permanecemos cerrados. El horario puede variar en días feriados — llama al (754) 206-3501 o consulta nuestro sistema de reservas para confirmar la disponibilidad en fechas específicas.',
+          a: 'Abrimos de lunes a miércoles de 9:00 AM a 6:00 PM, y de jueves a sábado de 9:00 AM a 7:00 PM. Los domingos permanecemos cerrados. El horario puede variar en días feriados, así que llama al (754) 206-3501 o consulta nuestro sistema de reservas para confirmar la disponibilidad en fechas específicas.',
         },
         {
           q: '¿Cómo reservo una cita en Blend Hair Boutique?',
-          a: 'Puedes reservar en línea las 24 horas a través de nuestro sistema Fresha, disponible en nuestro sitio web. También puedes llamarnos al (754) 206-3501 o escribirnos por WhatsApp al (954) 544-6792. Recomendamos reservar con anticipación para servicios de color y ocasiones especiales — nuestras estilistas más solicitadas suelen tener la agenda llena con 2 a 4 semanas de anticipación. Para secados y peinados es más común encontrar disponibilidad en la misma semana.',
+          a: 'Puedes reservar en línea las 24 horas a través de nuestro sistema Fresha, disponible en nuestro sitio web. También puedes llamarnos al (754) 206-3501 o escribirnos por WhatsApp al (954) 544-6792. Recomendamos reservar con anticipación para servicios de color y ocasiones especiales. Nuestras estilistas más solicitadas suelen tener la agenda llena con 2 a 4 semanas de anticipación. Para secados y peinados es más común encontrar disponibilidad en la misma semana.',
         },
         {
           q: '¿Atienden sin cita previa?',
-          a: 'Siempre recibimos clientas sin cita previa, según la disponibilidad. Para servicios más cortos como secados, cortes y retoques de raíz, hay más posibilidades de acomodarte entre semana. Para servicios de color, balayage, tratamientos de alisado, extensiones y otras citas más largas, recomendamos reservar con anticipación, ya que la disponibilidad en la misma semana — especialmente los fines de semana — suele ser limitada.',
+          a: 'Siempre recibimos clientas sin cita previa, según la disponibilidad. Para servicios más cortos como secados, cortes y retoques de raíz, hay más posibilidades de acomodarte entre semana. Para servicios de color, balayage, tratamientos de alisado, extensiones y otras citas más largas, recomendamos reservar con anticipación, ya que la disponibilidad en la misma semana, especialmente los fines de semana, suele ser limitada.',
         },
         {
           q: '¿Cuál es la política de cancelación?',
-          a: 'Para servicios más largos como tratamientos de keratina, mechas y balayage se requiere un depósito de $100. El depósito se cobra al momento de reservar y se aplica a tu cuenta final al pagar. Los cambios de cita y las cancelaciones pueden hacerse hasta 24 horas antes — si reprogramas dentro de ese plazo, tu depósito se transfiere automáticamente a la nueva cita. Si no puedes reprogramar, por favor contáctanos con al menos 24 horas de anticipación. Pasado ese plazo, el depósito no es reembolsable.',
+          a: 'Para servicios más largos como tratamientos de keratina, mechas y balayage se requiere un depósito de $100. El depósito se cobra al momento de reservar y se aplica a tu cuenta final al pagar. Los cambios de cita y las cancelaciones pueden hacerse hasta 24 horas antes. Si reprogramas dentro de ese plazo, tu depósito se transfiere automáticamente a la nueva cita. Si no puedes reprogramar, por favor contáctanos con al menos 24 horas de anticipación. Pasado ese plazo, el depósito no es reembolsable.',
         },
         {
           q: '¿Qué métodos de pago aceptan?',
@@ -50,19 +50,19 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Ofrecen gift cards?',
-          a: 'Sí — Blend Hair Boutique ofrece gift cards digitales y físicas. Las digitales se pueden comprar en línea a través de nuestro sitio web, y las físicas están disponibles en el salón. Son el regalo perfecto para cumpleaños, aniversarios, el Día de las Madres, despedidas de soltera, fiestas o cualquier ocasión especial. Las gift cards pueden usarse en cualquier servicio o producto de Blend Hair Boutique.',
+          a: 'Sí. Blend Hair Boutique ofrece gift cards digitales y físicas. Las digitales se pueden comprar en línea a través de nuestro sitio web, y las físicas están disponibles en el salón. Son el regalo perfecto para cumpleaños, aniversarios, el Día de las Madres, despedidas de soltera, fiestas o cualquier ocasión especial. Las gift cards pueden usarse en cualquier servicio o producto de Blend Hair Boutique.',
         },
         {
           q: '¿Hay estacionamiento en Blend Hair Boutique?',
-          a: 'Sí — hay estacionamiento gratuito en el centro comercial en 10035 Cleary Blvd, Plantation, FL 33324. Estamos en el oeste del condado de Broward, con fácil acceso desde Plantation, Davie, Weston, Fort Lauderdale y Sunrise.',
+          a: 'Sí. Hay estacionamiento gratuito en el centro comercial en 10035 Cleary Blvd, Plantation, FL 33324. Estamos en el oeste del condado de Broward, con fácil acceso desde Plantation, Davie, Weston, Fort Lauderdale y Sunrise.',
         },
         {
           q: '¿Atienden en español o portugués?',
-          a: 'Sí — atendemos a nuestras clientas en inglés, portugués y español. Aunque no todos los miembros del equipo hablan los tres idiomas, siempre nos aseguramos de que puedas comunicarte con comodidad durante toda tu visita. Blend Hair Boutique fue fundado por profesionales de la belleza brasileños, y estamos comprometidos con que cada clienta se sienta cómoda, comprendida y segura desde la consulta hasta el resultado final — sin importar el idioma que hable.',
+          a: 'Sí. Atendemos a nuestras clientas en inglés, portugués y español. Aunque no todos los miembros del equipo hablan los tres idiomas, siempre nos aseguramos de que puedas comunicarte con comodidad durante toda tu visita. Blend Hair Boutique fue fundado por profesionales de la belleza brasileños, y estamos comprometidos con que cada clienta se sienta cómoda, comprendida y segura desde la consulta hasta el resultado final, sin importar el idioma que hable.',
         },
         {
           q: '¿Ofrecen consultas antes de reservar un servicio?',
-          a: 'Sí. Ofrecemos consultas gratuitas antes de reservar cualquier servicio complejo — corrección de color, extensiones, transformaciones con balayage y paquetes de novia. Una consulta permite que tu estilista evalúe tu cabello en persona, te dé tiempos y precios con transparencia, y planifique el mejor enfoque antes de aplicar cualquier producto. Contáctanos para agendar tu consulta.',
+          a: 'Sí. Ofrecemos consultas gratuitas antes de reservar cualquier servicio complejo: corrección de color, extensiones, transformaciones con balayage y paquetes de novia. Una consulta permite que tu estilista evalúe tu cabello en persona, te dé tiempos y precios con transparencia, y planifique el mejor enfoque antes de aplicar cualquier producto. Contáctanos para agendar tu consulta.',
         },
         {
           q: '¿Puedo pedir una estilista específica?',
@@ -70,7 +70,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Puedo hacerme varios servicios en una misma cita?',
-          a: 'Sí — muchas clientas de Blend combinan servicios en una sola visita. Las combinaciones más populares son color + secado, keratina + corte y retoque de raíz + manicura. Los servicios de uñas se pueden realizar durante el tiempo de procesamiento del color, pero no se pueden agendar junto con cortes, balayage o mechas. Al reservar, selecciona todos los servicios que deseas y el sistema asignará el tiempo adecuado. Para combinaciones más complejas, contacta a nuestra recepción para organizar tu agenda correctamente.',
+          a: 'Sí. Muchas clientas de Blend combinan servicios en una sola visita. Las combinaciones más populares son color + secado, keratina + corte y retoque de raíz + manicura. Los servicios de uñas se pueden realizar durante el tiempo de procesamiento del color, pero no se pueden agendar junto con cortes, balayage o mechas. Al reservar, selecciona todos los servicios que deseas y el sistema asignará el tiempo adecuado. Para combinaciones más complejas, contacta a nuestra recepción para organizar tu agenda correctamente.',
         },
         {
           q: '¿Dónde está ubicado Blend Hair Boutique?',
@@ -86,19 +86,19 @@ export const faqEs: FAQTranslation = {
       faqs: [
         {
           q: '¿Cuál es la diferencia entre balayage y mechas?',
-          a: 'Las mechas tradicionales (con papel aluminio) generalmente comienzan más cerca de la raíz y crean una luminosidad más uniforme desde arriba hasta las puntas. El balayage busca un resultado más suave y difuminado, con una raíz más difusa o "sombreada", creando dimensión natural y un crecimiento de menor mantenimiento. Ninguna técnica es mejor que la otra — muchas clientas de Blend se benefician de la combinación: mechas para iluminar el contorno del rostro y balayage a lo largo del largo. Tu colorista te recomendará el mejor enfoque durante la consulta.',
+          a: 'Las mechas tradicionales (con papel aluminio) generalmente comienzan más cerca de la raíz y crean una luminosidad más uniforme desde arriba hasta las puntas. El balayage busca un resultado más suave y difuminado, con una raíz más difusa o "sombreada", creando dimensión natural y un crecimiento de menor mantenimiento. Ninguna técnica es mejor que la otra, y muchas clientas de Blend se benefician de la combinación: mechas para iluminar el contorno del rostro y balayage a lo largo del largo. Tu colorista te recomendará el mejor enfoque durante la consulta.',
         },
         {
           q: '¿Cómo sé si necesito mechas parciales o completas?',
-          a: 'La elección entre mechas parciales y completas depende de cuánta luminosidad y cobertura desees. Las mechas parciales se concentran en áreas específicas — normalmente alrededor del rostro y en las capas superiores — creando un efecto más sutil y natural, con menos mantenimiento. Las mechas completas se aplican en toda la cabeza, con un resultado más claro, más uniforme y con una dimensión más notoria. Si tienes dudas, tu estilista evaluará tu cabello, tus objetivos y tu estilo de vida para recomendarte la mejor opción.',
+          a: 'La elección entre mechas parciales y completas depende de cuánta luminosidad y cobertura desees. Las mechas parciales se concentran en áreas específicas, normalmente alrededor del rostro y en las capas superiores, creando un efecto más sutil y natural, con menos mantenimiento. Las mechas completas se aplican en toda la cabeza, con un resultado más claro, más uniforme y con una dimensión más notoria. Si tienes dudas, tu estilista evaluará tu cabello, tus objetivos y tu estilo de vida para recomendarte la mejor opción.',
         },
         {
           q: '¿Cuánto dura una cita de balayage?',
-          a: 'La mayoría de las citas de balayage toman entre 3 y 5 horas, dependiendo de tu color inicial, del largo y la densidad de tu cabello y del resultado deseado. Tu primera cita puede tomar un poco más de tiempo para permitir una consulta completa. Los trabajos más complejos — como aclarar mucho un cabello oscuro — pueden requerir las 5 horas completas y posiblemente una cita de seguimiento.',
+          a: 'La mayoría de las citas de balayage toman entre 3 y 5 horas, dependiendo de tu color inicial, del largo y la densidad de tu cabello y del resultado deseado. Tu primera cita puede tomar un poco más de tiempo para permitir una consulta completa. Los trabajos más complejos, como aclarar mucho un cabello oscuro, pueden requerir las 5 horas completas y posiblemente una cita de seguimiento.',
         },
         {
           q: '¿Cada cuánto necesita mantenimiento el balayage?',
-          a: 'Muchas clientas renuevan su balayage cada 3 a 6 meses. Como el balayage es una técnica a mano alzada sin una línea marcada en la raíz, el crecimiento se ve natural — no hay una demarcación abrupta como la que dejan las mechas con papel aluminio. Entre citas se pueden recomendar tonalizadores o gloss para mantener la luminosidad y el tono.',
+          a: 'Muchas clientas renuevan su balayage cada 3 a 6 meses. Como el balayage es una técnica a mano alzada sin una línea marcada en la raíz, el crecimiento se ve natural, sin una demarcación abrupta como la que dejan las mechas con papel aluminio. Entre citas se pueden recomendar tonalizadores o gloss para mantener la luminosidad y el tono.',
         },
         {
           q: '¿Cada cuánto se deben retocar las mechas?',
@@ -122,7 +122,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Se puede hacer balayage o mechas en cabello oscuro?',
-          a: 'Sí — el aclarado en cabello oscuro produce algunos de los resultados más impresionantes, y el cabello oscuro crea un hermoso contraste natural. Sin embargo, un aclarado significativo en cabello oscuro normalmente requiere varias sesiones separadas por semanas para proteger la integridad del cabello. En una sola cita sobre cabello oscuro, generalmente logramos tonos cálidos de caramelo, miel o cobrizo. Llegar al platinado o rubio ceniza desde un cabello muy oscuro requiere un plan de varias sesiones, y tu colorista establecerá expectativas realistas en la consulta.',
+          a: 'Sí. El aclarado en cabello oscuro produce algunos de los resultados más impresionantes, y el cabello oscuro crea un hermoso contraste natural. Sin embargo, un aclarado significativo en cabello oscuro normalmente requiere varias sesiones separadas por semanas para proteger la integridad del cabello. En una sola cita sobre cabello oscuro, generalmente logramos tonos cálidos de caramelo, miel o cobrizo. Llegar al platinado o rubio ceniza desde un cabello muy oscuro requiere un plan de varias sesiones, y tu colorista establecerá expectativas realistas en la consulta.',
         },
         {
           q: '¿El balayage cubre las canas?',
@@ -130,11 +130,11 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿El balayage hace que el cabello se vea más abundante?',
-          a: 'Sí — uno de los beneficios poco reconocidos del balayage es que el color con dimensión crea la ilusión visual de más volumen y textura. La variación entre tonos más claros y más oscuros a lo largo del cabello añade profundidad y hace que cada hebra se vea más definida. En cabello fino o con poca densidad, un balayage bien ejecutado con varios tonos puede hacer que el cabello luzca notablemente más abundante.',
+          a: 'Sí. Uno de los beneficios poco reconocidos del balayage es que el color con dimensión crea la ilusión visual de más volumen y textura. La variación entre tonos más claros y más oscuros a lo largo del cabello añade profundidad y hace que cada hebra se vea más definida. En cabello fino o con poca densidad, un balayage bien ejecutado con varios tonos puede hacer que el cabello luzca notablemente más abundante.',
         },
         {
           q: '¿Qué es el balayage "lived-in"?',
-          a: 'El balayage "lived-in" (a veces llamado "color vivido") describe un resultado con una transición muy gradual y armoniosa desde la raíz natural hasta las puntas más claras — con un contraste mínimo. El crecimiento se ve intencional desde el primer día y sigue viéndose natural durante meses, sin ninguna marca abrupta. Es el resultado de balayage con menor mantenimiento y es ideal para quienes quieren un color hermoso sin visitas frecuentes al salón.',
+          a: 'El balayage "lived-in" (a veces llamado "color vivido") describe un resultado con una transición muy gradual y armoniosa desde la raíz natural hasta las puntas más claras, con un contraste mínimo. El crecimiento se ve intencional desde el primer día y sigue viéndose natural durante meses, sin ninguna marca abrupta. Es el resultado de balayage con menor mantenimiento y es ideal para quienes quieren un color hermoso sin visitas frecuentes al salón.',
         },
       ],
     },
@@ -178,15 +178,15 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Puedo teñir cabello dañado?',
-          a: 'Depende del nivel de daño. El cabello con daño leve suele poder teñirse de forma segura con la fórmula correcta y tratamientos reconstructores. El cabello muy dañado — con resequedad extrema, quiebre, textura gomosa al mojarse o puntas abiertas en todo el largo — puede necesitar una etapa de hidratación y restauración antes de aplicar cualquier color. En Blend evaluamos tu cabello con honestidad antes de cada servicio. Si creemos que el color no es seguro para la condición actual de tu cabello, te lo diremos y crearemos un plan para recuperar primero su salud.',
+          a: 'Depende del nivel de daño. El cabello con daño leve suele poder teñirse de forma segura con la fórmula correcta y tratamientos reconstructores. El cabello muy dañado, con resequedad extrema, quiebre, textura gomosa al mojarse o puntas abiertas en todo el largo, puede necesitar una etapa de hidratación y restauración antes de aplicar cualquier color. En Blend evaluamos tu cabello con honestidad antes de cada servicio. Si creemos que el color no es seguro para la condición actual de tu cabello, te lo diremos y crearemos un plan para recuperar primero su salud.',
         },
         {
           q: '¿Qué es la corrección de color?',
-          a: 'La corrección de color es el proceso de arreglar un color que no logró el resultado deseado — ya sea porque quedó anaranjado, demasiado oscuro, disparejo o dañado por tinte de caja. Es uno de los servicios técnicamente más complejos de un salón profesional. La corrección de color casi siempre requiere varias sesiones y una consulta previa a la reserva, ya que la cantidad de pasos depende por completo del punto de partida de tu cabello y de tu objetivo. En Blend, la corrección de color es una de nuestras especialidades.',
+          a: 'La corrección de color es el proceso de arreglar un color que no logró el resultado deseado, ya sea porque quedó anaranjado, demasiado oscuro, disparejo o dañado por tinte de caja. Es uno de los servicios técnicamente más complejos de un salón profesional. La corrección de color casi siempre requiere varias sesiones y una consulta previa a la reserva, ya que la cantidad de pasos depende por completo del punto de partida de tu cabello y de tu objetivo. En Blend, la corrección de color es una de nuestras especialidades.',
         },
         {
           q: '¿Cómo cuido mi cabello teñido en casa?',
-          a: 'Los tres pasos más importantes son: (1) Usa un shampoo sin sulfatos y apto para cabello teñido — los sulfatos eliminan el pigmento de forma agresiva. (2) Haz hidratación profunda cada semana — el cabello teñido pierde humedad más rápido que el natural. (3) Aplica protección UV antes de exponerte al sol — los rayos UV degradan el pigmento y provocan tonos anaranjados. En el clima del sur de la Florida, la protección UV es necesaria todo el año. Tu colorista de Blend te recomendará productos específicos según tu tipo de cabello y tu servicio de color.',
+          a: 'Los tres pasos más importantes son: (1) Usa un shampoo sin sulfatos y apto para cabello teñido, ya que los sulfatos eliminan el pigmento de forma agresiva. (2) Haz hidratación profunda cada semana, porque el cabello teñido pierde humedad más rápido que el natural. (3) Aplica protección UV antes de exponerte al sol, porque los rayos UV degradan el pigmento y provocan tonos anaranjados. En el clima del sur de la Florida, la protección UV es necesaria todo el año. Tu colorista de Blend te recomendará productos específicos según tu tipo de cabello y tu servicio de color.',
         },
       ],
     },
@@ -206,7 +206,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Cada cuánto debo cortarme el cabello?',
-          a: 'La mayoría de las clientas se cortan el cabello cada 6 a 8 semanas para mantener su estilo y conservar el cabello saludable. Los estilos más largos pueden mantenerse con intervalos un poco mayores. Si estás dejándote crecer el cabello, un despunte ligero cada 10 a 12 semanas evita que las puntas abiertas suban por la hebra — lo que a la larga te cuesta más largo.',
+          a: 'La mayoría de las clientas se cortan el cabello cada 6 a 8 semanas para mantener su estilo y conservar el cabello saludable. Los estilos más largos pueden mantenerse con intervalos un poco mayores. Si estás dejándote crecer el cabello, un despunte ligero cada 10 a 12 semanas evita que las puntas abiertas suban por la hebra, lo que a la larga te cuesta más largo.',
         },
         {
           q: '¿Mi estilista puede recomendarme un corte que me favorezca?',
@@ -218,7 +218,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Puedo llevar fotos de inspiración a mi cita de corte?',
-          a: 'Sí — te animamos a llevar fotos de inspiración para que tu estilista entienda mejor tus preferencias y adapte el corte a tu tipo de cabello y a tus rasgos faciales. Si puedes, lleva también fotos de cortes que no te hayan gustado. El mismo corte puede verse muy distinto en diferentes tipos de cabello, y tu estilista te dirá con honestidad qué es posible lograr con el tuyo.',
+          a: 'Sí. Te animamos a llevar fotos de inspiración para que tu estilista entienda mejor tus preferencias y adapte el corte a tu tipo de cabello y a tus rasgos faciales. Si puedes, lleva también fotos de cortes que no te hayan gustado. El mismo corte puede verse muy distinto en diferentes tipos de cabello, y tu estilista te dirá con honestidad qué es posible lograr con el tuyo.',
         },
         {
           q: '¿Tienen profesionales especializadas en cabello rizado?',
@@ -290,7 +290,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Cuánto duran los tratamientos de alisado?',
-          a: 'Los resultados suelen durar alrededor de 3 meses, dependiendo de tu tipo de cabello, tu rutina de cuidado en casa y la frecuencia de lavado. Usar un shampoo sin sal y sin sulfatos prolonga bastante el tratamiento — quienes se lavan el cabello a diario verán que el resultado se desvanece antes que quienes lo lavan 2 o 3 veces por semana.',
+          a: 'Los resultados suelen durar alrededor de 3 meses, dependiendo de tu tipo de cabello, tu rutina de cuidado en casa y la frecuencia de lavado. Usar un shampoo sin sal y sin sulfatos prolonga bastante el tratamiento. Quienes se lavan el cabello a diario verán que el resultado se desvanece antes que quienes lo lavan 2 o 3 veces por semana.',
         },
         {
           q: '¿Puedo teñirme el cabello y hacerme un tratamiento de alisado el mismo día?',
@@ -378,7 +378,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Cada cuánto se requiere mantenimiento?',
-          a: 'El mantenimiento se recomienda normalmente cada 4 a 6 semanas, dependiendo del crecimiento de tu cabello, del método de aplicación y del cuidado en casa. No intentes reposicionar ni retirar las extensiones por tu cuenta — una remoción incorrecta puede causar quiebre y dañar tu cabello natural.',
+          a: 'El mantenimiento se recomienda normalmente cada 4 a 6 semanas, dependiendo del crecimiento de tu cabello, del método de aplicación y del cuidado en casa. No intentes reposicionar ni retirar las extensiones por tu cuenta. Una remoción incorrecta puede causar quiebre y dañar tu cabello natural.',
         },
         {
           q: '¿Necesito una consulta antes de ponerme extensiones?',
@@ -398,7 +398,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Puedo nadar con extensiones?',
-          a: 'Sí, con precauciones. Antes de nadar, moja tu cabello con agua dulce y aplica un leave-in o aceite protector en el largo — el cabello saturado absorbe menos agua de la piscina. Evita sumergirte repetidamente en agua clorada o salada, ya que puede aflojar las fijaciones. Enjuaga bien el cabello después de nadar y aplica un tratamiento de hidratación profunda. Usar gorro de natación, cuando sea posible, es lo ideal para la duración de las extensiones.',
+          a: 'Sí, con precauciones. Antes de nadar, moja tu cabello con agua dulce y aplica un leave-in o aceite protector en el largo, ya que el cabello saturado absorbe menos agua de la piscina. Evita sumergirte repetidamente en agua clorada o salada, ya que puede aflojar las fijaciones. Enjuaga bien el cabello después de nadar y aplica un tratamiento de hidratación profunda. Usar gorro de natación, cuando sea posible, es lo ideal para la duración de las extensiones.',
         },
       ],
     },
@@ -586,7 +586,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Qué largo debe tener el vello antes de una cita de depilación con cera?',
-          a: 'Para obtener los mejores resultados, el vello debe medir alrededor de 0.6 cm — aproximadamente el largo de un grano de arroz.',
+          a: 'Para obtener los mejores resultados, el vello debe medir alrededor de 0.6 cm, aproximadamente el largo de un grano de arroz.',
         },
         {
           q: '¿Puedo depilarme si estoy usando Retinol o Accutane?',
@@ -622,7 +622,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Ofrecen faciales para adolescentes?',
-          a: 'Sí. La piel adolescente necesita más que un facial básico. Nuestro Facial Teen es un tratamiento seguro y suave, diseñado para ayudar a controlar el exceso de grasa, reducir los brotes y los puntos negros, prevenir las marcas de acné y mantener la piel saludable protegiendo su barrera natural. Creemos que la piel adolescente merece cuidado, no extracciones agresivas — por eso nuestro enfoque está en equilibrar la piel, reducir la inflamación y enseñar hábitos saludables de skincare que sostienen resultados a largo plazo. La piel adolescente suele ser más sensible, lo cual es parte natural de esta etapa, así que creamos una experiencia cómoda y acogedora con productos y técnicas apropiados para la piel joven.',
+          a: 'Sí. La piel adolescente necesita más que un facial básico. Nuestro Facial Teen es un tratamiento seguro y suave, diseñado para ayudar a controlar el exceso de grasa, reducir los brotes y los puntos negros, prevenir las marcas de acné y mantener la piel saludable protegiendo su barrera natural. Creemos que la piel adolescente merece cuidado, no extracciones agresivas. Por eso nuestro enfoque está en equilibrar la piel, reducir la inflamación y enseñar hábitos saludables de skincare que sostienen resultados a largo plazo. La piel adolescente suele ser más sensible, lo cual es parte natural de esta etapa, así que creamos una experiencia cómoda y acogedora con productos y técnicas apropiados para la piel joven.',
         },
         {
           q: '¿Cuánto dura una cita de facial?',
@@ -658,15 +658,15 @@ export const faqEs: FAQTranslation = {
       faqs: [
         {
           q: '¿Cómo afecta la humedad del sur de la Florida al cabello?',
-          a: 'La humedad del sur de la Florida — que promedia entre 70% y 90% durante todo el año — hace que la cutícula del cabello absorba humedad del aire y se expanda de forma despareja, provocando frizz, volumen no deseado y pérdida del peinado. El cabello teñido y tratado químicamente es más poroso y reacciona de forma más marcada a la humedad. Las soluciones más efectivas son los tratamientos de keratina o alisado (que sellan físicamente la cutícula), los productos anti-humectantes (que bloquean la absorción de humedad) y las fundas de almohada de seda (que reducen la fricción durante la noche).',
+          a: 'La humedad del sur de la Florida, que promedia entre 70% y 90% durante todo el año, hace que la cutícula del cabello absorba humedad del aire y se expanda de forma despareja, provocando frizz, volumen no deseado y pérdida del peinado. El cabello teñido y tratado químicamente es más poroso y reacciona de forma más marcada a la humedad. Las soluciones más efectivas son los tratamientos de keratina o alisado (que sellan físicamente la cutícula), los productos anti-humectantes (que bloquean la absorción de humedad) y las fundas de almohada de seda (que reducen la fricción durante la noche).',
         },
         {
           q: '¿Cómo puedo prevenir el frizz con la humedad de la Florida?',
-          a: 'El tratamiento profesional más efectivo contra el frizz en la Florida es la keratina o un tratamiento de alisado — ambos sellan la cutícula y reducen drásticamente la capacidad del cabello de absorber humedad. Para el día a día: seca el cabello por completo (el cabello parcialmente húmedo genera mucho frizz con la humedad), usa un sérum anti-frizz sobre el cabello seco antes de salir y evita los productos con glicerina en días de humedad muy alta. Las fundas de almohada de seda o satén también reducen la fricción nocturna que levanta la cutícula.',
+          a: 'El tratamiento profesional más efectivo contra el frizz en la Florida es la keratina o un tratamiento de alisado. Ambos sellan la cutícula y reducen drásticamente la capacidad del cabello de absorber humedad. Para el día a día: seca el cabello por completo (el cabello parcialmente húmedo genera mucho frizz con la humedad), usa un sérum anti-frizz sobre el cabello seco antes de salir y evita los productos con glicerina en días de humedad muy alta. Las fundas de almohada de seda o satén también reducen la fricción nocturna que levanta la cutícula.',
         },
         {
           q: '¿Qué productos funcionan mejor en el clima de la Florida?',
-          a: 'En el calor y la humedad del sur de la Florida durante todo el año, busca shampoos sin sulfatos (más suaves con el color y la cutícula), cremas y séums anti-humectantes (que forman una barrera contra la humedad), leave-in con protección UV (esenciales para cabello teñido y rubio) y productos sin glicerina para los días muy húmedos. Las líneas Discipline y Elixir de Kérastase están diseñadas específicamente para cabello con tendencia al frizz en climas húmedos — disponibles en Blend.',
+          a: 'En el calor y la humedad del sur de la Florida durante todo el año, busca shampoos sin sulfatos (más suaves con el color y la cutícula), cremas y séums anti-humectantes (que forman una barrera contra la humedad), leave-in con protección UV (esenciales para cabello teñido y rubio) y productos sin glicerina para los días muy húmedos. Las líneas Discipline y Elixir de Kérastase están diseñadas específicamente para cabello con tendencia al frizz en climas húmedos, y ambas están disponibles en Blend.',
         },
         {
           q: '¿Cada cuánto deben matizar su cabello las rubias en el sur de la Florida?',
@@ -674,19 +674,19 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Cómo protejo mi cabello teñido del agua de la piscina y del mar en la Florida?',
-          a: 'Antes de nadar: moja tu cabello con agua dulce (el cabello saturado absorbe menos agua de la piscina), aplica un leave-in o aceite de coco como barrera y usa gorro si es posible. Después de nadar: enjuaga de inmediato con agua dulce, aplica un shampoo clarificante para retirar el cloro o la sal, y termina con una mascarilla de hidratación profunda. El cloro es especialmente agresivo con el cabello decolorado porque oxida el pigmento — y el daño es acumulativo si nadas con frecuencia sin protección.',
+          a: 'Antes de nadar: moja tu cabello con agua dulce (el cabello saturado absorbe menos agua de la piscina), aplica un leave-in o aceite de coco como barrera y usa gorro si es posible. Después de nadar: enjuaga de inmediato con agua dulce, aplica un shampoo clarificante para retirar el cloro o la sal, y termina con una mascarilla de hidratación profunda. El cloro es especialmente agresivo con el cabello decolorado porque oxida el pigmento, y el daño es acumulativo si nadas con frecuencia sin protección.',
         },
         {
           q: '¿Por qué el cabello rubio se pone verde después de nadar en la Florida?',
-          a: 'Los tonos verdes en el cabello rubio después de nadar son causados por el cobre — específicamente, por el cobre oxidado por el cloro de la piscina que se adhiere a la proteína del cabello. No es el cloro en sí lo que causa el color verde. Prevención: enjuaga con agua dulce antes y después de nadar, aplica un leave-in como barrera y usa un shampoo clarificante o quelante inmediatamente después de la exposición a la piscina. Para los tonos verdes ya existentes, un tratamiento clarificante profesional en Blend puede retirar los depósitos de cobre.',
+          a: 'Los tonos verdes en el cabello rubio después de nadar son causados por el cobre, específicamente por el cobre oxidado por el cloro de la piscina que se adhiere a la proteína del cabello. No es el cloro en sí lo que causa el color verde. Prevención: enjuaga con agua dulce antes y después de nadar, aplica un leave-in como barrera y usa un shampoo clarificante o quelante inmediatamente después de la exposición a la piscina. Para los tonos verdes ya existentes, un tratamiento clarificante profesional en Blend puede retirar los depósitos de cobre.',
         },
         {
           q: '¿Vale la pena un tratamiento de alisado viviendo en el sur de la Florida?',
-          a: 'Para la mayoría de las clientas de Plantation y del condado de Broward — sí. La humedad y el calor del sur de la Florida durante todo el año hacen de la keratina y el Botox Capilar algunos de los servicios más solicitados en Blend. Estos tratamientos eliminan el frizz durante unos 3 meses, reducen considerablemente el tiempo de secado y son especialmente valiosos durante la temporada de huracanes y los meses de verano.',
+          a: 'Para la mayoría de las clientas de Plantation y del condado de Broward, sí. La humedad y el calor del sur de la Florida durante todo el año hacen de la keratina y el Botox Capilar algunos de los servicios más solicitados en Blend. Estos tratamientos eliminan el frizz durante unos 3 meses, reducen considerablemente el tiempo de secado y son especialmente valiosos durante la temporada de huracanes y los meses de verano.',
         },
         {
           q: '¿Cómo cuido mis extensiones con el calor de la Florida?',
-          a: 'Con el calor de la Florida, las extensiones necesitan hidratación constante. Usa un shampoo sin sulfatos y apto para extensiones, y acondiciona solo el largo y las puntas (nunca las fijaciones ni las cintas). Haz hidratación profunda cada semana — el calor acelera la pérdida de humedad de las extensiones. Antes de actividades al aire libre, aplica un spray con protección UV tanto en las extensiones como en tu cabello natural. Enjuaga el cabello inmediatamente después de nadar e hidrata profundamente tras cualquier exposición a la sal o el cloro.',
+          a: 'Con el calor de la Florida, las extensiones necesitan hidratación constante. Usa un shampoo sin sulfatos y apto para extensiones, y acondiciona solo el largo y las puntas (nunca las fijaciones ni las cintas). Haz hidratación profunda cada semana, porque el calor acelera la pérdida de humedad de las extensiones. Antes de actividades al aire libre, aplica un spray con protección UV tanto en las extensiones como en tu cabello natural. Enjuaga el cabello inmediatamente después de nadar e hidrata profundamente tras cualquier exposición a la sal o el cloro.',
         },
       ],
     },
@@ -698,19 +698,19 @@ export const faqEs: FAQTranslation = {
       faqs: [
         {
           q: '¿Qué puedo esperar en mi primera visita a Blend Hair Boutique?',
-          a: 'Tu primera visita comienza con una consulta — tu estilista quiere entender el historial de tu cabello, su condición actual y tus objetivos antes de comenzar cualquier trabajo. Te preguntaremos sobre coloraciones previas, servicios químicos y tu rutina diaria. Espera un ambiente acogedor y profesional que respeta tu tiempo. Te daremos una evaluación realista de lo que es posible lograr en tu primera cita y de lo que podría requerir sesiones adicionales.',
+          a: 'Tu primera visita comienza con una consulta. Tu estilista quiere entender el historial de tu cabello, su condición actual y tus objetivos antes de comenzar cualquier trabajo. Te preguntaremos sobre coloraciones previas, servicios químicos y tu rutina diaria. Espera un ambiente acogedor y profesional que respeta tu tiempo. Te daremos una evaluación realista de lo que es posible lograr en tu primera cita y de lo que podría requerir sesiones adicionales.',
         },
         {
           q: '¿Qué debo usar para mi cita en el salón?',
-          a: 'Para las citas de color, usa una blusa con botones o cierre que puedas quitarte fácilmente sin pasarla por la cabeza ni arriesgarte a mancharla — evita prendas blancas o de colores claros. La capa del salón protegerá tu ropa durante el servicio, pero llegar con algo cómodo y que no te importe manchar siempre es lo más seguro. Para las citas de corte, cualquier ropa cómoda funciona.',
+          a: 'Para las citas de color, usa una blusa con botones o cierre que puedas quitarte fácilmente sin pasarla por la cabeza ni arriesgarte a mancharla, y evita prendas blancas o de colores claros. La capa del salón protegerá tu ropa durante el servicio, pero llegar con algo cómodo y que no te importe manchar siempre es lo más seguro. Para las citas de corte, cualquier ropa cómoda funciona.',
         },
         {
           q: '¿Debo llegar con el cabello limpio?',
-          a: 'El shampoo y acondicionador regulares están incluidos en todos nuestros servicios de cabello, así que no necesitas llegar recién lavada. Para las citas de color, evita los productos pesados de peinado (shampoo en seco, laca, séums) el día de la cita — pueden interferir con la aplicación del color, y algo de grasa natural del cuero cabelludo incluso resulta protectora durante los servicios de aclarado.',
+          a: 'El shampoo y acondicionador regulares están incluidos en todos nuestros servicios de cabello, así que no necesitas llegar recién lavada. Para las citas de color, evita los productos pesados de peinado (shampoo en seco, laca, séums) el día de la cita. Pueden interferir con la aplicación del color, y algo de grasa natural del cuero cabelludo incluso resulta protectora durante los servicios de aclarado.',
         },
         {
           q: '¿Con cuánta anticipación debo reservar en Blend?',
-          a: 'Nuestras estilistas más solicitadas — especialmente para servicios de color — suelen tener la agenda llena con 2 a 4 semanas de anticipación. Las citas de fin de semana se llenan aún más rápido. Para servicios de novia, recomendamos reservar con 6 a 9 meses de anticipación. Para secados y servicios más cortos hay más disponibilidad en la misma semana. Para garantizar tu estilista y horario preferidos, lo ideal es reservar con al menos 2 semanas de anticipación.',
+          a: 'Nuestras estilistas más solicitadas, especialmente para servicios de color, suelen tener la agenda llena con 2 a 4 semanas de anticipación. Las citas de fin de semana se llenan aún más rápido. Para servicios de novia, recomendamos reservar con 6 a 9 meses de anticipación. Para secados y servicios más cortos hay más disponibilidad en la misma semana. Para garantizar tu estilista y horario preferidos, lo ideal es reservar con al menos 2 semanas de anticipación.',
         },
       ],
     },
@@ -726,11 +726,11 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Ofrecen paquetes de novia?',
-          a: 'Sí — los servicios de novia están entre los más solicitados. Ofrecemos peinado de novia, maquillaje de novia, citas de prueba y paquetes de día completo para la novia y su cortejo. Atendemos grupos para bodas, quinceañeras y celebraciones importantes. Las reservas de novia deben hacerse con la mayor anticipación posible — recomendamos de 6 a 9 meses para fechas muy solicitadas. Contáctanos directamente para conversar sobre tu fecha y tu visión.',
+          a: 'Sí. Los servicios de novia están entre los más solicitados. Ofrecemos peinado de novia, maquillaje de novia, citas de prueba y paquetes de día completo para la novia y su cortejo. Atendemos grupos para bodas, quinceañeras y celebraciones importantes. Las reservas de novia deben hacerse con la mayor anticipación posible. Recomendamos de 6 a 9 meses para fechas muy solicitadas. Contáctanos directamente para conversar sobre tu fecha y tu visión.',
         },
         {
           q: '¿Qué productos profesionales utilizan?',
-          a: 'Blend es un salón autorizado Kérastase y trabajamos con líneas profesionales de color como Keune, Wella y Truss. No usamos tintes de caja ni productos de farmacia en nuestras clientas. También vendemos productos Kérastase en el salón — tu estilista puede recomendarte los productos ideales para llevar a casa después de tu cita.',
+          a: 'Blend es un salón autorizado Kérastase y trabajamos con líneas profesionales de color como Keune, Wella y Truss. No usamos tintes de caja ni productos de farmacia en nuestras clientas. También vendemos productos Kérastase en el salón, y tu estilista puede recomendarte los productos ideales para llevar a casa después de tu cita.',
         },
       ],
     },

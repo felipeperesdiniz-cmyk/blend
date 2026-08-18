@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Hair Salon Plantation FL | Best Hair Salon Near Me | Blend Hair Boutique',
   description:
-    'Blend Hair Boutique is Plantation\'s most-loved luxury hair salon — 4.9★ · 1,230+ Google reviews. Balayage, haircuts, keratin treatments, nails, facials, waxing & more. 10035 Cleary Blvd. Book online 24/7.',
+    'Blend Hair Boutique is Plantation\'s most-loved luxury hair salon, rated 4.9★ across 1,230+ Google reviews. Balayage, haircuts, keratin treatments, nails, facials, waxing & more. 10035 Cleary Blvd. Book online 24/7.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: 'Hair Salon Plantation FL | Blend Hair Boutique',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'What are the hours of Blend Hair Boutique?',
-    a: 'Blend Hair Boutique is open Monday through Wednesday 9:00 AM to 6:00 PM, Thursday through Saturday 9:00 AM to 7:00 PM, and closed on Sunday. Hours may vary on holidays — we recommend checking our booking system or calling (754) 206-3501 to confirm availability.',
+    a: 'Blend Hair Boutique is open Monday through Wednesday 9:00 AM to 6:00 PM, Thursday through Saturday 9:00 AM to 7:00 PM, and closed on Sunday. Hours may vary on holidays, so we recommend checking our booking system or calling (754) 206-3501 to confirm availability.',
   },
   {
     q: 'What services does Blend Hair Boutique offer?',
@@ -33,15 +33,15 @@ const faqs = [
   },
   {
     q: 'How do I book an appointment at Blend Hair Boutique in Plantation?',
-    a: 'You can book online 24/7 through our Fresha booking system — available on our website. You can also call us at (754) 206-3501 or message us via WhatsApp at (954) 544-6792. We recommend booking in advance for color services and special occasions, as our calendar fills quickly.',
+    a: 'You can book online 24/7 through our Fresha booking system, available on our website. You can also call us at (754) 206-3501 or message us via WhatsApp at (954) 544-6792. We recommend booking in advance for color services and special occasions, as our calendar fills quickly.',
   },
   {
     q: 'Is Blend Hair Boutique a Brazilian salon?',
-    a: 'Yes — Blend Hair Boutique was founded with a Brazilian-inspired approach to beauty and hospitality. Our team includes specialists trained in Brazil, and we bring a distinctly Brazilian warmth, artistry, and dedication to craft to every service. Our multilingual team serves clients in English, Portuguese, and Spanish.',
+    a: 'Yes. Blend Hair Boutique was founded with a Brazilian-inspired approach to beauty and hospitality. Our team includes specialists trained in Brazil, and we bring a distinctly Brazilian warmth, artistry, and dedication to craft to every service. Our multilingual team serves clients in English, Portuguese, and Spanish.',
   },
   {
     q: 'Does Blend Hair Boutique offer gift cards?',
-    a: 'Yes. Blend Hair Boutique gift cards are available for purchase online through our website. They make a thoughtful gift for any occasion — birthdays, holidays, mother\'s day, bridal showers, and more. Gift cards can be used toward any service or product.',
+    a: 'Yes. Blend Hair Boutique gift cards are available for purchase online through our website. They make a thoughtful gift for any occasion: birthdays, holidays, mother\'s day, bridal showers, and more. Gift cards can be used toward any service or product.',
   },
 ]
 
@@ -70,7 +70,7 @@ const schema = {
       '@id': `${CANONICAL}#webpage`,
       url: CANONICAL,
       name: 'Hair Salon Plantation FL | Blend Hair Boutique',
-      description: 'The primary local authority page for Blend Hair Boutique — luxury hair salon in Plantation, Florida.',
+      description: 'The primary local authority page for Blend Hair Boutique, a luxury hair salon in Plantation, Florida.',
       isPartOf: { '@id': `${SITE_URL}/#website` },
       about: { '@id': `${SITE_URL}/#business` },
       breadcrumb: {
@@ -108,7 +108,7 @@ export default function HairSalonPlantationPage() {
               The Best Hair Salon<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,230+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences — delivered with Brazilian warmth and precision.
+              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,230+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences, delivered with Brazilian warmth and precision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -154,7 +154,7 @@ export default function HairSalonPlantationPage() {
                   Since opening in Plantation, FL, Blend Hair Boutique has grown from a neighborhood boutique into one of Broward County's most beloved beauty destinations. Our team of multilingual stylists, colorists, nail technicians, and estheticians share one commitment: delivering premium results in an environment that feels genuinely welcoming.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>
-                  We believe beauty is personal. That's why every appointment begins with a consultation — a real conversation about your goals, lifestyle, and history. We listen before we act. The result is a visit that feels tailored, not transactional, and results that feel unmistakably like you.
+                  We believe beauty is personal. That's why every appointment begins with a consultation, a real conversation about your goals, lifestyle, and history. We listen before we act. The result is a visit that feels tailored, not transactional, and results that feel unmistakably like you.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <Link href="/about" className="btn btn--outline">Our Story</Link>
@@ -183,7 +183,7 @@ export default function HairSalonPlantationPage() {
               Everything You Need,<br /><em>Under One Roof</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '52ch', margin: '0 auto 3rem' }}>
-              From a precision haircut to a full balayage transformation, from a gel manicure to microbladed brows — Blend Hair Boutique is your one-stop luxury beauty destination in Plantation, FL.
+              From a precision haircut to a full balayage transformation, from a gel manicure to microbladed brows, Blend Hair Boutique is your one-stop luxury beauty destination in Plantation, FL.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1.5rem' }}>
               {services.map((s) => (
@@ -212,10 +212,10 @@ export default function HairSalonPlantationPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought — they\'re earned, one client at a time, since 2018.' },
+                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought. They\'re earned, one client at a time, since 2018.' },
                 { title: 'Brazilian Expertise', body: 'Our team brings the precision, warmth, and hair culture of Brazil to Plantation, FL. Brazilian stylists are world-renowned for their mastery of color, texture, and smoothing techniques.' },
-                { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish — ensuring every client can communicate exactly what they want and feel completely understood.' },
-                { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup — all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },
+                { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish, ensuring every client can communicate exactly what they want and feel completely understood.' },
+                { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup, all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },
               ].map((s) => (
                 <div key={s.title} style={{ borderTop: '1px solid var(--line)', paddingTop: '1.5rem' }}>
                   <h3 style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontWeight: 400, marginBottom: '0.6rem' }}>{s.title}</h3>
@@ -236,7 +236,7 @@ export default function HairSalonPlantationPage() {
               Your Neighborhood Salon,<br /><em>For All of Broward County</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '60ch', margin: '0 auto 2.5rem' }}>
-              Located at 10035 Cleary Blvd in Plantation, FL 33324, Blend Hair Boutique is centrally positioned in western Broward County. Our clients travel from across South Florida to visit us — because we deliver results worth the trip. We are Plantation's luxury hair salon serving Davie, Weston, Fort Lauderdale, Sunrise, Cooper City, Pembroke Pines, Miramar, Boca Raton, and Miami.
+              Located at 10035 Cleary Blvd in Plantation, FL 33324, Blend Hair Boutique is centrally positioned in western Broward County. Our clients travel from across South Florida to visit us, because we deliver results worth the trip. We are Plantation's luxury hair salon serving Davie, Weston, Fort Lauderdale, Sunrise, Cooper City, Pembroke Pines, Miramar, Boca Raton, and Miami.
             </p>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               {['Plantation, FL', 'Davie, FL', 'Weston, FL', 'Fort Lauderdale, FL', 'Sunrise, FL', 'Cooper City, FL', 'Pembroke Pines, FL', 'Miramar, FL', 'Hollywood, FL', 'Boca Raton, FL', 'Miami, FL'].map((city) => (
