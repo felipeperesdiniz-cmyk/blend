@@ -774,10 +774,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   position: relative;
   z-index: 2;
   margin: 0;
-  /* Capped by height as well as width: the lockup is 1200x765, so a 60svh
-     width cap holds it to ~38svh tall. Without this it is sized purely off
+  /* Capped by height as well as width: the lockup is 1200x765, so a 48svh
+     width cap holds it to ~30svh tall. Without this it is sized purely off
      width and collides with the scroll cue on short (landscape) viewports. */
-  width: min(26vw, 25rem, 60svh);
+  width: min(20vw, 19rem, 48svh);
   min-width: 14rem;
   /* Base state is visible; the keyframe supplies the entry via `backwards`
      fill. If animations never run, the mark still renders. */
@@ -826,18 +826,19 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 
 @media (max-width: 1024px) {
-  .hero__mark { width: min(38vw, 22rem, 60svh); }
+  .hero__mark { width: min(30vw, 18rem, 48svh); }
 }
 @media (max-width: 768px) {
   .hero--film { min-height: 95svh; }
-  /* Belmond sizes its hero mark to ~51vw on a phone. The desktop min-width
-     floor sits above that, so it has to be released here or it wins. */
-  .hero__mark { width: min(52vw, 17rem, 60svh); min-width: 0; }
+  /* Deliberately below Belmond's ~51vw so the film, not the mark, carries the
+     hero. The desktop min-width floor sits above this, so it must be released
+     here or it wins. */
+  .hero__mark { width: min(42vw, 14rem, 48svh); min-width: 0; }
   .hero__video video { object-position: center 42%; }
 }
 @media (max-width: 480px) {
   .hero--film { min-height: 92svh; }
-  .hero__mark { width: min(52vw, 60svh); }
+  .hero__mark { width: min(42vw, 48svh); }
   /* The sticky action bar is hidden over the film, so the cue can sit low. */
   .hero__cue { bottom: 1.75rem; }
   .hero__cue-label { font-size: 10px; letter-spacing: 0.32em; }
