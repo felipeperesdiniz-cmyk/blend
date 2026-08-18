@@ -66,12 +66,30 @@ export default function HeroSection() {
           loop
           playsInline
           preload="metadata"
-          poster="/hero-interior.webp"
+          poster="/hero-poster.webp"
           aria-hidden="true"
           tabIndex={-1}
         >
+          {/* Sources are trimmed to 0.667s–26.367s of the master. The master
+              fades up from black and fades back to black, so looping it raw
+              dipped through ~0.8s of black at every wrap. The trim starts and
+              ends on full-brightness frames (luma 132 vs 136), so the wrap is
+              an ordinary cut — which matches an edit that cuts every ~2s.
+              The dip-to-black at 21.8s is the editor's scene transition and is
+              deliberately kept.
+
+              `object-fit: cover` in a portrait viewport shows only the middle
+              ~500px of the 1920-wide frame, so phones were downloading four
+              times the pixels they can display. These sources are the same
+              footage pre-cropped to what is actually visible — smaller file,
+              identical framing, no loss of detail.
+
+              `media` on <source> is resolved once at load, not on resize, so
+              the order matters: narrowest first. */}
+          <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 600px)" />
+          <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 600px)" />
           <source src="/hero-loop.webm" type="video/webm" />
-          <source src="/hero-loop.mp4" type="video/mp4" />
+          <source src="/hero-loop.mp4"  type="video/mp4" />
         </video>
       </div>
 

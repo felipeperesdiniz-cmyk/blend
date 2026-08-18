@@ -762,7 +762,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   inset: 0;
   background:
     radial-gradient(60% 50% at 50% 47%, rgba(14,10,6,0.56) 0%, rgba(14,10,6,0.30) 58%, rgba(14,10,6,0.08) 100%),
-    linear-gradient(to bottom, rgba(14,10,6,0.24) 0%, transparent 18%),
+    /* The nav sits in the top ~8% of the hero and the footage there is mostly
+       white coats and walls (luma up to 198), so the old 0.24/18% ramp left the
+       hamburger and lang switcher under 2.5:1. This is deeper and stronger but
+       fully decayed by 30%, which is above the mark, so the centre is unchanged. */
+    linear-gradient(to bottom, rgba(14,10,6,0.62) 0%, rgba(14,10,6,0.28) 14%, transparent 30%),
     linear-gradient(to top,    rgba(14,10,6,0.38) 0%, transparent 30%);
 }
 
@@ -770,7 +774,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   position: relative;
   z-index: 2;
   margin: 0;
-  width: min(26vw, 25rem);
+  /* Capped by height as well as width: the lockup is 1200x765, so a 60svh
+     width cap holds it to ~38svh tall. Without this it is sized purely off
+     width and collides with the scroll cue on short (landscape) viewports. */
+  width: min(26vw, 25rem, 60svh);
   min-width: 14rem;
   /* Base state is visible; the keyframe supplies the entry via `backwards`
      fill. If animations never run, the mark still renders. */
@@ -819,19 +826,27 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 }
 
 @media (max-width: 1024px) {
-  .hero__mark { width: min(38vw, 22rem); }
+  .hero__mark { width: min(38vw, 22rem, 60svh); }
 }
 @media (max-width: 768px) {
   .hero--film { min-height: 95svh; }
-  .hero__mark { width: min(62vw, 20rem); }
+  /* Belmond sizes its hero mark to ~51vw on a phone. The desktop min-width
+     floor sits above that, so it has to be released here or it wins. */
+  .hero__mark { width: min(52vw, 17rem, 60svh); min-width: 0; }
   .hero__video video { object-position: center 42%; }
 }
 @media (max-width: 480px) {
   .hero--film { min-height: 92svh; }
-  .hero__mark { width: 68vw; }
+  .hero__mark { width: min(52vw, 60svh); }
   /* The sticky action bar is hidden over the film, so the cue can sit low. */
   .hero__cue { bottom: 1.75rem; }
   .hero__cue-label { font-size: 10px; letter-spacing: 0.32em; }
+}
+
+/* Short viewports (phones in landscape) cannot fit the mark and the cue at
+   once — the cue is decorative and aria-hidden, so it yields. */
+@media (max-height: 500px) {
+  .hero__cue { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3108,7 +3123,9 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   }
 
   /* ── Nav logo ── */
-  .nav__logo-img { height: 44px; }
+  /* Belmond keeps the mobile header mark small — 11px of ink in a 58px bar.
+     This lockup is stacked, so it is matched on height, not width. */
+  .nav__logo-img { height: 34px; }
   .nav__inner { padding: 14px var(--gutter); }
 
   /* ── Trust bar ── */
@@ -3193,7 +3210,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   }
 
   /* ── Nav ── */
-  .nav__logo-img { height: 40px; }
+  .nav__logo-img { height: 30px; }
   .nav__inner { padding: 12px var(--gutter); }
 
   /* ── Trust bar ── */

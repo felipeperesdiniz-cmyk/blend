@@ -180,22 +180,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-interior-mobile.webp"
-          type="image/webp"
-          media="(max-width: 640px)"
-          fetchPriority="high"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/hero-interior.webp"
-          type="image/webp"
-          media="(min-width: 641px)"
-          fetchPriority="high"
-        />
+        {/* The hero-interior stills were preloaded at high priority here back
+            when the homepage hero was an image. The film hero replaced them and
+            nothing renders them any more, so these were fetching unused bytes on
+            every page — and doing it in the same window the hero video needs the
+            bandwidth. The video carries its own poster. */}
         <meta name="keywords" content="hair salon Plantation FL, balayage Plantation, Brazilian blowout Plantation, keratin treatment Florida, luxury hair salon South Florida, nail salon Plantation, bridal hair Plantation FL, hair color Plantation FL, blowout Plantation Florida" />
         <script
           type="application/ld+json"
