@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Premium hair extensions in Plantation, Florida at Blend Hair Boutique. Tape-in, sew-in, and clip-in methods. Ethically sourced hair, seamless blending. Consultation required. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair Extensions in Plantation, FL | Blend Hair Boutique',
     description: 'Premium hair extensions in Plantation, FL. Tape-in, sew-in, and clip-in. Ethically sourced, seamless blending. Book a consultation online.',
     url: CANONICAL,

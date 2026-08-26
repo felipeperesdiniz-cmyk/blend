@@ -105,3 +105,16 @@ export const NAV_LINKS = [
   { label: 'About',     href: '/about' },
   { label: 'Contact',   href: '/contact' },
 ] as const
+
+// ─── Social share image ───────────────────────────────────────
+// Next replaces, rather than merges, a parent openGraph object when a page
+// declares its own — so a page that sets openGraph without images ships no
+// og:image at all. Every page spreads this in rather than relying on the root
+// layout. The file also lives at /og-image.jpg for the JSON-LD `image` field,
+// which takes a URL and cannot read the app-router file convention.
+export const OG_IMAGE = {
+  url: 'https://www.blendhairboutique.com/og-image.jpg',
+  width: 1200,
+  height: 630,
+  alt: 'Juliana and Fernanda, owners of Blend Hair Boutique in Plantation, Florida',
+} as const

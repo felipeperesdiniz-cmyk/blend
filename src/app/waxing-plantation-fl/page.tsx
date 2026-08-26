@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Professional waxing services in Plantation, Florida: eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Waxing in Plantation, FL | Blend Hair Boutique',
     description: 'Eyebrow waxing, facial waxing, and body waxing in Plantation, FL at Blend Hair Boutique. Professional, gentle, precise. 4.9★. Book online.',
     url: CANONICAL,

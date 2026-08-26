@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { SERVICES } from '@/data/services'
 import ServiceDetailContent from '@/components/pages/ServiceDetailContent'
-import { pageTitle } from '@/data/constants'
+import { pageTitle, OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: s.description,
     alternates: { canonical: `${SITE_URL}/services/${s.id}` },
     openGraph: {
+      images: [OG_IMAGE],
       title: `${title} | Blend Hair Boutique`,
       description: s.description,
       url: `${SITE_URL}/services/${s.id}`,

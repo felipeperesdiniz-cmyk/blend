@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Find the best hair color in Plantation, FL at Blend Hair Boutique. Balayage, highlights, all-over color, and color correction by expert colorists. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Best Hair Color in Plantation, FL | Blend Hair Boutique',
     description:
       'Plantation\'s top-rated hair color salon. Expert balayage, highlights, all-over color, and color correction. 4.9★ · 1,230+ Google reviews. Book at Blend Hair Boutique.',

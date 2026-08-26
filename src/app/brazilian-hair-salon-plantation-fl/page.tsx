@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Blend Hair Boutique is a Brazilian-owned luxury hair salon in Plantation, Florida. Specializing in Brazilian blowouts, keratin treatments, balayage, and hair color. 4.9★ · 1,230+ reviews.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Brazilian Hair Salon in Plantation, FL | Blend Hair Boutique',
     description:
       'Brazilian-owned luxury hair salon in Plantation, FL. Expert Brazilian blowouts, keratin, balayage, and color by certified Brazilian beauty professionals. Book online.',

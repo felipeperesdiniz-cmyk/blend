@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Blend Hair Boutique is Plantation\'s most-loved luxury hair salon, rated 4.9★ across 1,230+ Google reviews. Balayage, haircuts, keratin treatments, nails, facials, waxing & more. 10035 Cleary Blvd. Book online 24/7.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair Salon Plantation FL | Blend Hair Boutique',
     description: 'Plantation\'s most-loved luxury hair salon. 4.9★ · 1,230+ Google reviews. Balayage, cuts, keratin, nails, facials & more. Book online 24/7.',
     url: CANONICAL,

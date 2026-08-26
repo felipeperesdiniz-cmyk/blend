@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Expert balayage in Plantation, Florida at Blend Hair Boutique. Hand-painted, custom balayage, highlights, and ombre tailored to your hair texture and skin tone. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Balayage in Plantation, FL | Blend Hair Boutique',
     description: 'Expert balayage in Plantation, Florida at Blend Hair Boutique. Hand-painted, custom balayage, highlights, and ombre. 4.9★ rated salon. Book online.',
     url: CANONICAL,

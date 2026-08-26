@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { SERVICES, FAQ } from '@/data/services'
 import ServicesContent from '@/components/pages/ServicesContent'
+import { OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Explore all services at Blend Hair Boutique in Plantation, FL: haircuts, color, balayage & highlights, styling, keratin smoothing, hair care, extensions, nails, brows, makeup, waxing, facials, and lashes.',
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair & Beauty Services | Blend Hair Boutique, Plantation FL',
     description: 'Explore all services at Blend Hair Boutique in Plantation, FL: haircuts, color, balayage & highlights, styling, keratin smoothing, hair care, extensions, nails, brows, makeup, waxing, facials, and lashes.',
     url: `${SITE_URL}/services`,

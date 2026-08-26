@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import GalleryContent from '@/components/pages/GalleryContent'
+import { OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     'Browse the Blend Hair Boutique gallery: balayage, blonde highlights, brunette color, Brazilian blowout, keratin, bridal hair, and nail art. Located in Plantation, Florida.',
   alternates: { canonical: `${SITE_URL}/gallery` },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair Color & Styling Gallery | Blend Hair Boutique, Plantation FL',
     description: 'Browse the Blend Hair Boutique gallery: balayage, blonde highlights, brunette color, Brazilian blowout, keratin, bridal hair, and nail art.',
     url: `${SITE_URL}/gallery`,

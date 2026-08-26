@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/reviews`
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Read what Plantation, FL clients say about Blend Hair Boutique. 4.9★ rated across 1,230+ Google reviews. Balayage, haircuts, keratin, nails, and more. See why we\'re Broward\'s most-loved salon.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Reviews | Blend Hair Boutique · 4.9★ · 1,230+ Google Reviews',
     description: 'See why Blend Hair Boutique in Plantation, FL has a 4.9★ rating from 1,230+ Google reviews. Read client testimonials and book your visit.',
     url: CANONICAL,

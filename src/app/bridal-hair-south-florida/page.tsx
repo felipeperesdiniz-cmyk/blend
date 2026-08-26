@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Luxury bridal hair and beauty packages in South Florida at Blend Hair Boutique, Plantation, FL. Bridal trials, day-of styling, bridal party packages. 4.9★ rated salon. Book your consultation.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Bridal Hair Salon in South Florida | Blend Hair Boutique, Plantation FL',
     description: 'Luxury bridal hair and beauty in South Florida. Bridal trials, day-of styling, and bridal party packages at Blend Hair Boutique, Plantation, FL.',
     url: CANONICAL,

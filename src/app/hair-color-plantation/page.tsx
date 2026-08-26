@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS } from '@/data/constants'
+import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Professional hair color services in Plantation, Florida at Blend Hair Boutique. All-over color, highlights, glossing, toning, balayage, and color correction. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair Color Services in Plantation, FL | Blend Hair Boutique',
     description: 'Professional hair color in Plantation, FL. All-over color, highlights, glossing, toning, and color correction at Blend Hair Boutique. Book online.',
     url: CANONICAL,

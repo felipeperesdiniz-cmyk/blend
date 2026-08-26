@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Professional manicure, pedicure, gel nails, and nail art in Plantation, Florida at Blend Hair Boutique. Luxury nail services in a full-service beauty boutique. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Nail Salon in Plantation, FL | Blend Hair Boutique',
     description: 'Manicure, pedicure, gel nails, and nail art in Plantation, FL. Luxury nail services at Blend Hair Boutique. 4.9★. Book online.',
     url: CANONICAL,

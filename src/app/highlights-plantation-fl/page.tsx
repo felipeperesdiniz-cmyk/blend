@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Professional hair highlights in Plantation, Florida: foil highlights, babylights, money piece, and partial highlights at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your color appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Hair Highlights in Plantation, FL | Blend Hair Boutique',
     description: 'Foil highlights, babylights, money piece, and partial highlights in Plantation, FL at Blend Hair Boutique. Expert colorists. 4.9★. Book online.',
     url: CANONICAL,

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Precision haircuts for women and men in Plantation, Florida at Blend Hair Boutique. Lived-in layers, bobs, curtain bangs, blunt cuts, and custom styling by expert stylists. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Haircuts in Plantation, FL | Blend Hair Boutique',
     description: 'Precision haircuts for women and men in Plantation, FL. Lived-in layers, bobs, custom styling by expert stylists at Blend Hair Boutique. 4.9★ rated. Book online.',
     url: CANONICAL,

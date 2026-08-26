@@ -23,6 +23,7 @@ import AnnouncementBar from '@/components/AnnouncementBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
+import { OG_IMAGE } from '@/data/constants'
 import { REVIEWS } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -50,17 +51,11 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Blend Hair Boutique',
     locale: 'en_US',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Blend Hair Boutique, a luxury hair salon in Plantation, Florida',
-      },
-    ],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
+    images: [OG_IMAGE.url],
   },
   other: {
     'geo.region': 'US-FL',

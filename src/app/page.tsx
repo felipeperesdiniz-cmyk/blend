@@ -9,6 +9,7 @@ import ProductSection from '@/components/sections/ProductSection'
 import ReviewsSection from '@/components/sections/ReviewsSection'
 import ContactSection from '@/components/sections/ContactSection'
 import CTASection from '@/components/sections/CTASection'
+import { OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     'Blend Hair Boutique is a luxury hair salon in Plantation, Florida. Specializing in balayage, Brazilian blowout, keratin treatments, haircuts, nails, facials, and bridal beauty. Book online 24/7.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Blend Hair Boutique | Luxury Hair Salon in Plantation, FL',
     description:
       'Luxury hair color, balayage, Brazilian blowout, keratin, nails, and bridal beauty in Plantation, Florida. Book your appointment online today.',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Professional blowout and styling services in Plantation, Florida. Smooth, voluminous, or beachy wave blowouts at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Walk-in friendly. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Blowout in Plantation, FL | Blend Hair Boutique',
     description: 'Professional blowout and styling in Plantation, FL at Blend Hair Boutique. Smooth, voluminous, or beachy wave blowouts. 4.9★. Book online.',
     url: CANONICAL,

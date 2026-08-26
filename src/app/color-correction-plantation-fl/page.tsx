@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Expert color correction in Plantation, Florida. Fix brassiness, uneven color, box dye damage, and over-processed hair at Blend Hair Boutique. Advanced colorists. 4.9★ · 1,230+ reviews. Book a consultation.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Color Correction in Plantation, FL | Blend Hair Boutique',
     description: 'Expert color correction in Plantation, FL: fix brassiness, box dye damage, uneven color. Advanced colorists at Blend Hair Boutique. 4.9★. Book a consultation.',
     url: CANONICAL,

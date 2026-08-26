@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import BlogContent from '@/components/pages/BlogContent'
+import { OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/blog`
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     'Expert hair and beauty education from the colorists at Blend Hair Boutique in Plantation, FL. Balayage guides, color tips, keratin advice, extension care, and more.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Beauty Resource Center | Blend Hair Boutique',
     description:
       'Expert hair and beauty guides from Blend Hair Boutique in Plantation, Florida. Learn about balayage, color correction, keratin treatments, extensions, and more.',

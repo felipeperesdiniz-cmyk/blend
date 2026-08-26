@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Custom facials, hydrating treatments, and skin care services in Plantation, Florida at Blend Hair Boutique. Personalized to your skin type. 4.9★ · 1,230+ reviews. Book your facial appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
+    images: [OG_IMAGE],
     title: 'Facials in Plantation, FL | Blend Hair Boutique',
     description: 'Custom facials and hydrating skin treatments in Plantation, FL at Blend Hair Boutique. Personalized to your skin type. 4.9★. Book online.',
     url: CANONICAL,
