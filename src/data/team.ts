@@ -32,7 +32,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Twenty years in the industry, and at Blend since the day it opened. Debora works in colour and precision cutting.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/hairbydebora.us',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/debora.webp',
   },
   {
     id: 'lea',
