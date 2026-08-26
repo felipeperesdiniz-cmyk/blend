@@ -57,8 +57,8 @@ export default function GiftCardsContent() {
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <img
-                src="/images/gallery/wine-blend-champagne.webp"
-                alt="Champagne toast at Blend Hair Boutique in Plantation, FL"
+                src="/images/gallery/gift-card-blend.webp"
+                alt="Blend Hair Boutique gift certificate and gift bag at the salon in Plantation, FL"
                 loading="lazy"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />

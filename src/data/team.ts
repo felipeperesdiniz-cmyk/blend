@@ -77,7 +77,7 @@ export const TEAM: TeamMember[] = [
     bio: 'When a colour has gone wrong elsewhere, Ketty is who puts it right. She is also the salon’s only perm specialist. Here since 2022.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/ketty.hairstylist',
-    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/ketty.webp',
   },
   {
     id: 'jeniffer',
@@ -112,7 +112,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Nilza has been here since the very beginning. Decades of waxing and nails, and quicker than you would think possible.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/nilza.brazil',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80',
+    image: '/images/team/nilza.webp',
   },
   {
     id: 'edith',

@@ -80,5 +80,7 @@ export const FEATURED_IDS = [
 //   bronde-waves-smile ...... /about
 //   stylist-blend-wall ...... /about (hero)
 //   salon-wine-service ...... /gift-cards, /luxury-hair-salon-plantation-fl
+//   gift-card-blend ......... /gift-cards
+//   wine-blend-champagne .... unused — spare (was /gift-cards)
 //   kerastase-chroma-absolu . homepage, ProductSection
 //   blonde-lob-waves ........ unused — spare
