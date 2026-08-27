@@ -189,9 +189,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Providers>
+          {/* First focusable element on every page: without it a keyboard or
+              screen-reader visitor tabbed the whole navigation again on each
+              route, and #main-content existed with nothing pointing at it. */}
+          <a href="#main-content" className="skip-link">Skip to content</a>
           <AnnouncementBar />
           <Nav />
-          {children}
+          <main id="main-content">{children}</main>
           <Footer />
           <StickyMobileCTA />
         </Providers>

@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/makeup-plantation-fl`
 export const metadata: Metadata = {
   title: 'Makeup Artist in Plantation, FL',
   description:
-    'Professional makeup application in Plantation, Florida: bridal makeup, event makeup, and everyday glam at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your makeup appointment online.',
+    'Makeup in Plantation, Florida: bridal, event and everyday glam at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your appointment online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/nails-plantation-fl`
 export const metadata: Metadata = {
   title: 'Nail Salon in Plantation, FL',
   description:
-    'Professional manicure, pedicure, gel nails, and nail art in Plantation, Florida at Blend Hair Boutique. Luxury nail services in a full-service beauty boutique. 4.9★ · 1,230+ reviews. Book online.',
+    'Manicures, pedicures, gel nails and nail art in Plantation, Florida, inside a full-service beauty boutique. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

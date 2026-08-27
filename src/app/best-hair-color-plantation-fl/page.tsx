@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/best-hair-color-plantation-fl`
 export const metadata: Metadata = {
   title: 'Best Hair Color in Plantation, FL',
   description:
-    'Find the best hair color in Plantation, FL at Blend Hair Boutique. Balayage, highlights, all-over color, and color correction by expert colorists. 4.9★ · 1,230+ reviews. Book online.',
+    'The best hair colour in Plantation, FL: balayage, highlights, all-over colour and correction by expert colourists. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

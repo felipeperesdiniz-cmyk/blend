@@ -4,11 +4,23 @@ import Link from 'next/link'
 import { Instagram } from 'lucide-react'
 import { BUSINESS, pageTitle, OG_IMAGE } from '@/data/constants'
 import { TEAM } from '@/data/team'
+import TeamPortrait from '@/components/ui/TeamPortrait'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
 // The owners are presented together in the unified FoundersFeature block on
 // /team, so they no longer have standalone profile pages.
+// A stylist bio runs to two or three sentences, which pushed every profile's
+// meta description past the ~160 characters a search result shows — the close
+// was always the part that got cut. Trim on a word boundary instead.
+function metaDescription(name: string, specialty: string, bio: string) {
+  const lead = `${name}, ${specialty} at Blend Hair Boutique in Plantation, FL. `
+  const room = 158 - lead.length
+  if (bio.length <= room) return lead + bio
+  const cut = bio.slice(0, room)
+  return lead + cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:]$/, '') + '…'
+}
+
 const OWNER_IDS = ['juliana', 'fernanda']
 
 const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
@@ -137,12 +149,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     // Brand is appended by the root layout's title template.
     title: pageTitle(`${member.name} · ${member.specialty}`),
-    description: `Meet ${member.name}, ${member.specialty} at Blend Hair Boutique in Plantation, FL. ${member.bio} Book your appointment online.`,
+    description: metaDescription(member.name, member.specialty, member.bio),
     alternates: { canonical },
     openGraph: {
       images: [OG_IMAGE],
       title: `${member.name} | Blend Hair Boutique`,
-      description: `${member.specialty} at Blend Hair Boutique in Plantation, Florida. ${member.bio}`,
+      description: metaDescription(member.name, member.specialty, member.bio),
       url: canonical,
     },
   }
@@ -228,10 +240,10 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'start' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)', position: 'sticky', top: '6rem' }}>
-                <img
+                <TeamPortrait
                   src={member.image}
+                  name={member.name}
                   alt={`${member.name}, ${member.specialty} at Blend Hair Boutique in Plantation, FL`}
-                  loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>

@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/brazilian-hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Brazilian Hair Salon in Plantation, FL',
   description:
-    'Blend Hair Boutique is a Brazilian-owned luxury hair salon in Plantation, Florida. Specializing in Brazilian blowouts, keratin treatments, balayage, and hair color. 4.9★ · 1,230+ reviews.',
+    'A Brazilian-owned luxury hair salon in Plantation, Florida: Brazilian blowouts, keratin treatments, balayage and colour. 4.9★ · 1,230+ reviews.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

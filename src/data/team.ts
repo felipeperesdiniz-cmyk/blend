@@ -5,7 +5,9 @@ export interface TeamMember {
   bio: string
   languages: string
   instagram?: string
-  image: string
+  // Optional: a member without a photo gets a monogram tile rather than a
+  // stock stranger standing in for them.
+  image?: string
 }
 
 export const TEAM: TeamMember[] = [
@@ -41,7 +43,6 @@ export const TEAM: TeamMember[] = [
     bio: 'Léa was among the first at Blend to do extensions, and she is still the one to ask for curly cutting. Blondes are her specialty. Six years here, Brazilian.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/leaaraujooficial',
-    image: 'https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'beatriz',
@@ -103,7 +104,6 @@ export const TEAM: TeamMember[] = [
     specialty: 'Master Stylist',
     bio: 'Born in Brazil, raised in South Florida, twenty years behind the chair. Nina cuts both women’s and men’s hair and stays with a client from start to finish.',
     languages: 'English, Portuguese',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 'nilza',

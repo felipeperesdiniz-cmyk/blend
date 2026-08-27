@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'Hair Color & Styling Gallery',
   description:
-    'Browse the Blend Hair Boutique gallery: balayage, blonde highlights, brunette color, Brazilian blowout, keratin, bridal hair, and nail art. Located in Plantation, Florida.',
+    'Real work from Blend Hair Boutique, Plantation FL: balayage, blonde highlights, brunette colour, Brazilian blowout, bridal hair and nail art.',
   alternates: { canonical: `${SITE_URL}/gallery` },
   openGraph: {
     images: [OG_IMAGE],

@@ -8,7 +8,7 @@ const CANONICAL = `${SITE_URL}/reviews`
 export const metadata: Metadata = {
   title: 'Reviews · 4.9★ from 1,230+ Clients',
   description:
-    'Read what Plantation, FL clients say about Blend Hair Boutique. 4.9★ rated across 1,230+ Google reviews. Balayage, haircuts, keratin, nails, and more. See why we\'re Broward\'s most-loved salon.',
+    'What Plantation, FL clients say about Blend Hair Boutique — 4.9★ across 1,230+ Google reviews for balayage, haircuts, keratin and nails.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

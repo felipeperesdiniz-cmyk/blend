@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/hair-color-plantation`
 export const metadata: Metadata = {
   title: 'Hair Color Services in Plantation, FL',
   description:
-    'Professional hair color services in Plantation, Florida at Blend Hair Boutique. All-over color, highlights, glossing, toning, balayage, and color correction. 4.9★ rated salon. Book online.',
+    'Hair colour in Plantation, Florida: all-over colour, highlights, glossing, toning, balayage and correction. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

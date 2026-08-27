@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/waxing-plantation-fl`
 export const metadata: Metadata = {
   title: 'Waxing in Plantation, FL',
   description:
-    'Professional waxing services in Plantation, Florida: eyebrow waxing, facial waxing, full and partial body waxing at Blend Hair Boutique. Gentle, precise, and effective. 4.9★ · 1,230+ reviews. Book online.',
+    'Waxing in Plantation, Florida: eyebrow, facial and body waxing at Blend Hair Boutique. Gentle, precise, effective. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -122,9 +122,9 @@ export default function WaxingPlantationPage() {
                   From a quick eyebrow cleanup to a full-body wax before vacation, we take every service seriously. Our team will assess your skin sensitivity and hair type to select the right technique and wax formula for your specific needs.
                 </p>
               </div>
-              <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
+              <div style={{ overflow: 'hidden', aspectRatio: '1/1', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+                  src="/images/services/waxing.webp"
                   alt="Waxing services at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}

@@ -34,9 +34,9 @@ const CSP = [
   // Google Fonts actual font files are served from fonts.gstatic.com.
   "font-src 'self' https://fonts.gstatic.com",
 
-  // Images: local assets, base64 data URIs, blob URLs (Next.js image
-  // optimization), and Unsplash CDN used throughout the gallery.
-  "img-src 'self' data: blob: https://images.unsplash.com",
+  // Images: local assets, base64 data URIs and blob URLs only. Every photo on
+  // the site is now the salon's own, so no third-party image host is needed.
+  "img-src 'self' data: blob:",
 
   // No external fetch/XHR from the client — static site with no API calls.
   "connect-src 'self'",
@@ -129,18 +129,6 @@ const nextConfig: NextConfig = {
   // Remove the "X-Powered-By: Next.js" response header — it tells attackers
   // which framework (and version) to target.
   poweredByHeader: false,
-
-  // Only allow Next.js Image optimisation to pull from Unsplash.
-  // Any other remote hostname will be rejected at the CDN level.
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
-      },
-    ],
-  },
 
   // Attach security headers to every response the app serves.
   async headers() {

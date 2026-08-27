@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/bridal-hair-south-florida`
 export const metadata: Metadata = {
   title: 'Bridal Hair in South Florida',
   description:
-    'Luxury bridal hair and beauty packages in South Florida at Blend Hair Boutique, Plantation, FL. Bridal trials, day-of styling, bridal party packages. 4.9★ rated salon. Book your consultation.',
+    'Bridal hair and beauty in South Florida: trials, day-of styling and bridal party packages at Blend Hair Boutique, Plantation FL. Book a consultation.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

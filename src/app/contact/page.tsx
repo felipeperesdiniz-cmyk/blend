@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'Contact & Location · Plantation, FL',
   description:
-    'Contact Blend Hair Boutique in Plantation, FL. Book online 24/7, call (754) 206-3501, or visit us at 10035 Cleary Blvd, Plantation, FL 33324. Open Mon 10–5, Tue–Sat 10–7.',
+    'Contact Blend Hair Boutique, Plantation FL. Book online 24/7, call (754) 206-3501, or visit 10035 Cleary Blvd. Open Mon–Wed 9–6, Thu–Sat 9–7.',
   alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
     images: [OG_IMAGE],

@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/color-correction-plantation-fl`
 export const metadata: Metadata = {
   title: 'Color Correction in Plantation, FL',
   description:
-    'Expert color correction in Plantation, Florida. Fix brassiness, uneven color, box dye damage, and over-processed hair at Blend Hair Boutique. Advanced colorists. 4.9★ · 1,230+ reviews. Book a consultation.',
+    'Colour correction in Plantation, Florida — brassiness, uneven colour, box dye and over-processed hair, fixed by advanced colourists. 4.9★ rated.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

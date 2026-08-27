@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/haircuts-plantation-fl`
 export const metadata: Metadata = {
   title: 'Haircuts in Plantation, FL',
   description:
-    'Precision haircuts for women and men in Plantation, Florida at Blend Hair Boutique. Lived-in layers, bobs, curtain bangs, blunt cuts, and custom styling by expert stylists. 4.9★ · 1,230+ reviews. Book online.',
+    'Precision haircuts for women and men in Plantation, FL: lived-in layers, bobs, curtain bangs and blunt cuts. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

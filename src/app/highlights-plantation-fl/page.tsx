@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/highlights-plantation-fl`
 export const metadata: Metadata = {
   title: 'Hair Highlights in Plantation, FL',
   description:
-    'Professional hair highlights in Plantation, Florida: foil highlights, babylights, money piece, and partial highlights at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your color appointment online.',
+    'Highlights in Plantation, Florida: foils, babylights, money piece and partial highlights. 4.9★ · 1,230+ reviews. Book your colour appointment.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

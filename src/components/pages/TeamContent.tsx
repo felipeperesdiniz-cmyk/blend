@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Instagram } from 'lucide-react'
 import Link from 'next/link'
 import { TEAM } from '@/data/team'
+import TeamPortrait from '@/components/ui/TeamPortrait'
 import { BUSINESS } from '@/data/constants'
 import FoundersFeature from '@/components/FoundersFeature'
 import CTASection from '@/components/sections/CTASection'
@@ -70,13 +71,11 @@ export default function TeamContent() {
                   style={{ animationDelay: `${(i % 3) * 0.06}s` }}
                 >
                   <Link href={`/team/${member.id}`} style={{ display: 'block', overflow: 'hidden', aspectRatio: '3/4', background: 'var(--bg-soft)', marginBottom: '1.75rem', textDecoration: 'none' }}>
-                    <img
+                    <TeamPortrait
                       src={member.image}
+                      name={member.name}
                       alt={`${member.name}, ${td.specialty}`}
-                      loading="lazy" decoding="async"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', transition: 'transform 0.7s var(--ease)' }}
-                      onMouseEnter={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1.04)' }}
-                      onMouseLeave={(e) => { (e.target as HTMLImageElement).style.transform = 'scale(1)' }}
                     />
                   </Link>
                   <div>

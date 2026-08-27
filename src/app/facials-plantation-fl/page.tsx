@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/facials-plantation-fl`
 export const metadata: Metadata = {
   title: 'Facials in Plantation, FL',
   description:
-    'Custom facials, hydrating treatments, and skin care services in Plantation, Florida at Blend Hair Boutique. Personalized to your skin type. 4.9★ · 1,230+ reviews. Book your facial appointment online.',
+    'Custom facials and skin treatments in Plantation, Florida, matched to your skin type. 4.9★ · 1,230+ reviews. Book your facial online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -122,9 +122,9 @@ export default function FacialsPlantationPage() {
                   South Florida's climate, hot, humid, and sun-intensive, places unique demands on skin. Our facials are designed with this environment in mind, helping to address sun damage, clogged pores from sweat and humidity, and dehydration from excessive air conditioning exposure.
                 </p>
               </div>
-              <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
+              <div style={{ overflow: 'hidden', aspectRatio: '1/1', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1596178067620-c9a7b6abe7c6?auto=format&fit=crop&w=800&q=80"
+                  src="/images/services/facials.webp"
                   alt="Facial treatment at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}

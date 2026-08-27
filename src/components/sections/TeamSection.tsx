@@ -4,6 +4,7 @@ import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import FoundersFeature from '@/components/FoundersFeature'
 import { TEAM } from '@/data/team'
+import TeamPortrait from '@/components/ui/TeamPortrait'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
@@ -43,10 +44,10 @@ export default function TeamSection() {
               style={{ animationDelay: `${(i % 4) * 0.06}s` }}
             >
               <div className="team-card__img-wrap">
-                <img
+                <TeamPortrait
                   src={member.image}
+                  name={member.name}
                   alt={`${member.name}, ${teamData[index].specialty} at Blend Hair Boutique`}
-                  loading="lazy" decoding="async"
                 />
               </div>
               <div className="team-card__body">

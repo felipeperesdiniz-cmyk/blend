@@ -16,7 +16,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'Blend Hair Boutique | Luxury Hair Salon in Plantation, FL',
   description:
-    'Blend Hair Boutique is a luxury hair salon in Plantation, Florida. Specializing in balayage, Brazilian blowout, keratin treatments, haircuts, nails, facials, and bridal beauty. Book online 24/7.',
+    'A luxury hair salon in Plantation, Florida for balayage, Brazilian blowout, keratin, haircuts, nails and bridal beauty. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     images: [OG_IMAGE],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main id="main-content">
+    <>
       <HeroSection />
       <TrustBar />
       <ServicesSection />
@@ -40,6 +40,6 @@ export default function HomePage() {
       <ReviewsSection />
       <ContactSection />
       <CTASection />
-    </main>
+    </>
   )
 }

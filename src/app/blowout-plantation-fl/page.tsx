@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/blowout-plantation-fl`
 export const metadata: Metadata = {
   title: 'Blowout in Plantation, FL',
   description:
-    'Professional blowout and styling services in Plantation, Florida. Smooth, voluminous, or beachy wave blowouts at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Walk-in friendly. Book online.',
+    'Blowouts and styling in Plantation, Florida — smooth, voluminous or beachy waves. 4.9★ · 1,230+ reviews. Walk-in friendly. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

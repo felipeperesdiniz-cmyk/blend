@@ -7,7 +7,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'About Our Salon in Plantation, FL',
   description:
-    'Learn the story behind Blend Hair Boutique, a Brazilian-inspired luxury hair salon and beauty boutique in Plantation, Florida. Meet our values, our team, and our commitment to personalized beauty.',
+    'The story behind Blend Hair Boutique, a Brazilian-owned luxury salon in Plantation, Florida — our values, our team, and how we work. 4.9★ · 1,230+ reviews.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     images: [OG_IMAGE],

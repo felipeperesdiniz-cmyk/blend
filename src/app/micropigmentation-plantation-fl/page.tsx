@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/micropigmentation-plantation-fl`
 export const metadata: Metadata = {
   title: 'Micropigmentation in Plantation, FL',
   description:
-    'Professional micropigmentation and permanent makeup in Plantation, Florida: eyebrow microblading, ombre brows, and lip blushing at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book a consultation.',
+    'Permanent makeup in Plantation, Florida: eyebrow microblading, ombre brows and lip blushing at Blend Hair Boutique. Book a consultation.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -122,9 +122,9 @@ export default function MicropigmentationPlantationPage() {
                   We use premium pigments, professional-grade tools, and meticulous technique to create results that look genuinely natural and beautifully crafted. Whether you want barely-there definition or bold, defined brows, we'll create the look that's right for you.
                 </p>
               </div>
-              <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
+              <div style={{ overflow: 'hidden', aspectRatio: '1/1', background: 'var(--bg-soft)' }}>
                 <img
-                  src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80"
+                  src="/images/services/eyebrows.webp"
                   alt="Micropigmentation and eyebrow treatment at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}

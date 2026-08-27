@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/best-balayage-plantation-fl`
 export const metadata: Metadata = {
   title: 'Best Balayage in Plantation, FL',
   description:
-    'Looking for the best balayage in Plantation, FL? Blend Hair Boutique has 1,230+ Google reviews and a 4.9★ rating. Expert hand-painted balayage by certified color specialists. Book online.',
+    'Looking for the best balayage in Plantation, FL? 1,230+ Google reviews at 4.9★, hand-painted by certified colour specialists. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

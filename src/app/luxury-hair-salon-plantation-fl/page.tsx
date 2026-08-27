@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/luxury-hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Luxury Hair Salon in Plantation, FL',
   description:
-    'Blend Hair Boutique is a luxury hair salon in Plantation, Florida offering world-class balayage, color, keratin treatments, extensions, and bridal beauty. 4.9★ · 1,230+ reviews. Book online.',
+    'A luxury hair salon in Plantation, Florida for balayage, colour, keratin, extensions and bridal beauty. 4.9★ · 1,230+ reviews. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

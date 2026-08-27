@@ -10,7 +10,7 @@ const CANONICAL = `${SITE_URL}/faq`
 export const metadata: Metadata = {
   title: 'Hair Salon FAQ · Plantation, FL',
   description:
-    'Answers to 130+ questions about Blend Hair Boutique in Plantation, FL: booking, policies, balayage, keratin, extensions, haircuts, nails, brows, lashes, facials, waxing, and makeup. 4.9★ salon.',
+    'Answers to the questions we are asked most at Blend Hair Boutique, Plantation FL: booking, policies, balayage, keratin, extensions, nails and brows.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

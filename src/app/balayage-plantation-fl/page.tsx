@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/balayage-plantation-fl`
 export const metadata: Metadata = {
   title: 'Balayage in Plantation, FL',
   description:
-    'Expert balayage in Plantation, Florida at Blend Hair Boutique. Hand-painted, custom balayage, highlights, and ombre tailored to your hair texture and skin tone. 4.9★ rated salon. Book online.',
+    'Hand-painted balayage in Plantation, Florida, tailored to your hair texture and skin tone. Highlights and ombre too. 4.9★ rated salon. Book online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

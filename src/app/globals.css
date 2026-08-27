@@ -376,6 +376,31 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .lang-switcher { display: none; }
 }
 
+/* ─── Skip link ───────────────────────────────────────────────
+   Off-screen until focused, then a real target sitting above the
+   fixed nav. */
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  z-index: 200;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  transition: transform var(--t-fast) var(--ease);
+}
+.skip-link:focus-visible {
+  transform: translate(-50%, 0);
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* ─── Mobile Menu ────────────────────────────────────────────── */
 .mobile-menu {
   position: fixed;

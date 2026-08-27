@@ -8,7 +8,7 @@ const CANONICAL = `${SITE_URL}/gift-cards`
 export const metadata: Metadata = {
   title: 'Salon Gift Cards · Plantation, FL',
   description:
-    'Give the gift of luxury beauty at Blend Hair Boutique in Plantation, FL. Salon gift cards redeemable for any service: balayage, color, keratin, nails, facials, and more. Buy online.',
+    'Salon gift cards from Blend Hair Boutique, Plantation FL, redeemable against any service: balayage, colour, keratin, nails and facials. Buy online.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

@@ -8,7 +8,7 @@ const SITE_URL = 'https://www.blendhairboutique.com'
 export const metadata: Metadata = {
   title: 'Our Hair & Beauty Team, Plantation FL',
   description:
-    'Meet the stylists and beauty specialists at Blend Hair Boutique in Plantation, FL. Multilingual team (English, Portuguese, Spanish) specializing in color, balayage, smoothing, extensions, nails, and bridal beauty.',
+    'Meet the stylists and beauty specialists at Blend Hair Boutique, Plantation FL. A multilingual team working in colour, smoothing, extensions, nails and bridal.',
   alternates: { canonical: `${SITE_URL}/team` },
   openGraph: {
     images: [OG_IMAGE],

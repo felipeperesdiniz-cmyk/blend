@@ -1,6 +1,7 @@
 'use client'
 import { LangProvider } from '@/context/LangContext'
 import { ReactLenis } from 'lenis/react'
+import { MotionConfig } from 'framer-motion'
 import 'lenis/dist/lenis.css'
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
@@ -35,7 +36,12 @@ export default function Providers({ children }: { children: ReactNode }) {
         allowNestedScroll: true,
       }}
     >
-      <LangProvider>{children}</LangProvider>
+      {/* reducedMotion="user" makes every framer-motion component honour the OS
+          setting. Nine components animate on entrance and none of them checked
+          it, so the reveals still ran for people who had asked them not to. */}
+      <MotionConfig reducedMotion="user">
+        <LangProvider>{children}</LangProvider>
+      </MotionConfig>
     </ReactLenis>
   )
 }
