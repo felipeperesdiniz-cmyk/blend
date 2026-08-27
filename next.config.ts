@@ -152,66 +152,14 @@ const nextConfig: NextConfig = {
     ]
   },
 
-  // ── Legacy URL Redirects (301 Permanent) ──────────────────────────────────
-  // Maps every URL from the old Fresha-hosted site to the new site.
-  // All redirects resolve in a single hop — no chains, no loops.
-  async redirects() {
-    return [
-      // Home variants
-      { source: '/home', destination: '/', permanent: true },
+  // ── Legacy URL Redirects ──────────────────────────────────────────────────
+  // The redirect table lives in vercel.json, not here. Vercel applies its own
+  // redirects at the edge before a request ever reaches the Next.js app, so
+  // when both files defined rules the vercel.json ones silently won — and the
+  // two had drifted apart: every /portfolio/* URL landed on /services while
+  // this file believed it was sending them to the matching service page.
+  // One table, at the layer that actually runs.
 
-      // Owners no longer have standalone profiles — send to the team page
-      // where they appear together in the unified founders block.
-      { source: '/team/juliana', destination: '/team', permanent: true },
-      { source: '/team/fernanda', destination: '/team', permanent: true },
-
-      // Contact / forms
-      { source: '/client-form', destination: '/contact', permanent: true },
-      { source: '/thank-you', destination: '/', permanent: true },
-
-      // Gallery
-      { source: '/galleries', destination: '/gallery', permanent: true },
-      { source: '/gallery/:path+', destination: '/gallery', permanent: true },
-
-      // Portfolio → service pages
-      { source: '/portfolio/hair-color', destination: '/hair-color-plantation', permanent: true },
-      { source: '/portfolio/hair-color/:path+', destination: '/hair-color-plantation', permanent: true },
-
-      { source: '/portfolio/hair-cut', destination: '/haircuts-plantation-fl', permanent: true },
-      { source: '/portfolio/hair-cut/:path+', destination: '/haircuts-plantation-fl', permanent: true },
-
-      { source: '/portfolio/hair-stylist', destination: '/blowout-plantation-fl', permanent: true },
-      { source: '/portfolio/hair-stylist/:path+', destination: '/blowout-plantation-fl', permanent: true },
-
-      { source: '/portfolio/smoothing-treatment', destination: '/keratin-treatment-plantation', permanent: true },
-      { source: '/portfolio/smoothing-treatment/:path+', destination: '/keratin-treatment-plantation', permanent: true },
-
-      { source: '/portfolio/eyebrows', destination: '/micropigmentation-plantation-fl', permanent: true },
-      { source: '/portfolio/eyebrows/:path+', destination: '/micropigmentation-plantation-fl', permanent: true },
-
-      { source: '/portfolio/lips', destination: '/micropigmentation-plantation-fl', permanent: true },
-      { source: '/portfolio/lips/:path+', destination: '/micropigmentation-plantation-fl', permanent: true },
-
-      { source: '/portfolio/make-up', destination: '/makeup-plantation-fl', permanent: true },
-      { source: '/portfolio/make-up/:path+', destination: '/makeup-plantation-fl', permanent: true },
-
-      { source: '/portfolio/nails', destination: '/nails-plantation-fl', permanent: true },
-      { source: '/portfolio/nails/:path+', destination: '/nails-plantation-fl', permanent: true },
-
-      { source: '/portfolio/waxing', destination: '/waxing-plantation-fl', permanent: true },
-      { source: '/portfolio/waxing/:path+', destination: '/waxing-plantation-fl', permanent: true },
-
-      // "tratament" = updo/styling on the old site
-      { source: '/portfolio/tratament', destination: '/blowout-plantation-fl', permanent: true },
-      { source: '/portfolio/tratament/:path+', destination: '/blowout-plantation-fl', permanent: true },
-
-      // Price list → services hub
-      { source: '/price-list', destination: '/services', permanent: true },
-
-      // Testimonials → reviews
-      { source: '/testimonials', destination: '/reviews', permanent: true },
-    ]
-  },
 }
 
 export default nextConfig

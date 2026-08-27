@@ -1,6 +1,8 @@
 'use client'
 import { useCallback, useEffect, useRef } from 'react'
 import { useLenis } from 'lenis/react'
+import { useLang } from '@/context/LangContext'
+import { T } from '@/data/translations'
 
 // Where a line starts and finishes its reveal, as a fraction of viewport height.
 // Because every line is mapped against its own position, the stagger falls out
@@ -10,6 +12,8 @@ const SETTLE = 0.55
 const TRAVEL = 30 // px the line rises through
 
 export default function PhilosophySection() {
+  const { lang } = useLang()
+  const t = T[lang].philosophy
   const innerRef = useRef<HTMLDivElement>(null)
   const linesRef = useRef<HTMLElement[]>([])
   const reducedRef = useRef(false)
@@ -73,17 +77,17 @@ export default function PhilosophySection() {
         <div className="philosophy__line philosophy__line--grow" aria-hidden />
 
         <p className="philosophy__eyebrow" data-reveal>
-          The Blend Philosophy
+          {t.eyebrow}
         </p>
 
         <blockquote className="philosophy__quote">
-          <span className="philosophy__quote-line" data-reveal>Beauty is a ritual.</span>
-          <span className="philosophy__quote-line" data-reveal>Artistry is our craft.</span>
-          <span className="philosophy__quote-line" data-reveal><em>Warmth is our nature.</em></span>
+          <span className="philosophy__quote-line" data-reveal>{t.lines[0]}</span>
+          <span className="philosophy__quote-line" data-reveal>{t.lines[1]}</span>
+          <span className="philosophy__quote-line" data-reveal><em>{t.lines[2]}</em></span>
         </blockquote>
 
         <p className="philosophy__meta" data-reveal>
-          Blend Hair Boutique · Plantation, Florida · Est. 2018
+          {t.meta}
         </p>
 
         <div

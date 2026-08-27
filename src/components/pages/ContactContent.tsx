@@ -8,28 +8,46 @@ import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
 export default function ContactContent() {
-  const [sent, setSent] = useState(false)
+  // 'blocked' is not a cosmetic state: if the WhatsApp window never opened, the
+  // message has gone nowhere, and saying "thank you" would be a lie the salon
+  // pays for in missed enquiries.
+  const [status, setStatus] = useState<'idle' | 'handed-off' | 'blocked'>('idle')
+  const [draft, setDraft] = useState('')
   const { lang } = useLang()
   const t = T[lang].pages.contact
   const tc = T[lang].contact
   const fields = t.fields
 
+  const compose = (data: FormData) =>
+    `Hi Blend! My name is ${data.get('name')} (${data.get('email')}).\n` +
+    `Service of interest: ${data.get('service')}\n\n${data.get('message')}`
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.currentTarget
-    const data = new FormData(form)
-    const name    = data.get('name')    as string
-    const email   = data.get('email')   as string
-    const service = data.get('service') as string
-    const message = data.get('message') as string
+    const body = compose(new FormData(form))
+    setDraft(body)
 
-    const text = encodeURIComponent(
-      `Hi Blend! My name is ${name} (${email}).\nService of interest: ${service}\n\n${message}`
-    )
-    window.open(`${BUSINESS.whatsapp}?text=${text}`, '_blank')
-    setSent(true)
+    const win = window.open(`${BUSINESS.whatsapp}?text=${encodeURIComponent(body)}`, '_blank')
+
+    // A blocked pop-up returns null. Keep what they typed on screen so the
+    // email fallback is one click rather than a retype.
+    if (!win) {
+      setStatus('blocked')
+      return
+    }
+    setStatus('handed-off')
     form.reset()
   }
+
+  // A link click is a user gesture, so this survives the pop-up blocker that
+  // stopped window.open.
+  const whatsappHref = `${BUSINESS.whatsapp}?text=${encodeURIComponent(draft)}`
+
+  const mailtoHref =
+    `mailto:${BUSINESS.email}` +
+    `?subject=${encodeURIComponent('Enquiry from the website')}` +
+    `&body=${encodeURIComponent(draft)}`
 
   return (
     <div className="page-enter">
@@ -154,21 +172,38 @@ export default function ContactContent() {
                   {t.formBody}
                 </p>
 
-                {sent ? (
+                {status !== 'idle' ? (
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     style={{ padding: '2rem', textAlign: 'center', background: 'var(--bg-soft)' }}
+                    role="status"
                   >
                     <p style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>
-                      {t.formSentTitle}
+                      {status === 'blocked' ? t.formBlockedTitle : t.formSentTitle}
                     </p>
                     <p style={{ fontSize: '1rem', color: 'var(--text-2)', fontWeight: 300 }}>
-                      {t.formSentBody}
+                      {status === 'blocked' ? t.formBlockedBody : t.formSentBody}
                     </p>
-                    <button onClick={() => setSent(false)} className="btn btn--outline" style={{ marginTop: '1.5rem', fontSize: '0.88rem' }}>
-                      {fields.submit}
-                    </button>
+                    <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                      {status === 'blocked' ? (
+                        <>
+                          <a href={mailtoHref} className="btn btn--cta-gold" style={{ fontSize: '0.88rem' }}>
+                            {t.formEmailInstead}
+                          </a>
+                          <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
+                            {t.formTryAgain}
+                          </a>
+                          <a href={BUSINESS.phoneHref} className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
+                            {BUSINESS.phone}
+                          </a>
+                        </>
+                      ) : (
+                        <button onClick={() => setStatus('idle')} className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
+                          {t.formWriteAnother}
+                        </button>
+                      )}
+                    </div>
                   </motion.div>
                 ) : (
                   <form className="contact-form" onSubmit={handleSubmit}>

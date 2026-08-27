@@ -29,7 +29,10 @@ export const BUSINESS = {
 
   // Booking / Gift cards
   bookingUrl:  'https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer',
-  giftCardUrl: 'https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer',
+  // Fresha's own gift card checkout for this venue. It used to point at the
+  // general booking URL, which dropped anyone trying to buy a gift into a
+  // service picker with no gift card in sight.
+  giftCardUrl: 'https://www.fresha.com/a/blend-hair-boutique-plantation-10035-cleary-blvd-xxr1ujbz/gift-cards?menu=true',
 
   // Google Maps — directions link + embed URL
   mapsDirections: 'https://maps.google.com/?q=10035+Cleary+Blvd,+Plantation,+FL+33324',

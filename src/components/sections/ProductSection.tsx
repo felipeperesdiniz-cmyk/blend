@@ -1,14 +1,14 @@
 'use client'
 import SectionHeader from '@/components/ui/SectionHeader'
 import AnimatedSection from '@/components/ui/AnimatedSection'
-
-const features = [
-  { label: 'Professional-Grade Color:', body: 'We work with premium color lines including Keune, Wella, and Truss, chosen for vibrancy, lasting power, and hair health. They are the same products trusted by top salons across South Florida.' },
-  { label: 'Smoothing Treatments:', body: 'Our Brazilian keratin and botox smoothing treatments use FDA-approved Brazilian products, chosen for safety, longevity, and results that stand up to Florida\'s humidity.' },
-  { label: 'Home-Care Guidance:', body: 'Every client leaves with a personalized Kérastase home-care routine. It is a curated selection of professional-grade products that protects and extends their results between visits to our Plantation boutique.' },
-]
+import { useLang } from '@/context/LangContext'
+import { T } from '@/data/translations'
 
 export default function ProductSection() {
+  const { lang } = useLang()
+  const t = T[lang].products
+  const features = t.features
+
   return (
     <section className="section product-section" id="products">
       <div className="container">
@@ -25,9 +25,9 @@ export default function ProductSection() {
 
           <div>
             <SectionHeader
-              eyebrow="Premium Care"
-              h2={<>Professional Products,<br /><em>Real Results</em></>}
-              body="At Blend Hair Boutique in Plantation, Florida, we work exclusively with professional-grade products and color lines, because your hair deserves nothing less."
+              eyebrow={t.eyebrow}
+              h2={<>{t.h2a}<br /><em>{t.h2b}</em></>}
+              body={t.body}
               light
             />
 

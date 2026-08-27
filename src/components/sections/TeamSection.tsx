@@ -5,30 +5,38 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import FoundersFeature from '@/components/FoundersFeature'
 import { TEAM } from '@/data/team'
 import { BUSINESS } from '@/data/constants'
+import { useLang } from '@/context/LangContext'
+import { T } from '@/data/translations'
 
 const OWNER_IDS = ['juliana', 'fernanda']
 
-const staff = TEAM.filter((m) => !OWNER_IDS.includes(m.id))
+const staff = TEAM.map((member, index) => ({ member, index })).filter(
+  ({ member }) => !OWNER_IDS.includes(member.id),
+)
 
 export default function TeamSection() {
+  const { lang } = useLang()
+  const t = T[lang].homeTeam
+  const teamData = T[lang].teamData
+
   return (
     <section className="section section--ivory2" id="team">
       <div className="container">
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem', marginBottom: 'clamp(2.5rem, 4vw, 4.5rem)' }}>
           <SectionHeader
-            eyebrow="The Artists"
-            h2={<>Meet Your <em>Beauty Team</em></>}
+            eyebrow={t.eyebrow}
+            h2={<>{t.h2a}<em>{t.h2b}</em></>}
           />
           <Link href="/team" className="btn btn--outline" style={{ flexShrink: 0 }}>
-            Our Team
+            {t.allTeam}
           </Link>
         </div>
 
         <FoundersFeature />
 
-        <div className="team__label"><span>The Team</span></div>
+        <div className="team__label"><span>{t.label}</span></div>
         <div className="team-grid">
-          {staff.map((member, i) => (
+          {staff.map(({ member, index }, i) => (
             <article
               key={member.id}
               className="team-card fade-in-up"
@@ -37,13 +45,13 @@ export default function TeamSection() {
               <div className="team-card__img-wrap">
                 <img
                   src={member.image}
-                  alt={`${member.name}, ${member.specialty} at Blend Hair Boutique`}
+                  alt={`${member.name}, ${teamData[index].specialty} at Blend Hair Boutique`}
                   loading="lazy" decoding="async"
                 />
               </div>
               <div className="team-card__body">
                 <h3 className="team-card__name">{member.name}</h3>
-                <p className="team-card__specialty">{member.specialty}</p>
+                <p className="team-card__specialty">{teamData[index].specialty}</p>
                 {member.instagram ? (
                   <a
                     className="team-card__langs"
@@ -63,7 +71,7 @@ export default function TeamSection() {
                   rel="noopener noreferrer"
                   className="team-card__book"
                 >
-                  Book an Appointment
+                  {t.book}
                 </a>
               </div>
             </article>
