@@ -376,6 +376,28 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   .lang-switcher { display: none; }
 }
 
+/* ─── Forms ───────────────────────────────────────────────────
+   Name and email sat two-up at every width, which left each field 131px on a
+   375px screen — narrower than its own placeholder. */
+@media (max-width: 560px) {
+  .contact-form > div:first-of-type { grid-template-columns: 1fr !important; }
+}
+
+/* A 1px border shift was the only focus signal, and outline was switched off
+   entirely. Keyboard users need to see where they are. */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 2px solid var(--gold-dk);
+  outline-offset: 2px;
+  border-color: var(--ink);
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-dk);
+  outline-offset: 3px;
+}
+
 /* ─── Skip link ───────────────────────────────────────────────
    Off-screen until focused, then a real target sitting above the
    fixed nav. */

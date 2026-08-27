@@ -1,9 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS } from '@/data/constants'
 
+// A 404 that carries the homepage's title is indistinguishable from a page
+// that worked, in the tab and in browser history alike.
+export const metadata: Metadata = {
+  title: 'Page not found',
+  robots: { index: false, follow: true },
+}
+
 export default function NotFound() {
   return (
-    <main style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '4rem var(--gutter)' }}>
+    <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '4rem var(--gutter)' }}>
       <div>
         <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold-dk)', marginBottom: '1rem' }}>
           Page Not Found
@@ -22,6 +30,6 @@ export default function NotFound() {
           </a>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

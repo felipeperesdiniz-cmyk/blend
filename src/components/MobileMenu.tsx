@@ -1,5 +1,5 @@
 'use client'
-import { Fragment } from 'react'
+import { Fragment, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import { BUSINESS } from '@/data/constants'
@@ -28,6 +28,47 @@ const item = (i: number) => ({
 export default function MobileMenu({ open, onClose }: Props) {
   const { lang, setLang } = useLang()
   const t = T[lang].nav
+  const panelRef = useRef<HTMLDivElement>(null)
+
+  // A full-screen overlay that cannot be dismissed from the keyboard, and lets
+  // focus wander onto the page behind it, is a trap rather than a menu.
+  useEffect(() => {
+    if (!open) return
+
+    const panel = panelRef.current
+    const focusable = () =>
+      Array.from(
+        panel?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((el) => el.offsetParent !== null)
+
+    focusable()[0]?.focus()
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose()
+        return
+      }
+      if (e.key !== 'Tab') return
+      const items = focusable()
+      if (items.length === 0) return
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    // Capture phase on window so the menu closes even if something inside it
+    // stops the event before it would bubble to document.
+    window.addEventListener('keydown', onKeyDown, true)
+    return () => window.removeEventListener('keydown', onKeyDown, true)
+  }, [open, onClose])
 
   const links = [
     { label: t.services,    href: '/services' },
@@ -50,6 +91,10 @@ export default function MobileMenu({ open, onClose }: Props) {
           initial="hidden"
           animate="visible"
           exit="exit"
+          ref={panelRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={t.menuLabel}
         >
           <nav className="mobile-menu__links">
             {links.map((l, i) => (

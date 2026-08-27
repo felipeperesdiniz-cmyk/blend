@@ -3,6 +3,7 @@ import { Star } from 'lucide-react'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import { REVIEWS, REVIEW_COUNT } from '@/data/constants'
 
 export default function ReviewsSection() {
   const { lang } = useLang()
@@ -70,7 +71,7 @@ export default function ReviewsSection() {
         <div className="reviews-rating-strip fade-in-up">
           <span className="reviews-rating-strip__stars">★★★★★</span>
           <span className="reviews-rating-strip__text">
-            <strong>4.9</strong> &nbsp;·&nbsp; 1,230+ {t.googleRating}
+            <strong>{REVIEWS.rating}</strong> &nbsp;·&nbsp; {REVIEW_COUNT}+ {t.googleRating}
           </span>
         </div>
 

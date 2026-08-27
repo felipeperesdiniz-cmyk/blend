@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -9,12 +9,12 @@ const CANONICAL = `${SITE_URL}/hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Hair Salon Plantation FL · Near Me',
   description:
-    'Plantation\'s most-loved luxury hair salon, rated 4.9★ across 1,230+ reviews. Balayage, haircuts, keratin, nails, facials and waxing. Book online 24/7.',
+    `Plantation's most-loved luxury hair salon, rated 4.9★ across ${REVIEW_COUNT}+ reviews. Balayage, haircuts, keratin, nails, facials and waxing. Book online 24/7.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
     title: 'Hair Salon Plantation FL | Blend Hair Boutique',
-    description: 'Plantation\'s most-loved luxury hair salon. 4.9★ · 1,230+ Google reviews. Balayage, cuts, keratin, nails, facials & more. Book online 24/7.',
+    description: `Plantation's most-loved luxury hair salon. 4.9★ · ${REVIEW_COUNT}+ Google reviews. Balayage, cuts, keratin, nails, facials & more. Book online 24/7.`,
     url: CANONICAL,
   },
 }
@@ -109,7 +109,7 @@ export default function HairSalonPlantationPage() {
               The Best Hair Salon<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '50ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across 1,230+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences, delivered with Brazilian warmth and precision.
+              Blend Hair Boutique is a full-service luxury hair and beauty salon in Plantation, Florida. With a 4.9-star rating across ${REVIEW_COUNT}+ Google reviews, we are Broward County's most trusted destination for balayage, haircuts, keratin treatments, nails, facials, and complete beauty experiences, delivered with Brazilian warmth and precision.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
@@ -128,7 +128,7 @@ export default function HairSalonPlantationPage() {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center', alignItems: 'center' }}>
               {[
                 '4.9 ★ Google Rating',
-                '1,230+ Verified Reviews',
+                `${REVIEW_COUNT}+ Verified Reviews`,
                 'Brazilian Specialists',
                 'Open Since 2018',
                 'Plantation, FL 33324',
@@ -213,7 +213,7 @@ export default function HairSalonPlantationPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: '4.9 Stars · 1,230+ Reviews', body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought. They\'re earned, one client at a time, since 2018.' },
+                { title: `4.9 Stars · ${REVIEW_COUNT}+ Reviews`, body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought. They\'re earned, one client at a time, since 2018.' },
                 { title: 'Brazilian Expertise', body: 'Our team brings the precision, warmth, and hair culture of Brazil to Plantation, FL. Brazilian stylists are world-renowned for their mastery of color, texture, and smoothing techniques.' },
                 { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish, ensuring every client can communicate exactly what they want and feel completely understood.' },
                 { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup, all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },

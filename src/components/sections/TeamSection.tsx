@@ -11,9 +11,14 @@ import { T } from '@/data/translations'
 
 const OWNER_IDS = ['juliana', 'fernanda']
 
-const staff = TEAM.map((member, index) => ({ member, index })).filter(
-  ({ member }) => !OWNER_IDS.includes(member.id),
-)
+// The homepage shows a first handful and sends the rest to /team: printing all
+// seventeen made the section the tallest block on the page and pushed the
+// closing call to action four thousand pixels down.
+const HOMEPAGE_COUNT = 8
+
+const staff = TEAM.map((member, index) => ({ member, index }))
+  .filter(({ member }) => !OWNER_IDS.includes(member.id))
+  .slice(0, HOMEPAGE_COUNT)
 
 export default function TeamSection() {
   const { lang } = useLang()

@@ -88,6 +88,11 @@ const group = (n: number, sep: string) =>
 
 // The figures are identical in all three locales; only the separator and the
 // surrounding words change. en-US groups with a comma, pt-BR and es with a period.
+// The count as it appears in prose and page metadata. It used to be typed by
+// hand in 30 places, so bumping REVIEWS.count left the meta descriptions
+// quoting a stale number.
+export const REVIEW_COUNT = group(REVIEWS.count, ',')
+
 export const REVIEW_LINE = {
   en: `${REVIEWS.rating} ★ · ${group(REVIEWS.count, ',')}+ Google Reviews`,
   pt: `${REVIEWS.rating} ★ · ${group(REVIEWS.count, '.')}+ Avaliações Google`,

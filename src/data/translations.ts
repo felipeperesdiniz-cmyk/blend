@@ -7,6 +7,7 @@ export const T = {
     announcement: '✦ Now booking · Book online for instant confirmation · (754) 206-3501',
 
     nav: {
+      menuLabel: 'Menu',
       services: 'Services',
       gallery: 'Gallery',
       team: 'Team',
@@ -949,6 +950,7 @@ export const T = {
     announcement: '✦ Agendamentos abertos · Agende online e confirme na hora · (754) 206-3501',
 
     nav: {
+      menuLabel: 'Menu',
       services: 'Serviços',
       gallery: 'Galeria',
       team: 'Equipe',
@@ -1878,6 +1880,7 @@ export const T = {
     announcement: '✦ Reservas abiertas · Reserva en línea para confirmación inmediata · (754) 206-3501',
 
     nav: {
+      menuLabel: 'Menú',
       services: 'Servicios',
       gallery: 'Galería',
       team: 'Equipo',

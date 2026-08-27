@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/makeup-plantation-fl`
 export const metadata: Metadata = {
   title: 'Makeup Artist in Plantation, FL',
   description:
-    'Makeup in Plantation, Florida: bridal, event and everyday glam at Blend Hair Boutique. 4.9★ · 1,230+ reviews. Book your appointment online.',
+    `Makeup in Plantation, Florida: bridal, event and everyday glam at Blend Hair Boutique. 4.9★ · ${REVIEW_COUNT}+ reviews. Book your appointment online.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

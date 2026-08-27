@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE } from '@/data/constants'
+import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -9,13 +9,13 @@ const CANONICAL = `${SITE_URL}/best-balayage-plantation-fl`
 export const metadata: Metadata = {
   title: 'Best Balayage in Plantation, FL',
   description:
-    'Looking for the best balayage in Plantation, FL? 1,230+ Google reviews at 4.9★, hand-painted by certified colour specialists. Book online.',
+    `Looking for the best balayage in Plantation, FL? ${REVIEW_COUNT}+ Google reviews at 4.9★, hand-painted by certified colour specialists. Book online.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
     title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',
     description:
-      'Plantation\'s top-rated balayage salon. 1,230+ Google reviews · 4.9★ · Expert hand-painted color by certified colorists. Book your balayage appointment at Blend Hair Boutique.',
+      `Plantation's top-rated balayage salon. ${REVIEW_COUNT}+ Google reviews · 4.9★ · Expert hand-painted color by certified colorists. Book your balayage appointment at Blend Hair Boutique.`,
     url: CANONICAL,
   },
 }
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: 'Why is Blend Hair Boutique considered one of the best balayage salons in Plantation?',
-    a: 'Blend has a 4.9-star rating across over 1,230 Google reviews, the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.',
+    a: `Blend has a 4.9-star rating across over ${REVIEW_COUNT} Google reviews, the vast majority of which mention color and balayage services specifically. Our colorists are trained in multiple balayage techniques (soft, bold, ombre, lived-in) and use a mandatory consultation process to ensure every result is personalized. We also use professional-grade color lines and Kérastase aftercare to protect hair integrity.`,
   },
   {
     q: 'How do I know if my hair is a good candidate for balayage?',
