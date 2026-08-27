@@ -4,6 +4,7 @@ import Link from 'next/link'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import Photo from '@/components/ui/Photo'
 import { GALLERY_ITEMS, FEATURED_IDS, gallerySrc } from '@/data/gallery'
 
 const GALLERY = FEATURED_IDS
@@ -45,10 +46,10 @@ export default function GallerySection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
-              <img
+              <Photo
                 src={item.src}
                 alt={`${labelMap[item.enLabel] ?? item.enLabel} at Blend Hair Boutique`}
-                loading="lazy" decoding="async"
+                sizes="(max-width: 768px) 50vw, 33vw"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: item.focus ?? 'center' }}
               />
             </motion.div>

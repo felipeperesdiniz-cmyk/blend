@@ -5,6 +5,7 @@ import { SERVICES } from '@/data/services'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import Photo from '@/components/ui/Photo'
 
 export default function ServicesSection() {
   const { lang } = useLang()
@@ -37,10 +38,10 @@ export default function ServicesSection() {
           className="svc-featured fade-in-up"
         >
           <div className="svc-featured__img">
-            <img
+            <Photo
               src={featuredService.image}
               alt={`${featuredData.title} at Blend Hair Boutique`}
-              loading="lazy" decoding="async"
+              sizes="(max-width: 768px) 100vw, 620px"
             />
           </div>
           <div className="svc-featured__body">

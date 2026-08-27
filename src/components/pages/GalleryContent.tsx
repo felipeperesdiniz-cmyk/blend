@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import CTASection from '@/components/sections/CTASection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import Photo from '@/components/ui/Photo'
 import { BUSINESS } from '@/data/constants'
 import { GALLERY_ITEMS, gallerySrc, type GallerySize } from '@/data/gallery'
 
@@ -70,7 +71,12 @@ export default function GalleryContent() {
               {ITEMS.map((item, idx) => (
                 <div key={item.id} className="gal-masonry__item">
                   <motion.div className="gal-item" style={{ aspectRatio: ASPECT[item.size] }} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: Math.min(idx * 0.055, 0.4) }} onClick={() => setLightbox(idx)}>
-                    <img src={item.src} alt={`${labelMap[item.enLabel] ?? item.enLabel} at Blend Hair Boutique, Plantation FL`} loading="lazy" decoding="async" style={item.focus ? { objectPosition: item.focus } : undefined} />
+                    <Photo
+                      src={item.src}
+                      alt={`${labelMap[item.enLabel] ?? item.enLabel} at Blend Hair Boutique, Plantation FL`}
+                      sizes="(max-width: 700px) 50vw, 30vw"
+                      style={item.focus ? { objectPosition: item.focus } : undefined}
+                    />
                     <div className="gal-item__expand" aria-hidden="true">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M7.5 1H11V4.5M4.5 11H1V7.5M11 1L6.5 5.5M1 11L5.5 6.5" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </div>

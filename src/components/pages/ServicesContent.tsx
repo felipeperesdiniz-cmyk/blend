@@ -8,6 +8,7 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import CTASection from '@/components/sections/CTASection'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
+import Photo from '@/components/ui/Photo'
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false)
@@ -74,10 +75,11 @@ export default function ServicesContent() {
               return (
                 <Link key={s.id} href={`/services/${s.id}`} className={`service-card${featured ? ' service-card--featured' : ''}`}>
                   <div className="service-card__img-wrap">
-                    <img
+                    <Photo
                       src={s.image}
                       alt={`${sd.title} at Blend Hair Boutique, Plantation FL`}
-                      loading={i < 3 ? 'eager' : 'lazy'}
+                      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 400px"
+                      eager={i < 3}
                     />
                     {sd.badge && <span className="service-card__badge">{sd.badge}</span>}
                   </div>
