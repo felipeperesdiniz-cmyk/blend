@@ -141,7 +141,7 @@ export default function ReviewsPage() {
               What Our <em>Clients</em> Say
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique has earned a 4.9-star rating from over ${REVIEW_COUNT} Google reviews, not through advertising, but through consistent, exceptional work delivered one client at a time since 2018.
+              Blend Hair Boutique has earned a 4.9-star rating from over {REVIEW_COUNT} Google reviews, not through advertising, but through consistent, exceptional work delivered one client at a time since 2018.
             </p>
           </div>
         </header>
@@ -157,7 +157,7 @@ export default function ReviewsPage() {
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
               <div style={{ textAlign: 'center' }}>
-                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>${REVIEW_COUNT}+</p>
+                <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(4rem, 8vw, 7rem)', fontWeight: 300, lineHeight: 1, color: 'var(--ink)', letterSpacing: '-0.03em' }}>{REVIEW_COUNT}+</p>
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', marginTop: '0.5rem', letterSpacing: '0.05em', textTransform: 'uppercase', fontWeight: 500 }}>Verified Reviews</p>
               </div>
               <div style={{ width: '1px', height: '80px', background: 'var(--line)' }} />
@@ -210,7 +210,7 @@ export default function ReviewsPage() {
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
             <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>On Google</p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
-              Read All ${REVIEW_COUNT}+<br /><em>Google Reviews</em>
+              Read All {REVIEW_COUNT}+<br /><em>Google Reviews</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Every one of our reviews is real, verified, and earned. See what Broward County clients say about Blend Hair Boutique on Google.
@@ -235,7 +235,7 @@ export default function ReviewsPage() {
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
             <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
-              Join ${REVIEW_COUNT}+ Happy Clients
+              Join {REVIEW_COUNT}+ Happy Clients
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
               Your turn to experience<br /><em>the Blend difference.</em>

@@ -43,6 +43,7 @@ export const TEAM: TeamMember[] = [
     bio: 'Léa was among the first at Blend to do extensions, and she is still the one to ask for curly cutting. Blondes are her specialty. Six years here, Brazilian.',
     languages: 'English, Portuguese',
     instagram: 'https://www.instagram.com/leaaraujooficial',
+    image: '/images/team/lea.jpg',
   },
   {
     id: 'beatriz',
@@ -97,13 +98,6 @@ export const TEAM: TeamMember[] = [
     languages: 'English',
     instagram: 'https://www.instagram.com/saintzstyles',
     image: '/images/team/tabby.webp',
-  },
-  {
-    id: 'nina',
-    name: 'Nina',
-    specialty: 'Master Stylist',
-    bio: 'Born in Brazil, raised in South Florida, twenty years behind the chair. Nina cuts both women’s and men’s hair and stays with a client from start to finish.',
-    languages: 'English, Portuguese',
   },
   {
     id: 'nilza',
