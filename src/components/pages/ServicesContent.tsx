@@ -44,10 +44,9 @@ export default function ServicesContent() {
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <p
-            className="fade-in-up"
-            style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
+            className="fade-in-up eyebrow eyebrow--on-dark"
           >
             {t.eyebrow}
           </p>

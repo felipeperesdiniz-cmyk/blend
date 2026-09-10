@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ContactContent from '@/components/pages/ContactContent'
 import { OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Contact & Location · Plantation, FL',
   description:
     'Contact Blend Hair Boutique, Plantation FL. Book online 24/7, call (754) 206-3501, or visit 10035 Cleary Blvd. Open Mon–Wed 9–6, Thu–Sat 9–7.',
-  alternates: { canonical: `${SITE_URL}/contact` },
+  alternates: hreflang('/contact', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Contact & Location | Blend Hair Boutique, Plantation, FL',

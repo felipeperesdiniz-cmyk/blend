@@ -4,12 +4,22 @@ import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE, REVIEW_COUNT } fr
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
-const CANONICAL = `${SITE_URL}/best-hair-color-plantation-fl`
+
+// This page's own address — for the JSON-LD @id and the breadcrumb, which
+// describe this document.
+const SELF = `${SITE_URL}/best-hair-color-plantation-fl`
+
+// The URL search engines should credit instead. Same reasoning as the
+// balayage pair: this and /hair-color-plantation answer one intent and
+// differ only by the word "best", so as two self-canonical URLs they split
+// the signals rather than compounding them. The page stays live and keeps its
+// own FAQ content; only the indexing credit moves to the primary.
+const CANONICAL = `${SITE_URL}/hair-color-plantation`
 
 export const metadata: Metadata = {
   title: 'Best Hair Color in Plantation, FL',
   description:
-    `The best hair colour in Plantation, FL: balayage, highlights, all-over colour and correction by expert colourists. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
+    `The best hair color in Plantation, FL: balayage, highlights, all-over color and correction by expert colorists. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -52,9 +62,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'Service',
-      '@id': `${SITE_URL}/best-hair-color-plantation-fl#service`,
+      '@id': `${SELF}#service`,
       name: 'Best Hair Color in Plantation, FL',
-      description: 'Expert hair color services at Blend Hair Boutique in Plantation, Florida. Balayage, highlights, all-over color, and color correction by certified colorists.',
+      description: 'Expert hair color services at Blend Hair Boutique in Plantation, Florida. Balayage, highlights, all-over color, and color correction by specialist colorists.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -64,7 +74,7 @@ const schema = {
     },
     {
       '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
+      '@id': `${SELF}#faq`,
       mainEntity: faqs.map(({ q, a }) => ({
         '@type': 'Question',
         name: q,
@@ -76,7 +86,7 @@ const schema = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
         { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-        { '@type': 'ListItem', position: 3, name: 'Best Hair Color Plantation FL', item: CANONICAL },
+        { '@type': 'ListItem', position: 3, name: 'Best Hair Color Plantation FL', item: SELF },
       ],
     },
   ],
@@ -89,17 +99,17 @@ export default function BestHairColorPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               {REVIEW_LINE_LOCATED.en}
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Hair Color<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              From custom balayage and foil highlights to full color correction and glossing treatments, Blend Hair Boutique's certified colorists deliver hair color that is healthy, vibrant, and designed to last in South Florida's climate.
+              From custom balayage and foil highlights to full color correction and glossing treatments, Blend Hair Boutique's specialist colorists deliver hair color that is healthy, vibrant, and designed to last in South Florida's climate.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book Color Appointment
               </a>
@@ -112,10 +122,10 @@ export default function BestHairColorPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Full Color Services
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Every Color Service,<br /><em>Done at the Highest Level</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
@@ -140,15 +150,14 @@ export default function BestHairColorPage() {
           <div className="container" style={{ maxWidth: '820px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/rich-brunette-waves.webp"
                   alt="Rich dimensional brunette color at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   Our Approach
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
@@ -167,7 +176,7 @@ export default function BestHairColorPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Serving South Florida
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '56ch', margin: '0 auto 2.5rem' }}>
@@ -183,8 +192,8 @@ export default function BestHairColorPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Hair Color <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -193,14 +202,14 @@ export default function BestHairColorPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Ready for beautiful<br /><em>hair color in Plantation?</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 or call (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Color Online</a>
               <Link href="/services" className="btn btn--outline">View All Services</Link>
             </div>

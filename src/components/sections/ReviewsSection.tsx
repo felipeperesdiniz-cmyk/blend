@@ -9,6 +9,7 @@ export default function ReviewsSection() {
   const { lang } = useLang()
   const t = T[lang].reviews
   const reviewsData = T[lang].reviewsData
+  const a = T[lang].a11y
 
   const [featured, ...secondary] = reviewsData
 
@@ -27,7 +28,7 @@ export default function ReviewsSection() {
 
         {/* Featured review — editorial pullquote */}
         <div className="review-featured fade-in-up">
-          <div className="review-featured__stars" aria-label="5 out of 5 stars">
+          <div className="review-featured__stars" aria-label={a.fiveStars}>
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} size={11} fill="currentColor" />
             ))}
@@ -50,7 +51,7 @@ export default function ReviewsSection() {
               className="review-secondary__card fade-in-up"
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="review-secondary__stars" aria-label="5 stars">
+              <div className="review-secondary__stars" aria-label={a.fiveStars}>
                 {Array.from({ length: 5 }).map((_, idx) => (
                   <Star key={idx} size={9} fill="currentColor" />
                 ))}

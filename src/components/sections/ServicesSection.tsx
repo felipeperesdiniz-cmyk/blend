@@ -62,7 +62,7 @@ export default function ServicesSection() {
               className="svc-list__row fade-in-up"
               style={{ animationDelay: `${i * 0.06}s` }}
             >
-              <Link href={`/services/${s.id}`} className="svc-list__left" aria-label={`View ${listData[i].title} at Blend Hair Boutique`}>
+              <Link href={`/services/${s.id}`} className="svc-list__left" aria-label={T[lang].a11y.viewService.replace('{service}', listData[i].title)}>
                 <span className="svc-list__name">{listData[i].title}</span>
                 <span className="svc-list__cat">{s.category}</span>
               </Link>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="svc-list__book"
-                aria-label={`Book ${listData[i].title} at Blend Hair Boutique`}
+                aria-label={T[lang].a11y.bookService.replace('{service}', listData[i].title)}
               >{t.bookNow}</a>
             </div>
           ))}

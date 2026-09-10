@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import { SERVICES, FAQ } from '@/data/services'
 import ServicesContent from '@/components/pages/ServicesContent'
 import { OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
 export const metadata: Metadata = {
   title: 'Hair & Beauty Services, Plantation FL',
   description:
-    'Every service at Blend Hair Boutique, Plantation FL: haircuts, colour, balayage, keratin smoothing, extensions, nails, brows, makeup, waxing and facials.',
-  alternates: { canonical: `${SITE_URL}/services` },
+    'Every service at Blend Hair Boutique, Plantation FL: haircuts, color, balayage, keratin smoothing, extensions, nails, brows, makeup, waxing and facials.',
+  alternates: hreflang('/services', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Hair & Beauty Services | Blend Hair Boutique, Plantation FL',

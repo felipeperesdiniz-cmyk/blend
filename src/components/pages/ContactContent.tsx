@@ -8,10 +8,10 @@ import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
 export default function ContactContent() {
-  // 'blocked' is not a cosmetic state: if the WhatsApp window never opened, the
-  // message has gone nowhere, and saying "thank you" would be a lie the salon
-  // pays for in missed enquiries.
-  const [status, setStatus] = useState<'idle' | 'handed-off' | 'blocked'>('idle')
+  // 'failed' is not a cosmetic state: if the message never reached the server
+  // it has gone nowhere, and saying "thank you" would be a lie the salon pays
+  // for in missed inquiries.
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'failed'>('idle')
   const [draft, setDraft] = useState('')
   const { lang } = useLang()
   const t = T[lang].pages.contact
@@ -22,39 +22,61 @@ export default function ContactContent() {
     `Hi Blend! My name is ${data.get('name')} (${data.get('email')}).\n` +
     `Service of interest: ${data.get('service')}\n\n${data.get('message')}`
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  // Submits to /api/contact, which emails the salon.
+  //
+  // This used to call window.open() on a WhatsApp deep link and keep nothing.
+  // Someone who chose to type into a form rather than tap the WhatsApp button
+  // had signalled they did not want to message, and was sent to WhatsApp
+  // regardless — and the name and email they had just entered were discarded.
+  // WhatsApp is still offered, but as an alternative the visitor picks, not as
+  // a redirect they did not ask for.
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const form = e.currentTarget
-    const body = compose(new FormData(form))
-    setDraft(body)
+    const data = new FormData(form)
+    setDraft(compose(data))
+    setStatus('sending')
 
-    const win = window.open(`${BUSINESS.whatsapp}?text=${encodeURIComponent(body)}`, '_blank')
-
-    // A blocked pop-up returns null. Keep what they typed on screen so the
-    // email fallback is one click rather than a retype.
-    if (!win) {
-      setStatus('blocked')
-      return
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: String(data.get('name') ?? ''),
+          email: String(data.get('email') ?? ''),
+          service: String(data.get('service') ?? ''),
+          message: String(data.get('message') ?? ''),
+          company: String(data.get('company') ?? ''), // honeypot
+        }),
+      })
+      if (!res.ok) {
+        // Covers a 503 from an unconfigured deploy as well as a real failure.
+        // Either way nothing was delivered, so the visitor is told so and the
+        // draft is kept for the WhatsApp and email fallbacks below.
+        setStatus('failed')
+        return
+      }
+      setStatus('sent')
+      form.reset()
+    } catch {
+      setStatus('failed')
     }
-    setStatus('handed-off')
-    form.reset()
   }
 
-  // A link click is a user gesture, so this survives the pop-up blocker that
-  // stopped window.open.
+  // A link click is a user gesture, so this works even where a scripted
+  // window.open would be blocked.
   const whatsappHref = `${BUSINESS.whatsapp}?text=${encodeURIComponent(draft)}`
 
   const mailtoHref =
     `mailto:${BUSINESS.email}` +
-    `?subject=${encodeURIComponent('Enquiry from the website')}` +
+    `?subject=${encodeURIComponent('Inquiry from the website')}` +
     `&body=${encodeURIComponent(draft)}`
 
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--dark page-hero--fade-soft">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.p
-            style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}
+        <div className="container hero-layer">
+          <motion.p className="eyebrow eyebrow--on-dark"
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}
           >
             {t.eyebrow}
@@ -90,7 +112,7 @@ export default function ContactContent() {
                 <div>
                   <p className="contact-info__label">{tc.address}</p>
                   <p className="contact-info__value">
-                    <a href={BUSINESS.mapsDirections} target="_blank" rel="noopener noreferrer" aria-label={`Get directions to ${BUSINESS.address}`}>
+                    <a href={BUSINESS.mapsDirections} target="_blank" rel="noopener noreferrer" aria-label={T[lang].a11y.getDirections.replace('{address}', BUSINESS.address)}>
                       {BUSINESS.address}
                     </a>
                   </p>
@@ -172,7 +194,7 @@ export default function ContactContent() {
                   {t.formBody}
                 </p>
 
-                {status !== 'idle' ? (
+                {status === 'sent' || status === 'failed' ? (
                   <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -180,13 +202,13 @@ export default function ContactContent() {
                     role="status"
                   >
                     <p style={{ fontFamily: 'var(--serif)', fontSize: '1.2rem', fontStyle: 'italic', marginBottom: '0.5rem' }}>
-                      {status === 'blocked' ? t.formBlockedTitle : t.formSentTitle}
+                      {status === 'failed' ? t.formBlockedTitle : t.formSentTitle}
                     </p>
                     <p style={{ fontSize: '1rem', color: 'var(--text-2)', fontWeight: 300 }}>
-                      {status === 'blocked' ? t.formBlockedBody : t.formSentBody}
+                      {status === 'failed' ? t.formBlockedBody : t.formSentBody}
                     </p>
                     <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
-                      {status === 'blocked' ? (
+                      {status === 'failed' ? (
                         <>
                           <a href={mailtoHref} className="btn btn--cta-gold" style={{ fontSize: '0.88rem' }}>
                             {t.formEmailInstead}
@@ -230,8 +252,25 @@ export default function ContactContent() {
                       <label htmlFor="contact-message">{fields.message}</label>
                       <textarea id="contact-message" name="message" placeholder={fields.messagePlaceholder} rows={4} />
                     </div>
-                    <button type="submit" className="btn btn--primary w-full" style={{ justifyContent: 'center' }}>
-                      {fields.submit}
+                    {/* `w-full` was a Tailwind-ism that was never defined in this
+                        stylesheet, so the submit button has quietly not been
+                        full-width. .btn is inline-flex; this is the actual fix. */}
+                    {/* Honeypot. Off-screen rather than display:none — some
+                        bots skip hidden fields — and taken out of the tab
+                        order and the accessibility tree so no real visitor
+                        ever meets it. Anything in it is discarded server-side. */}
+                    <div aria-hidden style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+                      <label htmlFor="contact-company">Company</label>
+                      <input id="contact-company" name="company" type="text" tabIndex={-1} autoComplete="off" />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="btn btn--primary"
+                      style={{ justifyContent: 'center', width: '100%' }}
+                      disabled={status === 'sending'}
+                    >
+                      {status === 'sending' ? t.formSending : fields.submit}
                     </button>
                   </form>
                 )}

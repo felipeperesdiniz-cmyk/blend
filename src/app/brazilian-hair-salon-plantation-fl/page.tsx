@@ -9,13 +9,13 @@ const CANONICAL = `${SITE_URL}/brazilian-hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Brazilian Hair Salon in Plantation, FL',
   description:
-    `A Brazilian-owned luxury hair salon in Plantation, Florida: Brazilian blowouts, keratin treatments, balayage and colour. 4.9★ · ${REVIEW_COUNT}+ reviews.`,
+    `A Brazilian-owned luxury hair salon in Plantation, Florida: Brazilian blowouts, keratin treatments, balayage and color. 4.9★ · ${REVIEW_COUNT}+ reviews.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
     title: 'Brazilian Hair Salon in Plantation, FL | Blend Hair Boutique',
     description:
-      'Brazilian-owned luxury hair salon in Plantation, FL. Expert Brazilian blowouts, keratin, balayage, and color by certified Brazilian beauty professionals. Book online.',
+      'Brazilian-owned luxury hair salon in Plantation, FL. Expert Brazilian blowouts, keratin, balayage, and color by Brazilian beauty professionals. Book online.',
     url: CANONICAL,
   },
 }
@@ -81,17 +81,17 @@ export default function BrazilianHairSalonPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Plantation, Florida · Brazilian-Owned & Operated
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               <em>Brazilian</em> Hair Salon<br />in Plantation, FL
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique brings the artistry and warmth of Brazilian beauty culture to the heart of South Florida. Our Brazilian co-founders and their team of certified professionals deliver the full range of Brazilian hair techniques, from our signature blowout to customized color and smoothing treatments.
+              Blend Hair Boutique brings the artistry and warmth of Brazilian beauty culture to the heart of South Florida. Our Brazilian co-founders and their team of professionals deliver the full range of Brazilian hair techniques, from our signature blowout to customized color and smoothing treatments.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book Your Appointment
               </a>
@@ -106,10 +106,10 @@ export default function BrazilianHairSalonPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   Our Heritage
                 </p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <h2 className="section-h2">
                   Born in Brazil.<br /><em>Built for South Florida.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
@@ -120,11 +120,10 @@ export default function BrazilianHairSalonPage() {
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/brunette-glam-waves.webp"
                   alt="Brazilian styling and glam waves at Blend Hair Boutique, Plantation FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -133,10 +132,10 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Brazilian Specialties
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Our Signature<br /><em>Brazilian Services</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
@@ -157,7 +156,7 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Areas We Serve
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -176,8 +175,8 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Brazilian Salon <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -186,14 +185,14 @@ export default function BrazilianHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Experience Brazilian beauty<br /><em>in Plantation, FL</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 at your convenience, or call us at (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online Now</a>
               <Link href="/services" className="btn btn--outline">View All Services</Link>
             </div>

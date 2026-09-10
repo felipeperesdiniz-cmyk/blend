@@ -133,8 +133,8 @@ export default function ReviewsPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark page-hero--fade-soft">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Client Reviews · Plantation, FL
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -172,10 +172,10 @@ export default function ReviewsPage() {
         {/* Testimonials grid */}
         <section className="section">
           <div className="container" style={{ maxWidth: '1100px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Client Testimonials
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Real Stories.<br /><em>Real Results.</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
@@ -208,14 +208,14 @@ export default function ReviewsPage() {
         {/* Google reviews link */}
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>On Google</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">On Google</p>
+            <h2 className="section-h2">
               Read All {REVIEW_COUNT}+<br /><em>Google Reviews</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Every one of our reviews is real, verified, and earned. See what Broward County clients say about Blend Hair Boutique on Google.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a
                 href="https://www.google.com/maps/search/Blend+Hair+Boutique+Plantation+FL"
                 target="_blank"
@@ -234,16 +234,16 @@ export default function ReviewsPage() {
         {/* CTA */}
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p className="eyebrow">
               Join {REVIEW_COUNT}+ Happy Clients
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <h2 className="section-h2">
               Your turn to experience<br /><em>the Blend difference.</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 or call (754) 206-3501. Blend Hair Boutique, 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book an Appointment</a>
               <Link href="/hair-salon-plantation-fl" className="btn btn--outline">About Our Salon</Link>
             </div>

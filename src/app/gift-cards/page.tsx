@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import GiftCardsContent from '@/components/pages/GiftCardsContent'
 import { OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/gift-cards`
@@ -8,8 +9,8 @@ const CANONICAL = `${SITE_URL}/gift-cards`
 export const metadata: Metadata = {
   title: 'Salon Gift Cards · Plantation, FL',
   description:
-    'Salon gift cards from Blend Hair Boutique, Plantation FL, redeemable against any service: balayage, colour, keratin, nails and facials. Buy online.',
-  alternates: { canonical: CANONICAL },
+    'Salon gift cards from Blend Hair Boutique, Plantation FL, redeemable against any service: balayage, color, keratin, nails and facials. Buy online.',
+  alternates: hreflang('/gift-cards', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Gift Cards | Blend Hair Boutique',

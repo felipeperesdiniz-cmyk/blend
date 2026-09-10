@@ -290,7 +290,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Quanto tempo duram os tratamentos de alisamento?',
-          a: 'Os resultados costumam durar cerca de 3 meses, dependendo do tipo de cabelo, da rotina de cuidados em casa e da frequência de lavagem. Usar um shampoo sem sal e sem sulfato prolonga bastante o tratamento. Quem lava o cabelo diariamente verá o resultado desaparecer antes de quem lava 2 a 3 vezes por semana.',
+          a: 'Os resultados costumam durar de 3 a 5 meses, dependendo do tipo de cabelo, da rotina de cuidados em casa e da frequência de lavagem. Usar um shampoo sem sal e sem sulfato prolonga bastante o tratamento. Quem lava o cabelo diariamente verá o resultado desaparecer antes de quem lava 2 a 3 vezes por semana.',
         },
         {
           q: 'Posso colorir o cabelo e fazer um tratamento de alisamento no mesmo dia?',
@@ -682,7 +682,7 @@ export const faqPt: FAQTranslation = {
         },
         {
           q: 'Vale a pena fazer um tratamento de alisamento morando no Sul da Flórida?',
-          a: 'Para a maioria das clientes de Plantation e do Broward County, sim. A umidade e o calor do Sul da Flórida durante o ano todo fazem da queratina e do Botox Capilar alguns dos serviços mais procurados no Blend. Esses tratamentos eliminam o frizz por cerca de 3 meses, reduzem bastante o tempo de escova e são especialmente valiosos na temporada de furacões e nos meses de verão.',
+          a: 'Para a maioria das clientes de Plantation e do Broward County, sim. A umidade e o calor do Sul da Flórida durante o ano todo fazem da queratina e do Botox Capilar alguns dos serviços mais procurados no Blend. Esses tratamentos eliminam o frizz por 3 a 5 meses, reduzem bastante o tempo de escova e são especialmente valiosos na temporada de furacões e nos meses de verão.',
         },
         {
           q: 'Como cuidar das extensões no calor da Flórida?',

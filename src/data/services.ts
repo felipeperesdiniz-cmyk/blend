@@ -403,7 +403,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'How long does a balayage appointment take?',
-    a: 'Balayage appointments typically range from 2.5 to 4 hours depending on your hair length, density, and the result you\'re aiming for. We\'ll give you a realistic time estimate during booking or consultation.',
+    a: 'Balayage appointments typically range from 3 to 5 hours depending on your hair length, density, and the result you\'re aiming for. We\'ll give you a realistic time estimate during booking or consultation.',
   },
   {
     q: 'Do you specialize in balayage and blonding?',

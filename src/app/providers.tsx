@@ -1,5 +1,6 @@
 'use client'
 import { LangProvider } from '@/context/LangContext'
+import BookingAttribution from '@/components/BookingAttribution'
 import { ReactLenis } from 'lenis/react'
 import { MotionConfig } from 'framer-motion'
 import 'lenis/dist/lenis.css'
@@ -40,7 +41,11 @@ export default function Providers({ children }: { children: ReactNode }) {
           setting. Nine components animate on entrance and none of them checked
           it, so the reveals still ran for people who had asked them not to. */}
       <MotionConfig reducedMotion="user">
-        <LangProvider>{children}</LangProvider>
+        <LangProvider>
+          {/* Renders nothing; tags outbound Fresha links on their way out. */}
+          <BookingAttribution />
+          {children}
+        </LangProvider>
       </MotionConfig>
     </ReactLenis>
   )

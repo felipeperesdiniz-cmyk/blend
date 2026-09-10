@@ -13,8 +13,13 @@ function TikTokIcon({ size = 15 }: { size?: number }) {
   )
 }
 
-const year = new Date().getFullYear()
-const quickHrefs = ['/services', '/gallery', '/team', '/blog', '/gift-cards', '/about', '/contact']
+// Positional against footer.quickLinks in every locale — keep the two in step.
+// Reviews and FAQ were added here when they came out of the primary nav; the
+// footer is where the full set belongs.
+const quickHrefs = [
+  '/services', '/gallery', '/team', '/reviews', '/blog',
+  '/gift-cards', '/faq', '/about', '/contact',
+]
 
 export default function Footer() {
   const { lang } = useLang()
@@ -50,13 +55,13 @@ export default function Footer() {
               {t.bookBtn}
             </a>
             <div className="footer__socials">
-              <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Blend Hair Boutique on Instagram">
+              <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={T[lang].a11y.onInstagram}>
                 <Instagram size={15} />
               </a>
-              <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Blend Hair Boutique on Facebook">
+              <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={T[lang].a11y.onFacebook}>
                 <Facebook size={15} />
               </a>
-              <a href={BUSINESS.tiktok} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label="Blend Hair Boutique on TikTok">
+              <a href={BUSINESS.tiktok} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={T[lang].a11y.onTikTok}>
                 <TikTokIcon size={15} />
               </a>
             </div>
@@ -113,7 +118,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {year} Blend Hair Boutique · {lang === 'en' ? 'All rights reserved' : lang === 'pt' ? 'Todos os direitos reservados' : 'Todos los derechos reservados'} · Plantation, Florida
+            {t.copyright}
           </p>
           <p className="footer__copy">{t.madeWith}</p>
         </div>

@@ -39,7 +39,7 @@ export default function AboutContent() {
         <div className="about-hero__img">
           <img
             src="/images/gallery/stylist-blend-wall.webp"
-            alt="A Blend Hair Boutique stylist at the salon in Plantation, Florida"
+            alt={T[lang].alt.stylistAtSalon}
             loading="eager"
           />
         </div>
@@ -65,11 +65,10 @@ export default function AboutContent() {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/bronde-waves-smile.webp"
-                  alt="Finished balayage and styling at Blend Hair Boutique in Plantation, FL"
+                  alt={T[lang].alt.finishedBalayage}
                   loading="lazy" decoding="async"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </AnimatedSection>

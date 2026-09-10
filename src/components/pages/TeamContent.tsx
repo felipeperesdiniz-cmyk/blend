@@ -20,7 +20,7 @@ export default function TeamContent() {
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '1.6rem' }}>
             <motion.span
               style={{ display: 'block', height: '1px', width: '28px', background: 'var(--gold)', transformOrigin: 'left center' }}
@@ -58,7 +58,7 @@ export default function TeamContent() {
         <div className="container">
           <FoundersFeature />
 
-          <div className="team__label"><span>The Team</span></div>
+          <div className="team__label"><span>{T[lang].homeTeam.label}</span></div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
             {TEAM.map((member, i) => ({ member, td: teamData[i], i }))
               .filter(({ member }) => !OWNER_IDS.includes(member.id))
@@ -99,7 +99,7 @@ export default function TeamContent() {
                     <p style={{ fontSize: '0.92rem', lineHeight: 1.7, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1.5rem' }}>{td.bio}</p>
                     <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
                       <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.88rem' }}>
-                        View Profile
+                        {T[lang].homeTeam.viewProfile}
                       </Link>
                       <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
                         {t.bookBtn}

@@ -20,14 +20,14 @@ export default function ServiceDetailContent({ id }: { id: string }) {
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <Link
             href="/services"
             style={{ fontSize: '0.85rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', fontWeight: 500, marginBottom: '1.25rem', display: 'inline-block' }}
           >
             {t.backToServices}
           </Link>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p className="eyebrow eyebrow--on-dark">
             {sd.category}
           </p>
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 4.5vw, 4.6rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 0.95, maxWidth: '20ch' }}>

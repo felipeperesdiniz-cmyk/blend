@@ -8,7 +8,7 @@ const CANONICAL = `${SITE_URL}/blog`
 export const metadata: Metadata = {
   title: 'Hair & Beauty Resource Center',
   description:
-    'Hair and beauty advice from the colourists at Blend Hair Boutique, Plantation FL: balayage guides, colour tips, keratin and extension care.',
+    'Hair and beauty advice from the colorists at Blend Hair Boutique, Plantation FL: balayage guides, color tips, keratin and extension care.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],

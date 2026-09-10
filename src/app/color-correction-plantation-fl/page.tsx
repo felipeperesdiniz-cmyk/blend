@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/color-correction-plantation-fl`
 export const metadata: Metadata = {
   title: 'Color Correction in Plantation, FL',
   description:
-    'Colour correction in Plantation, Florida — brassiness, uneven colour, box dye and over-processed hair, fixed by advanced colourists. 4.9★ rated.',
+    'Color correction in Plantation, Florida — brassiness, uneven color, box dye and over-processed hair, fixed by advanced colorists. 4.9★ rated.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -84,8 +84,8 @@ export default function ColorCorrectionPlantationPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Plantation, Florida · Broward County
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '16ch' }}>
@@ -94,7 +94,7 @@ export default function ColorCorrectionPlantationPage() {
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
               When hair color goes wrong, whether from brassiness, uneven tones, box dye buildup, or over-lightening, Blend Hair Boutique's advanced colorists have the expertise to fix it. We approach every color correction with precision, transparency, and deep respect for your hair's integrity.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book a Consultation
               </a>
@@ -109,10 +109,10 @@ export default function ColorCorrectionPlantationPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   Our Approach
                 </p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <h2 className="section-h2">
                   Honest Results.<br /><em>Hair First.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
@@ -123,11 +123,10 @@ export default function ColorCorrectionPlantationPage() {
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/ash-silver-blend.webp"
                   alt="Ash and silver color correction at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -136,10 +135,10 @@ export default function ColorCorrectionPlantationPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               What We Fix
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Common <em>Color Problems</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
@@ -160,7 +159,7 @@ export default function ColorCorrectionPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Areas We Serve
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -179,8 +178,8 @@ export default function ColorCorrectionPlantationPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Color Correction <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -189,14 +188,14 @@ export default function ColorCorrectionPlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Let's fix your color<br /><em>the right way.</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book a color correction consultation at Blend Hair Boutique, 10035 Cleary Blvd, Plantation, FL 33324, or call us at (754) 206-3501.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book a Consultation</a>
               <Link href="/hair-color-plantation" className="btn btn--outline">Hair Color Services</Link>
             </div>

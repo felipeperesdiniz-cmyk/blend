@@ -4,18 +4,36 @@ import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE, REVIEW_COUNT } fr
 import ServiceFAQ from '@/components/ServiceFAQ'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
-const CANONICAL = `${SITE_URL}/best-balayage-plantation-fl`
+
+// This page's own address. Used for the things that genuinely describe *this*
+// document: the JSON-LD @id, and its breadcrumb trail.
+const SELF = `${SITE_URL}/best-balayage-plantation-fl`
+
+// ...and the URL search engines should credit instead.
+//
+// This page and /balayage-plantation-fl answer the same question for the same
+// visitor, differing only by the word "best". Left as two self-canonical URLs
+// they compete for one intent and split the signals that would otherwise rank
+// one of them properly. The primary URL wins the consolidation because it is
+// the cleaner address and matches the service name used in the nav, the
+// sitemap and the offer catalog.
+//
+// The page stays live and stays useful: its FAQ set is genuinely different
+// from the primary's and answers real questions ("what should I look for when
+// choosing a balayage salon"). Nothing is deleted and no URL breaks — anyone
+// arriving here still gets the page. Only the indexing credit moves.
+const CANONICAL = `${SITE_URL}/balayage-plantation-fl`
 
 export const metadata: Metadata = {
   title: 'Best Balayage in Plantation, FL',
   description:
-    `Looking for the best balayage in Plantation, FL? ${REVIEW_COUNT}+ Google reviews at 4.9★, hand-painted by certified colour specialists. Book online.`,
+    `Looking for the best balayage in Plantation, FL? ${REVIEW_COUNT}+ Google reviews at 4.9★, hand-painted by specialist colorists. Book online.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
     title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',
     description:
-      `Plantation's top-rated balayage salon. ${REVIEW_COUNT}+ Google reviews · 4.9★ · Expert hand-painted color by certified colorists. Book your balayage appointment at Blend Hair Boutique.`,
+      `Plantation's top-rated balayage salon. ${REVIEW_COUNT}+ Google reviews · 4.9★ · Expert hand-painted color by specialist colorists. Book your balayage appointment at Blend Hair Boutique.`,
     url: CANONICAL,
   },
 }
@@ -48,9 +66,9 @@ const schema = {
   '@graph': [
     {
       '@type': 'Service',
-      '@id': `${SITE_URL}/best-balayage-plantation-fl#service`,
+      '@id': `${SELF}#service`,
       name: 'Best Balayage in Plantation, FL',
-      description: 'Top-rated balayage services at Blend Hair Boutique in Plantation, Florida. Expert hand-painted color by certified colorists.',
+      description: 'Top-rated balayage services at Blend Hair Boutique in Plantation, Florida. Expert hand-painted color by specialist colorists.',
       provider: { '@id': `${SITE_URL}/#business` },
       areaServed: [
         { '@type': 'City', name: 'Plantation, FL' },
@@ -60,7 +78,7 @@ const schema = {
     },
     {
       '@type': 'FAQPage',
-      '@id': `${CANONICAL}#faq`,
+      '@id': `${SELF}#faq`,
       mainEntity: faqs.map(({ q, a }) => ({
         '@type': 'Question',
         name: q,
@@ -72,7 +90,7 @@ const schema = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
         { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-        { '@type': 'ListItem', position: 3, name: 'Best Balayage Plantation FL', item: CANONICAL },
+        { '@type': 'ListItem', position: 3, name: 'Best Balayage Plantation FL', item: SELF },
       ],
     },
   ],
@@ -85,17 +103,17 @@ export default function BestBalayagePage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               {REVIEW_LINE_LOCATED.en}
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
               The Best Balayage<br /><em>in Plantation, FL</em>
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Plantation's most-reviewed salon for balayage. Our certified colorists deliver custom hand-painted color designed for your hair texture, skin tone, and maintenance lifestyle, for results that look effortless because they are crafted with precision.
+              Plantation's most-reviewed salon for balayage. Our specialist colorists deliver custom hand-painted color designed for your hair texture, skin tone, and maintenance lifestyle, for results that look effortless because they are crafted with precision.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book Balayage Now
               </a>
@@ -110,10 +128,10 @@ export default function BestBalayagePage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   Why Blend
                 </p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <h2 className="section-h2">
                   Balayage That<br /><em>Actually Looks Natural</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
@@ -124,11 +142,10 @@ export default function BestBalayagePage() {
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/caramel-balayage-brunette.webp"
                   alt="Caramel balayage on brunette hair at Blend Hair Boutique, Plantation FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -137,10 +154,10 @@ export default function BestBalayagePage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Our Balayage Techniques
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Every Style of<br /><em>Balayage Done Right</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
@@ -164,7 +181,7 @@ export default function BestBalayagePage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Related Services
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
@@ -188,7 +205,7 @@ export default function BestBalayagePage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Serving South Florida
             </p>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, textAlign: 'center', maxWidth: '56ch', margin: '0 auto 2.5rem' }}>
@@ -204,8 +221,8 @@ export default function BestBalayagePage() {
 
         <section className="section" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Balayage <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -214,14 +231,14 @@ export default function BestBalayagePage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Book your balayage<br /><em>at Blend today</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 or call (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Balayage Online</a>
               <Link href="/balayage-plantation-fl" className="btn btn--outline">Balayage Details</Link>
             </div>

@@ -23,7 +23,7 @@ export default function NotFound() {
           The page you&apos;re looking for has moved or doesn&apos;t exist.
           Visit our homepage or book directly online.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div className="btn-row">
           <Link href="/" className="btn btn--primary">Back to Home</Link>
           <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline">
             Book Online

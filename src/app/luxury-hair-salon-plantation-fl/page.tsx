@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/luxury-hair-salon-plantation-fl`
 export const metadata: Metadata = {
   title: 'Luxury Hair Salon in Plantation, FL',
   description:
-    `A luxury hair salon in Plantation, Florida for balayage, colour, keratin, extensions and bridal beauty. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
+    `A luxury hair salon in Plantation, Florida for balayage, color, keratin, extensions and bridal beauty. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
   alternates: { canonical: CANONICAL },
   openGraph: {
     images: [OG_IMAGE],
@@ -81,8 +81,8 @@ export default function LuxuryHairSalonPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Plantation, Florida · Broward County
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -91,7 +91,7 @@ export default function LuxuryHairSalonPage() {
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '52ch', marginTop: '1.5rem', fontWeight: 300 }}>
               Blend Hair Boutique is Plantation's premier luxury hair salon, a boutique environment where world-class technique meets Brazilian warmth. From custom balayage to smoothing treatments and bridal beauty, every service is designed to exceed expectations.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book Your Visit
               </a>
@@ -106,25 +106,24 @@ export default function LuxuryHairSalonPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   What Sets Us Apart
                 </p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <h2 className="section-h2">
                   A Different Kind of<br /><em>Salon Experience</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
                   Blend Hair Boutique was founded by Juliana Chen, with co-owner and salon manager Fernanda Macedo, on a shared vision: to bring the artistry and warmth of Brazilian salon culture to Plantation, Florida. Since 2018, Blend has served thousands of South Florida clients with a level of care and expertise that sets it apart from conventional salons.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
-                  As an authorized Kérastase salon, we use only professional-grade products across all services. Our team of certified stylists and estheticians undergoes ongoing education to stay current with the most advanced techniques in color, smoothing, and hair care.
+                  As an authorized Kérastase salon, we use only professional-grade products across all services. Our stylists and estheticians undergoes ongoing education to stay current with the most advanced techniques in color, smoothing, and hair care.
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/salon-wine-service.webp"
                   alt="Wine service at Blend Hair Boutique, a luxury salon in Plantation, FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -133,17 +132,17 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Luxury Services
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               Everything You Need,<br /><em>Exceptionally Done</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '2rem' }}>
               {[
                 { title: 'Balayage & Color', body: 'Custom hand-painted color, highlights, ombre, and all-over color crafted for your unique hair.', href: '/balayage-plantation-fl' },
                 { title: 'Keratin & Smoothing', body: 'Brazilian blowout and keratin treatments that eliminate frizz and deliver months of effortless smoothness.', href: '/keratin-treatment-plantation' },
-                { title: 'Hair Extensions', body: 'Volume and length added seamlessly with weft, tape-in, and fusion techniques by certified specialists.', href: '/hair-extensions-plantation' },
+                { title: 'Hair Extensions', body: 'Volume and length added seamlessly with weft, tape-in, and fusion techniques by extension specialists.', href: '/hair-extensions-plantation' },
                 { title: 'Bridal Beauty', body: 'Full-service bridal hair and beauty for your most important day, with trial runs and day-of coordination.', href: '/bridal-hair-south-florida' },
                 { title: 'Facials & Skin', body: 'Personalized facials and skin treatments by licensed estheticians for radiant, healthy skin.', href: '/facials-plantation-fl' },
                 { title: 'Nails', body: 'Manicures, pedicures, gel, and nail art, with precision and polish in every detail.', href: '/nails-plantation-fl' },
@@ -161,15 +160,14 @@ export default function LuxuryHairSalonPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/brunette-glam-waves.webp"
                   alt="Luxury blowout and styling at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   Our Standards
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
@@ -205,7 +203,7 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Serving South Florida
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -224,8 +222,8 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Luxury Salon <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -234,14 +232,14 @@ export default function LuxuryHairSalonPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Ready to experience<br /><em>Plantation's most loved salon?</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 or call (754) 206-3501. Blend Hair Boutique is at 10035 Cleary Blvd, Plantation, FL 33324, open Monday through Saturday.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online Now</a>
               <Link href="/services" className="btn btn--outline">View All Services</Link>
             </div>

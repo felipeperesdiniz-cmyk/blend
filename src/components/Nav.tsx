@@ -45,15 +45,19 @@ export default function Nav() {
     <>
       <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
         <div className="nav__inner">
+          {/* Six links, not nine. Past about half a dozen a navigation stops
+              orienting people and starts deferring the decision to them, and
+              nine of them at 11.5px was also what forced the whole bar to
+              collapse to a hamburger below 1400px — i.e. on most laptops.
+              Reviews, FAQ and Guides moved to the footer, which carries the
+              full set; all three remain in the mobile menu. */}
           <ul className="nav__links nav__links--left">
             <li><Link href="/services"    className="nav__link">{t.services}</Link></li>
             <li><Link href="/gallery"     className="nav__link">{t.gallery}</Link></li>
             <li><Link href="/team"        className="nav__link">{t.team}</Link></li>
-            <li><Link href="/reviews"     className="nav__link">{t.reviews}</Link></li>
-            <li><Link href="/blog"        className="nav__link">{t.resources}</Link></li>
           </ul>
 
-          <Link href="/" className="nav__logo" aria-label="Blend Hair Boutique">
+          <Link href="/" className="nav__logo" aria-label={T[lang].a11y.homeLink}>
             {/* Both marks are keyed to transparency. logo.png is kept as-is for
                 OG/schema, where a white card is safer than an alpha channel, but
                 it cannot be used here: its opaque white background sat as a hard
@@ -65,9 +69,8 @@ export default function Nav() {
 
           <div className="nav__actions">
             <ul className="nav__links nav__links--right">
-              <li><Link href="/faq"         className="nav__link">{t.faq}</Link></li>
-              <li><Link href="/gift-cards"  className="nav__link">{t.giftCards}</Link></li>
               <li><Link href="/about"       className="nav__link">{t.about}</Link></li>
+              <li><Link href="/gift-cards"  className="nav__link">{t.giftCards}</Link></li>
               <li><Link href="/contact"     className="nav__link">{t.location}</Link></li>
             </ul>
 
@@ -78,7 +81,7 @@ export default function Nav() {
                   <button
                     className={`lang-switcher__btn${lang === l ? ' active' : ''}`}
                     onClick={() => setLang(l)}
-                    aria-label={`Switch to ${l.toUpperCase()}`}
+                    aria-label={T[lang].a11y.switchTo.replace('{lang}', l.toUpperCase())}
                   >
                     {l.toUpperCase()}
                   </button>
@@ -98,7 +101,7 @@ export default function Nav() {
             <button
               className={`nav__hamburger ${menuOpen ? 'open' : ''}`}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+              aria-label={menuOpen ? T[lang].a11y.closeMenu : T[lang].a11y.openMenu}
               aria-expanded={menuOpen}
             >
               <span />

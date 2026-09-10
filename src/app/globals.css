@@ -6,15 +6,17 @@
   /* Palette */
   --white:         #ffffff;
   --bg-soft:       #f8f5f0;
-  --bg-mint:       #d4e2dd;
-  --bg-mint-soft:  #eaf1ed;
   --ink:           #1f1a16;
   --ink-2:         #5a4f44;
   --caramel:       #b08562;
   --caramel-dk:    #8a6443;
   --gold:          #c9a875;
   --gold-dk:       #7a6238;
-  --line:          #e8e2d6;
+  /* Nudged from #e8e2d6 (1.29:1 on white) to 1.46:1. Still a hairline, not a
+     rule — the editorial look depends on these being barely there — but at the
+     old value the section dividers were effectively invisible on a dimmed
+     laptop or in direct sun. Controls do not use this; see --border-field. */
+  --line:          #ded5c4;
 
   /* Semantic aliases */
   --bg:            var(--white);
@@ -22,25 +24,28 @@
   --text:          var(--ink);
   --text-2:        var(--ink-2);
   --text-3:        var(--caramel-dk);
-  --accent:        var(--gold);
   --accent-lt:     rgba(201,168,117,0.12);
   --border:        var(--line);
   --border-gold:   rgba(201,168,117,0.35);
 
-  /* Legacy aliases — keep so page components don't break */
-  --ivory:         var(--white);
-  --ivory-2:       var(--bg-soft);
-  --beige:         var(--bg-soft);
-  --beige-2:       #ece8e2;
-  --champagne:     var(--gold);
-  --champagne-lt:  rgba(201,168,117,0.25);
-  --champagne-dk:  var(--gold-dk);
-  --espresso:      var(--ink);
+  /* Boundaries of actual controls — form fields, and any button whose edge is
+     the only thing identifying it. WCAG 1.4.11 wants 3:1 for those, and --line
+     is a decorative hairline at 1.29:1 against white: invisible on a dimmed
+     laptop or outdoors, which in South Florida is most of the mobile traffic.
+     Decorative rules between sections are NOT bound by 1.4.11 and deliberately
+     keep --line, because darkening every divider to a mid-tone would turn the
+     editorial hairlines into ruled lines and lose the whole look.
+     Measured on the white the fields actually sit on: 4.03:1, and it still
+     clears 3:1 on bg-soft, warm-white and parchment. */
+  --border-field:  #8a7d66;
+  /* Still-referenced remnants of the pre-token palette. The rest of the
+     legacy alias block was removed: all thirteen of --ivory, --ivory-2,
+     --beige, --beige-2, --champagne(-lt/-dk), --espresso, --brown(-mid/-lt)
+     and --muted were referenced from nowhere in CSS or TSX, so the comment
+     claiming page components would break without them was stale. --muted in
+     particular was a hazard: 2.84:1 on --bg-soft, sitting unmarked in the
+     palette for the next person to reach for. */
   --espresso-2:    #2c2218;
-  --brown:         var(--caramel);
-  --brown-mid:     var(--caramel-dk);
-  --brown-lt:      var(--ink-2);
-  --muted:         #a09080;
   --charcoal:      #191510;
   --warm-white:    #faf8f4;
   --parchment:     #f0ebe2;
@@ -62,26 +67,27 @@
      had to share the space with it. */
   --sticky-cta-h: calc(92px + env(safe-area-inset-bottom, 0px));
 
+  /* Height of the announcement strip. Overwritten at runtime by HeroSection
+     with the measured value — the strip wraps to two lines on a phone and to
+     different line counts in pt/es, and the media queries below change its
+     type and padding as well. This is the desktop single-line value, and it
+     is what the nav offsets against until that measurement lands: 12px text
+     at line-height 1.6 (19px) plus 10px padding top and bottom. */
+  --announce-h: 39px;
+
   /* Spacing */
   --section-pad: clamp(3.25rem, 6vw, 5rem);
   --container:   1400px;
   --gutter:      clamp(1.5rem, 4vw, 2.5rem);
 
   /* Radius — flatter, more editorial */
-  --r-sm:   3px;
   --r-md:   4px;
-  --r-lg:   6px;
-  --r-xl:   8px;
-  --r-full: 999px;
 
   /* Shadows */
   --shadow-sm: 0 2px 16px rgba(31,26,22,0.06);
-  --shadow-md: 0 8px 40px rgba(31,26,22,0.10);
-  --shadow-lg: 0 20px 60px rgba(31,26,22,0.14);
 
   /* Transitions */
   --ease:    cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --t-fast:     0.2s;
   --t-mid:      0.4s;
   --t-slow:     0.7s;
@@ -113,13 +119,83 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 
 /* ─── Typography Scale ───────────────────────────────────────── */
 .display  { font-size: clamp(3.5rem, 8vw, 8rem);  font-weight: 300; letter-spacing: -0.02em; line-height: 0.95; }
-.headline { font-size: clamp(2.8rem, 5vw, 5.5rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.05; }
+
 .title    { font-size: clamp(2rem, 3.5vw, 3.5rem); font-weight: 400; letter-spacing: -0.01em; line-height: 1.15; }
-.subtitle { font-size: clamp(1.4rem, 2.5vw, 2.2rem); font-weight: 300; }
-.body-lg  { font-family: var(--sans); font-size: clamp(1.05rem, 1.5vw, 1.15rem); line-height: 1.75; font-weight: 300; }
+
+
 .body     { font-family: var(--sans); font-size: 1rem; line-height: 1.75; font-weight: 300; }
 .label    { font-family: var(--sans); font-size: 0.88rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
 .caption  { font-family: var(--sans); font-size: 0.95rem; letter-spacing: 0.06em; }
+
+/* ─── Page primitives ────────────────────────────────────────────
+   These five patterns accounted for ~314 of the 960 inline style objects in
+   src/, repeated verbatim across more than twenty files. Every declaration
+   below is copied exactly from the object it replaces, so the computed style
+   is unchanged — this moves the rules into the stylesheet, it does not
+   redesign anything. They exist because a design system that is bypassed 960
+   times is not governing anything, and because changing the eyebrow colour
+   used to mean a find-and-replace across 131 call sites.
+
+   The old .headline/.subtitle/.body-lg scale was deleted rather than kept:
+   it was never applied to a single element, while these were the classes the
+   site actually needed. */
+
+/* Small tracked caps above a section heading. */
+.eyebrow {
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.eyebrow--center { text-align: center; }
+/* Over a dark ground the darker gold has nothing to sit against, so this
+   variant takes the lighter --gold and slightly wider tracking. */
+.eyebrow--on-dark {
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+
+/* The standard section heading. */
+.section-h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+.section-h2--center {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* A row of buttons under a block of copy. */
+.btn-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-row--start {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Lifts page-hero content above its background layer. */
+.hero-layer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fills a fixed-ratio box with an image. */
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ─── Layout Utilities ───────────────────────────────────────── */
 .container {
@@ -131,7 +207,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 .section             { padding: var(--section-pad) 0; }
 .section--soft       { background: var(--bg-soft); }
 .section--beige      { background: var(--bg-soft); }
-.section--mint       { background: var(--bg-mint-soft); }
+
 .section--dark       { background: var(--ink); color: var(--white); }
 .section--ivory2     { background: var(--bg-soft); }
 .grid-2 {
@@ -180,6 +256,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   white-space: nowrap;
   cursor: pointer;
 }
+/* The contact form disables its submit while the request is in flight; without
+   this the button looks identical to its idle state and invites a second click. */
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
 .btn--primary {
   background: var(--ink);
   color: var(--white);
@@ -189,15 +274,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   background: var(--caramel-dk);
   border-color: var(--caramel-dk);
 }
-.btn--gold {
-  background: var(--ink);
-  color: var(--white);
-  border: 1px solid var(--ink);
-}
-.btn--gold:hover {
-  background: var(--caramel-dk);
-  border-color: var(--caramel-dk);
-}
+
+
 .btn--outline {
   background: transparent;
   color: var(--ink);
@@ -222,7 +300,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--border);
+  /* This underline is the only thing drawing the control, so it takes the
+     3:1 field token rather than the decorative hairline. */
+  border-bottom: 1px solid var(--border-field);
   border-radius: 0;
   color: var(--text-2);
 }
@@ -364,16 +444,33 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--serif); font-weight: 400; line-heigh
 /* nav--home: used for transparent styling, no layout changes needed */
 
 /* Collapse to the hamburger below the width where the full horizontal row
-   (9 links + language switcher + Book Now) fits at the readable 11.5px size in
+   (6 links + language switcher + Book Now) fits at the readable 11.5px size in
    the longest language (Spanish/Portuguese). Above this, the bar shows in full;
-   below it, the menu opens as a hamburger where the links are large and legible. */
-@media (max-width: 1400px) {
+   below it, the menu opens as a hamburger where the links are large and legible.
+
+   Was 1400px, which was the honest figure for the nine links this bar used to
+   carry — and it meant a 1280 or 1366 laptop, the two commonest desktop widths
+   there are, got the mobile hamburger. At six links the row measures ~966px in
+   the longest locale, so 1100px is the fit point plus a comfortable margin. */
+@media (max-width: 1100px) {
   .nav__inner { padding: 16px var(--gutter); gap: 16px; }
   .nav__links  { display: none; }
-  .nav__book   { display: none; }
   .nav__actions { justify-content: flex-end; gap: 0.75rem; }
   .nav__hamburger { display: flex; }
   .lang-switcher { display: none; }
+}
+
+/* Book Now deliberately survives the collapse above.
+   It used to be hidden at the same 1400px breakpoint as the links, while the
+   mobile action bar only appears below 1024px — which left every viewport from
+   1025px to 1399px with no persistent booking control anywhere on the site.
+   That band is 1280x800 and 1366x768, the two commonest laptop screens there
+   are, plus every iPad in landscape. Booking was three interactions deep
+   (open menu, scroll, tap) on the widths most desktop visitors actually use.
+   Below 1024px it can go, because that is exactly where .sticky-cta takes
+   over and two booking buttons on a phone is one too many. */
+@media (max-width: 1024px) {
+  .nav__book { display: none; }
 }
 
 /* ─── Forms ───────────────────────────────────────────────────
@@ -451,7 +548,8 @@ button:focus-visible {
 }
 .mobile-menu__link:hover { opacity: 1; color: var(--gold); }
 .mobile-menu__book {
-  margin-top: 3rem;
+  /* Sits above the link list now, so the spacing moved with it. */
+  margin-bottom: 2.5rem;
   padding: 1.2rem 2.5rem;
   background: var(--gold);
   color: var(--ink);
@@ -475,7 +573,9 @@ button:focus-visible {
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  /* Was 0.45, which measured 4.46:1 on --ink and missed AA by the width of a
+     rounding error. 0.50 gives 5.19:1. */
+  color: rgba(255,255,255,0.50);
   transition: color var(--t-fast);
 }
 .mobile-menu__contact-link:hover { color: var(--gold); }
@@ -563,165 +663,20 @@ button:focus-visible {
 }
 
 /* Background image with slow Ken Burns */
-.hero__bg {
-  position: absolute;
-  inset: -6%;
-  will-change: transform;
-  animation: heroBreath 22s ease-in-out infinite alternate;
-}
-.hero__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-}
-@keyframes heroBreath {
-  from { transform: scale(1.0); }
-  to   { transform: scale(1.09) translateY(-1.5%); }
-}
+
 
 /* Atmospheric overlay — cinematic left, luminous right, photo breathes */
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(108deg, rgba(14,10,6,0.66) 0%, rgba(14,10,6,0.38) 33%, rgba(14,10,6,0.04) 62%, transparent 82%),
-    linear-gradient(to top,  rgba(14,10,6,0.72) 0%, rgba(14,10,6,0.18) 30%, transparent 54%),
-    linear-gradient(to bottom, rgba(14,10,6,0.08) 0%, transparent 14%);
-}
+
 
 /* Content container — bottom-anchored grid */
-.hero__content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: clamp(7rem, 12vw, 10rem) var(--gutter) clamp(3.5rem, 6vw, 5rem);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: flex-end;
-  gap: 3rem;
-}
 
-.hero__eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.46em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  font-weight: 500;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-.hero__eyebrow::before {
-  content: '';
-  display: block;
-  width: 52px;
-  height: 1px;
-  background: var(--gold);
-  flex-shrink: 0;
-}
-
-.hero__h1 {
-  font-family: var(--serif);
-  font-size: clamp(3.8rem, 9vw, 10.5rem);
-  font-weight: 300;
-  line-height: 0.89;
-  letter-spacing: -0.03em;
-  color: var(--white);
-  margin-bottom: 2.75rem;
-}
-.hero__h1 em {
-  font-style: italic;
-  color: var(--gold);
-  display: block;
-}
-
-.hero__sub {
-  font-family: var(--sans);
-  font-size: clamp(13px, 1.1vw, 15px);
-  color: rgba(255,255,255,0.62);
-  line-height: 1.95;
-  max-width: 48ch;
-  font-weight: 300;
-  letter-spacing: 0.018em;
-  margin-bottom: 2.75rem;
-}
-
-.hero__ctas {
-  display: flex;
-  gap: 1.25rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 /* Hero CTA buttons — designed for dark backgrounds */
-.btn--hero-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  padding: 1.1rem 2.8rem;
-  background: var(--white);
-  color: var(--ink);
-  border: 1px solid var(--white);
-  border-radius: 0;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: background var(--t-mid) var(--ease), border-color var(--t-mid) var(--ease), color var(--t-mid) var(--ease);
-  cursor: pointer;
-}
-.btn--hero-primary:hover {
-  background: transparent;
-  border-color: rgba(255,255,255,0.7);
-  color: var(--white);
-}
 
-.btn--hero-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  padding: 1.1rem 2.8rem;
-  background: transparent;
-  color: rgba(255,255,255,0.55);
-  border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 0;
-  font-family: var(--sans);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: background var(--t-mid) var(--ease), border-color var(--t-mid) var(--ease), color var(--t-mid) var(--ease);
-  cursor: pointer;
-}
-.btn--hero-ghost:hover {
-  border-color: rgba(255,255,255,0.45);
-  color: rgba(255,255,255,0.85);
-}
 
 /* Editorial vertical aside */
-.hero__aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding-bottom: 0.25rem;
-}
-.hero__rating-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 12px;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.25);
-  font-weight: 400;
-}
+
+
 .hero__scroll-line {
   width: 1px;
   height: 72px;
@@ -734,76 +689,28 @@ button:focus-visible {
   50%       { opacity: 1; }
 }
 
-@keyframes heroFloat {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-7px); }
-}
-.hero__h1-float {
-  display: block;
-  animation: heroFloat 9s ease-in-out 2.5s infinite;
-}
 
 /* Inline trust signal (replaces absolute badge) */
-.hero__trust {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-.hero__trust-stars {
-  color: var(--gold);
-  font-size: 11.5px;
-  letter-spacing: 3px;
-  opacity: 0.85;
-}
-.hero__trust-label {
-  font-size: 11.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.48);
-  font-weight: 400;
-}
+
 
 /* Hero responsive */
-@media (max-width: 1024px) {
-  .hero__content {
-    grid-template-columns: 1fr;
-    padding-top: clamp(5.5rem, 14vw, 8rem);
-  }
-  .hero__aside  { display: none; }
-  .hero__badge  { display: none; }
-  .hero__h1     { font-size: clamp(3.2rem, 11vw, 5.5rem); }
-  .hero__sub    { max-width: 100%; }
-}
+
 @media (max-width: 768px) {
   .hero { min-height: 95svh; }
-  .hero__h1 { font-size: clamp(3rem, 12vw, 5rem); line-height: 0.92; }
-  .hero__eyebrow { margin-bottom: 1.5rem; }
+  
+  
   /* Portrait crop shows a vertical slice — keep the focal point on the branded
      "Blend" wall (~68% across) instead of the product shelves in the middle. */
-  .hero__bg img { object-position: 68% center; }
+  
 }
 @media (max-width: 480px) {
   .hero { min-height: 92svh; }
   /* Clear the sticky Call/Book/WhatsApp bar so the headline + CTAs stay visible. */
-  .hero__content { padding-bottom: calc(clamp(3rem, 8vw, 4.5rem) + 4.5rem); }
-  .hero__h1 {
-    font-size: clamp(2.9rem, 13vw, 4rem);
-    line-height: 0.93;
-    margin-bottom: 2rem;
-  }
-  .hero__sub { font-size: 15px; line-height: 1.85; margin-bottom: 2rem; }
-  .hero__ctas {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-  .btn--hero-primary,
-  .btn--hero-ghost {
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 1.5rem;
-  }
+  
+  
+  
+  
+  
 }
 
 /* ─── Film hero — full-bleed loop with the mark centred ───────
@@ -889,6 +796,79 @@ button:focus-visible {
     drop-shadow(0 4px 30px rgba(14,10,6,0.50));
 }
 
+/* ── The one line of copy and the one control on the first screen ──
+   Both are solid white rather than an alpha, for the same reason the cue
+   label is: the film peaks near white and a translucent white has no
+   contrast left to give away there. The shadow does the edge work instead,
+   mirroring the mark's own drop-shadow so the three read as one lockup. */
+.hero__tagline {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  /* Wraps rather than shrinks below the readable floor: two centred lines
+     under the lockup is a better trade than 9px type on a phone. */
+  max-width: 22ch;
+  line-height: 1.9;
+  padding-left: 0.3em; /* optical centring against the tracked caps */
+  text-shadow: 0 1px 3px rgba(14,10,6,0.6), 0 2px 16px rgba(14,10,6,0.45);
+  animation: heroMarkIn 1.8s var(--ease) 0.6s backwards;
+}
+
+.hero__book {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(1.5rem, 2.6vw, 2rem);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.9rem 2.4rem;
+  /* 0.75, not the 0.55 the nav uses over the same film. The nav sits inside
+     the 110px scrim band; this sits at the radial's edge, where the brightest
+     frame leaves a ground of ~118. Measured there: 0.65 gives 2.98:1 and 0.75
+     gives 3.41:1, so this is the first value that clears the 3:1 floor for a
+     control boundary with headroom to spare. */
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(14,10,6,0.6);
+  transition:
+    background-color var(--t-mid) var(--ease),
+    border-color     var(--t-mid) var(--ease),
+    color            var(--t-mid) var(--ease);
+  animation: heroMarkIn 1.8s var(--ease) 0.8s backwards;
+}
+.hero__book:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink);
+  text-shadow: none;
+}
+
+@media (max-width: 480px) {
+  .hero__tagline { letter-spacing: 0.24em; }
+  .hero__book    { padding: 0.9rem 1.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__tagline,
+  .hero__book { animation: none; }
+}
+
 .hero__cue {
   position: absolute;
   z-index: 2;
@@ -906,17 +886,7 @@ button:focus-visible {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-.hero__cue-label {
-  font-size: 11px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  /* Was 0.52, which measured 1.82:1 against the brightest frames. At 11px with
-     0.4em tracking there is no spare contrast to give away, so this is solid. */
-  color: #fff;
-  font-weight: 400;
-  text-align: center;
-  padding-left: 0.4em; /* optical centring against the tracked caps */
-}
+
 
 @media (max-width: 1024px) {
   .hero__mark { width: min(30vw, 18rem, 48svh); }
@@ -944,7 +914,7 @@ button:focus-visible {
   .hero__mark { width: min(42vw, 48svh); }
   /* Bottom offset comes from the 1024px rule above, which clears the action
      bar; only the type needs tightening at this width. */
-  .hero__cue-label { font-size: 10px; letter-spacing: 0.32em; }
+  
 }
 
 /* Short viewports (phones in landscape) cannot fit the mark and the cue at
@@ -969,8 +939,32 @@ button:focus-visible {
    [data-past-hero] (set once the hero scrolls away) restores the normal
    solid bars. */
 
-/* The promo strip would be a black band across the top of the film. */
-body:has(.hero--film) .announcement-bar { display: none; }
+/* The promo strip used to be hidden outright here, which meant the one line
+   carrying "book online for instant confirmation" and the phone number never
+   appeared on the highest-traffic page on the site. It was hidden for a good
+   reason — a solid band across the top of a full-bleed film wrecks it — so it
+   is not shown over the film. It is taken out of flow instead and slid up out
+   of view, then brought down with the solid nav once the film is behind you.
+   Both bars are fixed in that state, so the document never reflows and the
+   film keeps the whole first screen.
+
+   --announce-h is declared in :root and overwritten at runtime by HeroSection
+   with the measured height, because a constant would leave the nav either
+   overlapping the strip or floating below it. */
+body:has(.hero--film) .announcement-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-100%);
+  transition: transform var(--t-mid) var(--ease);
+}
+html[data-past-hero] body:has(.hero--film) .announcement-bar {
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  body:has(.hero--film) .announcement-bar { transition: none; }
+}
 
 /* Out of flow, so the video starts at the very top of the viewport. */
 body:has(.hero--film) .nav {
@@ -1058,6 +1052,9 @@ html[data-past-hero] body:has(.hero--film) .nav {
   box-shadow: 0 1px 20px rgba(31,26,22,0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  /* Drops below the announcement strip, which slides down at the same moment.
+     Overrides the `top: 0` set while the nav is overlaid on the film. */
+  top: var(--announce-h);
 }
 html[data-past-hero] body:has(.hero--film) .nav__logo-img--dark  { display: block; }
 html[data-past-hero] body:has(.hero--film) .nav__logo-img--light { display: none; }
@@ -3185,7 +3182,6 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   overflow: hidden;
 }
 .page-hero--dark  { background: var(--ink); }
-.page-hero--mint  { background: var(--bg-mint); }
 .page-hero--beige { background: var(--bg-soft); }
 /* Use when the section right after the hero isn't plain white (e.g. Contact's bg-soft block) */
 .page-hero--fade-soft { --hero-fade-to: var(--bg-soft); }
@@ -3224,7 +3220,7 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
 .form-group textarea {
   width: 100%;
   padding: 12px 14px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border-field);
   border-radius: 0;
   font-family: var(--sans);
   font-size: 15px;

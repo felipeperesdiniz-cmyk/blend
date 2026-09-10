@@ -30,7 +30,7 @@ export default function ContactSection() {
                     href={BUSINESS.mapsDirections}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Get directions to ${BUSINESS.address}`}
+                    aria-label={T[lang].a11y.getDirections.replace('{address}', BUSINESS.address)}
                   >
                     {BUSINESS.address}
                   </a>

@@ -96,27 +96,34 @@ export default function MobileMenu({ open, onClose }: Props) {
           aria-modal="true"
           aria-label={t.menuLabel}
         >
+          {/* Booking comes first, above the links, not after them.
+              Nine links at a 48px minimum with a 2.5rem gap is ~790px of list
+              before this button, on top of the panel's 7rem of top padding —
+              so on any phone shorter than about 900px the primary action was
+              below the fold of the menu that exists to expose it. Being first
+              in the DOM also means the focus trap's initial focus lands here,
+              which is the right place for it to land. */}
+          <motion.a
+            href={BUSINESS.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mobile-menu__book"
+            variants={item(0)}
+            initial="hidden"
+            animate="visible"
+          >
+            {T[lang].mobileMenu.bookBtn}
+          </motion.a>
+
           <nav className="mobile-menu__links">
             {links.map((l, i) => (
-              <motion.div key={l.href} variants={item(i)} initial="hidden" animate="visible">
+              <motion.div key={l.href} variants={item(i + 1)} initial="hidden" animate="visible">
                 <Link href={l.href} className="mobile-menu__link" onClick={onClose}>
                   {l.label}
                 </Link>
               </motion.div>
             ))}
           </nav>
-
-          <motion.a
-            href={BUSINESS.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mobile-menu__book"
-            variants={item(links.length)}
-            initial="hidden"
-            animate="visible"
-          >
-            {T[lang].mobileMenu.bookBtn}
-          </motion.a>
 
           <motion.div
             className="mobile-lang-switcher lang-switcher"

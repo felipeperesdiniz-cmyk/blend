@@ -182,6 +182,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             every page — and doing it in the same window the hero video needs the
             bandwidth. The video carries its own poster. */}
         <meta name="keywords" content="hair salon Plantation FL, balayage Plantation, Brazilian blowout Plantation, keratin treatment Florida, luxury hair salon South Florida, nail salon Plantation, bridal hair Plantation FL, hair color Plantation FL, blowout Plantation Florida" />
+        {/* Sets <html lang> from the URL before the body paints.
+
+            Only the root layout renders <html>, and it gets no route params, so
+            it cannot know the locale — the obvious fix, reading headers() from
+            middleware, makes every route on the site dynamically rendered, which
+            is a poor trade for one attribute on a marketing site that is
+            otherwise fully static.
+
+            This runs synchronously in <head>, so the attribute is correct before
+            anything is painted and long before hydration; LangProvider keeps it
+            in sync from then on. Crawlers that do not execute JavaScript still
+            see lang="en" here, which is why hreflang and the locale URL prefix —
+            both static, both in the markup — carry the real signal. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "var s=location.pathname.split('/')[1];" +
+              "if(s==='pt'||s==='es')document.documentElement.lang=s==='pt'?'pt-BR':'es';",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}

@@ -22,7 +22,7 @@ export default function FAQContent() {
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--beige">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
             {t.hero.eyebrow}
           </p>
@@ -80,14 +80,14 @@ export default function FAQContent() {
       {/* CTA */}
       <section className="section">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{t.cta.eyebrow}</p>
-          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+          <p className="eyebrow">{t.cta.eyebrow}</p>
+          <h2 className="section-h2">
             {t.cta.heading} <em>{t.cta.em}</em>
           </h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
             {t.cta.body}
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="btn-row">
             <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{t.cta.book}</a>
             <a href={BUSINESS.whatsapp} target="_blank" rel="noopener noreferrer" className="btn btn--outline">{t.cta.whatsapp}</a>
           </div>
@@ -97,7 +97,7 @@ export default function FAQContent() {
       {/* Quick links to service pages */}
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '900px' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>{t.explore.eyebrow}</p>
+          <p className="eyebrow eyebrow--center">{t.explore.eyebrow}</p>
           <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2.5rem', textAlign: 'center' }}>
             {t.explore.heading} <em>{t.explore.em}</em>
           </h2>

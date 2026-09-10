@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { SERVICES } from '@/data/services'
 import ServiceDetailContent from '@/components/pages/ServiceDetailContent'
 import { pageTitle, OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: pageTitle(title),
     description: s.description,
-    alternates: { canonical: `${SITE_URL}/services/${s.id}` },
+    alternates: hreflang(`/services/${s.id}`, 'en'),
     openGraph: {
       images: [OG_IMAGE],
       title: `${title} | Blend Hair Boutique`,

@@ -38,6 +38,27 @@ export default function HeroSection() {
     }
   }, [])
 
+  // Publishes the announcement bar's real height so the nav can sit exactly
+  // beneath it once both are fixed over the film. It cannot be a constant: the
+  // strip is 12px uppercase at 0.18em tracking and wraps to two lines on a
+  // phone — and to different line counts in Portuguese and Spanish, which are
+  // longer. Measured on mount and on resize only; this has no business running
+  // on every scroll frame. getBoundingClientRect reports the true height even
+  // while the bar is translated out of view.
+  useEffect(() => {
+    const root = document.documentElement
+    const measure = () => {
+      const bar = document.querySelector('.announcement-bar')
+      if (bar) root.style.setProperty('--announce-h', `${bar.getBoundingClientRect().height}px`)
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => {
+      window.removeEventListener('resize', measure)
+      root.style.removeProperty('--announce-h')
+    }
+  }, [])
+
   // The mark's entry is CSS-driven on purpose — it is the only content in this
   // hero, so it must never depend on JS having run. This effect only governs
   // playback.
@@ -57,7 +78,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="hero hero--film" aria-label="Hero" ref={sectionRef}>
+    <section className="hero hero--film" aria-label={T[lang].a11y.heroRegion} ref={sectionRef}>
       <div className="hero__video">
         <video
           ref={videoRef}
@@ -176,8 +197,27 @@ export default function HeroSection() {
         </span>
       </h1>
 
+      {/* The mark alone left the first screen wordless: the only heading was
+          the sr-only span above, so a sighted visitor was told neither what is
+          sold nor where. These two lines are the whole fix — one line of copy
+          and one control, sized and weighted to sit under the lockup rather
+          than compete with the film. */}
+      <p className="hero__tagline">{t.filmTagline}</p>
+
+      <a
+        href={BUSINESS.bookingUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hero__book"
+      >
+        {t.cta1}
+      </a>
+
+      {/* Label dropped: it read "Plantation, FL · Est. 2018" while being
+          aria-hidden, so it was real information withheld from assistive tech —
+          and the city now appears in the tagline above. What is left is a
+          scroll affordance, which is genuinely decorative. */}
       <div className="hero__cue" aria-hidden>
-        <span className="hero__cue-label">{t.eyebrow}</span>
         <div className="hero__scroll-line" />
       </div>
     </section>

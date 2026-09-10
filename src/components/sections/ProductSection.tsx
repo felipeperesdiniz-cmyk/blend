@@ -17,7 +17,7 @@ export default function ProductSection() {
             <div className="product-section__img">
               <img
                 src="/images/gallery/kerastase-chroma-absolu.webp"
-                alt="Kerastase Chroma Absolu products carried at Blend Hair Boutique, Plantation FL"
+                alt={T[lang].alt.kerastase}
                 loading="lazy" decoding="async"
               />
             </div>

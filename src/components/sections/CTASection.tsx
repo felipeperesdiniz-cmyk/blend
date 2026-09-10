@@ -33,7 +33,7 @@ export default function CTASection({
   return (
     <section className="cta-section">
       <div className="cta-section__bg" aria-hidden />
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container hero-layer">
         <p className="cta-section__eyebrow fade-in-up">
           {resolvedEyebrow}
         </p>

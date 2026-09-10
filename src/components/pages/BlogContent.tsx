@@ -33,8 +33,8 @@ export default function BlogContent() {
   return (
     <div className="page-enter">
       <header className="page-hero page-hero--dark">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+        <div className="container hero-layer">
+          <p className="eyebrow eyebrow--on-dark">
             {t.eyebrow}
           </p>
           <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 4vw, 4.4rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -81,7 +81,7 @@ export default function BlogContent() {
                   letterSpacing: '-0.01em',
                   lineHeight: 1.35,
                   marginBottom: '0.75rem',
-                  color: 'var(--text-1)',
+                  color: 'var(--text)',
                 }}>
                   {article.title}
                 </h2>
@@ -112,7 +112,7 @@ export default function BlogContent() {
 
       <section className="section section--beige">
         <div className="container" style={{ maxWidth: '820px' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+          <p className="eyebrow eyebrow--center">
             {t.browseByCategory}
           </p>
           <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -127,16 +127,16 @@ export default function BlogContent() {
 
       <section className="section">
         <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-          <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+          <p className="eyebrow">
             {t.readyToBook}
           </p>
-          <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+          <h2 className="section-h2">
             {t.ctaH2Line1}<br /><em>{t.ctaH2Line2}</em>
           </h2>
           <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
             {t.ctaSub}
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="btn-row">
             <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{t.bookOnline}</a>
             <Link href="/services" className="btn btn--outline">{t.viewAllServices}</Link>
           </div>

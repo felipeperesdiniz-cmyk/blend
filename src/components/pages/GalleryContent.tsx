@@ -54,7 +54,7 @@ export default function GalleryContent() {
   return (
     <div className="page-enter">
       <header className="gal-hero">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <motion.p style={{ fontSize: '0.88rem', letterSpacing: '0.26em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '0.9rem' }} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             {tp.eyebrow}
           </motion.p>
@@ -92,7 +92,7 @@ export default function GalleryContent() {
       </section>
 
       <section className="gal-editorial fade-in-up">
-        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="container hero-layer">
           <p className="gal-editorial__eyebrow">{ed.eyebrow}</p>
           <h2 className="gal-editorial__h2">{ed.h2a}<em>{ed.h2b}</em></h2>
           <p className="gal-editorial__sub">{ed.sub}</p>
@@ -121,9 +121,9 @@ export default function GalleryContent() {
                 <img src={currentItem.src} alt={`${labelMap[currentItem.enLabel] ?? currentItem.enLabel} at Blend Hair Boutique`} className="gal-lightbox__img" />
               </div>
             </motion.div>
-            <button className="gal-lightbox__close" onClick={closeLightbox} aria-label="Close gallery">✕</button>
-            <button className="gal-lightbox__nav gal-lightbox__nav--prev" onClick={prevItem} aria-label="Previous image">←</button>
-            <button className="gal-lightbox__nav gal-lightbox__nav--next" onClick={nextItem} aria-label="Next image">→</button>
+            <button className="gal-lightbox__close" onClick={closeLightbox} aria-label={T[lang].a11y.closeGallery}>✕</button>
+            <button className="gal-lightbox__nav gal-lightbox__nav--prev" onClick={prevItem} aria-label={T[lang].a11y.prevImage}>←</button>
+            <button className="gal-lightbox__nav gal-lightbox__nav--next" onClick={nextItem} aria-label={T[lang].a11y.nextImage}>→</button>
             <span className="gal-lightbox__counter">{String(lightbox + 1).padStart(2, '0')} / {String(ITEMS.length).padStart(2, '0')}</span>
           </motion.div>
         )}

@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: 'How long does a balayage appointment take at Blend Hair Boutique?', a: 'Balayage appointments at Blend Hair Boutique typically take 2.5 to 4 hours, depending on your hair length, density, and the result you\'re aiming for. We provide a realistic time estimate during your consultation or booking.' },
+  { q: 'How long does a balayage appointment take at Blend Hair Boutique?', a: 'Balayage appointments at Blend Hair Boutique typically take 3 to 5 hours, depending on your hair length, density, and the result you\'re aiming for. We provide a realistic time estimate during your consultation or booking.' },
   { q: 'What is the difference between balayage and highlights?', a: 'Balayage is a freehand painting technique that creates soft, sun-kissed color with no harsh lines, and it grows out naturally and requires less frequent touch-ups. Traditional highlights use foils for more defined, uniform brightness. Our colorists will recommend the best technique for your goals during your consultation.' },
-  { q: 'How do I maintain my balayage at home?', a: 'Use a sulfate-free shampoo to protect color longevity, apply a deep conditioning mask weekly, and use a UV-protective product before sun exposure. We recommend professional glossing treatments every 6–8 weeks to refresh vibrancy. Our team will provide a personalized home-care plan after your appointment.' },
+  { q: 'How do I maintain my balayage at home?', a: 'Use a sulfate-free shampoo to protect color longevity, apply a deep conditioning mask weekly, and use a UV-protective product before sun exposure. We recommend professional glossing treatments every 8–10 weeks to refresh vibrancy, more often over the summer. Our team will provide a personalized home-care plan after your appointment.' },
   { q: 'Is balayage suitable for all hair types?', a: 'Yes. Balayage can be adapted for straight, wavy, curly, fine, and thick hair. Our colorists at Blend Hair Boutique customize the technique, placement, and formula to work with your specific hair texture and natural color for results that look effortless and intentional.' },
   { q: 'What does balayage cost at Blend Hair Boutique in Plantation?', a: 'Balayage pricing at Blend Hair Boutique varies based on hair length, density, and the complexity of the color goal. Starting prices are available upon booking through our online system. We believe in transparent pricing, and you\'ll receive a full quote during your consultation.' },
 ]
@@ -70,8 +70,8 @@ export default function BalayagePlantationPage() {
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Plantation, Florida · Broward County
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.4rem, 5.5vw, 5.5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '16ch' }}>
@@ -80,7 +80,7 @@ export default function BalayagePlantationPage() {
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
               Blend Hair Boutique is a luxury balayage salon in Plantation, Florida, specializing in custom hand-painted color, highlights, and ombre. Our colorists create dimensional, sun-kissed results tailored to your hair texture and lifestyle: naturally beautiful, low-maintenance color that grows out gracefully.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
                 Book Balayage Appointment
               </a>
@@ -95,10 +95,10 @@ export default function BalayagePlantationPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   The Blend Difference
                 </p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <h2 className="section-h2">
                   Custom Color.<br /><em>Natural Results.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
@@ -109,11 +109,10 @@ export default function BalayagePlantationPage() {
                 </p>
               </div>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img
+                <img className="img-cover"
                   src="/images/gallery/bronde-balayage-back.webp"
                   alt="Bronde balayage hand-painted at Blend Hair Boutique in Plantation, FL"
                   loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
             </div>
@@ -122,10 +121,10 @@ export default function BalayagePlantationPage() {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               What to Expect
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <h2 className="section-h2 section-h2--center">
               The Balayage <em>Process</em>
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
@@ -147,7 +146,7 @@ export default function BalayagePlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '900px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">
               Areas We Serve
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1rem', textAlign: 'center' }}>
@@ -166,8 +165,8 @@ export default function BalayagePlantationPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Balayage <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -176,14 +175,14 @@ export default function BalayagePlantationPage() {
 
         <section className="section">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{REVIEW_LINE.en}</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <p className="eyebrow">{REVIEW_LINE.en}</p>
+            <h2 className="section-h2">
               Ready to book your<br /><em>balayage in Plantation?</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Book online 24/7 through our Fresha booking system, or call us at (754) 206-3501 to schedule a consultation at Blend Hair Boutique, 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Balayage Online</a>
               <Link href="/services" className="btn btn--outline">View All Services</Link>
             </div>

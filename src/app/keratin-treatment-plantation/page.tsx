@@ -66,8 +66,8 @@ export default function KeratinTreatmentPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', fontWeight: 500, marginBottom: '1rem' }}>
+          <div className="container hero-layer">
+            <p className="eyebrow eyebrow--on-dark">
               Plantation, Florida · Signature Service
             </p>
             <h1 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(2.2rem, 5vw, 5rem)', fontWeight: 300, color: 'var(--white)', letterSpacing: '-0.025em', lineHeight: 1.0, maxWidth: '18ch' }}>
@@ -76,7 +76,7 @@ export default function KeratinTreatmentPage() {
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
               Blend Hair Boutique is Plantation&apos;s trusted destination for Brazilian blowout and keratin smoothing treatments. Eliminate frizz, reduce styling time, and achieve brilliantly smooth hair that lasts 3–5 months, especially powerful in Florida&apos;s humid climate.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+            <div className="btn-row--start">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">Book Keratin Treatment</a>
               <a href={BUSINESS.phoneHref} className="btn btn--outline-light">Call (754) 206-3501</a>
             </div>
@@ -87,11 +87,11 @@ export default function KeratinTreatmentPage() {
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'center' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)' }}>
-                <img src="/images/gallery/glossy-straight-lob.webp" alt="Keratin-smoothed glossy hair at Blend Hair Boutique in Plantation, FL" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img className="img-cover" src="/images/gallery/glossy-straight-lob.webp" alt="Keratin-smoothed glossy hair at Blend Hair Boutique in Plantation, FL" loading="lazy" />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>Why Keratin at Blend</p>
-                <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+                <p className="eyebrow">Why Keratin at Blend</p>
+                <h2 className="section-h2">
                   Frizz-Free.<br /><em>For Months.</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
@@ -107,8 +107,8 @@ export default function KeratinTreatmentPage() {
 
         <section className="section section--beige" id="faq">
           <div className="container" style={{ maxWidth: '820px' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem', textAlign: 'center' }}>FAQ</p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '3rem', textAlign: 'center' }}>
+            <p className="eyebrow eyebrow--center">FAQ</p>
+            <h2 className="section-h2 section-h2--center">
               Keratin Treatment <em>Questions</em>
             </h2>
             <ServiceFAQ faqs={faqs} />
@@ -123,7 +123,7 @@ export default function KeratinTreatmentPage() {
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '2.5rem' }}>
               Blend Hair Boutique · 10035 Cleary Blvd, Plantation, FL 33324 · Open Mon–Sat
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">Book Online</a>
               <Link href="/services/smoothing" className="btn btn--outline">Learn More</Link>
             </div>

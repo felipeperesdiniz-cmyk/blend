@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import { TEAM } from '@/data/team'
 import TeamContent from '@/components/pages/TeamContent'
 import { OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
 export const metadata: Metadata = {
   title: 'Our Hair & Beauty Team, Plantation FL',
   description:
-    'Meet the stylists and beauty specialists at Blend Hair Boutique, Plantation FL. A multilingual team working in colour, smoothing, extensions, nails and bridal.',
-  alternates: { canonical: `${SITE_URL}/team` },
+    'Meet the stylists and beauty specialists at Blend Hair Boutique, Plantation FL. A multilingual team working in color, smoothing, extensions, nails and bridal.',
+  alternates: hreflang('/team', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Our Hair & Beauty Team | Blend Hair Boutique, Plantation FL',

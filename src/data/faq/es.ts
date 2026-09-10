@@ -290,7 +290,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Cuánto duran los tratamientos de alisado?',
-          a: 'Los resultados suelen durar alrededor de 3 meses, dependiendo de tu tipo de cabello, tu rutina de cuidado en casa y la frecuencia de lavado. Usar un shampoo sin sal y sin sulfatos prolonga bastante el tratamiento. Quienes se lavan el cabello a diario verán que el resultado se desvanece antes que quienes lo lavan 2 o 3 veces por semana.',
+          a: 'Los resultados suelen durar de 3 a 5 meses, dependiendo de tu tipo de cabello, tu rutina de cuidado en casa y la frecuencia de lavado. Usar un shampoo sin sal y sin sulfatos prolonga bastante el tratamiento. Quienes se lavan el cabello a diario verán que el resultado se desvanece antes que quienes lo lavan 2 o 3 veces por semana.',
         },
         {
           q: '¿Puedo teñirme el cabello y hacerme un tratamiento de alisado el mismo día?',
@@ -682,7 +682,7 @@ export const faqEs: FAQTranslation = {
         },
         {
           q: '¿Vale la pena un tratamiento de alisado viviendo en el sur de la Florida?',
-          a: 'Para la mayoría de las clientas de Plantation y del condado de Broward, sí. La humedad y el calor del sur de la Florida durante todo el año hacen de la keratina y el Botox Capilar algunos de los servicios más solicitados en Blend. Estos tratamientos eliminan el frizz durante unos 3 meses, reducen considerablemente el tiempo de secado y son especialmente valiosos durante la temporada de huracanes y los meses de verano.',
+          a: 'Para la mayoría de las clientas de Plantation y del condado de Broward, sí. La humedad y el calor del sur de la Florida durante todo el año hacen de la keratina y el Botox Capilar algunos de los servicios más solicitados en Blend. Estos tratamientos eliminan el frizz durante 3 a 5 meses, reducen considerablemente el tiempo de secado y son especialmente valiosos durante la temporada de huracanes y los meses de verano.',
         },
         {
           q: '¿Cómo cuido mis extensiones con el calor de la Florida?',

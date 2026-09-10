@@ -290,7 +290,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'How long do smoothing treatments last?',
-          a: 'Results typically last around 3 months, depending on your hair type, home care routine, and washing frequency. Using a sodium-chloride-free and sulfate-free shampoo significantly extends the treatment. Clients who wash daily will see results fade sooner than those who wash 2–3 times per week.',
+          a: 'Results typically last 3 to 5 months, depending on your hair type, home care routine, and washing frequency. Using a sodium-chloride-free and sulfate-free shampoo significantly extends the treatment. Clients who wash daily will see results fade sooner than those who wash 2–3 times per week.',
         },
         {
           q: 'Can I color my hair and get a smoothing treatment on the same day?',
@@ -682,7 +682,7 @@ export const faqEn: FAQTranslation = {
         },
         {
           q: 'Is a smoothing treatment worth it for South Florida residents?',
-          a: "For most clients in Plantation and Broward County, yes. South Florida's year-round humidity and heat make keratin and Hair Botox among the most popular services at Blend. These treatments eliminate frizz for around 3 months, cut blowout time significantly, and are especially valuable during hurricane season and summer months.",
+          a: "For most clients in Plantation and Broward County, yes. South Florida's year-round humidity and heat make keratin and Hair Botox among the most popular services at Blend. These treatments eliminate frizz for 3 to 5 months, cut blowout time significantly, and are especially valuable during hurricane season and summer months.",
         },
         {
           q: 'How do I care for hair extensions in Florida heat?',

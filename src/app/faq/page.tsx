@@ -3,6 +3,7 @@ import FAQContent from '@/components/pages/FAQContent'
 import { faqEn } from '@/data/faq/en'
 import { FAQ_SECTION_KEYS } from '@/data/faq'
 import { OG_IMAGE } from '@/data/constants'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/faq`
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Hair Salon FAQ · Plantation, FL',
   description:
     'Answers to the questions we are asked most at Blend Hair Boutique, Plantation FL: booking, policies, balayage, keratin, extensions, nails and brows.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/faq', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'FAQ | Blend Hair Boutique Plantation, FL: 130+ Questions Answered',

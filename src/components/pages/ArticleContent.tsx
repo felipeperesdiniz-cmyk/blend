@@ -67,7 +67,7 @@ export default function ArticleContent({ article, schema }: Props) {
                       letterSpacing: '-0.02em',
                       marginBottom: '1rem',
                       marginTop: i > 0 ? '2.5rem' : 0,
-                      color: 'var(--text-1)',
+                      color: 'var(--text)',
                     }}>
                       {section.heading}
                     </h2>
@@ -84,7 +84,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.relatedServices.length > 0 && (
           <section className="section section--beige">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p className="eyebrow">
                 {t.atBlend}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -104,7 +104,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {article.faqs.length > 0 && (
           <section className="section" id="faq">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>{t.faqLabel}</p>
+              <p className="eyebrow">{t.faqLabel}</p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2.5rem' }}>
                 {t.commonQuestions}
               </h2>
@@ -116,7 +116,7 @@ export default function ArticleContent({ article, schema }: Props) {
         {others.length > 0 && (
           <section className="section">
             <div className="container" style={{ maxWidth: '780px' }}>
-              <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+              <p className="eyebrow">
                 {t.beautyResourceCenter}
               </p>
               <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.4rem, 2.2vw, 1.9rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '2rem' }}>
@@ -132,7 +132,7 @@ export default function ArticleContent({ article, schema }: Props) {
                     <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '0.4rem', fontFamily: 'var(--sans)' }}>
                       {tBlog.categories[a.category as keyof typeof tBlog.categories] ?? a.category}
                     </p>
-                    <p style={{ fontFamily: 'var(--serif)', fontSize: '1.05rem', fontWeight: 400, color: 'var(--text-1)', marginBottom: '0.4rem' }}>{a.title}</p>
+                    <p style={{ fontFamily: 'var(--serif)', fontSize: '1.05rem', fontWeight: 400, color: 'var(--text)', marginBottom: '0.4rem' }}>{a.title}</p>
                     <p style={{ fontSize: '0.9rem', color: 'var(--text-2)', fontWeight: 300, lineHeight: 1.6 }}>{a.excerpt}</p>
                   </Link>
                 ))}
@@ -146,16 +146,16 @@ export default function ArticleContent({ article, schema }: Props) {
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '780px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p className="eyebrow">
               {t.reviewsLine}
             </p>
-            <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.8rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
+            <h2 className="section-h2">
               {t.ctaH2Line1}<br /><em>{t.ctaH2Line2}</em>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               {t.ctaSub}
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{t.bookOnline}</a>
               <Link href="/blog" className="btn btn--outline">{t.moreResources}</Link>
             </div>

@@ -71,7 +71,7 @@ export default function PhilosophySection() {
   useLenis(update)
 
   return (
-    <section className="philosophy" id="philosophy" aria-label="Our Philosophy">
+    <section className="philosophy" id="philosophy" aria-label={T[lang].a11y.philosophyRegion}>
       <div className="philosophy__inner" ref={innerRef}>
 
         <div className="philosophy__line philosophy__line--grow" aria-hidden />

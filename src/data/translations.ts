@@ -12,7 +12,7 @@ export const T = {
       gallery: 'Gallery',
       team: 'Team',
       reviews: 'Reviews',
-      resources: 'Resources',
+      resources: 'Guides',
       faq: 'FAQ',
       giftCards: 'Gift Cards',
       about: 'About',
@@ -22,6 +22,10 @@ export const T = {
 
     hero: {
       eyebrow: 'Plantation, FL · Est. 2018',
+      // Short enough to hold one line in tracked caps on a 375px screen. It is
+      // the only copy a sighted visitor gets on the first screen, so it has to
+      // carry the category and the city and nothing else.
+      filmTagline: 'Luxury Hair & Beauty · Plantation, FL',
       h1: ['Beauty', 'as a', 'ritual.'],
       sub: 'A sanctuary of artistry and Brazilian warmth in the heart of South Florida. Every visit, a transformation.',
       cta1: 'Reserve Your Visit',
@@ -203,7 +207,7 @@ export const T = {
         ],
         faq: [
           { q: 'What\'s the difference between Hair Botox and Keratin Treatment?', a: 'Hair Botox is designed to reduce frizz and volume while improving the overall condition and appearance of the hair. Keratin Treatment focuses more on smoothing the hair, reducing curl and frizz, and creating a sleeker finish with easier day-to-day styling.' },
-          { q: 'How long do smoothing treatments last?', a: 'Results typically last around 3 months, depending on your hair type, home care routine, and washing frequency.' },
+          { q: 'How long do smoothing treatments last?', a: 'Results typically last 3 to 5 months, depending on your hair type, home care routine, and washing frequency.' },
           { q: 'Will my hair be completely straight after a Keratin Treatment?', a: 'It depends on your natural hair texture. If your hair is very curly or coily, it may not become completely straight after the first session, but with additional sessions, it can become progressively smoother. Most clients experience significantly reduced frizz and easier styling.' },
           { q: 'Are smoothing treatments safe for color-treated hair?', a: 'Yes. Our smoothing treatments can be performed on color-treated hair and often help improve its appearance and manageability.' },
         ],
@@ -460,7 +464,7 @@ export const T = {
       },
       {
         q: 'How long does a balayage appointment take?',
-        a: "Balayage appointments typically range from 2.5 to 4 hours depending on your hair length, density, and the result you're aiming for. We'll give you a realistic time estimate during booking or consultation.",
+        a: "Balayage appointments typically range from 3 to 5 hours depending on your hair length, density, and the result you're aiming for. We'll give you a realistic time estimate during booking or consultation.",
       },
       {
         q: 'Do you specialize in balayage and blonding?',
@@ -659,6 +663,7 @@ export const T = {
       h2a: 'Meet Your ',
       h2b: 'Beauty Team',
       allTeam: 'Our Team',
+      viewProfile: 'View Profile',
       label: 'The Team',
       book: 'Book an Appointment',
     },
@@ -695,20 +700,20 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · All rights reserved · Plantation, Florida`,
       madeWith: 'Made with love · Brazilian touch',
       serviceLinks: ['Haircuts', 'Color Services', 'Balayage & Highlights', 'Smoothing Treatments', 'Nail Services'],
-      quickLinks: ['Services', 'Gallery', 'Team', 'Resources', 'Gift Cards', 'About', 'Contact'],
+      quickLinks: ['Services', 'Gallery', 'Team', 'Reviews', 'Guides', 'Gift Cards', 'FAQ', 'About', 'Contact'],
     },
 
     teamData: [
       { specialty: "Founder & General Manager", bio: "Brazilian, and a founder. Juliana runs Blend from behind the scenes — operations, marketing, growth, and the standard every visit is held to.", languages: "English, Portuguese" },
       { specialty: "Co-Owner & Salon Manager", bio: "Fernanda runs the floor. She is usually the one who greets you by name, and the one who notices a detail is off before you do.", languages: "English, Portuguese" },
-      { specialty: "Master Stylist", bio: "Twenty years in the industry, and at Blend since the day it opened. Debora works in colour and precision cutting.", languages: "English, Portuguese" },
+      { specialty: "Master Stylist", bio: "Twenty years in the industry, and at Blend since the day it opened. Debora works in color and precision cutting.", languages: "English, Portuguese" },
       { specialty: "Master Stylist", bio: "Léa was among the first at Blend to do extensions, and she is still the one to ask for curly cutting. Blondes are her specialty. Six years here, Brazilian.", languages: "English, Portuguese" },
-      { specialty: "Master Stylist", bio: "Colombian, at Blend since 2020. Bia does colour and precision cuts, and has the kind of loyal clientele that comes from never making anyone feel rushed.", languages: "English, Spanish" },
-      { specialty: "Master Stylist", bio: "Colour, styling, smoothing, and the updos. Nana is Brazilian and works in three languages.", languages: "English, Spanish, Portuguese" },
-      { specialty: "Master Stylist", bio: "Roger covers more ground than anyone here: colour, precision cutting, smoothing, extensions, and men’s grooming. Brazilian, at Blend since 2022.", languages: "English, Portuguese" },
-      { specialty: "Master Stylist", bio: "When a colour has gone wrong elsewhere, Ketty is who puts it right. She is also the salon’s only perm specialist. Here since 2022.", languages: "English, Portuguese" },
-      { specialty: "Master Stylist", bio: "Jeniffer does colour, cutting, smoothing and makeup — but it is the blowouts people come back for.", languages: "English, Portuguese" },
-      { specialty: "Master Stylist", bio: "A Florida native, and one of the few here who does every step of an appointment herself. Colour, cutting, styling, men’s grooming.", languages: "English" },
+      { specialty: "Master Stylist", bio: "Colombian, at Blend since 2020. Bia does color and precision cuts, and has the kind of loyal clientele that comes from never making anyone feel rushed.", languages: "English, Spanish" },
+      { specialty: "Master Stylist", bio: "Color, styling, smoothing, and the updos. Nana is Brazilian and works in three languages.", languages: "English, Spanish, Portuguese" },
+      { specialty: "Master Stylist", bio: "Roger covers more ground than anyone here: color, precision cutting, smoothing, extensions, and men’s grooming. Brazilian, at Blend since 2022.", languages: "English, Portuguese" },
+      { specialty: "Master Stylist", bio: "When a color has gone wrong elsewhere, Ketty is who puts it right. She is also the salon’s only perm specialist. Here since 2022.", languages: "English, Portuguese" },
+      { specialty: "Master Stylist", bio: "Jeniffer does color, cutting, smoothing and makeup — but it is the blowouts people come back for.", languages: "English, Portuguese" },
+      { specialty: "Master Stylist", bio: "A Florida native, and one of the few here who does every step of an appointment herself. Color, cutting, styling, men’s grooming.", languages: "English" },
       { specialty: "Wax & Nail Specialist", bio: "Nilza has been here since the very beginning. Decades of waxing and nails, and quicker than you would think possible.", languages: "English, Portuguese" },
       { specialty: "Nail Specialist", bio: "Edith is Colombian and has been on the nail team for close to two years. Her work is built to last.", languages: "English, Spanish" },
       { specialty: "Eyebrow & Facial Specialist", bio: "Brows and facials. Adriana shapes to the face in front of her rather than to a template, which is why her clients stay with her.", languages: "English, Portuguese" },
@@ -716,7 +721,7 @@ export const T = {
       { specialty: "Salon Assistant", bio: "Vitória makes the cappuccino, and most of the reason the room feels the way it does.", languages: "English, Portuguese" },
       { specialty: "Stylist Assistant", bio: "Marcelle was a hairstylist in Brazil before she moved to the States. She assists Roger now, which is why his column runs to time.", languages: "English, Portuguese" },
       { specialty: "Front Desk Coordinator", bio: "Five years at the front desk. Maggie is the voice on the phone, the reply on WhatsApp, and the first face through the door.", languages: "English, Portuguese" },
-      { specialty: "Stylist Assistants", bio: "Vanessa and Hanna work alongside Léa. Between them, long colour appointments keep moving.", languages: "English, Portuguese" },
+      { specialty: "Stylist Assistants", bio: "Vanessa and Hanna work alongside Léa. Between them, long color appointments keep moving.", languages: "English, Portuguese" },
     ],
 
     pages: {
@@ -797,7 +802,7 @@ export const T = {
           { title: 'Balayage & Color', body: 'Custom balayage, highlights, all-over color, and color correction: our most popular services.', href: '/balayage-plantation-fl' },
           { title: 'Keratin & Smoothing', body: 'Brazilian blowout and keratin treatments for months of frizz-free, effortlessly smooth hair.', href: '/keratin-treatment-plantation' },
           { title: 'Haircuts & Styling', body: 'Precision cuts and blowout styling by experienced stylists who listen first.', href: '/haircuts-plantation-fl' },
-          { title: 'Hair Extensions', body: 'Volume and length added seamlessly by certified extension specialists.', href: '/hair-extensions-plantation' },
+          { title: 'Hair Extensions', body: 'Volume and length added seamlessly by experienced extension specialists.', href: '/hair-extensions-plantation' },
           { title: 'Facials & Skin', body: 'Personalized facials by licensed estheticians for radiant, healthy-looking skin.', href: '/facials-plantation-fl' },
           { title: 'Nails', body: 'Manicures, pedicures, gel polish, and nail art, polished and precise.', href: '/nails-plantation-fl' },
           { title: 'Waxing & Brows', body: 'Eyebrow design, full and partial waxing for smooth, defined results.', href: '/waxing-plantation-fl' },
@@ -827,12 +832,13 @@ export const T = {
         visitBody: "We're conveniently located in Plantation, Florida. Walk-ins welcome, but appointments are recommended.",
         formTitle: 'Send a Message',
         formBody: "Questions? Special requests? We'll get back to you promptly.",
-        formSentTitle: 'Your message is ready in WhatsApp.',
-        formSentBody: 'Press send there and we will reply as soon as we can — nothing reaches us until you do.',
-        formBlockedTitle: 'WhatsApp could not open.',
-        formBlockedBody: 'Your browser blocked the window, so nothing has been sent yet. Send the same message by email instead, or call the salon.',
+        formSentTitle: 'Message sent.',
+        formSentBody: 'Thank you — your message is with us and we will reply as soon as we can.',
+        formSending: 'Sending…',
+        formBlockedTitle: 'That did not send.',
+        formBlockedBody: 'Something went wrong at our end and your message was not delivered. Send it on WhatsApp or by email instead, or call the salon — what you wrote is kept.',
         formEmailInstead: 'Send by email',
-        formTryAgain: 'Open WhatsApp again',
+        formTryAgain: 'Send on WhatsApp',
         formWriteAnother: 'Write another message',
         fields: {
           name: 'Your Name',
@@ -853,7 +859,7 @@ export const T = {
         eyebrow: 'Beauty Resource Center · Blend Hair Boutique',
         h1Line1: 'Your Hair & Beauty',
         h1Line2: 'Authority Library',
-        sub: 'Expert guidance on balayage, color, smoothing treatments, extensions, hair health, and more, from the certified professionals at Blend Hair Boutique in Plantation, Florida.',
+        sub: 'Expert guidance on balayage, color, smoothing treatments, extensions, hair health, and more, from the professionals at Blend Hair Boutique in Plantation, Florida.',
         readArticle: 'Read Article →',
         browseByCategory: 'Browse by Category',
         readyToBook: 'Ready to Book?',
@@ -941,6 +947,45 @@ export const T = {
     },
 
     mobileCta: { call: 'Call', book: 'Book', whatsapp: 'WhatsApp' },
+
+    // Screen-reader and assistive labels. These were English literals inside the
+    // components, which meant a Portuguese or Spanish visitor got an English
+    // voice for every control on the page while the visible copy was localised.
+    // {token} placeholders are filled by the caller.
+    a11y: {
+      heroRegion: 'Hero',
+      philosophyRegion: 'Our philosophy',
+      quickActions: 'Quick actions',
+      callUs: 'Call the salon',
+      bookAppointment: 'Book an appointment',
+      whatsapp: 'Message us on WhatsApp',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
+      switchTo: 'Switch to {lang}',
+      closeGallery: 'Close gallery',
+      prevImage: 'Previous image',
+      nextImage: 'Next image',
+      fiveStars: '5 out of 5 stars',
+      onInstagram: 'Blend Hair Boutique on Instagram',
+      onFacebook: 'Blend Hair Boutique on Facebook',
+      onTikTok: 'Blend Hair Boutique on TikTok',
+      getDirections: 'Get directions to {address}',
+      viewService: 'View {service}',
+      bookService: 'Book {service}',
+      homeLink: 'Blend Hair Boutique — home',
+    },
+
+    // Image alt text. Localised because alt is read aloud and is also indexed:
+    // English alt on a Portuguese page is both an accessibility gap and a
+    // wasted relevance signal on the pages we most want ranking in pt and es.
+    alt: {
+      stylistAtSalon: 'A Blend Hair Boutique stylist at the salon in Plantation, Florida',
+      finishedBalayage: 'Finished balayage and styling at Blend Hair Boutique in Plantation, FL',
+      kerastase: 'Kérastase Chroma Absolu products carried at Blend Hair Boutique, Plantation FL',
+      founders: 'Juliana and Fernanda, owners of Blend Hair Boutique in Plantation, Florida',
+      wineService: 'Complimentary wine service at Blend Hair Boutique in Plantation, FL',
+      giftCard: 'Blend Hair Boutique gift certificate and gift bag at the salon in Plantation, FL',
+    },
     mobileMenu: { bookBtn: 'Book Appointment' },
   },
 
@@ -954,7 +999,7 @@ export const T = {
       gallery: 'Galeria',
       team: 'Equipe',
       reviews: 'Avaliações',
-      resources: 'Recursos',
+      resources: 'Guias',
       faq: 'FAQ',
       giftCards: 'Cartões Presente',
       about: 'Sobre',
@@ -964,6 +1009,7 @@ export const T = {
 
     hero: {
       eyebrow: 'Salão Premium · Plantation, FL',
+      filmTagline: 'Beleza & Cabelo de Luxo · Plantation, FL',
       h1: ['Cabelos refinados,', 'com alma', 'brasileira.'],
       sub: 'Uma experiência boutique no coração de Plantation. Nossas especialistas formadas no Brasil dominam coloração personalizada, tratamentos alisantes e cortes clássicos, com produtos Kérastase e toda a hospitalidade brasileira.',
       cta1: 'Agendar Horário',
@@ -1145,7 +1191,7 @@ export const T = {
         ],
         faq: [
           { q: 'Qual a diferença entre Botox Capilar e Tratamento de Queratina?', a: 'O Botox Capilar é feito para reduzir o frizz e o volume, melhorando a condição geral e a aparência do cabelo. O Tratamento de Queratina foca mais em alisar o cabelo, reduzir cachos e frizz, criando um acabamento mais liso e fácil de pentear no dia a dia.' },
-          { q: 'Quanto tempo dura o tratamento alisante?', a: 'O resultado dura geralmente cerca de 3 meses, dependendo do seu tipo de cabelo, rotina de cuidados em casa e frequência de lavagem.' },
+          { q: 'Quanto tempo dura o tratamento alisante?', a: 'O resultado dura geralmente de 3 a 5 meses, dependendo do seu tipo de cabelo, rotina de cuidados em casa e frequência de lavagem.' },
           { q: 'Meu cabelo vai ficar completamente liso após a Queratina?', a: 'Depende da sua textura natural. Se o seu cabelo for muito cacheado ou crespo, pode não ficar completamente liso já na primeira sessão, mas com sessões adicionais fica progressivamente mais liso. A maioria das clientes nota redução significativa do frizz e mais facilidade para pentear.' },
           { q: 'Os tratamentos alisantes são seguros para cabelo colorido?', a: 'Sim. Nossos tratamentos alisantes podem ser feitos em cabelo colorido e muitas vezes ajudam a melhorar sua aparência e manuseio.' },
         ],
@@ -1394,7 +1440,7 @@ export const T = {
       },
       {
         q: 'Quanto tempo dura um agendamento de balayage?',
-        a: 'Agendamentos de balayage geralmente levam de 2h30 a 4 horas, dependendo do comprimento, densidade e resultado desejado. Daremos uma estimativa realista no momento do agendamento ou consulta.',
+        a: 'Agendamentos de balayage geralmente levam de 3 a 5 horas, dependendo do comprimento, densidade e resultado desejado. Daremos uma estimativa realista no momento do agendamento ou consulta.',
       },
       {
         q: 'Vocês são especialistas em balayage e luzes?',
@@ -1589,6 +1635,7 @@ export const T = {
       h2a: 'Conheça Sua ',
       h2b: 'Equipe de Beleza',
       allTeam: 'Nossa Equipe',
+      viewProfile: 'Ver Perfil',
       label: 'A Equipe',
       book: 'Agendar Horário',
     },
@@ -1625,7 +1672,7 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · Todos os direitos reservados · Plantation, Florida`,
       madeWith: 'Feito com amor · toque brasileiro',
       serviceLinks: ['Cortes', 'Serviços de Coloração', 'Balayage & Luzes', 'Tratamentos Alisantes', 'Serviços de Unhas'],
-      quickLinks: ['Serviços', 'Galeria', 'Equipe', 'Recursos', 'Vale-Presente', 'Sobre', 'Contato'],
+      quickLinks: ['Serviços', 'Galeria', 'Equipe', 'Avaliações', 'Guias', 'Cartões Presente', 'FAQ', 'Sobre', 'Contato'],
     },
 
     teamData: [
@@ -1756,12 +1803,13 @@ export const T = {
         visitBody: 'Estamos convenientemente localizados em Plantation, Flórida. Aceitamos clientes sem agendamento, mas recomendamos uma reserva.',
         formTitle: 'Envie uma Mensagem',
         formBody: 'Dúvidas? Pedidos especiais? Retornaremos em breve.',
-        formSentTitle: 'Sua mensagem está pronta no WhatsApp.',
-        formSentBody: 'Toque em enviar por lá e responderemos assim que possível — nada chega até nós antes disso.',
-        formBlockedTitle: 'O WhatsApp não abriu.',
-        formBlockedBody: 'Seu navegador bloqueou a janela, então nada foi enviado ainda. Envie a mesma mensagem por e-mail ou ligue para o salão.',
+        formSentTitle: 'Mensagem enviada.',
+        formSentBody: 'Obrigado — recebemos sua mensagem e responderemos assim que possível.',
+        formSending: 'Enviando…',
+        formBlockedTitle: 'A mensagem não foi enviada.',
+        formBlockedBody: 'Algo deu errado do nosso lado e sua mensagem não chegou. Envie pelo WhatsApp ou por e-mail, ou ligue para o salão — o que você escreveu foi guardado.',
         formEmailInstead: 'Enviar por e-mail',
-        formTryAgain: 'Abrir o WhatsApp de novo',
+        formTryAgain: 'Enviar pelo WhatsApp',
         formWriteAnother: 'Escrever outra mensagem',
         fields: {
           name: 'Seu Nome',
@@ -1870,6 +1918,38 @@ export const T = {
     },
 
     mobileCta: { call: 'Ligar', book: 'Agendar', whatsapp: 'WhatsApp' },
+
+    a11y: {
+      heroRegion: 'Destaque',
+      philosophyRegion: 'Nossa filosofia',
+      quickActions: 'Ações rápidas',
+      callUs: 'Ligar para o salão',
+      bookAppointment: 'Agendar horário',
+      whatsapp: 'Falar conosco no WhatsApp',
+      openMenu: 'Abrir menu',
+      closeMenu: 'Fechar menu',
+      switchTo: 'Mudar para {lang}',
+      closeGallery: 'Fechar galeria',
+      prevImage: 'Imagem anterior',
+      nextImage: 'Próxima imagem',
+      fiveStars: '5 de 5 estrelas',
+      onInstagram: 'Blend Hair Boutique no Instagram',
+      onFacebook: 'Blend Hair Boutique no Facebook',
+      onTikTok: 'Blend Hair Boutique no TikTok',
+      getDirections: 'Ver rota até {address}',
+      viewService: 'Ver {service}',
+      bookService: 'Agendar {service}',
+      homeLink: 'Blend Hair Boutique — página inicial',
+    },
+
+    alt: {
+      stylistAtSalon: 'Cabeleireira do Blend Hair Boutique no salão em Plantation, Flórida',
+      finishedBalayage: 'Balayage e finalização feitos no Blend Hair Boutique em Plantation, FL',
+      kerastase: 'Produtos Kérastase Chroma Absolu disponíveis no Blend Hair Boutique, Plantation FL',
+      founders: 'Juliana e Fernanda, proprietárias do Blend Hair Boutique em Plantation, Flórida',
+      wineService: 'Serviço de vinho de cortesia no Blend Hair Boutique em Plantation, FL',
+      giftCard: 'Vale-presente e sacola do Blend Hair Boutique no salão em Plantation, FL',
+    },
     mobileMenu: { bookBtn: 'Agendar Horário' },
   },
 
@@ -1883,7 +1963,7 @@ export const T = {
       gallery: 'Galería',
       team: 'Equipo',
       reviews: 'Reseñas',
-      resources: 'Recursos',
+      resources: 'Guías',
       faq: 'FAQ',
       giftCards: 'Tarjetas de Regalo',
       about: 'Nosotros',
@@ -1893,6 +1973,7 @@ export const T = {
 
     hero: {
       eyebrow: 'Salón Premium · Plantation, FL',
+      filmTagline: 'Belleza y Cabello de Lujo · Plantation, FL',
       h1: ['Cabello refinado,', 'con alma', 'brasileña.'],
       sub: 'Una experiencia boutique en el corazón de Plantation. Nuestras especialistas formadas en Brasil dominan el color personalizado, tratamientos alisadores y cortes atemporales, con productos Kérastase y la cálida hospitalidad brasileña.',
       cta1: 'Reservar Cita',
@@ -2074,7 +2155,7 @@ export const T = {
         ],
         faq: [
           { q: '¿Cuál es la diferencia entre Botox Capilar y Tratamiento de Keratina?', a: 'El Botox Capilar está diseñado para reducir el frizz y el volumen mientras mejora la condición y apariencia general del cabello. El Tratamiento de Keratina se enfoca más en alisar el cabello, reducir el rizo y el frizz, y crear un acabado más liso con un peinado diario más fácil.' },
-          { q: '¿Cuánto duran los tratamientos alisadores?', a: 'Los resultados suelen durar alrededor de 3 meses, dependiendo de tu tipo de cabello, rutina de cuidado en casa y frecuencia de lavado.' },
+          { q: '¿Cuánto duran los tratamientos alisadores?', a: 'Los resultados suelen durar de 3 a 5 meses, dependiendo de tu tipo de cabello, rutina de cuidado en casa y frecuencia de lavado.' },
           { q: '¿Mi cabello quedará completamente liso después de la Keratina?', a: 'Depende de tu textura natural. Si tu cabello es muy rizado o afro, puede que no quede completamente liso tras la primera sesión, pero con sesiones adicionales se vuelve progresivamente más liso. La mayoría de las clientas experimenta una reducción significativa del frizz y mayor facilidad para peinar.' },
           { q: '¿Los tratamientos alisadores son seguros para cabello con color?', a: 'Sí. Nuestros tratamientos alisadores pueden realizarse en cabello con color y a menudo ayudan a mejorar su apariencia y manejo.' },
         ],
@@ -2323,7 +2404,7 @@ export const T = {
       },
       {
         q: '¿Cuánto tiempo dura una cita de balayage?',
-        a: 'Las citas de balayage generalmente duran entre 2.5 y 4 horas según el largo, densidad y resultado deseado. Te daremos una estimativa realista al momento de la reserva o consulta.',
+        a: 'Las citas de balayage generalmente duran entre 3 y 5 horas según el largo, densidad y resultado deseado. Te daremos una estimativa realista al momento de la reserva o consulta.',
       },
       {
         q: '¿Se especializan en balayage y luces?',
@@ -2518,6 +2599,7 @@ export const T = {
       h2a: 'Conoce a Tu ',
       h2b: 'Equipo de Belleza',
       allTeam: 'Nuestro Equipo',
+      viewProfile: 'Ver Perfil',
       label: 'El Equipo',
       book: 'Reservar Cita',
     },
@@ -2554,7 +2636,7 @@ export const T = {
       copyright: `© ${year} Blend Hair Boutique · Todos los derechos reservados · Plantation, Florida`,
       madeWith: 'Hecho con amor · toque brasileño',
       serviceLinks: ['Cortes', 'Servicios de Coloración', 'Balayage & Luces', 'Tratamientos Alisadores', 'Servicios de Uñas'],
-      quickLinks: ['Servicios', 'Galería', 'Equipo', 'Recursos', 'Tarjetas de Regalo', 'Nosotros', 'Contacto'],
+      quickLinks: ['Servicios', 'Galería', 'Equipo', 'Reseñas', 'Guías', 'Tarjetas de Regalo', 'FAQ', 'Nosotros', 'Contacto'],
     },
 
     teamData: [
@@ -2685,12 +2767,13 @@ export const T = {
         visitBody: 'Estamos convenientemente ubicados en Plantation, Florida. Se aceptan clientas sin cita previa, pero se recomienda hacer una reserva.',
         formTitle: 'Envía un Mensaje',
         formBody: '¿Preguntas? ¿Pedidos especiales? Te responderemos pronto.',
-        formSentTitle: 'Tu mensaje está listo en WhatsApp.',
-        formSentBody: 'Pulsa enviar allí y te responderemos lo antes posible — hasta entonces no nos llega nada.',
-        formBlockedTitle: 'WhatsApp no se abrió.',
-        formBlockedBody: 'Tu navegador bloqueó la ventana, así que todavía no se ha enviado nada. Envía el mismo mensaje por correo o llama al salón.',
+        formSentTitle: 'Mensaje enviado.',
+        formSentBody: 'Gracias — hemos recibido tu mensaje y te responderemos lo antes posible.',
+        formSending: 'Enviando…',
+        formBlockedTitle: 'El mensaje no se envió.',
+        formBlockedBody: 'Algo falló de nuestro lado y tu mensaje no llegó. Envíalo por WhatsApp o por correo, o llama al salón — lo que escribiste se ha guardado.',
         formEmailInstead: 'Enviar por correo',
-        formTryAgain: 'Abrir WhatsApp otra vez',
+        formTryAgain: 'Enviar por WhatsApp',
         formWriteAnother: 'Escribir otro mensaje',
         fields: {
           name: 'Tu Nombre',
@@ -2799,6 +2882,38 @@ export const T = {
     },
 
     mobileCta: { call: 'Llamar', book: 'Reservar', whatsapp: 'WhatsApp' },
+
+    a11y: {
+      heroRegion: 'Destacado',
+      philosophyRegion: 'Nuestra filosofía',
+      quickActions: 'Acciones rápidas',
+      callUs: 'Llamar al salón',
+      bookAppointment: 'Reservar cita',
+      whatsapp: 'Escríbenos por WhatsApp',
+      openMenu: 'Abrir menú',
+      closeMenu: 'Cerrar menú',
+      switchTo: 'Cambiar a {lang}',
+      closeGallery: 'Cerrar galería',
+      prevImage: 'Imagen anterior',
+      nextImage: 'Imagen siguiente',
+      fiveStars: '5 de 5 estrellas',
+      onInstagram: 'Blend Hair Boutique en Instagram',
+      onFacebook: 'Blend Hair Boutique en Facebook',
+      onTikTok: 'Blend Hair Boutique en TikTok',
+      getDirections: 'Cómo llegar a {address}',
+      viewService: 'Ver {service}',
+      bookService: 'Reservar {service}',
+      homeLink: 'Blend Hair Boutique — inicio',
+    },
+
+    alt: {
+      stylistAtSalon: 'Estilista de Blend Hair Boutique en el salón en Plantation, Florida',
+      finishedBalayage: 'Balayage y peinado realizados en Blend Hair Boutique en Plantation, FL',
+      kerastase: 'Productos Kérastase Chroma Absolu disponibles en Blend Hair Boutique, Plantation FL',
+      founders: 'Juliana y Fernanda, propietarias de Blend Hair Boutique en Plantation, Florida',
+      wineService: 'Servicio de vino de cortesía en Blend Hair Boutique en Plantation, FL',
+      giftCard: 'Tarjeta de regalo y bolsa de Blend Hair Boutique en el salón en Plantation, FL',
+    },
     mobileMenu: { bookBtn: 'Reservar Cita' },
   },
 }

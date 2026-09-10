@@ -14,7 +14,7 @@ export default function FoundersFeature() {
         <div className="founders-feature__img">
           <img
             src="/founders.webp"
-            alt="Juliana and Fernanda, owners of Blend Hair Boutique in Plantation, Florida"
+            alt={T[lang].alt.founders}
             loading="lazy"
             decoding="async"
           />

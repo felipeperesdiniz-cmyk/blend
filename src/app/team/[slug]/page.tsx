@@ -197,7 +197,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
       <div className="page-enter">
         <header className="page-hero page-hero--dark">
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container hero-layer">
             <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '1.25rem' }}>
               <Link href="/team" style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', fontWeight: 400, textDecoration: 'none' }}>
                 Our Team
@@ -234,15 +234,14 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
           <div className="container" style={{ maxWidth: '900px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(3rem, 6vw, 5rem)', alignItems: 'start' }}>
               <div style={{ overflow: 'hidden', aspectRatio: '4/5', background: 'var(--bg-soft)', position: 'sticky', top: '6rem' }}>
-                <TeamPortrait
+                <TeamPortrait className="img-cover"
                   src={member.image}
                   name={member.name}
                   alt={`${member.name}, ${member.specialty} at Blend Hair Boutique in Plantation, FL`}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
               </div>
               <div>
-                <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                <p className="eyebrow">
                   About {shortName}
                 </p>
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.6rem, 2.5vw, 2.4rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.5rem' }}>
@@ -258,7 +257,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
                 {services.length > 0 && (
                   <>
-                    <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+                    <p className="eyebrow">
                       Services
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
@@ -268,7 +267,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                           href={s.href}
                           style={{
                             textDecoration: 'none',
-                            color: 'var(--text-1)',
+                            color: 'var(--text)',
                             fontSize: '1rem',
                             fontFamily: 'var(--serif)',
                             fontWeight: 400,
@@ -297,7 +296,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
 
         <section className="section section--beige">
           <div className="container" style={{ maxWidth: '820px', textAlign: 'center' }}>
-            <p style={{ fontSize: '0.88rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--gold-dk)', fontWeight: 500, marginBottom: '1rem' }}>
+            <p className="eyebrow">
               Blend Hair Boutique · Plantation, FL
             </p>
             <h2 style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', fontWeight: 300, letterSpacing: '-0.02em', marginBottom: '1.25rem' }}>
@@ -306,7 +305,7 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
             <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, maxWidth: '44ch', margin: '0 auto 2.5rem' }}>
               Blend Hair Boutique is home to a full team of specialists across color, styling, extensions, skin, and nails, all at 10035 Cleary Blvd, Plantation, FL 33324.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="btn-row">
               <Link href="/team" className="btn btn--primary">Meet Our Team</Link>
               <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline">Book Online</a>
             </div>

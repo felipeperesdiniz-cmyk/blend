@@ -18,7 +18,7 @@ export default function ServiceFAQ({ faqs }: { faqs: FAQ[] }) {
               width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
               padding: '1.25rem 0', background: 'none', border: 'none', cursor: 'pointer',
               fontFamily: 'var(--serif)', fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)', fontWeight: 400,
-              textAlign: 'left', color: 'var(--text-1)', gap: '1rem',
+              textAlign: 'left', color: 'var(--text)', gap: '1rem',
             }}
           >
             <span>{faq.q}</span>
