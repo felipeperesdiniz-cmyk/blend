@@ -106,12 +106,26 @@ export default function HeroSection() {
 
               The portrait tier is gated on orientation as well as width so a
               phone in landscape correctly gets landscape footage rather than
-              the centre-cropped portrait cut. */}
+              the centre-cropped portrait cut.
+
+              The two landscape tiers carry the newer salon film; the portrait
+              tier still carries the original, because that cut was framed for
+              9:16 by hand. The new footage is landscape only, and a centre
+              crop of it slices the painted Blend wordmark in half — which is
+              also what `object-fit: cover` would do unaided. Until there is a
+              portrait grade of the new film, phones keep the cut that frames
+              properly.
+
+              webm is AV1 here rather than VP9: same VMAF against the master,
+              about 30% fewer bytes. The codecs string is load-bearing — a
+              browser without AV1 claims `video/webm` wholesale and would
+              select a file it cannot decode, so it must be told precisely
+              what is inside before it skips to the mp4. */}
           <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 700px) and (orientation: portrait)" />
           <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 700px) and (orientation: portrait)" />
-          <source src="/hero-loop-md.webm" type="video/webm" media="(max-width: 1200px)" />
+          <source src="/hero-loop-md.webm" type='video/webm; codecs="av01.0.04M.08"' media="(max-width: 1200px)" />
           <source src="/hero-loop-md.mp4"  type="video/mp4"  media="(max-width: 1200px)" />
-          <source src="/hero-loop.webm" type="video/webm" />
+          <source src="/hero-loop.webm" type='video/webm; codecs="av01.0.05M.08"' />
           <source src="/hero-loop.mp4"  type="video/mp4" />
         </video>
       </div>
