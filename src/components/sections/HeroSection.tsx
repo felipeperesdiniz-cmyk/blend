@@ -115,14 +115,20 @@ export default function HeroSection() {
               the whole edit present there at 1920x1080, so the cut is rebuilt
               from it: same twelve shots, same order, real pixels.
 
-              The portrait tier is its own edit, not a crop of the landscape
-              one. Two shots cannot survive 9:16 — the painted Blend wordmark
-              reads as "end / outique" once the sides are gone, and the
-              two-women shot puts its subject at the frame edge. Both are
-              dropped; what remains is the close work (brush, hands, brow,
-              faces), which fills a tall frame properly. The wordmark is no
-              loss on phones: the real mark is already composited over the
-              video as `blend-mark-white.png`.
+              Both tiers run the same shot sequence and the same 19.4s. One
+              shot of the supplied edit is not in either: the stylist in front
+              of the painted Blend wall. The overlaid white lockup lands
+              directly above the identical wordmark painted behind her, so the
+              frame carries two Blend marks stacked, the lower one half hidden
+              by the model. The previous film had this same shot cut for the
+              same reason. It is a framing collision, not a crop problem —
+              reframing does not help, and on phones `object-fit: cover`
+              additionally clips the painted mark to "Blen…".
+
+              The portrait tier reframes per shot rather than centre-cropping
+              throughout: the two-women shot is centred on x=500 instead of
+              656, which is the difference between her face being in frame and
+              being cut by the edge. Everything else takes the centre.
 
               Both cuts drop two short stretches the supplied edit contains: a
               four-frame white flash sitting exactly on a shot boundary, and
