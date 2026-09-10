@@ -66,7 +66,7 @@ export default function HeroSection() {
           loop
           playsInline
           preload="metadata"
-          poster="/hero-poster.webp"
+          poster="/hero-poster.v2.webp"
           aria-hidden="true"
           tabIndex={-1}
         >
@@ -149,12 +149,12 @@ export default function HeroSection() {
               `video/webm` wholesale and would commit to a file it cannot
               decode, so it must be told precisely what is inside before it
               falls through to the mp4. */}
-          <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 700px) and (orientation: portrait)" />
-          <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 700px) and (orientation: portrait)" />
-          <source src="/hero-loop-md.webm" type='video/webm; codecs="av01.0.04M.08"' media="(max-width: 1200px)" />
-          <source src="/hero-loop-md.mp4"  type="video/mp4"  media="(max-width: 1200px)" />
-          <source src="/hero-loop.webm" type='video/webm; codecs="av01.0.08M.08"' />
-          <source src="/hero-loop.mp4"  type="video/mp4" />
+          <source src="/hero-loop-mobile.v2.webm" type="video/webm" media="(max-width: 700px) and (orientation: portrait)" />
+          <source src="/hero-loop-mobile.v2.mp4"  type="video/mp4"  media="(max-width: 700px) and (orientation: portrait)" />
+          <source src="/hero-loop-md.v2.webm" type='video/webm; codecs="av01.0.05M.08"' media="(max-width: 1200px)" />
+          <source src="/hero-loop-md.v2.mp4"  type="video/mp4"  media="(max-width: 1200px)" />
+          <source src="/hero-loop.v2.webm" type='video/webm; codecs="av01.0.08M.08"' />
+          <source src="/hero-loop.v2.mp4"  type="video/mp4" />
         </video>
       </div>
 
