@@ -90,15 +90,27 @@ export default function HeroSection() {
               through ~0.8s of black at every wrap.
 
               `object-fit: cover` in a portrait viewport shows only the middle
-              ~500px of the 1920-wide frame, so phones were downloading four
+              ~500px of the full-width frame, so phones were downloading four
               times the pixels they can display. These sources are the same
               footage pre-cropped to what is actually visible — smaller file,
               identical framing, no loss of detail.
 
               `media` on <source> is resolved once at load, not on resize, so
-              the order matters: narrowest first. */}
-          <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 600px)" />
-          <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 600px)" />
+              the order matters: narrowest first.
+
+              Three tiers, not two. The previous pair switched at 600px, which
+              meant every viewport from 601px up — the whole tablet range, and
+              a phone held in landscape — pulled the full 1600-wide desktop
+              file. An iPad in portrait was downloading 3.5MB to paint a strip
+              about 430px across. `hero-loop-md` closes that gap.
+
+              The portrait tier is gated on orientation as well as width so a
+              phone in landscape correctly gets landscape footage rather than
+              the centre-cropped portrait cut. */}
+          <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 700px) and (orientation: portrait)" />
+          <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 700px) and (orientation: portrait)" />
+          <source src="/hero-loop-md.webm" type="video/webm" media="(max-width: 1200px)" />
+          <source src="/hero-loop-md.mp4"  type="video/mp4"  media="(max-width: 1200px)" />
           <source src="/hero-loop.webm" type="video/webm" />
           <source src="/hero-loop.mp4"  type="video/mp4" />
         </video>
