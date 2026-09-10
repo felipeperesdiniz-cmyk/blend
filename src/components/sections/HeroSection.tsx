@@ -108,24 +108,46 @@ export default function HeroSection() {
               phone in landscape correctly gets landscape footage rather than
               the centre-cropped portrait cut.
 
-              The two landscape tiers carry the newer salon film; the portrait
-              tier still carries the original, because that cut was framed for
-              9:16 by hand. The new footage is landscape only, and a centre
-              crop of it slices the painted Blend wordmark in half — which is
-              also what `object-fit: cover` would do unaided. Until there is a
-              portrait grade of the new film, phones keep the cut that frames
-              properly.
+              All three tiers are the newer salon edit, conformed back onto the
+              1080p master. The film was supplied as a 1280x720 re-export,
+              which would have capped the desktop tier below the 1600x900 it
+              already had. Frame-matching every shot against the master showed
+              the whole edit present there at 1920x1080, so the cut is rebuilt
+              from it: same twelve shots, same order, real pixels.
 
-              webm is AV1 here rather than VP9: same VMAF against the master,
-              about 30% fewer bytes. The codecs string is load-bearing — a
-              browser without AV1 claims `video/webm` wholesale and would
-              select a file it cannot decode, so it must be told precisely
-              what is inside before it skips to the mp4. */}
+              The portrait tier is its own edit, not a crop of the landscape
+              one. Two shots cannot survive 9:16 — the painted Blend wordmark
+              reads as "end / outique" once the sides are gone, and the
+              two-women shot puts its subject at the frame edge. Both are
+              dropped; what remains is the close work (brush, hands, brow,
+              faces), which fills a tall frame properly. The wordmark is no
+              loss on phones: the real mark is already composited over the
+              video as `blend-mark-white.png`.
+
+              Both cuts drop two short stretches the supplied edit contains: a
+              four-frame white flash sitting exactly on a shot boundary, and
+              the bright tail of the shot before it. In the mark region those
+              frames reached luma 246, which put the white lockup at 4.8:1 —
+              "hair boutique" all but vanished. Removing 0.5s in total brings
+              the worst frame to 220, or 5.6:1, and neither cut is visible at
+              speed. This is the same reason the previous film had its
+              near-white macro removed rather than scrimmed harder: past a
+              certain frame brightness no overlay rescues white type without
+              darkening the whole hero.
+
+              webm is AV1 on the landscape tiers — same VMAF as VP9 for about
+              a third fewer bytes. The portrait tier stays VP9 because AV1
+              hardware decode is still uneven on phones, and this loop plays
+              continuously; software decode there costs battery. The codecs
+              string is load-bearing: a browser without AV1 claims
+              `video/webm` wholesale and would commit to a file it cannot
+              decode, so it must be told precisely what is inside before it
+              falls through to the mp4. */}
           <source src="/hero-loop-mobile.webm" type="video/webm" media="(max-width: 700px) and (orientation: portrait)" />
           <source src="/hero-loop-mobile.mp4"  type="video/mp4"  media="(max-width: 700px) and (orientation: portrait)" />
           <source src="/hero-loop-md.webm" type='video/webm; codecs="av01.0.04M.08"' media="(max-width: 1200px)" />
           <source src="/hero-loop-md.mp4"  type="video/mp4"  media="(max-width: 1200px)" />
-          <source src="/hero-loop.webm" type='video/webm; codecs="av01.0.05M.08"' />
+          <source src="/hero-loop.webm" type='video/webm; codecs="av01.0.08M.08"' />
           <source src="/hero-loop.mp4"  type="video/mp4" />
         </video>
       </div>
