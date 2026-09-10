@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/bridal-hair-south-florida`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Bridal Hair in South Florida',
   description:
     'Bridal hair and beauty in South Florida: trials, day-of styling and bridal party packages at Blend Hair Boutique, Plantation FL. Book a consultation.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/bridal-hair-south-florida', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Bridal Hair Salon in South Florida | Blend Hair Boutique, Plantation FL',

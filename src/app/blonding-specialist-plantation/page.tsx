@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/blonding-specialist-plantation`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Blonding Specialist in Plantation, FL',
   description:
     'Blonding specialists in Plantation, Florida: full bleach, highlights, toning and blonde corrections at Blend Hair Boutique. 4.9★ rated. Book online.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/blonding-specialist-plantation', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Blonding Specialist in Plantation, FL | Blend Hair Boutique',

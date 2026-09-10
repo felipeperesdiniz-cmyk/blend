@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/waxing-plantation-fl`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Waxing in Plantation, FL',
   description:
     `Waxing in Plantation, Florida: eyebrow, facial and body waxing at Blend Hair Boutique. Gentle, precise, effective. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/waxing-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Waxing in Plantation, FL | Blend Hair Boutique',

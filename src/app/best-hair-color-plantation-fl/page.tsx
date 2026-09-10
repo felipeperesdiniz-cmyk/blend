@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   title: 'Best Hair Color in Plantation, FL',
   description:
     `The best hair color in Plantation, FL: balayage, highlights, all-over color and correction by expert colorists. 4.9★ · ${REVIEW_COUNT}+ reviews. Book online.`,
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/best-hair-color-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Best Hair Color in Plantation, FL | Blend Hair Boutique',

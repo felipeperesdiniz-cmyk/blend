@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, REVIEW_LINE_LOCATED, OG_IMAGE, REVIEW_COUNT } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   title: 'Best Balayage in Plantation, FL',
   description:
     `Looking for the best balayage in Plantation, FL? ${REVIEW_COUNT}+ Google reviews at 4.9★, hand-painted by specialist colorists. Book online.`,
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/best-balayage-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Best Balayage in Plantation, FL | Blend Hair Boutique',

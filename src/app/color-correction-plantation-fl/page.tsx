@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/color-correction-plantation-fl`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Color Correction in Plantation, FL',
   description:
     'Color correction in Plantation, Florida — brassiness, uneven color, box dye and over-processed hair, fixed by advanced colorists. 4.9★ rated.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/color-correction-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Color Correction in Plantation, FL | Blend Hair Boutique',

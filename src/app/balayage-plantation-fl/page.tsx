@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/balayage-plantation-fl`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Balayage in Plantation, FL',
   description:
     'Hand-painted balayage in Plantation, Florida, tailored to your hair texture and skin tone. Highlights and ombre too. 4.9★ rated salon. Book online.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/balayage-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Balayage in Plantation, FL | Blend Hair Boutique',

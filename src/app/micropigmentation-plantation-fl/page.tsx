@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, REVIEW_LINE, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/micropigmentation-plantation-fl`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Micropigmentation in Plantation, FL',
   description:
     'Permanent makeup in Plantation, Florida: eyebrow microblading, ombre brows and lip blushing at Blend Hair Boutique. Book a consultation.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/micropigmentation-plantation-fl', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Micropigmentation in Plantation, FL | Blend Hair Boutique',

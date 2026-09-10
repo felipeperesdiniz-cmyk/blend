@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BUSINESS, OG_IMAGE } from '@/data/constants'
 import ServiceFAQ from '@/components/ServiceFAQ'
+import { hreflang } from '@/data/locales'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 const CANONICAL = `${SITE_URL}/keratin-treatment-plantation`
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Keratin Treatment in Plantation, FL',
   description:
     'Keratin treatments and Brazilian blowout in Plantation, Florida. Frizz gone for 3–5 months, built for Florida humidity. 4.9★ rated. Book online.',
-  alternates: { canonical: CANONICAL },
+  alternates: hreflang('/keratin-treatment-plantation', 'en'),
   openGraph: {
     images: [OG_IMAGE],
     title: 'Keratin Treatment & Brazilian Blowout in Plantation, FL | Blend Hair Boutique',

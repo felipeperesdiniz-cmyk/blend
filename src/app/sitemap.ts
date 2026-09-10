@@ -3,6 +3,7 @@ import { ARTICLES } from '@/data/articles'
 import { SERVICES } from '@/data/services'
 import { TEAM } from '@/data/team'
 import { LOCALIZED_ROUTES, localeUrls } from '@/data/locales'
+import { LANDING_INDEXABLE_SLUGS } from '@/data/landing'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -21,24 +22,6 @@ const STATIC_ROUTES: { path: string; priority: number }[] = [
   { path: '/contact', priority: 0.9 },
   { path: '/reviews', priority: 0.8 },
   { path: '/faq', priority: 0.8 },
-  { path: '/hair-salon-plantation-fl', priority: 0.95 },
-  { path: '/balayage-plantation-fl', priority: 0.9 },
-  { path: '/hair-color-plantation', priority: 0.9 },
-  { path: '/highlights-plantation-fl', priority: 0.85 },
-  { path: '/haircuts-plantation-fl', priority: 0.85 },
-  { path: '/keratin-treatment-plantation', priority: 0.9 },
-  { path: '/hair-extensions-plantation', priority: 0.85 },
-  { path: '/blowout-plantation-fl', priority: 0.8 },
-  { path: '/color-correction-plantation-fl', priority: 0.85 },
-  { path: '/blonding-specialist-plantation', priority: 0.8 },
-  { path: '/bridal-hair-south-florida', priority: 0.85 },
-  { path: '/nails-plantation-fl', priority: 0.8 },
-  { path: '/waxing-plantation-fl', priority: 0.8 },
-  { path: '/facials-plantation-fl', priority: 0.8 },
-  { path: '/makeup-plantation-fl', priority: 0.8 },
-  { path: '/micropigmentation-plantation-fl', priority: 0.8 },
-  { path: '/luxury-hair-salon-plantation-fl', priority: 0.9 },
-  { path: '/brazilian-hair-salon-plantation-fl', priority: 0.9 },
   // /best-balayage-plantation-fl and /best-hair-color-plantation-fl are
   // deliberately absent. Both now canonicalise to their primary counterparts
   // (/balayage-plantation-fl and /hair-color-plantation), and submitting a URL
@@ -87,6 +70,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Service detail pages, in all three languages. These carry the queries
     // that convert — "balayage", "queratina", "alisamento" — so the pt and es
     // URLs are submitted alongside the English rather than left to discovery.
+    // The twenty SEO landing pages, now in all three languages. Their English
+    // originals stay as hand-built files; pt and es render from shared copy.
+    ...LANDING_INDEXABLE_SLUGS.flatMap((slug) => {
+      const u = localeUrls(`/${slug}`)
+      const languages = { 'en-US': u.en, 'pt-BR': u.pt, es: u.es }
+      return (['en', 'pt', 'es'] as const).map((l) => ({
+        url: u[l],
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: l === 'en' ? 0.85 : 0.75,
+        alternates: { languages },
+      }))
+    }),
     ...SERVICES.flatMap((service) => {
       const u = localeUrls(`/services/${service.id}`)
       const languages = { 'en-US': u.en, 'pt-BR': u.pt, es: u.es }

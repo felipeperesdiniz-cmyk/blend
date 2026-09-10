@@ -55,8 +55,31 @@ export function routeWithoutLang(path: string): string {
  */
 export const LOCALIZED_PREFIXES = ['/services/'] as const
 
+/**
+ * The twenty SEO landing pages, which exist at a bare top-level slug in all
+ * three languages (/balayage-plantation-fl, /pt/balayage-plantation-fl, …).
+ *
+ * Written out here rather than imported from src/data/landing: this module is
+ * pulled into the client bundle by the language switcher, and importing the
+ * landing index would drag ~23,000 words of Portuguese and Spanish copy along
+ * with it. A test in this file's sibling asserts the two stay in step.
+ */
+export const LOCALIZED_LANDING_SLUGS = [
+  'balayage-plantation-fl', 'best-balayage-plantation-fl',
+  'best-hair-color-plantation-fl', 'blonding-specialist-plantation',
+  'blowout-plantation-fl', 'brazilian-hair-salon-plantation-fl',
+  'bridal-hair-south-florida', 'color-correction-plantation-fl',
+  'facials-plantation-fl', 'hair-color-plantation',
+  'hair-extensions-plantation', 'hair-salon-plantation-fl',
+  'haircuts-plantation-fl', 'highlights-plantation-fl',
+  'keratin-treatment-plantation', 'luxury-hair-salon-plantation-fl',
+  'makeup-plantation-fl', 'micropigmentation-plantation-fl',
+  'nails-plantation-fl', 'waxing-plantation-fl',
+] as const
+
 function isLocalized(base: string): boolean {
   if ((LOCALIZED_ROUTES as readonly string[]).includes(base)) return true
+  if ((LOCALIZED_LANDING_SLUGS as readonly string[]).includes(base.slice(1))) return true
   return LOCALIZED_PREFIXES.some((p) => base.startsWith(p) && base.length > p.length)
 }
 
