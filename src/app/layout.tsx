@@ -193,7 +193,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             anything is painted and long before hydration; LangProvider keeps it
             in sync from then on. Crawlers that do not execute JavaScript still
             see lang="en" here, which is why hreflang and the locale URL prefix —
-            both static, both in the markup — carry the real signal. */}
+            both static, both in the markup — carry the real signal, and why
+            app/pt/layout.tsx and app/es/layout.tsx declare the language on the
+            content itself where a non-JS reader will actually see it. */}
         <script
           dangerouslySetInnerHTML={{
             __html:
