@@ -25,7 +25,6 @@ export const BUSINESS = {
   // Social
   instagram:   'https://www.instagram.com/blendhairboutique',
   facebook:    'https://www.facebook.com/blendhairboutique',
-  tiktok:      'https://www.tiktok.com/@blendhairboutique',
 
   // Booking / Gift cards
   bookingUrl:  'https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer',

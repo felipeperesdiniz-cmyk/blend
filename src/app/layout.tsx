@@ -139,7 +139,6 @@ const globalSchema = {
       sameAs: [
         'https://www.instagram.com/blendhairboutique',
         'https://www.facebook.com/blendhairboutique',
-        'https://www.tiktok.com/@blendhairboutique',
         'https://www.fresha.com/book-now/blend-hair-boutique-tsmvse5t/all-offer',
       ],
       hasOfferCatalog: {

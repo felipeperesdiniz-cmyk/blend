@@ -5,14 +5,6 @@ import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'
 
-function TikTokIcon({ size = 15 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.73a4.85 4.85 0 01-1.01-.04z"/>
-    </svg>
-  )
-}
-
 // Positional against footer.quickLinks in every locale — keep the two in step.
 // Reviews and FAQ were added here when they came out of the primary nav; the
 // footer is where the full set belongs.
@@ -60,9 +52,6 @@ export default function Footer() {
               </a>
               <a href={BUSINESS.facebook} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={T[lang].a11y.onFacebook}>
                 <Facebook size={15} />
-              </a>
-              <a href={BUSINESS.tiktok} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={T[lang].a11y.onTikTok}>
-                <TikTokIcon size={15} />
               </a>
             </div>
           </div>
