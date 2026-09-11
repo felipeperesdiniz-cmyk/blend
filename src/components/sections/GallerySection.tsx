@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { useLang } from '@/context/LangContext'
 import { T } from '@/data/translations'

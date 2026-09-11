@@ -1,7 +1,8 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Instagram } from 'lucide-react'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import { TEAM } from '@/data/team'
 import TeamPortrait from '@/components/ui/TeamPortrait'
 import { BUSINESS } from '@/data/constants'

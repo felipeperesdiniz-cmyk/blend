@@ -1,6 +1,7 @@
 'use client'
 import { Fragment, useEffect, useRef } from 'react'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import { AnimatePresence, motion } from 'framer-motion'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'

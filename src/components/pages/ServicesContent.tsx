@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus } from 'lucide-react'
 import { SERVICES } from '@/data/services'

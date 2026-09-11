@@ -1,7 +1,8 @@
 'use client'
 import { Fragment, useState, useEffect } from 'react'
 import { useLenis } from 'lenis/react'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import { usePathname } from 'next/navigation'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'

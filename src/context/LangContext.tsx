@@ -21,10 +21,20 @@ const HTML_LANG: Record<Lang, string> = { en: 'en', pt: 'pt-BR', es: 'es' }
 
 interface LangCtx {
   lang: Lang
+  /**
+   * The locale the *URL* declares, or null on the unprefixed English tree.
+   *
+   * Separate from `lang` because internal links key off this rather than off
+   * the merged value: a page under /pt links to /pt, the English tree links to
+   * English, and a remembered preference never rewrites hrefs on a URL that
+   * did not ask for it. That keeps each language tree self-contained, which is
+   * what lets a crawler walk it.
+   */
+  routeLang: Lang | null
   setLang: (l: Lang) => void
 }
 
-const LangContext = createContext<LangCtx>({ lang: 'en', setLang: () => {} })
+const LangContext = createContext<LangCtx>({ lang: 'en', routeLang: null, setLang: () => {} })
 
 const isLang = (v: unknown): v is Lang => typeof v === 'string' && (LANGS as string[]).includes(v)
 
@@ -85,7 +95,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     if (target && target !== pathname) router.push(target)
   }
 
-  return <LangContext.Provider value={{ lang, setLang }}>{children}</LangContext.Provider>
+  return <LangContext.Provider value={{ lang, routeLang, setLang }}>{children}</LangContext.Provider>
 }
 
 export function useLang() {

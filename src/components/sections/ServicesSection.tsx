@@ -1,5 +1,6 @@
 'use client'
-import Link from 'next/link'
+// Locale-aware next/link: keeps /pt and /es links inside their own tree.
+import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { SERVICES } from '@/data/services'
 import { BUSINESS } from '@/data/constants'
