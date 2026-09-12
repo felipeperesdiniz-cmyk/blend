@@ -213,6 +213,21 @@ export default function HeroSection() {
         {t.cta1}
       </a>
 
+      {/* The address, live. It was previously reachable only from the footer or
+          the contact page, which is a long way round for the single most
+          common intent on a salon homepage. Gold rather than white so it reads
+          as the one link in the lockup without competing with the CTA above
+          it. */}
+      <a
+        href={BUSINESS.mapsDirections}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hero__address"
+        aria-label={T[lang].a11y.getDirections.replace('{address}', BUSINESS.address)}
+      >
+        {BUSINESS.address}
+      </a>
+
       {/* Label dropped: it read "Plantation, FL · Est. 2018" while being
           aria-hidden, so it was real information withheld from assistive tech —
           and the city now appears in the tagline above. What is left is a

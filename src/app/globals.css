@@ -948,13 +948,50 @@ button:focus-visible {
   text-shadow: none;
 }
 
+/* The address link. Gold, not white: it sits directly under a white outlined
+   button and a white tagline, and a third white element would read as chrome
+   rather than as the one thing on the hero you can click through to a map.
+   #c9a875 over the brightest ground the film reaches in this band (~118) still
+   clears 3:1, and the same shadow pair as the tagline does the edge work. The
+   underline is offset far enough to stay clear of the tracked caps. */
+.hero__address {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(1rem, 1.8vw, 1.35rem);
+  font-family: var(--sans);
+  font-size: 11.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--gold);
+  text-align: center;
+  max-width: 30ch;
+  line-height: 1.9;
+  padding-left: 0.18em; /* optical centring against the tracked caps */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.45em;
+  text-decoration-color: rgba(201,168,117,0.45);
+  text-shadow: 0 1px 3px rgba(14,10,6,0.6), 0 2px 16px rgba(14,10,6,0.45);
+  transition:
+    color var(--t-mid) var(--ease),
+    text-decoration-color var(--t-mid) var(--ease);
+  animation: heroMarkIn 1.8s var(--ease) 0.95s backwards;
+}
+.hero__address:hover {
+  color: #fff;
+  text-decoration-color: rgba(255,255,255,0.8);
+}
+
 @media (max-width: 480px) {
   .hero__tagline { letter-spacing: 0.24em; }
   .hero__book    { padding: 0.9rem 1.9rem; }
+  .hero__address { letter-spacing: 0.14em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__tagline,
+  .hero__address,
   .hero__book { animation: none; }
 }
 

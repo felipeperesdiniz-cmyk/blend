@@ -101,12 +101,6 @@ const testimonials = [
     text: 'Awesome first experience at Blend! Both Adriana, for eyebrows, and Roger, for a haircut, took excellent care of my daughter. They both consulted with her prior to the services and listened to what she wanted. The end result was beautiful brows and a perfect fresh new haircut. Exceptional service!',
   },
   {
-    name: 'Heather B.',
-    service: 'Haircut with Juliana',
-    rating: 5,
-    text: 'I was so scared to find someone new to cut my hair. They did a wonderful job accommodating me. I was given coffee and water, had my hair washed and brushed, and Juliana cut my hair. She was fast and did exactly what I asked for. I\'m very happy with my experience and results.',
-  },
-  {
     name: 'Domonique R.',
     service: 'Blonding with Beatriz',
     rating: 5,

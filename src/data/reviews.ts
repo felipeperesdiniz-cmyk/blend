@@ -84,15 +84,6 @@ export const REVIEWS: Review[] = [
     source: 'Fresha',
   },
   {
-    id: '9',
-    author: 'Heather B.',
-    service: 'Haircut',
-    stylist: 'Juliana',
-    quote: 'They did a wonderful job accommodating me. I was given coffee and water, had my hair washed and brushed, and Juliana cut my hair. She was fast and did exactly what I asked for. I\'m very happy with my experience and results.',
-    stars: 5,
-    source: 'Yelp',
-  },
-  {
     id: '10',
     author: 'Mayra D.',
     service: 'Color & Haircut',
