@@ -24,7 +24,6 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
 import { OG_IMAGE } from '@/data/constants'
-import { REVIEWS } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
 
@@ -94,7 +93,11 @@ const globalSchema = {
         width: 200,
         height: 80,
       },
-      image: `${SITE_URL}/og-image.jpg`,
+      // A photograph, deliberately not /og-image.jpg. That file is now the
+      // wordmark, and it is already declared above as `logo`. Schema.org's
+      // `image` on a LocalBusiness is meant to be a picture of the place —
+      // Google shows it in local results, and a logo in both slots wastes one.
+      image: `${SITE_URL}/hero-interior.jpg`,
       address: {
         '@type': 'PostalAddress',
         streetAddress: '10035 Cleary Blvd',
@@ -160,13 +163,21 @@ const globalSchema = {
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Eyelash Services', url: `${SITE_URL}/services/eyelashes`, description: 'Eyelash tinting and lash lift services in Plantation, Florida.' } },
         ],
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: REVIEWS.rating,
-        reviewCount: String(REVIEWS.count),
-        bestRating: '5',
-        worstRating: '1',
-      },
+      // No aggregateRating here, deliberately.
+      //
+      // The 4.9 / 1,230 figure is real, but it is the Google Business Profile
+      // rating, and the quoted reviews on /reviews come from Google, Yelp and
+      // Fresha. Google's review-snippet policy disallows a business marking up
+      // ratings about itself that it did not collect first-party — that is the
+      // "self-serving review" case, and on a LocalBusiness it is the usual
+      // trigger for a structured-data manual action. Losing the whole site's
+      // rich results to win a star that Google already shows from the GBP in
+      // the local pack is a bad trade.
+      //
+      // The rating still appears as visible text throughout the site, which is
+      // allowed and is what the trust bar is for. Only the markup claim is gone.
+      // To earn this back legitimately, collect reviews on the site itself and
+      // mark those up as Review objects alongside the aggregate.
     },
   ],
 }

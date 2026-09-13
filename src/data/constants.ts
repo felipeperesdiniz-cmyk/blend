@@ -123,5 +123,5 @@ export const OG_IMAGE = {
   url: 'https://www.blendhairboutique.com/og-image.jpg',
   width: 1200,
   height: 630,
-  alt: 'Juliana and Fernanda, owners of Blend Hair Boutique in Plantation, Florida',
+  alt: 'Blend Hair Boutique — hair salon in Plantation, Florida',
 } as const

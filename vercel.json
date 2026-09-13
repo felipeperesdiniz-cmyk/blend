@@ -151,6 +151,36 @@
       "permanent": true
     },
     {
+      "source": "/portfolio/hair-extension",
+      "destination": "/hair-extensions-plantation",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/hair-extension/:path+",
+      "destination": "/hair-extensions-plantation",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/facial",
+      "destination": "/facials-plantation-fl",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/facial/:path+",
+      "destination": "/facials-plantation-fl",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/micropigmentation-lips-eyebrows-paramedical",
+      "destination": "/micropigmentation-plantation-fl",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/micropigmentation-lips-eyebrows-paramedical/:path+",
+      "destination": "/micropigmentation-plantation-fl",
+      "permanent": true
+    },
+    {
       "source": "/portfolio",
       "destination": "/gallery",
       "permanent": true
@@ -167,6 +197,16 @@
     },
     {
       "source": "/testimonials",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/depoimento",
+      "destination": "/reviews",
+      "permanent": true
+    },
+    {
+      "source": "/depoimentos",
       "destination": "/reviews",
       "permanent": true
     },
@@ -423,7 +463,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=0, s-maxage=3600, must-revalidate"
         }
       ]
     },
@@ -432,7 +472,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=0, s-maxage=3600, must-revalidate"
         }
       ]
     },
@@ -441,7 +481,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "value": "public, max-age=0, s-maxage=3600, must-revalidate"
         }
       ]
     },
