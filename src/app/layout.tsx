@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import './globals.css'
 import Providers from './providers'
@@ -227,8 +228,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
+
+        {/* Google Tag Manager — container GTM-P3LCHJ44, supplied by the
+            client's marketing agency. GA4, Google Ads and Meta are all
+            configured inside GTM, so nothing else belongs in this file:
+            the agency adds and edits tags from the GTM console without a
+            deploy. afterInteractive keeps it off the critical path but fires
+            it early enough not to lose conversions. The container can inject
+            arbitrary JavaScript into every page, so whoever holds GTM access
+            effectively holds publish rights on this site. */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-P3LCHJ44');`}
+        </Script>
       </head>
       <body>
+        {/* GTM's no-JavaScript fallback. First element in <body> by Google's
+            spec; it is how the container still fires for visitors and crawlers
+            that do not run scripts. */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P3LCHJ44"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Providers>
           {/* First focusable element on every page: without it a keyboard or
               screen-reader visitor tabbed the whole navigation again on each
