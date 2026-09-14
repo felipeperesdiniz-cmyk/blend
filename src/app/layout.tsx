@@ -56,6 +56,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: [OG_IMAGE.url],
   },
+  // Carried over from the Alboom site. That site verified the Search Console
+  // property with this meta tag and nothing else — there is no
+  // google-site-verification TXT record on the domain — so the tag disappearing
+  // at cutover would have failed Google's next re-check and cost the client the
+  // property along with every year of history in it. Do not remove without
+  // confirming a second verification method (DNS TXT) is in place first.
+  verification: {
+    google: 'WShX2_mpdxlavpC3AT9Zo-0bRt5tcrH8zGkjpjaVLU0',
+  },
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Plantation, Florida',
