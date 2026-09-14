@@ -90,8 +90,8 @@ const globalSchema = {
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo.png`,
-        width: 200,
-        height: 80,
+        width: 1200,
+        height: 1200,
       },
       // A photograph, deliberately not /og-image.jpg. That file is now the
       // wordmark, and it is already declared above as `logo`. Schema.org's
