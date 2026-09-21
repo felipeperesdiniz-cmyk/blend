@@ -25,7 +25,13 @@ const CSP = [
   // Next.js requires 'unsafe-inline' for its injected __NEXT_DATA__ bootstrap
   // script and for the JSON-LD <script> tags used throughout the site.
   // 'unsafe-eval' is added only in dev — see comment above.
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
+  // Google Tag Manager loads gtm.js (and gtag for GA4 / Google Ads) from
+  // googletagmanager.com; the Meta Pixel tag inside GTM loads fbevents.js
+  // from connect.facebook.net.
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} ${[
+    'https://www.googletagmanager.com',
+    'https://connect.facebook.net',
+  ].join(' ')}`,
 
   // Framer-motion and JSX inline style props require 'unsafe-inline'.
   // Google Fonts stylesheet is loaded from fonts.googleapis.com.
@@ -34,15 +40,36 @@ const CSP = [
   // Google Fonts actual font files are served from fonts.gstatic.com.
   "font-src 'self' https://fonts.gstatic.com",
 
-  // Images: local assets, base64 data URIs and blob URLs only. Every photo on
-  // the site is now the salon's own, so no third-party image host is needed.
-  "img-src 'self' data: blob:",
+  // Images: local assets, base64 data URIs and blob URLs. Every photo on the
+  // site is the salon's own; the third-party hosts are the tracking pixels
+  // that GTM's tags (GA4, Google Ads, Meta) fire as image requests.
+  [
+    "img-src 'self' data: blob:",
+    'https://www.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://googleads.g.doubleclick.net',
+    'https://www.google.com',
+    'https://www.facebook.com',
+  ].join(' '),
 
-  // No external fetch/XHR from the client — static site with no API calls.
-  "connect-src 'self'",
+  // The site itself makes no API calls; these are the analytics beacons that
+  // GTM's tags send (GA4 collect, including its regional *.google-analytics.com
+  // endpoints, Google Ads conversions and the Meta Pixel).
+  [
+    "connect-src 'self'",
+    'https://www.google-analytics.com',
+    'https://*.google-analytics.com',
+    'https://*.analytics.google.com',
+    'https://*.googletagmanager.com',
+    'https://stats.g.doubleclick.net',
+    'https://googleads.g.doubleclick.net',
+    'https://www.google.com',
+    'https://www.facebook.com',
+  ].join(' '),
 
-  // Google Maps embed on the Contact page is the only iframe on the site.
-  "frame-src https://maps.google.com https://www.google.com",
+  // Google Maps embed on the Contact page, GTM's noscript fallback iframe and
+  // GTM's Preview / Tag Assistant mode.
+  "frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com",
 
   // Block all plugin content (Flash, PDF viewers, etc.) — none used.
   "object-src 'none'",
