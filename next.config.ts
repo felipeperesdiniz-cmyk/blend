@@ -57,7 +57,9 @@ const CSP = [
     'https://ssl.gstatic.com',
     'https://www.gstatic.com',
     'https://*.google-analytics.com',
-    'https://googleads.g.doubleclick.net',
+    'https://analytics.google.com',
+    'https://*.analytics.google.com',
+    'https://*.doubleclick.net',
     'https://www.googleadservices.com',
     'https://www.google.com',
     'https://www.facebook.com',
@@ -65,15 +67,19 @@ const CSP = [
 
   // The site itself makes no API calls; these are the analytics beacons that
   // GTM's tags send (GA4 collect, including its regional *.google-analytics.com
-  // endpoints, Google Ads conversions and the Meta Pixel).
+  // endpoints, Google Ads conversions and the Meta Pixel). A wildcard never
+  // matches the bare domain, so analytics.google.com is listed on its own:
+  // GA4 sends page_view there and it was blocked with only the wildcard.
+  // *.doubleclick.net covers stats., googleads. and ad. (Google Ads' ccm
+  // collect), all seen on the live site.
   [
     "connect-src 'self'",
     'https://www.google-analytics.com',
     'https://*.google-analytics.com',
+    'https://analytics.google.com',
     'https://*.analytics.google.com',
     'https://*.googletagmanager.com',
-    'https://stats.g.doubleclick.net',
-    'https://googleads.g.doubleclick.net',
+    'https://*.doubleclick.net',
     'https://www.googleadservices.com',
     'https://www.google.com',
     'https://www.facebook.com',
