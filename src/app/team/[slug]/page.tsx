@@ -23,6 +23,10 @@ function metaDescription(name: string, specialty: string, bio: string) {
 
 const OWNER_IDS = ['juliana', 'fernanda']
 
+// These team members aren't individually bookable, so their profile page
+// skips the "Book with {name}" calls to action.
+const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria']
+
 const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
   juliana: [
     { label: 'Hair Color', href: '/hair-color-plantation' },
@@ -128,7 +132,7 @@ const STYLIST_EXTENDED_BIO: Record<string, string> = {
   vitoria: 'Vitória plays an essential role in creating the warm, welcoming atmosphere that defines the Blend Hair Boutique experience. Always ready with a smile, she’s known for making clients feel at home, whether by preparing our signature cappuccino, offering a cup of tea, a glass of wine, or one of the little treats that make every visit feel special.\n\nBehind the scenes, Vitória helps keep the salon running smoothly by ensuring everything is organized, comfortable, and ready for both clients and the team. Her kindness, positive energy, and willingness to help have made her one of the most familiar and beloved faces at Blend.',
   marcelle: 'Originally from Brazil, Marcelle worked as a hairstylist before moving to the United States, bringing valuable experience and technical knowledge to the Blend Hair Boutique team. As Roger’s assistant, she is highly skilled and plays an essential role in delivering seamless, high-quality services throughout every appointment.\n\nKnown for her efficiency, positive energy, and attention to detail, Marcelle works side by side with Roger to create a smooth and enjoyable salon experience. Together, they combine experience, teamwork, and exceptional service, allowing clients to enjoy outstanding results with both comfort and efficiency.',
   maggie: 'With over five years at Blend Hair Boutique, Maggie is often the first friendly face and voice our clients meet. She knows many of our guests by name and takes pride in making every new client feel genuinely welcomed from the very first interaction.\n\nWhether answering phone calls, responding to text messages and WhatsApp inquiries, or coordinating appointments, Maggie is always ready to help with warmth, professionalism, and a positive attitude. She goes above and beyond to accommodate clients whenever possible, finding solutions and ensuring every guest feels valued, cared for, and excited about their visit to Blend.',
-  'vanessa-hanna': 'Working alongside Léa, Vanessa and Hanna are an essential part of the experience that keeps her chairs consistently full and her clients feeling welcomed from beginning to end. Their teamwork, impeccable timing, and attention to detail help every appointment flow seamlessly while maintaining the high standards Blend Hair Boutique is known for.\n\nTogether, they create a personalized, attentive experience that allows clients to relax and enjoy their visit. Always working in perfect sync, Vanessa and Hanna combine efficiency, professionalism, and genuine care, ensuring every guest feels comfortable, valued, and exceptionally well looked after.',
+  'vanessa-hanna': 'Working alongside Léa, Vanessa is an essential part of the experience that keeps her chairs consistently full and her clients feeling welcomed from beginning to end. Her teamwork, impeccable timing, and attention to detail help every appointment flow seamlessly while maintaining the high standards Blend Hair Boutique is known for.\n\nShe creates a personalized, attentive experience that allows clients to relax and enjoy their visit. Vanessa combines efficiency, professionalism, and genuine care, ensuring every guest feels comfortable, valued, and exceptionally well looked after.',
 }
 
 export function generateStaticParams() {
@@ -163,7 +167,8 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
   const services = STYLIST_SERVICES[member.id] || []
   const extendedBio = STYLIST_EXTENDED_BIO[member.id] || member.bio
   const bioParagraphs = extendedBio.split('\n\n')
-  // "Vanessa & Hanna" is a pair — a first-name split would drop Hanna
+  // A first-name split covers every current team member; the "&" check is
+  // kept in case a future profile is shared between two people again.
   const shortName = member.name.includes('&') ? member.name : member.name.split(' ')[0]
 
   const schema = {
@@ -224,9 +229,11 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                 @{member.instagram.replace(/\/+$/, '').split('/').pop()}
               </a>
             )}
-            <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
-              Book with {shortName}
-            </a>
+            {!NOT_BOOKABLE_IDS.includes(member.id) && (
+              <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--cta-gold">
+                Book with {shortName}
+              </a>
+            )}
           </div>
         </header>
 
@@ -286,9 +293,11 @@ export default async function StylistPage({ params }: { params: Promise<{ slug: 
                   </>
                 )}
 
-                <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary" style={{ display: 'inline-block' }}>
-                  Book with {shortName}
-                </a>
+                {!NOT_BOOKABLE_IDS.includes(member.id) && (
+                  <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary" style={{ display: 'inline-block' }}>
+                    Book with {shortName}
+                  </a>
+                )}
               </div>
             </div>
           </div>

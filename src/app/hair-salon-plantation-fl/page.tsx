@@ -131,7 +131,7 @@ export default function HairSalonPlantationPage() {
                 '4.9 ★ Google Rating',
                 `${REVIEW_COUNT}+ Verified Reviews`,
                 'Brazilian Specialists',
-                'Open Since 2018',
+                'Open Since 2017',
                 'Plantation, FL 33324',
                 'EN · PT · ES',
               ].map((item) => (
@@ -213,7 +213,7 @@ export default function HairSalonPlantationPage() {
             </h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '2rem' }}>
               {[
-                { title: `4.9 Stars · ${REVIEW_COUNT}+ Reviews`, body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought. They\'re earned, one client at a time, since 2018.' },
+                { title: `4.9 Stars · ${REVIEW_COUNT}+ Reviews`, body: 'Consistently rated as one of Broward County\'s top salons. Our reviews aren\'t bought. They\'re earned, one client at a time, since 2017.' },
                 { title: 'Brazilian Expertise', body: 'Our team brings the precision, warmth, and hair culture of Brazil to Plantation, FL. Brazilian stylists are world-renowned for their mastery of color, texture, and smoothing techniques.' },
                 { title: 'Multilingual Team', body: 'We serve our community in English, Portuguese, and Spanish, ensuring every client can communicate exactly what they want and feel completely understood.' },
                 { title: 'Full-Service Under One Roof', body: 'Hair, nails, skin, brows, and makeup, all in one location. Whether you\'re coming for a quick trim or a complete transformation, we have you covered.' },

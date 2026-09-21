@@ -114,7 +114,7 @@ export default function LuxuryHairSalonPage() {
                   A Different Kind of<br /><em>Salon Experience</em>
                 </h2>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300, marginBottom: '1rem' }}>
-                  Blend Hair Boutique was founded by Juliana Chen, with co-owner and salon manager Fernanda Macedo, on a shared vision: to bring the artistry and warmth of Brazilian salon culture to Plantation, Florida. Since 2018, Blend has served thousands of South Florida clients with a level of care and expertise that sets it apart from conventional salons.
+                  Blend Hair Boutique was founded by Juliana Chen, with co-owner and salon manager Fernanda Macedo, on a shared vision: to bring the artistry and warmth of Brazilian salon culture to Plantation, Florida. Since 2017, Blend has served thousands of South Florida clients with a level of care and expertise that sets it apart from conventional salons.
                 </p>
                 <p style={{ fontSize: '1rem', lineHeight: 1.85, color: 'var(--text-2)', fontWeight: 300 }}>
                   As an authorized Kérastase salon, we use only professional-grade products across all services. Our stylists and estheticians undergoes ongoing education to stay current with the most advanced techniques in color, smoothing, and hair care.
@@ -191,7 +191,7 @@ export default function LuxuryHairSalonPage() {
               {[
                 { stat: `${REVIEW_COUNT}+`, label: 'Five-Star Google Reviews' },
                 { stat: '4.9★', label: 'Average Google Rating' },
-                { stat: 'Est. 2018', label: 'Years Serving South Florida' },
+                { stat: 'Est. 2017', label: 'Years Serving South Florida' },
               ].map((s) => (
                 <div key={s.stat} style={{ borderTop: '1px solid var(--line)', paddingTop: '2rem' }}>
                   <p style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(1.8rem, 4vw, 2.8rem)', fontWeight: 300, color: 'var(--gold-dk)', letterSpacing: '-0.02em', marginBottom: '0.5rem' }}>{s.stat}</p>

@@ -241,7 +241,7 @@ export const LANDING_ES: LandingSet = {
     proseH2a: 'Nacido en Brasil.',
     proseH2b: 'Hecho para el sur de Florida.',
     prose: [
-      'Blend Hair Boutique fue fundado en 2018 por Juliana, junto a la socia y gerente Fernanda, dos brasileñas que se mudaron a Florida con un objetivo compartido: abrir un salón donde a la clienta se la conoce por su nombre, no se la procesa en serie.',
+      'Blend Hair Boutique fue fundado en 2017 por Juliana, junto a la socia y gerente Fernanda, dos brasileñas que se mudaron a Florida con un objetivo compartido: abrir un salón donde a la clienta se la conoce por su nombre, no se la procesa en serie.',
       'La belleza brasileña es reconocida mundialmente por su obsesión con el cabello sano y luminoso, por los rituales de hidratación y por la mezcla de técnica depurada con calidez humana. Esos valores guían cada servicio aquí, y buena parte del equipo está con nosotras desde la apertura.',
     ],
     imageAlt: 'Cabello liso y brillante tras un alisado brasileño en Blend Hair Boutique, Plantation, FL',

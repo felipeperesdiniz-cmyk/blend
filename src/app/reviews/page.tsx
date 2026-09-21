@@ -135,7 +135,7 @@ export default function ReviewsPage() {
               What Our <em>Clients</em> Say
             </h1>
             <p style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(1rem, 1.4vw, 1.1rem)', color: 'rgba(255,255,255,0.8)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '1.5rem', fontWeight: 300 }}>
-              Blend Hair Boutique has earned a 4.9-star rating from over {REVIEW_COUNT} Google reviews, not through advertising, but through consistent, exceptional work delivered one client at a time since 2018.
+              Blend Hair Boutique has earned a 4.9-star rating from over {REVIEW_COUNT} Google reviews, not through advertising, but through consistent, exceptional work delivered one client at a time since 2017.
             </p>
           </div>
         </header>
