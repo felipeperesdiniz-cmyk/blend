@@ -5,12 +5,6 @@
 User-agent: MJ12bot
 Disallow: /
 
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
 User-agent: DotBot
 Disallow: /
 
@@ -31,6 +25,9 @@ Disallow: /
 
 User-agent: zgrab
 Disallow: /
+
+# SemrushBot and AhrefsBot are deliberately NOT blocked: they are the SEO
+# tools the marketing agency uses for audits, rankings and backlink data.
 
 # ── All legitimate crawlers ─────────────────────────────────────
 User-agent: *

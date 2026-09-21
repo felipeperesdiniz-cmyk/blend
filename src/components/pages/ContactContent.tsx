@@ -57,6 +57,17 @@ export default function ContactContent() {
         return
       }
       setStatus('sent')
+      // The form posts over fetch and never changes the URL, so GTM's built-in
+      // form and page-view triggers cannot see a lead. This event is what the
+      // agency's GA4 / Google Ads / Meta lead conversions fire on. No personal
+      // data goes in: only the service the visitor picked.
+      const w = window as unknown as { dataLayer?: unknown[] }
+      if (Array.isArray(w.dataLayer)) {
+        w.dataLayer.push({
+          event: 'contact_form_submit',
+          form_service: String(data.get('service') ?? ''),
+        })
+      }
       form.reset()
     } catch {
       setStatus('failed')

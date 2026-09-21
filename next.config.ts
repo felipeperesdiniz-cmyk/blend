@@ -26,28 +26,39 @@ const CSP = [
   // script and for the JSON-LD <script> tags used throughout the site.
   // 'unsafe-eval' is added only in dev — see comment above.
   // Google Tag Manager loads gtm.js (and gtag for GA4 / Google Ads) from
-  // googletagmanager.com; the Meta Pixel tag inside GTM loads fbevents.js
-  // from connect.facebook.net.
+  // googletagmanager.com, and its Preview mode from tagmanager.google.com;
+  // Google Ads conversion and remarketing tags load from googleadservices.com
+  // and the doubleclick / google.com hosts; the Meta Pixel tag inside GTM
+  // loads fbevents.js from connect.facebook.net.
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} ${[
-    'https://www.googletagmanager.com',
+    'https://*.googletagmanager.com',
+    'https://tagmanager.google.com',
+    'https://www.googleadservices.com',
+    'https://googleads.g.doubleclick.net',
+    'https://www.google.com',
     'https://connect.facebook.net',
   ].join(' ')}`,
 
   // Framer-motion and JSX inline style props require 'unsafe-inline'.
-  // Google Fonts stylesheet is loaded from fonts.googleapis.com.
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  // Google Fonts stylesheet is loaded from fonts.googleapis.com; GTM's Preview
+  // mode styles its debug panel from the two Tag Manager hosts.
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googletagmanager.com https://tagmanager.google.com",
 
-  // Google Fonts actual font files are served from fonts.gstatic.com.
-  "font-src 'self' https://fonts.gstatic.com",
+  // Google Fonts actual font files are served from fonts.gstatic.com (GTM's
+  // Preview panel uses them too, plus data: fonts).
+  "font-src 'self' data: https://fonts.gstatic.com",
 
   // Images: local assets, base64 data URIs and blob URLs. Every photo on the
   // site is the salon's own; the third-party hosts are the tracking pixels
   // that GTM's tags (GA4, Google Ads, Meta) fire as image requests.
   [
     "img-src 'self' data: blob:",
-    'https://www.googletagmanager.com',
+    'https://*.googletagmanager.com',
+    'https://ssl.gstatic.com',
+    'https://www.gstatic.com',
     'https://*.google-analytics.com',
     'https://googleads.g.doubleclick.net',
+    'https://www.googleadservices.com',
     'https://www.google.com',
     'https://www.facebook.com',
   ].join(' '),
@@ -63,13 +74,15 @@ const CSP = [
     'https://*.googletagmanager.com',
     'https://stats.g.doubleclick.net',
     'https://googleads.g.doubleclick.net',
+    'https://www.googleadservices.com',
     'https://www.google.com',
     'https://www.facebook.com',
   ].join(' '),
 
-  // Google Maps embed on the Contact page, GTM's noscript fallback iframe and
-  // GTM's Preview / Tag Assistant mode.
-  "frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com",
+  // Google Maps embed on the Contact page, GTM's noscript fallback iframe,
+  // GTM's Preview / Tag Assistant mode, and the iframe Google Ads
+  // remarketing opens on td.doubleclick.net.
+  "frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net",
 
   // Block all plugin content (Flash, PDF viewers, etc.) — none used.
   "object-src 'none'",

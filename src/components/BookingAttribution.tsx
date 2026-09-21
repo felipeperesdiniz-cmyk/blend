@@ -52,6 +52,18 @@ export default function BookingAttribution() {
         const host = url.hostname.toLowerCase()
         if (host !== BOOKING_HOST && !host.endsWith(`.${BOOKING_HOST}`)) return
 
+        // Every click counts as a booking intent, including a repeat click on
+        // an anchor already tagged below (booking links open a new tab, so a
+        // visitor can come back and click again).
+        const w = window as unknown as { dataLayer?: unknown[] }
+        if (Array.isArray(w.dataLayer)) {
+          w.dataLayer.push({
+            event: 'booking_click',
+            booking_surface: surfaceOf(a),
+            booking_page: window.location.pathname,
+          })
+        }
+
         // Idempotent: a second click on the same anchor must not stack params,
         // and must not overwrite a campaign the URL already carries.
         if (url.searchParams.has('utm_source')) return
@@ -67,16 +79,6 @@ export default function BookingAttribution() {
         url.searchParams.set('utm_term', surfaceOf(a))
 
         a.href = url.toString()
-
-        // Costs nothing today and works the day GTM or GA4 is added.
-        const w = window as unknown as { dataLayer?: unknown[] }
-        if (Array.isArray(w.dataLayer)) {
-          w.dataLayer.push({
-            event: 'booking_click',
-            booking_surface: surfaceOf(a),
-            booking_page: window.location.pathname,
-          })
-        }
       } catch {
         // Leave the anchor exactly as it was.
       }
