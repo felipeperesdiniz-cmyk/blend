@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Instagram } from 'lucide-react'
 import { BUSINESS, pageTitle, OG_IMAGE } from '@/data/constants'
-import { TEAM } from '@/data/team'
+import { TEAM, NOT_BOOKABLE_IDS } from '@/data/team'
 import TeamPortrait from '@/components/ui/TeamPortrait'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -22,10 +22,6 @@ function metaDescription(name: string, specialty: string, bio: string) {
 }
 
 const OWNER_IDS = ['juliana', 'fernanda']
-
-// These team members aren't individually bookable, so their profile page
-// skips the "Book with {name}" calls to action.
-const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria']
 
 const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
   juliana: [

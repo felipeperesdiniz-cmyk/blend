@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Instagram } from 'lucide-react'
 // Locale-aware next/link: keeps /pt and /es links inside their own tree.
 import { LocaleLink as Link } from '@/components/ui/LocaleLink'
-import { TEAM } from '@/data/team'
+import { TEAM, NOT_BOOKABLE_IDS } from '@/data/team'
 import TeamPortrait from '@/components/ui/TeamPortrait'
 import { BUSINESS } from '@/data/constants'
 import FoundersFeature from '@/components/FoundersFeature'
@@ -102,9 +102,11 @@ export default function TeamContent() {
                       <Link href={`/team/${member.id}`} className="btn btn--ghost" style={{ fontSize: '0.88rem' }}>
                         {T[lang].homeTeam.viewProfile}
                       </Link>
-                      <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
-                        {t.bookBtn}
-                      </a>
+                      {!NOT_BOOKABLE_IDS.includes(member.id) && (
+                        <a href={BUSINESS.bookingUrl} target="_blank" rel="noopener noreferrer" className="btn btn--outline" style={{ fontSize: '0.88rem' }}>
+                          {t.bookBtn}
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>

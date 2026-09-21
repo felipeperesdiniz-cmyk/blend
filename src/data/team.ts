@@ -10,6 +10,10 @@ export interface TeamMember {
   image?: string
 }
 
+// These team members aren't individually bookable (front desk / assistants),
+// so their team-card and profile-page "Book" buttons are hidden.
+export const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria']
+
 export const TEAM: TeamMember[] = [
   {
     id: 'juliana',

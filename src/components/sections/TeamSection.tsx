@@ -4,7 +4,7 @@ import { Instagram } from 'lucide-react'
 import { LocaleLink as Link } from '@/components/ui/LocaleLink'
 import SectionHeader from '@/components/ui/SectionHeader'
 import FoundersFeature from '@/components/FoundersFeature'
-import { TEAM } from '@/data/team'
+import { TEAM, NOT_BOOKABLE_IDS } from '@/data/team'
 import TeamPortrait from '@/components/ui/TeamPortrait'
 import { BUSINESS } from '@/data/constants'
 import { useLang } from '@/context/LangContext'
@@ -72,14 +72,16 @@ export default function TeamSection() {
                 ) : (
                   <span className="team-card__langs" aria-hidden="true" />
                 )}
-                <a
-                  href={BUSINESS.bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="team-card__book"
-                >
-                  {t.book}
-                </a>
+                {!NOT_BOOKABLE_IDS.includes(member.id) && (
+                  <a
+                    href={BUSINESS.bookingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="team-card__book"
+                  >
+                    {t.book}
+                  </a>
+                )}
               </div>
             </article>
           ))}
