@@ -30,6 +30,7 @@ const STATIC_ROUTES: { path: string; priority: number }[] = [
   // are just no longer put forward as index candidates.
   { path: '/gift-cards', priority: 0.8 },
   { path: '/blog', priority: 0.9 },
+  { path: '/privacy-policy', priority: 0.3 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

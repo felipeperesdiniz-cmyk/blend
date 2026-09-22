@@ -699,6 +699,7 @@ export const T = {
       findUs: 'Find Us',
       copyright: `© ${year} Blend Hair Boutique · All rights reserved · Plantation, Florida`,
       madeWith: 'Made with love · Brazilian touch',
+      privacyPolicy: 'Privacy Policy',
       serviceLinks: ['Haircuts', 'Color Services', 'Balayage & Highlights', 'Smoothing Treatments', 'Nail Services'],
       quickLinks: ['Services', 'Gallery', 'Team', 'Reviews', 'Guides', 'Gift Cards', 'FAQ', 'About', 'Contact'],
     },
@@ -947,6 +948,13 @@ export const T = {
     },
 
     mobileCta: { call: 'Call', book: 'Book', whatsapp: 'WhatsApp' },
+
+    cookieConsent: {
+      message: 'We use cookies to run this site and, with your permission, for analytics and marketing. You can allow or reject them at any time.',
+      privacyLink: 'Privacy Policy',
+      allow: 'Allow',
+      rejectAll: 'Reject All',
+    },
 
     // Screen-reader and assistive labels. These were English literals inside the
     // components, which meant a Portuguese or Spanish visitor got an English
@@ -1671,6 +1679,7 @@ export const T = {
       findUs: 'Encontre-nos',
       copyright: `© ${year} Blend Hair Boutique · Todos os direitos reservados · Plantation, Florida`,
       madeWith: 'Feito com amor · toque brasileiro',
+      privacyPolicy: 'Política de Privacidade',
       serviceLinks: ['Cortes', 'Serviços de Coloração', 'Balayage & Luzes', 'Tratamentos Alisantes', 'Serviços de Unhas'],
       quickLinks: ['Serviços', 'Galeria', 'Equipe', 'Avaliações', 'Guias', 'Cartões Presente', 'FAQ', 'Sobre', 'Contato'],
     },
@@ -1918,6 +1927,13 @@ export const T = {
     },
 
     mobileCta: { call: 'Ligar', book: 'Agendar', whatsapp: 'WhatsApp' },
+
+    cookieConsent: {
+      message: 'Usamos cookies para o funcionamento do site e, com sua permissão, para análises e marketing. Você pode permitir ou recusar a qualquer momento.',
+      privacyLink: 'Política de Privacidade',
+      allow: 'Permitir',
+      rejectAll: 'Recusar Tudo',
+    },
 
     a11y: {
       heroRegion: 'Destaque',
@@ -2635,6 +2651,7 @@ export const T = {
       findUs: 'Encuéntranos',
       copyright: `© ${year} Blend Hair Boutique · Todos los derechos reservados · Plantation, Florida`,
       madeWith: 'Hecho con amor · toque brasileño',
+      privacyPolicy: 'Política de Privacidad',
       serviceLinks: ['Cortes', 'Servicios de Coloración', 'Balayage & Luces', 'Tratamientos Alisadores', 'Servicios de Uñas'],
       quickLinks: ['Servicios', 'Galería', 'Equipo', 'Reseñas', 'Guías', 'Tarjetas de Regalo', 'FAQ', 'Nosotros', 'Contacto'],
     },
@@ -2882,6 +2899,13 @@ export const T = {
     },
 
     mobileCta: { call: 'Llamar', book: 'Reservar', whatsapp: 'WhatsApp' },
+
+    cookieConsent: {
+      message: 'Usamos cookies para operar este sitio y, con su permiso, para análisis y marketing. Puede permitir o rechazar en cualquier momento.',
+      privacyLink: 'Política de Privacidad',
+      allow: 'Permitir',
+      rejectAll: 'Rechazar Todo',
+    },
 
     a11y: {
       heroRegion: 'Destacado',

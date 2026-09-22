@@ -24,6 +24,7 @@ import AnnouncementBar from '@/components/AnnouncementBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
+import CookieConsent from '@/components/CookieConsent'
 import { OG_IMAGE } from '@/data/constants'
 
 const SITE_URL = 'https://www.blendhairboutique.com'
@@ -229,6 +230,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
 
+        {/* Consent Mode default state — denied until CookieConsent records a
+            choice, or the visitor's earlier choice is replayed from
+            localStorage. Must run before the GTM snippet below: GTM's own
+            gtag.js and GA4/Ads tags read this default on load, and a tag that
+            fires before this exists gets no consent signal to respect at all.
+            beforeInteractive (vs. GTM's afterInteractive) is what guarantees
+            that order. Meta Pixel is not a Google tag and does not read
+            Consent Mode — gating it also requires an additional consent
+            check configured on that tag inside the GTM container itself. */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+          gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});
+          try{var c=localStorage.getItem('cookie-consent');if(c&&JSON.parse(c).status==='granted'){gtag('consent','update',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'});}}catch(e){}`}
+        </Script>
+
         {/* Google Tag Manager — container GTM-P3LCHJ44, supplied by the
             client's marketing agency. GA4, Google Ads and Meta are all
             configured inside GTM, so nothing else belongs in this file:
@@ -267,6 +283,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main-content">{children}</main>
           <Footer />
           <StickyMobileCTA />
+          <CookieConsent />
         </Providers>
       </body>
     </html>

@@ -110,6 +110,9 @@ export default function Footer() {
           <p className="footer__copy">
             {t.copyright}
           </p>
+          <p className="footer__copy">
+            <Link href="/privacy-policy" className="footer__legal-link">{t.privacyPolicy}</Link>
+          </p>
           <p className="footer__copy">{t.madeWith}</p>
         </div>
       </div>

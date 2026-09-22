@@ -2636,6 +2636,13 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
   font-weight: 300;
   letter-spacing: 0.05em;
 }
+.footer__legal-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast);
+}
+.footer__legal-link:hover { color: var(--white); }
 .footer__book-btn {
   font-size: 11.5px;
   letter-spacing: 0.18em;
@@ -3330,6 +3337,138 @@ html[data-past-hero] body:has(.hero--film) .nav__hamburger.open span {
 }
 .page-hero--beige::after,
 .page-hero--mint::after { display: none; }
+
+/* ─── Legal / Policy Pages ───────────────────────────────────── */
+.legal-intro {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-2);
+  font-weight: 300;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.legal-section {
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.legal-num {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dk);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.legal-h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+.legal-body p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-2);
+  font-weight: 300;
+}
+.legal-body p + p { margin-top: 1rem; }
+.legal-body ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+.legal-body li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-2);
+  font-weight: 300;
+  margin-bottom: 0.4rem;
+}
+.legal-body a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--t-fast);
+}
+.legal-body a:hover { color: var(--gold-dk); }
+.legal-contact {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-2);
+  font-weight: 300;
+}
+.legal-contact a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ─── Cookie Consent ─────────────────────────────────────────── */
+.cookie-consent {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 900;
+  width: min(380px, calc(100vw - 2.5rem));
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: 0 22px 54px -26px rgba(31,26,22,0.32);
+  padding: 1.25rem 1.4rem;
+  animation: cookieIn 0.5s var(--ease) both;
+}
+@keyframes cookieIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cookie-consent { animation: none; }
+}
+.cookie-consent__text {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text-2);
+  font-weight: 300;
+}
+.cookie-consent__link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cookie-consent__actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.cookie-consent__btn {
+  flex: 1;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.7rem 0.8rem;
+  border-radius: var(--r-md);
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+  text-align: center;
+}
+.cookie-consent__btn--reject {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text-2);
+}
+.cookie-consent__btn--reject:hover { border-color: var(--border-field); color: var(--ink); }
+.cookie-consent__btn--allow {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--ink);
+}
+.cookie-consent__btn--allow:hover { background: var(--caramel-dk); border-color: var(--caramel-dk); }
+
+/* Clear the mobile action bar rather than stack on top of it. */
+@media (max-width: 1024px) {
+  .cookie-consent { bottom: calc(var(--sticky-cta-h) + 0.75rem); }
+}
+@media (max-width: 480px) {
+  .cookie-consent { left: 0.75rem; right: 0.75rem; width: auto; }
+}
 
 /* ─── Contact Form ───────────────────────────────────────────── */
 .contact-form { display: grid; gap: 1.25rem; }
