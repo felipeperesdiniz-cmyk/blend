@@ -21,7 +21,7 @@ export const T = {
     },
 
     hero: {
-      eyebrow: 'Plantation, FL · Est. 2018',
+      eyebrow: 'Plantation, FL · Est. 2017',
       // Short enough to hold one line in tracked caps on a 375px screen. It is
       // the only copy a sighted visitor gets on the first screen, so it has to
       // carry the category and the city and nothing else.
@@ -38,7 +38,7 @@ export const T = {
       'Kérastase Salon',
       'Brazilian Specialists',
       REVIEW_LINE.en,
-      'Since 2018',
+      'Since 2017',
       'Plantation, Florida',
     ],
 
@@ -65,11 +65,9 @@ export const T = {
             heading: 'Haircuts (wash included)',
             items: [
               { label: "Women's Haircut", price: '$90+' },
-              { label: "Men's Haircut", price: '$45' },
-              { label: "Junior Boy's Haircut (up to 14Y)", price: '$35' },
+              { label: "Men's Haircut", price: '$50' },
+              { label: "Junior Boy's Haircut (up to 14Y)", price: '$40' },
               { label: "Junior Girl's Haircut (up to 14Y)", price: '$50+' },
-              { label: "Kids Boy's Haircut (up to 10Y)", price: '$25' },
-              { label: "Kids Girl's Haircut (up to 10Y)", price: '$30+' },
             ],
           },
           {
@@ -284,8 +282,8 @@ export const T = {
           {
             heading: 'Nail Services',
             items: [
-              { label: 'Manicure (Regular)', price: '$27' },
-              { label: 'Manicure (Gel)', price: '$32' },
+              { label: 'Manicure (Regular)', price: '$30' },
+              { label: 'Manicure (Gel)', price: '$35' },
               { label: 'Pedicure (Regular)', price: '$35' },
               { label: 'Pedicure (Gel)', price: '$40' },
               { label: 'Soak Off', price: '$7' },
@@ -314,9 +312,9 @@ export const T = {
           {
             heading: 'Eyebrow Services',
             items: [
-              { label: 'Design (Threading or Tweezer)', price: '$40' },
+              { label: 'Design (Threading or Tweezer)', price: '$45' },
               { label: 'Color', price: '$20' },
-              { label: 'Design & Color Combo', price: '$55' },
+              { label: 'Design & Color Combo', price: '$65' },
               { label: 'Brow Lamination', price: '$90' },
             ],
           },
@@ -645,7 +643,7 @@ export const T = {
     philosophy: {
       eyebrow: 'The Blend Philosophy',
       lines: ['Beauty is a ritual.', 'Artistry is our craft.', 'Warmth is our nature.'],
-      meta: 'Blend Hair Boutique · Plantation, Florida · Est. 2018',
+      meta: 'Blend Hair Boutique · Plantation, Florida · Est. 2017',
     },
     products: {
       eyebrow: 'Premium Care',
@@ -722,7 +720,7 @@ export const T = {
       { specialty: "Salon Assistant", bio: "Vitória makes the cappuccino, and most of the reason the room feels the way it does.", languages: "English, Portuguese" },
       { specialty: "Stylist Assistant", bio: "Marcelle was a hairstylist in Brazil before she moved to the States. She assists Roger now, which is why his column runs to time.", languages: "English, Portuguese" },
       { specialty: "Front Desk Coordinator", bio: "Five years at the front desk. Maggie is the voice on the phone, the reply on WhatsApp, and the first face through the door.", languages: "English, Portuguese" },
-      { specialty: "Stylist Assistants", bio: "Vanessa and Hanna work alongside Léa. Between them, long color appointments keep moving.", languages: "English, Portuguese" },
+      { specialty: "Stylist Assistant", bio: "Vanessa works alongside Léa, keeping long color appointments moving.", languages: "English, Portuguese" },
     ],
 
     pages: {
@@ -1030,7 +1028,7 @@ export const T = {
       'Salão Kérastase',
       'Especialistas Brasileiras',
       REVIEW_LINE.pt,
-      'Desde 2018',
+      'Desde 2017',
       'Plantation, Florida',
     ],
 
@@ -1057,11 +1055,9 @@ export const T = {
             heading: 'Cortes (lavagem incluída)',
             items: [
               { label: 'Corte Feminino', price: '$90+' },
-              { label: 'Corte Masculino', price: '$45' },
-              { label: 'Corte Infantil Menino (até 14 anos)', price: '$35' },
+              { label: 'Corte Masculino', price: '$50' },
+              { label: 'Corte Infantil Menino (até 14 anos)', price: '$40' },
               { label: 'Corte Infantil Menina (até 14 anos)', price: '$50+' },
-              { label: 'Corte Criança Menino (até 10 anos)', price: '$25' },
-              { label: 'Corte Criança Menina (até 10 anos)', price: '$30+' },
             ],
           },
           {
@@ -1276,8 +1272,8 @@ export const T = {
           {
             heading: 'Serviços de Unhas',
             items: [
-              { label: 'Manicure (Tradicional)', price: '$27' },
-              { label: 'Manicure (Gel)', price: '$32' },
+              { label: 'Manicure (Tradicional)', price: '$30' },
+              { label: 'Manicure (Gel)', price: '$35' },
               { label: 'Pedicure (Tradicional)', price: '$35' },
               { label: 'Pedicure (Gel)', price: '$40' },
               { label: 'Remoção (Soak Off)', price: '$7' },
@@ -1306,9 +1302,9 @@ export const T = {
           {
             heading: 'Serviços de Sobrancelha',
             items: [
-              { label: 'Design (Fio ou Pinça)', price: '$40' },
+              { label: 'Design (Fio ou Pinça)', price: '$45' },
               { label: 'Tintura', price: '$20' },
-              { label: 'Combo Design & Tintura', price: '$55' },
+              { label: 'Combo Design & Tintura', price: '$65' },
               { label: 'Laminação de Sobrancelha', price: '$90' },
             ],
           },
@@ -1625,7 +1621,7 @@ export const T = {
     philosophy: {
       eyebrow: 'A Filosofia Blend',
       lines: ['Beleza é um ritual.', 'A arte é nosso ofício.', 'O acolhimento é nossa natureza.'],
-      meta: 'Blend Hair Boutique · Plantation, Flórida · Desde 2018',
+      meta: 'Blend Hair Boutique · Plantation, Flórida · Desde 2017',
     },
     products: {
       eyebrow: 'Cuidado Premium',
@@ -1702,7 +1698,7 @@ export const T = {
       { specialty: "Assistente de Salão", bio: "Vitória faz o cappuccino e boa parte do motivo pelo qual a sala tem o clima que tem.", languages: "Inglês, Português" },
       { specialty: "Assistente de Estilista", bio: "Marcelle era cabeleireira no Brasil antes de se mudar para os Estados Unidos. Hoje assiste o Roger, e é por isso que a agenda dele anda no horário.", languages: "Inglês, Português" },
       { specialty: "Coordenadora de Recepção", bio: "Cinco anos na recepção. Maggie é a voz no telefone, a resposta no WhatsApp e o primeiro rosto na porta.", languages: "Inglês, Português" },
-      { specialty: "Assistentes de Estilista", bio: "Vanessa e Hanna trabalham ao lado da Léa. Entre as duas, atendimentos longos de coloração não param.", languages: "Inglês, Português" },
+      { specialty: "Assistente de Estilista", bio: "Vanessa trabalha ao lado da Léa, mantendo os atendimentos longos de coloração em movimento.", languages: "Inglês, Português" },
     ],
 
     pages: {
@@ -2002,7 +1998,7 @@ export const T = {
       'Salón Kérastase',
       'Especialistas Brasileñas',
       REVIEW_LINE.es,
-      'Desde 2018',
+      'Desde 2017',
       'Plantation, Florida',
     ],
 
@@ -2029,11 +2025,9 @@ export const T = {
             heading: 'Cortes (lavado incluido)',
             items: [
               { label: 'Corte Femenino', price: '$90+' },
-              { label: 'Corte Masculino', price: '$45' },
-              { label: 'Corte Infantil Niño (hasta 14 años)', price: '$35' },
+              { label: 'Corte Masculino', price: '$50' },
+              { label: 'Corte Infantil Niño (hasta 14 años)', price: '$40' },
               { label: 'Corte Infantil Niña (hasta 14 años)', price: '$50+' },
-              { label: 'Corte Niño (hasta 10 años)', price: '$25' },
-              { label: 'Corte Niña (hasta 10 años)', price: '$30+' },
             ],
           },
           {
@@ -2248,8 +2242,8 @@ export const T = {
           {
             heading: 'Servicios de Uñas',
             items: [
-              { label: 'Manicure (Regular)', price: '$27' },
-              { label: 'Manicure (Gel)', price: '$32' },
+              { label: 'Manicure (Regular)', price: '$30' },
+              { label: 'Manicure (Gel)', price: '$35' },
               { label: 'Pedicure (Regular)', price: '$35' },
               { label: 'Pedicure (Gel)', price: '$40' },
               { label: 'Remoción (Soak Off)', price: '$7' },
@@ -2278,9 +2272,9 @@ export const T = {
           {
             heading: 'Servicios de Cejas',
             items: [
-              { label: 'Diseño (Hilo o Pinza)', price: '$40' },
+              { label: 'Diseño (Hilo o Pinza)', price: '$45' },
               { label: 'Tinte', price: '$20' },
-              { label: 'Combo Diseño & Tinte', price: '$55' },
+              { label: 'Combo Diseño & Tinte', price: '$65' },
               { label: 'Laminado de Cejas', price: '$90' },
             ],
           },
@@ -2597,7 +2591,7 @@ export const T = {
     philosophy: {
       eyebrow: 'La Filosofía Blend',
       lines: ['La belleza es un ritual.', 'El arte es nuestro oficio.', 'La calidez es nuestra naturaleza.'],
-      meta: 'Blend Hair Boutique · Plantation, Florida · Desde 2018',
+      meta: 'Blend Hair Boutique · Plantation, Florida · Desde 2017',
     },
     products: {
       eyebrow: 'Cuidado Premium',
@@ -2674,7 +2668,7 @@ export const T = {
       { specialty: "Asistente de Salón", bio: "Vitória hace el cappuccino y buena parte de la razón por la que la sala se siente como se siente.", languages: "Inglés, Portugués" },
       { specialty: "Asistente de Estilista", bio: "Marcelle era estilista en Brasil antes de mudarse a Estados Unidos. Ahora asiste a Roger, y por eso su agenda va a tiempo.", languages: "Inglés, Portugués" },
       { specialty: "Coordinadora de Recepción", bio: "Cinco años en recepción. Maggie es la voz al teléfono, la respuesta en WhatsApp y la primera cara en la puerta.", languages: "Inglés, Portugués" },
-      { specialty: "Asistentes de Estilista", bio: "Vanessa y Hanna trabajan junto a Léa. Entre las dos, las citas largas de color no se detienen.", languages: "Inglés, Portugués" },
+      { specialty: "Asistente de Estilista", bio: "Vanessa trabaja junto a Léa, manteniendo en movimiento las citas largas de color.", languages: "Inglés, Portugués" },
     ],
 
     pages: {

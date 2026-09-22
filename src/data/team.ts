@@ -10,6 +10,10 @@ export interface TeamMember {
   image?: string
 }
 
+// These team members aren't individually bookable (front desk / assistants),
+// so their team-card and profile-page "Book" buttons are hidden.
+export const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria']
+
 export const TEAM: TeamMember[] = [
   {
     id: 'juliana',
@@ -160,9 +164,9 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: 'vanessa-hanna',
-    name: 'Vanessa & Hanna',
-    specialty: 'Stylist Assistants',
-    bio: 'Vanessa and Hanna work alongside Léa. Between them, long color appointments keep moving.',
+    name: 'Vanessa',
+    specialty: 'Stylist Assistant',
+    bio: 'Vanessa works alongside Léa, keeping long color appointments moving.',
     languages: 'English, Portuguese',
     image: '/images/team/vanessa-hanna.webp',
   },

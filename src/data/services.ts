@@ -36,11 +36,9 @@ export const SERVICES: Service[] = [
         heading: 'Haircuts (wash included)',
         items: [
           { label: "Women's Haircut", price: '$90+' },
-          { label: "Men's Haircut", price: '$45' },
-          { label: "Junior Boy's Haircut (up to 14Y)", price: '$35' },
+          { label: "Men's Haircut", price: '$50' },
+          { label: "Junior Boy's Haircut (up to 14Y)", price: '$40' },
           { label: "Junior Girl's Haircut (up to 14Y)", price: '$50+' },
-          { label: "Kids Boy's Haircut (up to 10Y)", price: '$25' },
-          { label: "Kids Girl's Haircut (up to 10Y)", price: '$30+' },
         ],
       },
       {
@@ -222,8 +220,8 @@ export const SERVICES: Service[] = [
       {
         heading: 'Nail Services',
         items: [
-          { label: 'Manicure (Regular)', price: '$27' },
-          { label: 'Manicure (Gel)', price: '$32' },
+          { label: 'Manicure (Regular)', price: '$30' },
+          { label: 'Manicure (Gel)', price: '$35' },
           { label: 'Pedicure (Regular)', price: '$35' },
           { label: 'Pedicure (Gel)', price: '$40' },
           { label: 'Soak Off', price: '$7' },
@@ -247,9 +245,9 @@ export const SERVICES: Service[] = [
       {
         heading: 'Eyebrow Services',
         items: [
-          { label: 'Design (Threading or Tweezer)', price: '$40' },
+          { label: 'Design (Threading or Tweezer)', price: '$45' },
           { label: 'Color', price: '$20' },
-          { label: 'Design & Color Combo', price: '$55' },
+          { label: 'Design & Color Combo', price: '$65' },
           { label: 'Brow Lamination', price: '$90' },
         ],
       },

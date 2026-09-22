@@ -243,7 +243,7 @@ export const LANDING_PT: LandingSet = {
     proseH2a: 'Nascido no Brasil.',
     proseH2b: 'Feito para o Sul da Flórida.',
     prose: [
-      'O Blend Hair Boutique foi fundado em 2018 por Juliana, ao lado da sócia e gerente Fernanda — duas brasileiras que se mudaram para a Flórida com um objetivo em comum: abrir um salão onde a cliente é conhecida pelo nome, não processada em série.',
+      'O Blend Hair Boutique foi fundado em 2017 por Juliana, ao lado da sócia e gerente Fernanda — duas brasileiras que se mudaram para a Flórida com um objetivo em comum: abrir um salão onde a cliente é conhecida pelo nome, não processada em série.',
       'A beleza brasileira é reconhecida mundialmente pela obsessão com cabelo saudável e luminoso, pelos rituais de hidratação e pela mistura de técnica apurada com acolhimento. São esses valores que orientam cada atendimento aqui — e boa parte da equipe está com a gente desde a abertura.',
     ],
     imageAlt: 'Cabelo liso e brilhante após progressiva no Blend Hair Boutique, em Plantation, FL',
