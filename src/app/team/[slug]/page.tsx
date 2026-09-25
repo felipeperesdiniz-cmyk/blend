@@ -83,6 +83,12 @@ const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
     { label: 'Haircuts & Styling', href: '/haircuts-plantation-fl' },
     { label: 'Balayage in Plantation', href: '/balayage-plantation-fl' },
   ],
+  thom: [
+    { label: 'Balayage in Plantation', href: '/balayage-plantation-fl' },
+    { label: 'Highlights', href: '/highlights-plantation-fl' },
+    { label: 'Color Correction', href: '/color-correction-plantation-fl' },
+    { label: 'Haircuts & Styling', href: '/haircuts-plantation-fl' },
+  ],
   nilza: [
     { label: 'Waxing Services', href: '/waxing-plantation-fl' },
     { label: 'Nail Services', href: '/nails-plantation-fl' },
@@ -103,11 +109,6 @@ const STYLIST_SERVICES: Record<string, { label: string; href: string }[]> = {
     { label: 'Hair Color', href: '/hair-color-plantation' },
     { label: 'Keratin Treatment', href: '/keratin-treatment-plantation' },
   ],
-  'vanessa-hanna': [
-    { label: 'Blonding Specialist', href: '/blonding-specialist-plantation' },
-    { label: 'Balayage in Plantation', href: '/balayage-plantation-fl' },
-    { label: 'Hair Extensions', href: '/hair-extensions-plantation' },
-  ],
 }
 
 const STYLIST_EXTENDED_BIO: Record<string, string> = {
@@ -121,6 +122,7 @@ const STYLIST_EXTENDED_BIO: Record<string, string> = {
   ketty: 'Originally from Brazil, Ketty has been part of the Blend Hair Boutique team since 2022. She specializes in color correction, highlights, hair extensions, and is the salon’s specialist in perm services, creating customized looks that enhance each client’s style and hair goals.\n\nWith a strong focus on precision and continuous professional development, Ketty takes a thoughtful, technical approach to every appointment. Whether restoring hair color, creating dimensional blondes, or adding texture and movement with a modern perm, she is dedicated to delivering healthy, beautiful, and personalized results.',
   jeniffer: 'Originally from Brazil, Jeniffer is one of the newest members of the Blend Hair Boutique team, bringing talent, creativity, and a passion for helping clients look and feel their best. She specializes in hair color, precision haircuts, smoothing treatments, and professional makeup, offering complete beauty services for both everyday confidence and special occasions.\n\nKnown for her warm personality and ability to make clients feel comfortable, Jeniffer has become especially known for her beautiful blowouts that keep guests coming back time and time again. Whether creating a polished everyday look or preparing someone for a special event, she is dedicated to delivering results that leave every client feeling confident and radiant.',
   tabby: 'A Florida native, Tabby brings creativity, fresh ideas, and a welcoming personality to the Blend Hair Boutique team. She specializes in hair color, precision haircuts, styling, and men’s grooming, creating customized looks that reflect each client’s personality and lifestyle.\n\nKnown for her friendly nature and engaging conversations, Tabby builds genuine connections with her clients from the moment they sit in her chair. She personally performs every step of each appointment, allowing for a more one-on-one experience and ensuring every detail reflects her care, creativity, and attention to detail.',
+  thom: 'Thom is a Brazilian hairstylist and cosmetologist with over 20 years of experience in the beauty industry. Trained in cosmetology in Brazil, his career has taken him from Brazil to France and North Carolina, with each experience shaping his approach to beauty, technique, and personalized care.\n\nSpecializing in highlights, color correction, and precision haircuts, Thom believes every look should reflect the individuality of the person wearing it. He takes the time to understand each client’s style and goals while always prioritizing the health and integrity of the hair.\n\nFor Thom, the best result is seeing a client leave his chair feeling confident, beautiful, and completely themselves.',
   nilza: 'Originally from Brazil and living in the United States for over 20 years, Nilza has been part of Blend Hair Boutique since the very beginning. With decades of experience in the beauty industry, she specializes in waxing and nail services, combining exceptional skill with remarkable efficiency.\n\nKnown by countless clients throughout South Florida, Nilza has built her reputation working in salons across the Miami area before joining Blend. Her speed, precision, and warm personality have made her a familiar face and a trusted favorite for clients who appreciate outstanding service delivered with professionalism and genuine care.',
   edith: 'Originally from Colombia, Edith has been part of the Blend Hair Boutique team for nearly two years. Combining experience with a fresh, detail-oriented approach, she is dedicated to creating beautiful, long-lasting nail services tailored to each client’s style.\n\nKnown for her warm personality and genuine care, Edith has built a loyal clientele who appreciate both her professionalism and the welcoming experience she provides. Her precision, creativity, and commitment to quality ensure every client leaves with beautiful nails and a smile.',
   adriana: 'Originally from Brazil, Adriana is dedicated to enhancing each client’s natural beauty through personalized eyebrow and facial services. With a meticulous eye for detail and a passion for delivering exceptional results, she helps clients look and feel their best with treatments tailored to their individual features.\n\nKnown for both her outstanding work and warm, welcoming personality, Adriana has built a remarkably loyal clientele who continue to return for her expertise and genuine care. Her commitment to excellence, combined with her ability to make every guest feel comfortable and confident, has made her one of Blend Hair Boutique’s most trusted beauty specialists.',

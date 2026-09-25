@@ -12,7 +12,7 @@ export interface TeamMember {
 
 // These team members aren't individually bookable (front desk / assistants),
 // so their team-card and profile-page "Book" buttons are hidden.
-export const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria']
+export const NOT_BOOKABLE_IDS = ['vanessa-hanna', 'maggie', 'marcelle', 'vitoria', 'anne', 'mariah', 'samantha']
 
 export const TEAM: TeamMember[] = [
   {
@@ -104,6 +104,15 @@ export const TEAM: TeamMember[] = [
     image: '/images/team/tabby.webp',
   },
   {
+    id: 'thom',
+    name: 'Thom Kauffmann',
+    specialty: 'Master Stylist',
+    bio: 'Twenty years in the industry, from Brazil to France to North Carolina. Thom specializes in highlights, color correction, and precision haircuts.',
+    languages: 'English, Portuguese',
+    instagram: 'https://www.instagram.com/thomkauff_hairstylist',
+    image: '/images/team/thom.webp',
+  },
+  {
     id: 'nilza',
     name: 'Nilza',
     specialty: 'Wax & Nail Specialist',
@@ -139,20 +148,36 @@ export const TEAM: TeamMember[] = [
     image: '/images/team/fran.webp',
   },
   {
-    id: 'vitoria',
-    name: 'Vitoria',
-    specialty: 'Salon Assistant',
-    bio: 'Vitória makes the cappuccino, and most of the reason the room feels the way it does.',
-    languages: 'English, Portuguese',
-    image: '/images/team/vitoria.webp',
-  },
-  {
     id: 'marcelle',
     name: 'Marcelle',
     specialty: 'Stylist Assistant',
-    bio: 'Marcelle was a hairstylist in Brazil before she moved to the States. She assists Roger now, which is why his column runs to time.',
+    bio: 'Marcelle was a hairstylist in Brazil before she moved to the States. She assists Roger through washes, prep, and every step of the appointment, and is just as skilled at styling — blowouts, flat-iron finishes — which is why his column runs to time.',
     languages: 'English, Portuguese',
     image: '/images/team/marcelle.webp',
+  },
+  {
+    id: 'anne',
+    name: 'Anne',
+    specialty: 'Stylist Assistant',
+    bio: 'Anne works alongside Beatriz — through washes, prep, and every step of the appointment — and is also highly skilled at styling, from blowouts to flat-iron finishes. Her caring approach and attention to detail make her a wonderful addition to the Blend team.',
+    languages: 'English',
+    image: '/images/team/anne.webp',
+  },
+  {
+    id: 'vanessa-hanna',
+    name: 'Vanessa',
+    specialty: 'Stylist Assistant',
+    bio: 'Vanessa works alongside Léa — through washes, prep, and every step of every appointment — and is also highly skilled at styling, from blowouts to flat-iron finishes. Vanessa combines efficiency, professionalism, and genuine care, ensuring every guest feels comfortable, valued, and exceptionally well looked after.',
+    languages: 'English, Portuguese',
+    image: '/images/team/vanessa-hanna.webp',
+  },
+  {
+    id: 'mariah',
+    name: 'Mariah',
+    specialty: 'Stylist Assistant',
+    bio: 'Mariah works alongside Debora and Ketty — through washes, prep, and every step of their appointments — and is also highly skilled at styling, from blowouts to flat-iron finishes. Attentive, welcoming, and always ready to help, she plays an important role in the experience we value at Blend.',
+    languages: 'English',
+    image: '/images/team/mariah.webp',
   },
   {
     id: 'maggie',
@@ -163,11 +188,19 @@ export const TEAM: TeamMember[] = [
     image: '/images/team/maggie.webp',
   },
   {
-    id: 'vanessa-hanna',
-    name: 'Vanessa',
-    specialty: 'Stylist Assistant',
-    bio: 'Vanessa works alongside Léa, keeping long color appointments moving.',
+    id: 'samantha',
+    name: 'Samantha',
+    specialty: 'Front Desk Coordinator',
+    bio: 'As part of our front desk team, Samantha is one of the friendly faces welcoming you to Blend. From helping with appointments and scheduling to making sure your visit runs smoothly, she is always ready to assist with warmth and care, helping create the welcoming, organized experience we want every client to feel.',
+    languages: 'English',
+    image: '/images/team/samantha.webp',
+  },
+  {
+    id: 'vitoria',
+    name: 'Vitoria',
+    specialty: 'Salon Assistant',
+    bio: 'Vitória makes the cappuccino, and most of the reason the room feels the way it does.',
     languages: 'English, Portuguese',
-    image: '/images/team/vanessa-hanna.webp',
+    image: '/images/team/vitoria.webp',
   },
 ]
