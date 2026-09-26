@@ -114,6 +114,10 @@ export default function Footer() {
             <Link href="/privacy-policy" className="footer__legal-link">{t.privacyPolicy}</Link>
           </p>
           <p className="footer__copy">{t.madeWith}</p>
+          <p className="footer__copy">
+            {t.siteBy}{' '}
+            <a href={t.siteByUrl} target="_blank" rel="noopener" className="footer__legal-link">The Diniz Studio</a>
+          </p>
         </div>
       </div>
     </footer>
