@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   description:
     'Blend Hair Boutique is a luxury hair salon in Plantation, Florida offering balayage, Brazilian blowout, keratin treatments, haircuts, nail services, facials, and bridal beauty. Book online 24/7.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
   robots: {
     index: true,
