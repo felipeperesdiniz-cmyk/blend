@@ -958,20 +958,6 @@ button:focus-visible {
   text-shadow: none;
 }
 
-/* The call button reads as the lighter of the two — booking is still the
-   primary intent — so it drops the border and shows only the text, same
-   treatment the nav uses for its secondary actions. */
-.hero__call {
-  border-color: transparent;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
-.hero__call:hover {
-  background: transparent;
-  color: var(--gold);
-  border-color: transparent;
-}
-
 /* The address link. Gold, not white: it sits directly under a white outlined
    button and a white tagline, and a third white element would read as chrome
    rather than as the one thing on the hero you can click through to a map.
