@@ -204,14 +204,19 @@ export default function HeroSection() {
           than compete with the film. */}
       <p className="hero__tagline">{t.filmTagline}</p>
 
-      <a
-        href={BUSINESS.bookingUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hero__book"
-      >
-        {t.cta1}
-      </a>
+      <div className="hero__ctas">
+        <a
+          href={BUSINESS.bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero__book"
+        >
+          {t.cta1}
+        </a>
+        <a href={BUSINESS.phoneHref} className="hero__call">
+          {t.cta2}
+        </a>
+      </div>
 
       {/* The address, live. It was previously reachable only from the footer or
           the contact page, which is a long way round for the single most

@@ -910,10 +910,20 @@ button:focus-visible {
   animation: heroMarkIn 1.8s var(--ease) 0.6s backwards;
 }
 
-.hero__book {
+.hero__ctas {
   position: relative;
   z-index: 2;
   margin-top: clamp(1.5rem, 2.6vw, 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  animation: heroMarkIn 1.8s var(--ease) 0.8s backwards;
+}
+
+.hero__book,
+.hero__call {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -939,13 +949,27 @@ button:focus-visible {
     background-color var(--t-mid) var(--ease),
     border-color     var(--t-mid) var(--ease),
     color            var(--t-mid) var(--ease);
-  animation: heroMarkIn 1.8s var(--ease) 0.8s backwards;
 }
-.hero__book:hover {
+.hero__book:hover,
+.hero__call:hover {
   background: var(--white);
   border-color: var(--white);
   color: var(--ink);
   text-shadow: none;
+}
+
+/* The call button reads as the lighter of the two — booking is still the
+   primary intent — so it drops the border and shows only the text, same
+   treatment the nav uses for its secondary actions. */
+.hero__call {
+  border-color: transparent;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+.hero__call:hover {
+  background: transparent;
+  color: var(--gold);
+  border-color: transparent;
 }
 
 /* The address link. Gold, not white: it sits directly under a white outlined
@@ -985,14 +1009,15 @@ button:focus-visible {
 
 @media (max-width: 480px) {
   .hero__tagline { letter-spacing: 0.24em; }
-  .hero__book    { padding: 0.9rem 1.9rem; }
+  .hero__book,
+  .hero__call    { padding: 0.9rem 1.9rem; }
   .hero__address { letter-spacing: 0.14em; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero__tagline,
   .hero__address,
-  .hero__book { animation: none; }
+  .hero__ctas { animation: none; }
 }
 
 .hero__cue {
